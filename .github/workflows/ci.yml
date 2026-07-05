@@ -1,0 +1,15 @@
+name: KidSorted — tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Data integrity + UI end-to-end (headless Chrome)
+        run: node tests/run.mjs
