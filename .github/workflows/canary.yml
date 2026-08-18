@@ -15,9 +15,9 @@ jobs:
           node -e '
           const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
           async function probe() {
-            const page = await fetch("https://kidsorted.com/", { cache: "no-store" });
+            const page = await fetch("https://kidsorted.co.uk/", { cache: "no-store" });
             const html = await page.text();
-            const app = await fetch("https://kidsorted.com/assets/app.js", { cache: "no-store" });
+            const app = await fetch("https://kidsorted.co.uk/assets/app.js", { cache: "no-store" });
             const js = await app.text();
             return {
               pageStatus: page.status === 200,
