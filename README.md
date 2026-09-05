@@ -18,3 +18,7 @@ Existing October single-booking plans migrate automatically on load; their previ
 Age entry supports years and months. Directory cards distinguish published dates from place availability, and unconfirmed providers are collapsed. The mobile planner stacks day cards. Share/export controls are below the planner, with hidden links kept hidden and private links invalidated after changes.
 
 Tests now perform actual clicks at desktop and phone widths, including migration, gaps, mixed care, overlap confirmation, full-week rules, ages, pricing, bookmarks, shares, merge behavior, calendar dates and the summer archive.
+
+## Parent newsletter
+
+The newsletter signup uses the official embed from https://kidsorted.substack.com/, a separate publication managed in Leath's existing Substack account. The iframe loads lazily and has a direct subscription fallback. Newsletter subscriptions are stored by Substack, independently of browser-only planner data. The newsletter section is hidden when printing a plan.

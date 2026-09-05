@@ -1408,3 +1408,16 @@ div.picker-option { cursor: default; }
   .child-plan, .booking-row { break-inside: avoid; }
   .export-menu, .booking-actions { display: none; }
 }
+
+.newsletter-section { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 32px; margin-top: 48px; padding: 32px; border: 2px solid var(--green); border-radius: 18px; background: var(--green-tint); }
+.newsletter-copy h2 { font-size: clamp(1.8rem,3vw,2.6rem); margin: 8px 0 16px; }
+.newsletter-copy p { line-height: 1.6; }
+.newsletter-note, .newsletter-form p { font-size: .88rem; color: var(--ink-soft); }
+.newsletter-form { min-width: 0; }
+.newsletter-form iframe { display: block; width: 100%; max-width: 100%; height: 200px; border: 0; border-radius: 12px; background: white; }
+.newsletter-form p { text-align: center; }
+@media (max-width: 760px) {
+  .newsletter-section { grid-template-columns: 1fr; gap: 16px; padding: 20px 12px; }
+  .newsletter-copy { padding: 0 8px; }
+}
+@media print { .newsletter-section { display: none !important; } }
