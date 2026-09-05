@@ -8,7 +8,7 @@
 const D = window.E17_DIRECTORY;
 const P = window.E17_PLANNER;
 
-const STORE_KEY = "e17planner.v1";
+const STORE_KEY = `e17planner.v1.${P.season}`;
 const CHILD_COLORS = ["var(--child-1)", "var(--child-2)", "var(--child-3)", "var(--child-4)", "var(--child-5)", "var(--child-6)"];
 
 /* ────────────────────────── state ────────────────────────── */
@@ -22,7 +22,7 @@ const state = {
   dayLength: "all",
   price: "all",
   confirmedOnly: false,
-  sort: "az",
+  sort: "confirmed",
   children: [],         // {id, name, age, color}
   shortlist: [],        // provider ids
   plan: {},             // { [weekId]: { [childId]: {type, campId?, label?} } }
@@ -424,7 +424,7 @@ function badgeRow(provider) {
   } else if (pl.sessionBased) {
     badges.push(`<span class="badge badge-tbc">Session-based</span>`);
   } else {
-    badges.push(`<span class="badge badge-tbc">Summer dates TBC</span>`);
+    badges.push(`<span class="badge badge-tbc">October dates TBC</span>`);
   }
   if (f.includes("Free/HAF")) badges.push(`<span class="badge badge-haf">HAF free places</span>`);
   if (f.includes("Tax-Free Childcare")) badges.push(`<span class="badge badge-tfc">Tax-Free Childcare</span>`);
@@ -454,13 +454,13 @@ function priceFact(provider) {
   if (pr.weekBands) bits.push(pr.weekBands.map((b) => money(b.week)).join("–") + "/wk");
   if (Number.isFinite(pr.sessionFrom)) bits.push(`${money(pr.sessionFrom)}–${money(pr.sessionTo)}/session`);
   if (!bits.length) return "Not published — check";
-  return bits.join(" · ") + (pl.priceStale ? ` (${pl.priceStale} — confirm summer rate)` : "");
+  return (pl.priceFrom ? "From " : "") + bits.join(" · ") + (pl.priceStale ? ` (${pl.priceStale} — confirm October rate)` : "");
 }
 
 function weeksFact(provider) {
   const pl = plannerOf(provider);
   const wk = (pl.weeks || []).filter((w) => w <= 6);
-  if (wk.length === 6) return pl.fridaysOnly ? "All 6 weeks (Fridays)" : "All 6 weeks";
+  if (wk.length === P.weeks.length) return "26–30 October";
   if (wk.length) return "Weeks " + wk.join(", ");
   if (pl.sessionBased) return "Selected dates";
   if (pl.weeksLikely) return "Likely — confirm";
@@ -492,7 +492,7 @@ function renderProviders() {
     const shortlisted = state.shortlist.includes(provider.id);
     const map = mapLink(provider);
     const stalePrice = pl.priceStale
-      ? `<p class="provenance">⚠ Price is from the ${escapeHtml(pl.priceStale)} — use as a guide and confirm the summer rate.</p>`
+      ? `<p class="provenance">⚠ Price is from the ${escapeHtml(pl.priceStale)} — use as a guide and confirm the October rate.</p>`
       : "";
     const reconfirm = pl.reconfirm
       ? `<p class="provenance">⚠ Reconfirm dates with the provider before booking — see basis below.</p>`
@@ -517,7 +517,7 @@ function renderProviders() {
           <span><strong>Ages</strong>${escapeHtml(provider.ageLabel)}</span>
           <span><strong>Hours</strong>${escapeHtml(hoursLabel(provider))}</span>
           <span class="fact-price"><strong>Cost</strong>${escapeHtml(priceFact(provider))}</span>
-          <span><strong>Summer weeks</strong>${escapeHtml(weeksFact(provider))}</span>
+          <span><strong>October dates</strong>${escapeHtml(weeksFact(provider))}</span>
         </div>
         <p class="summary">${escapeHtml(provider.summary)}</p>
         <p class="good-for"><strong>Best for:</strong> ${escapeHtml(provider.goodFor)}</p>
@@ -536,7 +536,7 @@ function renderProviders() {
         </details>
         <div class="card-actions">
           <button class="btn btn-add" type="button" data-addplan="${escapeHtml(provider.id)}">+ Add to plan</button>
-          <a class="btn btn-book" href="${escapeHtml(provider.bookingUrl || provider.source.url)}" target="_blank" rel="noreferrer">Book ↗</a>
+          <a class="btn btn-book" href="${escapeHtml(provider.bookingUrl || provider.source.url)}" target="_blank" rel="noreferrer">${(pl.weeks || []).length ? "Booking details ↗" : "Check provider ↗"}</a>
         </div>
       </article>
     `;
@@ -552,7 +552,7 @@ const COMPARE_ROWS = [
   { label: "Hours", get: (p) => hoursLabel(p) },
   { label: "Day length", get: (p) => coverageLabel(p) },
   { label: "Cost", get: (p) => priceFact(p) },
-  { label: "Summer 2026 weeks", get: (p) => weeksFact(p) },
+  { label: "October 2026 dates", get: (p) => weeksFact(p) },
   { label: "Food", get: (p) => (plannerOf(p).lunch ? plannerOf(p).lunch.note : "Ask provider") },
   { label: "Funding & discounts", get: (p) => (p.funding || []).join(", ") },
   { label: "Venue", get: (p) => p.venue },
@@ -856,10 +856,10 @@ function renderBudget() {
       <div class="budget-card">
         <span class="budget-label"><span class="child-dot" style="background:${c.color};display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px"></span>${escapeHtml(c.name)}</span>
         <span class="budget-value">${money(perChild[c.id])}</span>
-        <span class="budget-sub">${uncovered[c.id].length ? `${uncovered[c.id].length} week${uncovered[c.id].length === 1 ? "" : "s"} not covered yet` : "all 6 weeks covered ✓"}</span>
+        <span class="budget-sub">${uncovered[c.id].length ? `${uncovered[c.id].length} week${uncovered[c.id].length === 1 ? "" : "s"} not covered yet` : "half term covered ✓"}</span>
       </div>`),
     `<div class="budget-card grand">
-      <span class="budget-label">Whole summer</span>
+      <span class="budget-label">Whole half term</span>
       <span class="budget-value">${money(grand)}${unknownCount ? " +" : ""}</span>
       <span class="budget-sub">${unknownCount ? `${unknownCount} booking${unknownCount === 1 ? "" : "s"} still “£?” — confirm prices` : "all priced bookings included"}</span>
     </div>`
@@ -888,13 +888,13 @@ function renderBudget() {
     notes.push(`<div class="budget-note save"><strong>Sibling discount:</strong> you've got two children at ${escapeHtml(siblingHints.join("; "))} — ask for the sibling rate when booking.</div>`);
   }
   if (staleUsed.size) {
-    notes.push(`<div class="budget-note warn"><strong>Guide prices used:</strong> ${escapeHtml([...staleUsed].join("; "))} — these are from earlier holidays, so confirm the summer rate.</div>`);
+    notes.push(`<div class="budget-note warn"><strong>Guide prices used:</strong> ${escapeHtml([...staleUsed].join("; "))} — these are from earlier holidays, so confirm the October rate.</div>`);
   }
   if (availPlanned.size) {
     notes.push(`<div class="budget-note warn"><strong>Availability:</strong> ${escapeHtml([...availPlanned].join("; "))} — check with the provider before counting on a place.</div>`);
   }
   if (!notes.length && grand > 0) {
-    notes.push(`<div class="budget-note">Prices are as published on 9 June 2026 — re-check when booking. “est.” totals multiply a day rate by the days in that week.</div>`);
+    notes.push(`<div class="budget-note">October prices checked 5 September 2026 — re-check when booking. “est.” totals multiply a day rate by the days in that week.</div>`);
   }
   els.budgetNotes.innerHTML = notes.join("");
 }
@@ -948,7 +948,7 @@ function pickerOptionHtml(provider, weekId, opts = {}) {
     ? "Free*"
     : cost ? `${money(cost.value)}${cost.estimate ? " est." : ""}` : "£?";
   const warns = [];
-  if (opts.unconfirmed) warns.push("Runs in summer — exact weeks unconfirmed, check before relying on it");
+  if (opts.unconfirmed) warns.push("October dates unconfirmed — check before relying on it");
   if (pl.reconfirm) warns.push("Reconfirm dates with provider");
   if (pl.fridaysOnly) warns.push("Friday only — covers one day of this week");
   if (pl.priceStale) warns.push(`Price from ${pl.priceStale}`);
@@ -1141,10 +1141,10 @@ function renderPicker() {
       <p class="picker-note">Know the real price — a sibling rate, early-bird discount or a quote from the provider? Enter it and your budget uses that figure instead of our estimate.</p>` : "",
     wk.stub ? `<p class="picker-note">ℹ ${escapeHtml(wk.note)}</p>` : "",
     group("Confirmed for this week", confirmed),
-    group("Runs in summer — confirm exact dates", likely, { unconfirmed: true }),
+    group("October dates to confirm", likely, { unconfirmed: true }),
     group("Workshops & sessions (part-week)", sessions, { unconfirmed: true }),
     group("Free HAF camps (benefits-related FSM)", hafOnly, { unconfirmed: true }),
-    hafOnly.length ? `<p class="picker-note">*HAF places are free for eligible children and include food — book via the <a href="https://eequ.org/hafwalthamforest" target="_blank" rel="noreferrer">Eequ feed</a> when summer sessions open.</p>` : "",
+    hafOnly.length ? `<p class="picker-note">*HAF places are free for eligible children and include food — book via the <a href="https://eequ.org/hafwalthamforest" target="_blank" rel="noreferrer">Eequ feed</a> for current sessions.</p>` : "",
     customCampForm,
     `<p class="picker-group-title">Not a camp</p>`,
     customs,
@@ -1365,7 +1365,7 @@ function planCalendarText() {
     "PRODID:-//KidSorted//Holiday Camp Planner//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
-    icsFold("X-WR-CALNAME:E17 holiday camps — summer 2026"),
+    icsFold("X-WR-CALNAME:E17 holiday camps — October half term 2026"),
     events.join("\r\n"),
     "END:VCALENDAR"
   ].join("\r\n") + "\r\n";
@@ -1404,7 +1404,7 @@ function planSummaryText() {
     lines.push("");
   });
   if (bookable) lines.push(`Bookings made so far: ${booked} of ${bookable}.`);
-  lines.push("Prices as published 9 June 2026 — always confirm with the provider before booking.");
+  lines.push("October prices checked 5 September 2026 — always confirm with the provider before booking.");
   return lines.join("\n");
 }
 
@@ -1418,7 +1418,7 @@ function bindPlannerActions() {
   if (tellBtn) {
     tellBtn.addEventListener("click", async () => {
       const url = toolUrl();
-      const msg = `Free local tool for planning summer holiday camps in and around Walthamstow — every camp with dates, prices and free council places, plus a week-by-week planner you fill in yourself: ${url}`;
+      const msg = `Free local tool for planning October holiday camps in and around Walthamstow — every camp with dates, prices and free council places, plus a week-by-week planner you fill in yourself: ${url}`;
       tellWa.href = "https://wa.me/?text=" + encodeURIComponent(msg);
       tellWa.hidden = false;
       try {
@@ -1451,7 +1451,7 @@ function bindPlannerActions() {
     );
     if (!okay) return;
     const url = planShareUrl();
-    waShare.href = "https://wa.me/?text=" + encodeURIComponent(`Our summer 2026 holiday camp plan — week-by-week cover and costs: ${url}`);
+    waShare.href = "https://wa.me/?text=" + encodeURIComponent(`Our October half term 2026 holiday camp plan — week-by-week cover and costs: ${url}`);
     waShare.hidden = false;
     try {
       await navigator.clipboard.writeText(url);
@@ -1529,6 +1529,7 @@ function planShareUrl() {
   });
   const payload = {
     v: 1,
+    season: P.season,
     children: state.children.map((c) => ({ id: c.id, name: c.name, age: c.age })),
     plan
   };
@@ -1542,7 +1543,7 @@ function parseSharedPlan(hash) {
   if (!m) return null;
   try {
     const data = JSON.parse(base64urlDecode(m[1]));
-    if (!data || data.v !== 1 || !Array.isArray(data.children)) return null;
+    if (!data || data.v !== 1 || data.season !== P.season || !Array.isArray(data.children)) return null;
     const children = data.children
       .filter((c) => c && typeof c.id === "string" && Number.isFinite(c.age))
       .slice(0, CHILD_COLORS.length)
@@ -1612,7 +1613,7 @@ function offerSharedPlan() {
   const names = shared.children.map((c) => `${c.name} (${c.age})`).join(", ");
   const weeks = Object.keys(shared.plan).length;
   els.shareBannerText.textContent =
-    `Someone sent you a summer plan for ${names} — ${weeks} week${weeks === 1 ? "" : "s"} planned. ` +
+    `Someone sent you a October plan for ${names} — ${weeks} week${weeks === 1 ? "" : "s"} planned. ` +
     `Loading it only changes this browser; your shortlist and checklist ticks stay as they are.`;
   els.shareMerge.hidden = !state.children.length;
   els.shareBanner.hidden = false;
@@ -1657,7 +1658,7 @@ function renderHaf() {
     notice = `<tr class="haf-filter-note"><td colspan="4">${escapeHtml(message)}
       <button class="btn-sub" type="button" data-haf-showall="1">Show all</button></td></tr>`;
   }
-  els.hafTable.innerHTML = rows + notice;
+  els.hafTable.innerHTML = rows + notice || '<tr><td colspan="4">No October HAF sessions verified yet. Check the live Eequ list above.</td></tr>';
 }
 
 function renderSources() {
@@ -1683,12 +1684,12 @@ function renderMoneyMeta() {
 /* ────────────────────────── checklist ────────────────────────── */
 
 const CHECKLIST = [
-  { id: "dates", title: "Exact dates & current price", why: "Listings change between holidays — get this summer's price and dates in writing." },
+  { id: "dates", title: "Exact dates & current price", why: "Listings change between holidays — get this October's price and dates in writing." },
   { id: "ofsted", title: "Ofsted registration number", why: "You need it (and the provider signed up) to pay with Tax-Free Childcare or vouchers." },
   { id: "food", title: "Lunch & snack arrangements", why: "Included, a paid add-on, or packed lunch? Ask about the nut/allergy policy too." },
   { id: "times", title: "Drop-off and pick-up windows", why: "Exact times, who signs in/out, and the late-collection policy and fees." },
   { id: "collect", title: "Who's allowed to collect", why: "Named adults and collection passwords — sort this before day one, not at 5:55pm." },
-  { id: "kit", title: "First-day kit list", why: "Water bottle, named sunscreen (pre-applied?), hat, trainers, spare clothes, no toys." },
+  { id: "kit", title: "First-day kit list", why: "Water bottle, waterproof coat, layers, trainers and spare clothes; check the provider’s kit list." },
   { id: "send", title: "SEND & medical conversation", why: "1:1 support, medication storage, allergy plans and inhalers — speak to the lead, not the booking form." },
   { id: "groups", title: "Age groups & friends", why: "How groups are split and whether siblings or school friends can be placed together." },
   { id: "cancel", title: "Cancellation & swap policy", why: "Refund or credit if your child is ill or plans change? Any swap fees?" },
@@ -1745,14 +1746,14 @@ function bindAgeChips() {
 
 function resetFilters() {
   clearTimeout(searchDebounceTimer); // a pending debounced search must not undo the reset
-  Object.assign(state, { search: "", area: "all", category: "all", funding: "all", age: "any", dayLength: "all", price: "all", confirmedOnly: false, sort: "az" });
+  Object.assign(state, { search: "", area: "all", category: "all", funding: "all", age: "any", dayLength: "all", price: "all", confirmedOnly: false, sort: "confirmed" });
   els.searchInput.value = "";
   els.areaFilter.value = "all";
   els.categoryFilter.value = "all";
   els.fundingFilter.value = "all";
   els.dayLengthFilter.value = "all";
   els.priceFilter.value = "all";
-  els.sortSelect.value = "az";
+  els.sortSelect.value = "confirmed";
   els.confirmedOnly.checked = false;
   document.querySelectorAll(".age-chip[data-age]").forEach((chip) => {
     chip.classList.toggle("is-active", chip.dataset.age === "any");

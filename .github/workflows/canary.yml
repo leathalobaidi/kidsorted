@@ -21,7 +21,7 @@ jobs:
             const js = await app.text();
             return {
               pageStatus: page.status === 200,
-              heroPresent: html.includes("Six weeks of summer"),
+              heroPresent: html.includes("October half term"),
               plannerPresent: html.includes("plannerTable"),
               appStatus: app.status === 200,
               appIntact: js.includes("E17_PLANNER") && js.includes("data-pick-customcamp")
