@@ -25,7 +25,7 @@ const state = {
   sort: "confirmed",
   children: [],         // {id, name, age, color}
   shortlist: [],        // provider ids
-  plan: {},             // { [weekId]: { [childId]: {type, campId?, label?} } }
+  plan: {},             // { [weekId]: { [childId]: [{id, type, days, campId?, label?}] } }
   checks: [],           // checklist item ids
   pickerShowAll: false,
   hafShowAll: false     // HAF table: true after "Show all", reset when filters change
@@ -37,21 +37,22 @@ let pickerReturnFocus = null;  // CSS selector re-focused when the picker dialog
 let pendingCampId = null;      // camp chosen before any child exists — reopened after add
 let searchDebounceTimer = null;
 let gridHasRendered = false;   // first grid render plays the stagger; later ones don't
-let mobileShowAll = false;     // small screens: true after "Show all N camps" until filters change
 
 const MOBILE_MQ = window.matchMedia("(max-width: 680px)");
-const MOBILE_PAGE_SIZE = 12;
 
 /* ────────────────────────── persistence ────────────────────────── */
 
 function saveState() {
   try {
     localStorage.setItem(STORE_KEY, JSON.stringify({
+      version: 2,
       children: state.children,
       shortlist: state.shortlist,
       plan: state.plan,
       checks: state.checks
     }));
+    const staleShare = document.querySelector("#waShare");
+    if (staleShare) { staleShare.hidden = true; staleShare.removeAttribute("href"); }
   } catch (e) { /* storage full/blocked — keep going in-memory */ }
 }
 
@@ -60,9 +61,12 @@ function loadState() {
     const raw = localStorage.getItem(STORE_KEY);
     if (!raw) return;
     const data = JSON.parse(raw);
-    if (Array.isArray(data.children)) state.children = data.children.filter((c) => c && c.id && Number.isFinite(c.age));
+    if (Array.isArray(data.children)) state.children = data.children.filter((c) => c && /^[a-zA-Z0-9_-]{1,60}$/.test(c.id) && Number.isFinite(c.age)).slice(0,6).map((c,i)=>({...c,name:String(c.name||"Child").slice(0,20),color:CHILD_COLORS[i]}));
     if (Array.isArray(data.shortlist)) state.shortlist = data.shortlist.filter((id) => providerById(id));
-    if (data.plan && typeof data.plan === "object") state.plan = data.plan;
+    if (data.plan && typeof data.plan === "object") {
+      state.plan = normalizePlan(data.plan, state.children);
+      if (data.version !== 2 && !localStorage.getItem(STORE_KEY + '.before-daily')) localStorage.setItem(STORE_KEY + '.before-daily', raw);
+    }
     if (Array.isArray(data.checks)) state.checks = data.checks;
   } catch (e) { /* corrupt store — start fresh */ }
 }
@@ -245,7 +249,7 @@ function weekCost(provider, weekId) {
   const pl = plannerOf(provider);
   const wk = weekById(weekId);
   if (!wk) return null;
-  if (isHafOnly(provider)) return { value: 0, estimate: false, label: "Free (HAF, if eligible)" };
+  if (isHafOnly(provider) && (pl.weeks || []).includes(Number(weekId))) return { value: 0, estimate: false, label: "Free (HAF, if eligible)" };
   const pr = pl.price || {};
   const days = (pl.daysPerWeek && pl.daysPerWeek[String(weekId)]) || (wk.stub ? wk.days : 5);
 
@@ -272,7 +276,7 @@ function weekCost(provider, weekId) {
 
 function ageFits(provider, age) {
   return Number.isFinite(provider.ageMin) && Number.isFinite(provider.ageMax)
-    ? age >= provider.ageMin && age <= provider.ageMax
+    ? age >= provider.ageMin && (Number.isInteger(provider.ageMax) ? age < provider.ageMax + 1 : age <= provider.ageMax)
     : true;
 }
 
@@ -347,9 +351,9 @@ function ageMatches(item) {
   if (state.age.startsWith("child:")) {
     const child = childById(state.age.slice(6));
     if (!child) return true;
-    return item.ageMin <= child.age && item.ageMax >= child.age;
+    return ageFits(item, child.age);
   }
-  if (state.age === "under5") return item.ageMin <= 4;
+  if (state.age === "under5") return item.ageMin < 5;
   if (state.age === "primary") return item.ageMin <= 11 && item.ageMax >= 5;
   if (state.age === "teen") return item.ageMax >= 12;
   return true;
@@ -436,6 +440,7 @@ function badgeRow(provider) {
   if (pl.fridaysOnly) badges.push(`<span class="badge badge-tbc">Fridays only</span>`);
   const av = availabilityInfo(provider);
   if (av) badges.push(`<span class="badge badge-waitlist"${av.note ? ` title="${escapeHtml(av.note)}"` : ""}>&#9888; ${escapeHtml(av.text)}</span>`);
+  badges.push(`<span class="badge badge-tbc">${escapeHtml(bookingState(provider))}</span>`);
   return badges.join("");
 }
 
@@ -476,18 +481,11 @@ function sourceLinks(provider) {
 
 function renderProviders() {
   const matches = sortProviders(D.providers.filter(providerMatches));
-  els.resultCount.textContent = `${matches.length} of ${D.providers.length} shown`;
-  els.emptyState.hidden = matches.length > 0;
-
-  // Small screens: first paint shows a page of cards + "Show all" (reset on filter change).
-  const paginated = MOBILE_MQ.matches && !mobileShowAll && matches.length > MOBILE_PAGE_SIZE;
-  const visible = paginated ? matches.slice(0, MOBILE_PAGE_SIZE) : matches;
-
   // Only the very first render plays the stagger animation.
   if (gridHasRendered) els.providerGrid.classList.add("no-anim");
   gridHasRendered = true;
 
-  els.providerGrid.innerHTML = visible.map((provider, i) => {
+  const cardHtml = (provider, i) => {
     const pl = plannerOf(provider);
     const shortlisted = state.shortlist.includes(provider.id);
     const map = mapLink(provider);
@@ -540,9 +538,21 @@ function renderProviders() {
         </div>
       </article>
     `;
-  }).join("") + (paginated
-    ? `<button class="btn-sub show-all-camps" type="button" data-show-all-camps="1">Show all ${matches.length} camps</button>`
-    : "");
+  };
+  const confirmed = matches.filter(p => (plannerOf(p).weeks || []).length);
+  const unconfirmed = matches.filter(p => !(plannerOf(p).weeks || []).length);
+  els.providerGrid.innerHTML = confirmed.map(cardHtml).join('');
+  document.querySelector('#unconfirmedGrid').innerHTML = unconfirmed.map(cardHtml).join('');
+  const totalConfirmed = D.providers.filter(p => (plannerOf(p).weeks || []).length).length;
+  document.querySelector('#confirmedCount').textContent = `${confirmed.length} confirmed October options${confirmed.length !== totalConfirmed ? ` matching your filters (${totalConfirmed} total)` : ''} — dates published; check booking status on each card.`;
+  document.querySelector('#unconfirmedCount').textContent = `${unconfirmed.length} previous providers — October unconfirmed`;
+  document.querySelector('#unconfirmedProviders').hidden = !unconfirmed.length || state.confirmedOnly;
+  els.resultCount.textContent = `${confirmed.length} confirmed · ${unconfirmed.length} unconfirmed`;
+  els.emptyState.hidden = confirmed.length > 0;
+  els.emptyState.textContent = unconfirmed.length
+    ? 'No confirmed October camps match those filters. Expand the previous providers above to see unconfirmed leads, or widen your filters.'
+    : 'No camps match those filters. Try widening the day length or price, or reset the filters.';
+
 }
 
 /* ────────────────────────── compare ────────────────────────── */
@@ -592,7 +602,7 @@ function renderChildren() {
   els.childChips.innerHTML = state.children.map((c) => `
     <span class="child-chip">
       <span class="child-dot" style="background:${c.color}"></span>
-      ${escapeHtml(c.name)} <small>· age ${c.age}</small>
+      ${escapeHtml(c.name)} <small>· ${ageLabel(c.age)}</small>
       <button class="child-remove" type="button" data-removechild="${escapeHtml(c.id)}"
         aria-label="Remove ${escapeHtml(c.name)}">×</button>
     </span>
@@ -601,7 +611,7 @@ function renderChildren() {
   els.childAgeChips.innerHTML = state.children.map((c) => `
     <button class="age-chip is-child ${state.age === "child:" + c.id ? "is-active" : ""}"
       type="button" data-age="child:${escapeHtml(c.id)}">
-      Fits ${escapeHtml(c.name)} (${c.age})
+      Fits ${escapeHtml(c.name)} (${ageLabel(c.age)})
     </button>
   `).join("");
   bindAgeChips();
@@ -628,275 +638,142 @@ function removeChild(id) {
 
 /* ────────────────────────── planner grid ────────────────────────── */
 
-function planEntry(weekId, childId) {
-  return (state.plan[weekId] && state.plan[weekId][childId]) || null;
+/* Multiple bookings per child/week. Days belong to at most one booking. */
+function weekDays(weekId) {
+  const wk = weekById(weekId);
+  return Array.from({ length: Math.min(wk?.days || 5, 5) }, (_, i) => i + 1);
 }
-
-function setPlanEntry(weekId, childId, entry) {
-  if (!state.plan[weekId]) state.plan[weekId] = {};
-  if (entry) state.plan[weekId][childId] = entry;
+function bookingId() { return 'b' + crypto.randomUUID().replaceAll('-', ''); }
+function planEntries(weekId, childId) {
+  const raw = state.plan[weekId]?.[childId];
+  return Array.isArray(raw) ? raw : raw ? [raw] : [];
+}
+function normalizePlan(plan, children) {
+  const out = {};
+  for (const wk of P.weeks) for (const child of children) {
+    const raw = plan?.[wk.id]?.[child.id];
+    const list = Array.isArray(raw) ? raw : raw ? [raw] : [];
+    const occupied = new Set();
+    const entries = list.slice(0, 5).flatMap((r, i) => {
+      if (!r || !['camp','other','family','leave','swap'].includes(r.type)) return [];
+      if (r.type === 'camp' && typeof r.campId !== 'string') return [];
+      const days = [...new Set(Array.isArray(r.days) ? r.days : weekDays(wk.id))]
+        .filter(d => weekDays(wk.id).includes(d) && !occupied.has(d)).sort();
+      if (!days.length) return [];
+      days.forEach(d => occupied.add(d));
+      const e = { id: `b${wk.id}_${child.id}_${i}`, type: r.type, days };
+      if (typeof r.id === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(r.id)) e.id = r.id;
+      if (r.type === 'camp') e.campId = r.campId.slice(0, 60);
+      if (r.type === 'other') {
+        e.label = String(r.label || 'My own camp').slice(0, 60);
+        e.costBasis = r.costBasis === 'day' ? 'day' : 'week';
+      }
+      for (const key of ['cost','myCost']) if (Number.isFinite(r[key]) && r[key] >= 0) e[key] = Math.round(r[key] * 100) / 100;
+      if (r.booked === true) e.booked = true;
+      return [e];
+    });
+    if (entries.length) { out[wk.id] ||= {}; out[wk.id][child.id] = entries; }
+  }
+  return out;
+}
+function writeEntries(weekId, childId, entries) {
+  state.plan[weekId] ||= {};
+  if (entries.length) state.plan[weekId][childId] = entries;
   else delete state.plan[weekId][childId];
-  saveState();
-  renderPlanner();
+  if (!Object.keys(state.plan[weekId]).length) delete state.plan[weekId];
+  saveState(); renderPlanner();
 }
-
-/* Keep the booked tick when the picker re-assigns the same camp (whole-week ↔
- * pick-days, or editing a custom camp); anything different starts unbooked. */
-function carryBooked(weekId, childId, entry) {
-  const cur = planEntry(weekId, childId);
-  if (cur && cur.booked && cur.type === entry.type && cur.campId === entry.campId) entry.booked = true;
-  return entry;
-}
-
 function entryCost(entry, weekId) {
   if (!entry) return null;
-  if (entry.type !== "camp") {
-    const base = Number.isFinite(entry.cost) ? entry.cost : 0;
-    if (entry.costBasis === "day") {
-      const n = entryDays(entry, weekId).days.length;
-      return { value: Math.round(base * n * 100) / 100, estimate: false, label: `${money(base)} × ${n} day${n === 1 ? "" : "s"}` };
-    }
-    return { value: base, estimate: false, label: base ? "your own figure" : "no camp cost" };
+  if (entry.type !== 'camp') {
+    if (entry.type !== 'other') return { value: 0, estimate: false };
+    if (!Number.isFinite(entry.cost)) return null;
+    return { value: entry.cost * (entry.costBasis === 'day' ? entry.days.length : 1), estimate: false };
   }
+  if (Number.isFinite(entry.myCost)) return { value: entry.myCost, estimate: false };
   const p = providerById(entry.campId);
   if (!p) return null;
-  // A price the parent has entered themselves beats every published figure.
-  if (Number.isFinite(entry.myCost)) {
-    return { value: entry.myCost, estimate: false, label: "your price" };
-  }
-  // Part-week selection: price by day rate where one is published.
-  if (Array.isArray(entry.days) && entry.days.length) {
-    const info = entryDays(entry, weekId);
-    if (info.days.length < info.allowed.length) {
-      if (isHafOnly(p)) return { value: 0, estimate: false, label: "Free (HAF, if eligible)" };
-      const pr = plannerOf(p).price || {};
-      if (Number.isFinite(pr.day)) {
-        const v = pr.day * info.days.length;
-        return { value: v, estimate: true, label: `${money(pr.day)} × ${info.days.length} day${info.days.length === 1 ? "" : "s"}` };
-      }
-      return null; // only a week price is published — part-week cost unknown
-    }
-  }
-  return weekCost(p, weekId);
+  const pl = plannerOf(p);
+  if (pl.fullWeekOnly || entry.days.length === allowedDaysFor(p, weekId).length) return weekCost(p, weekId);
+  if (Number.isFinite(pl.price?.day)) return { value: pl.price.day * entry.days.length, estimate: true };
+  return null;
 }
-
-function entryMeta(entry, weekId) {
-  if (!entry) return "";
-  const bits = [];
-  if (entry.type === "camp") {
-    const p = providerById(entry.campId);
-    if (!p) return "";
-    const pl = plannerOf(p);
-    const info = entryDays(entry, weekId);
-    if (!info.isDefault && info.days.length < info.allowed.length) {
-      bits.push(info.days.map((d) => DAY_LABELS[d - 1]).join(" "));
-    } else if (pl.fridaysOnly) bits.push("Friday only");
-    else if (pl.daysPerWeek && pl.daysPerWeek[String(weekId)]) bits.push(`${pl.daysPerWeek[String(weekId)]} days`);
-    if (Number.isFinite(entry.myCost)) bits.push("your price");
-    if (pl.weeks && !pl.weeks.includes(Number(weekId))) bits.push("⚠ dates unconfirmed");
-    else if (pl.weeksLikely && !(pl.weeks || []).length) bits.push("⚠ confirm dates");
-  } else if (entry.costBasis === "day" && Array.isArray(entry.days) && entry.days.length < 5) {
-    bits.push(entry.days.map((d) => DAY_LABELS[d - 1]).join(" "));
-  }
-  return bits.join(" · ");
+function totalLabel(total, unknown) {
+  return unknown ? total ? `${money(total)} + ${unknown} price${unknown === 1 ? '' : 's'} to confirm` : 'Price to confirm' : money(total);
 }
-
-/* Planner action buttons are inert-looking (not disabled — handlers already
- * no-op safely) until the plan has at least one entry. */
+function isBooking(e) { return e.type === 'camp' || e.type === 'other'; }
+function bookingState(p, now = new Date()) {
+  const pl = plannerOf(p);
+  if (pl.bookingOpens && now < new Date(pl.bookingOpens)) return 'Opens ' + pl.bookingOpensLabel;
+  return (pl.weeks || []).length ? 'Dates published · places unverified' : 'October availability unverified';
+}
+function ageLabel(age) {
+  const total = Math.round(age * 12), years = Math.floor(total / 12), months = total % 12;
+  return `${years}y${months ? ` ${months}m` : ''}`;
+}
 function updatePlannerActionState() {
-  const hasEntries = Object.values(state.plan).some((row) => row && Object.keys(row).length > 0);
-  ["#sharePlan", "#calendarPlan", "#copyPlan", "#printPlan", "#clearPlan"].forEach((sel) => {
-    const btn = document.querySelector(sel);
-    if (!btn) return;
-    if (!("origTitle" in btn.dataset)) btn.dataset.origTitle = btn.getAttribute("title") || "";
-    btn.classList.toggle("is-disabled", !hasEntries);
-    if (!hasEntries) {
-      btn.setAttribute("aria-disabled", "true");
-      btn.setAttribute("title", "Add camps to your plan first");
-    } else {
-      btn.removeAttribute("aria-disabled");
-      if (btn.dataset.origTitle) btn.setAttribute("title", btn.dataset.origTitle);
-      else btn.removeAttribute("title");
-    }
-  });
+  const has = P.weeks.some(w=>state.children.some(c=>planEntries(w.id,c.id).length));
+  for(const id of ['sharePlan','calendarPlan','copyPlan','printPlan','clearPlan']) document.getElementById(id).disabled=!has;
 }
-
 function renderPlanner() {
+  document.querySelector('.planner-section').dataset.printTitle = `KidSorted — ${P.seasonLabel} (data checked ${D.updated})`;
   updatePlannerActionState();
-  const hasChildren = state.children.length > 0;
-  els.plannerEmpty.hidden = hasChildren;
-  els.plannerWrap.hidden = !hasChildren;
-  els.budgetBand.hidden = !hasChildren;
-  if (!hasChildren) return;
-
-  const head = `<thead><tr>
-    <th scope="col">Week</th>
-    ${state.children.map((c) => `<th scope="col"><span class="child-dot" style="background:${c.color}"></span>${escapeHtml(c.name)} (${c.age})</th>`).join("")}
-    <th scope="col">Week total</th>
-  </tr></thead>`;
-
-  const rows = P.weeks.map((wk) => {
-    let weekTotal = 0;
-    let weekUnknown = 0;
-    const cells = state.children.map((c) => {
-      const entry = planEntry(wk.id, c.id);
-      const cost = entryCost(entry, wk.id);
-      if (entry) {
-        if (cost && cost.value != null) weekTotal += cost.value;
-        else if (entry.type === "camp") weekUnknown += 1;
-      }
-      const label = assignmentLabel(entry);
-      const meta = entryMeta(entry, wk.id);
-      const costText = entry
-        ? (cost ? `${money(cost.value)}${cost.estimate ? " est." : ""}` : "£? — confirm")
-        : "";
-      const bookable = entry && (entry.type === "camp" || entry.type === "other");
-      return `<td class="plan-cell">
-        <button class="assign-btn ${entry ? "is-set" : ""}" type="button"
-          data-week="${wk.id}" data-child="${escapeHtml(c.id)}"
-          style="--cc:${c.color}">
-          <span class="sr-only">Week ${wk.id}, ${escapeHtml(c.name)}: </span>
-          ${entry
-            ? `<span class="assign-name">${escapeHtml(label)}</span>
-               ${meta ? `<span class="assign-meta">${escapeHtml(meta)}</span>` : ""}
-               <span class="assign-cost ${cost || entry.type !== "camp" ? "" : "is-unknown"}">${escapeHtml(costText)}</span>`
-            : `<span>+ Choose</span>`}
-        </button>
-        ${bookable ? `<button class="booked-toggle ${entry.booked ? "is-booked" : ""}" type="button"
-          data-booked-week="${wk.id}" data-booked-child="${escapeHtml(c.id)}"
-          aria-pressed="${entry.booked ? "true" : "false"}"
-          aria-label="${escapeHtml(label)}, week ${wk.id}: ${entry.booked ? "booked — tap to mark not booked" : "not booked yet — tap once you've booked it"}">
-          ${entry.booked ? "booked ✓" : "not booked"}
-        </button>` : ""}
-      </td>`;
-    }).join("");
-
-    const totalText = weekUnknown
-      ? `${money(weekTotal)} + ${weekUnknown}×£?`
-      : money(weekTotal);
-    return `<tr class="${wk.stub ? "stub-row" : ""}">
-      <td class="week-cell">
-        <span class="week-name">${escapeHtml(wk.label)}</span>
-        <span class="week-dates">${escapeHtml(wk.dates)}</span>
-        ${wk.note ? `<span class="week-flag" title="${escapeHtml(wk.note)}">${wk.stub ? "ℹ mostly covered" : "ℹ part week for many"}</span>` : ""}
-      </td>
-      ${cells}
-      <td class="row-total">${escapeHtml(totalText || "£0")}</td>
-    </tr>`;
-  }).join("");
-
-  els.plannerTable.innerHTML = head + `<tbody>${rows}</tbody>`;
+  const has = !!state.children.length;
+  els.plannerEmpty.hidden = has; els.plannerWrap.hidden = !has; els.budgetBand.hidden = !has;
+  els.plannerTable.innerHTML = '';
+  if (!has) return;
+  els.plannerTable.innerHTML = state.children.map(c => `<section class="child-plan" aria-label="Plan for ${escapeHtml(c.name)}">
+    <h3>${escapeHtml(c.name)} <small>${ageLabel(c.age)}</small></h3>
+    ${P.weeks.map(wk => {
+      const entries = planEntries(wk.id, c.id);
+      return `<section class="week-plan"><h4>${escapeHtml(wk.label)} · ${escapeHtml(wk.dates)}</h4>
+        ${wk.note ? `<p class="school-note">${escapeHtml(wk.note)}</p>` : ''}
+        <div class="daily-grid">${weekDays(wk.id).map(d => {
+          const entry = entries.find(e => e.days.includes(d));
+          const date = new Date(wk.mon + 'T12:00:00Z'); date.setUTCDate(date.getUTCDate() + d - 1);
+          const status = !entry ? 'Needs cover' : isBooking(entry) ? entry.booked ? 'Booked' : 'Planned · not booked' : 'Cover arranged';
+          return `<button type="button" class="daily-card ${entry ? 'has-cover' : 'needs-cover'}" data-open-day="${d}" data-week="${wk.id}" data-child="${escapeHtml(c.id)}">
+            <span class="daily-date">${DAY_LABELS[d-1]} ${date.getUTCDate()} ${MONTHS_SHORT[date.getUTCMonth()]}</span>
+            <strong>${entry ? escapeHtml(assignmentLabel(entry)) : '+ Add cover'}</strong><span class="daily-status">${status}</span></button>`;
+        }).join('')}</div>
+        <div class="booking-list">${entries.map(e => {
+          const cost = entryCost(e, wk.id);
+          return `<article class="booking-row"><div><strong>${escapeHtml(assignmentLabel(e))}</strong><p>${e.days.map(d => DAY_LABELS[d-1]).join(', ')} · ${cost ? money(cost.value) + (cost.estimate ? ' estimate' : '') : 'Price to confirm'}</p>
+            ${e.type === 'camp' && !(plannerOf(providerById(e.campId) || {}).weeks || []).includes(wk.id) ? '<p class="po-warn">Dates unconfirmed — check with provider</p>' : ''}</div>
+            <div class="booking-actions"><button type="button" class="btn-sub" data-edit-booking="${e.id}" data-week="${wk.id}" data-child="${escapeHtml(c.id)}">Edit booking</button>
+            ${isBooking(e) ? `<button type="button" class="btn-sub ${e.booked ? 'is-booked' : ''}" aria-pressed="${!!e.booked}" data-booking-toggle="${e.id}" data-week="${wk.id}" data-child="${escapeHtml(c.id)}">${e.booked ? 'Booked ✓' : 'Mark booked'}</button>` : ''}</div></article>`;
+        }).join('')}</div></section>`;
+    }).join('')}</section>`).join('');
   renderBudget();
 }
-
-/* ────────────────────────── budget ────────────────────────── */
-
 function renderBudget() {
-  const perChild = {};
-  let grand = 0;
-  let unknownCount = 0;
-  let tfcEligibleSpend = 0;
-  let bookable = 0;
-  let bookedCount = 0;
-  const staleUsed = new Set();
-  const availPlanned = new Set();
-  const uncovered = {};
-  const siblingHints = [];
-
-  state.children.forEach((c) => { perChild[c.id] = 0; uncovered[c.id] = []; });
-
-  P.weeks.forEach((wk) => {
-    const sameWeekCamps = {};
-    state.children.forEach((c) => {
-      const entry = planEntry(wk.id, c.id);
-      if (!entry) {
-        if (!wk.stub) uncovered[c.id].push(wk.id);
-        return;
-      }
-      if (entry.type === "camp" || entry.type === "other") {
-        bookable += 1;
-        if (entry.booked) bookedCount += 1;
-      }
-      if (entry.type !== "camp") {
-        const cc = entryCost(entry, wk.id);
-        const v = cc && Number.isFinite(cc.value) ? cc.value : 0;
-        perChild[c.id] += v;
-        grand += v;
-        return;
-      }
-      const p = providerById(entry.campId);
-      const cost = entryCost(entry, wk.id);
-      if (cost && cost.value != null) {
-        perChild[c.id] += cost.value;
-        grand += cost.value;
-        if (p) {
-          const pl = plannerOf(p);
-          if (pl.tfc || pl.vouchers) tfcEligibleSpend += cost.value;
-          if (pl.priceStale) staleUsed.add(`${p.name} (${pl.priceStale})`);
-        }
-      } else {
-        unknownCount += 1;
-      }
-      if (p) {
-        sameWeekCamps[p.id] = (sameWeekCamps[p.id] || 0) + 1;
-        const ai = availabilityInfo(p);
-        if (ai) availPlanned.add(`${p.name} — ${ai.text.toLowerCase()}`);
-      }
-    });
-    Object.entries(sameWeekCamps).forEach(([pid, n]) => {
-      const p = providerById(pid);
-      if (n >= 2 && p && (p.funding || []).includes("Sibling discount")) {
-        siblingHints.push(`${p.name} (${wk.label})`);
-      }
-    });
-  });
-
-  const cards = [
-    ...state.children.map((c) => `
-      <div class="budget-card">
-        <span class="budget-label"><span class="child-dot" style="background:${c.color};display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px"></span>${escapeHtml(c.name)}</span>
-        <span class="budget-value">${money(perChild[c.id])}</span>
-        <span class="budget-sub">${uncovered[c.id].length ? `${uncovered[c.id].length} week${uncovered[c.id].length === 1 ? "" : "s"} not covered yet` : "half term covered ✓"}</span>
-      </div>`),
-    `<div class="budget-card grand">
-      <span class="budget-label">Whole half term</span>
-      <span class="budget-value">${money(grand)}${unknownCount ? " +" : ""}</span>
-      <span class="budget-sub">${unknownCount ? `${unknownCount} booking${unknownCount === 1 ? "" : "s"} still “£?” — confirm prices` : "all priced bookings included"}</span>
-    </div>`
-  ];
-  if (bookable) {
-    cards.push(`<div class="budget-card bookings">
-      <span class="budget-label">Booked so far</span>
-      <span class="budget-value">${bookedCount} of ${bookable}</span>
-      <span class="budget-sub">${bookedCount === bookable ? "bookings made — all booked ✓" : "bookings made — tick cells as you book"}</span>
-    </div>`);
-  }
-  els.budgetCards.innerHTML = cards.join("");
-
+  let grand = 0, grandUnknown = 0, totalPlanned = 0, totalRequired = 0, totalBooked = 0, tfcSpend = 0;
   const notes = [];
-  const uncoveredMsgs = state.children
-    .filter((c) => uncovered[c.id].length)
-    .map((c) => `${c.name}: week${uncovered[c.id].length === 1 ? "" : "s"} ${uncovered[c.id].join(", ")}`);
-  if (uncoveredMsgs.length) {
-    notes.push(`<div class="budget-note warn"><strong>Gaps to fill:</strong> ${escapeHtml(uncoveredMsgs.join(" · "))}. Tap those cells to choose camps, leave or family cover.</div>`);
-  }
-  if (tfcEligibleSpend > 0) {
-    const saving = tfcEligibleSpend * 0.2;
-    notes.push(`<div class="budget-note save"><strong>Tax-Free Childcare:</strong> ${money(tfcEligibleSpend)} of your plan is with providers that take TFC or vouchers — paying through a TFC account could be worth roughly ${money(saving)} in government top-up (20p per 80p, caps apply, provider must confirm registration).</div>`);
-  }
-  if (siblingHints.length) {
-    notes.push(`<div class="budget-note save"><strong>Sibling discount:</strong> you've got two children at ${escapeHtml(siblingHints.join("; "))} — ask for the sibling rate when booking.</div>`);
-  }
-  if (staleUsed.size) {
-    notes.push(`<div class="budget-note warn"><strong>Guide prices used:</strong> ${escapeHtml([...staleUsed].join("; "))} — these are from earlier holidays, so confirm the October rate.</div>`);
-  }
-  if (availPlanned.size) {
-    notes.push(`<div class="budget-note warn"><strong>Availability:</strong> ${escapeHtml([...availPlanned].join("; "))} — check with the provider before counting on a place.</div>`);
-  }
-  if (!notes.length && grand > 0) {
-    notes.push(`<div class="budget-note">October prices checked 5 September 2026 — re-check when booking. “est.” totals multiply a day rate by the days in that week.</div>`);
-  }
-  els.budgetNotes.innerHTML = notes.join("");
+  const cards = state.children.map(c => {
+    let total = 0, unknown = 0, planned = 0, booked = 0, arranged = 0, required = 0;
+    const gaps = [];
+    for (const wk of P.weeks) {
+      const entries = planEntries(wk.id, c.id);
+      required += weekDays(wk.id).length;
+      const occupied = new Set(entries.flatMap(e => e.days));
+      planned += occupied.size;
+      gaps.push(...weekDays(wk.id).filter(d => !occupied.has(d)).map(d => `${DAY_LABELS[d-1]} ${new Date(Date.parse(wk.mon+'T12:00:00Z')+(d-1)*86400000).getUTCDate()} ${MONTHS_SHORT[new Date(wk.mon).getUTCMonth()]}`));
+      for (const e of entries) {
+        const cost = entryCost(e, wk.id);
+        if (cost) {total += cost.value;if(e.type === "camp" && plannerOf(providerById(e.campId)||{}).tfc)tfcSpend += cost.value;} else unknown++;
+        if (isBooking(e) && e.booked) booked += e.days.length;
+        if (!isBooking(e)) arranged += e.days.length;
+      }
+    }
+    grand += total; grandUnknown += unknown; totalPlanned += planned; totalRequired += required; totalBooked += booked;
+    if (gaps.length) notes.push(`<p><strong>${escapeHtml(c.name)} — still needs cover:</strong> ${gaps.join(', ')}.</p>`);
+    return `<div class="budget-card"><span class="budget-label">${escapeHtml(c.name)}</span><span class="budget-value">${totalLabel(total, unknown)}</span>
+      <span class="budget-sub">${planned} of ${required} days planned · ${required-planned} still to cover</span>
+      <span class="budget-sub">${booked} camp day${booked === 1 ? '' : 's'} booked · ${arranged} day${arranged === 1 ? '' : 's'} of other cover · ${planned-booked-arranged} camp day${planned-booked-arranged === 1 ? '' : 's'} awaiting booking</span></div>`;
+  });
+  els.budgetCards.innerHTML = cards.join('') + `<div class="budget-card grand"><span class="budget-label">Whole holiday</span><span class="budget-value">${totalLabel(grand, grandUnknown)}</span><span class="budget-sub">${totalPlanned} of ${totalRequired} child-days planned · ${totalBooked} camp day${totalBooked === 1 ? '' : 's'} booked</span></div>`;
+  if(tfcSpend > 0) notes.push(`<p><strong>Tax-Free Childcare:</strong> ${money(tfcSpend)} is with providers listed as accepting TFC. If eligible, the government contribution could cover approximately ${money(tfcSpend * .2)} of this bill; limits and provider participation apply.</p>`);
+  els.budgetNotes.innerHTML = notes.join('') + '<p>Estimates exclude unverified extras and discounts. Published dates do not guarantee a place; book directly with the provider.</p>';
 }
 
 /* ────────────────────────── picker dialog ────────────────────────── */
@@ -907,385 +784,116 @@ function refocusPicker(selector) {
   if (el) el.focus();
 }
 
-function openCellPicker(weekId, childId) {
-  pickerCtx = { mode: "cell", weekId: Number(weekId), childId };
-  pickerReturnFocus = `.assign-btn[data-week="${cssEsc(weekId)}"][data-child="${cssEsc(childId)}"]`;
-  state.pickerShowAll = false;
-  renderPicker();
-  els.pickerDialog.showModal();
+function openCellPicker(weekId, childId, day) {
+  pickerCtx = { mode: 'choose', weekId:Number(weekId), childId, days:day ? [Number(day)] : weekDays(weekId) };
+  pickerReturnFocus = `[data-open-day="${day || 1}"][data-week="${weekId}"][data-child="${cssEsc(childId)}"]`;
+  renderPicker(); els.pickerDialog.showModal();
 }
-
 function openCampAssign(campId) {
   if (!state.children.length) {
-    // Remember the camp, explain what to do, and reopen the picker once a child exists.
     pendingCampId = campId;
-    const p = providerById(campId);
-    let msg = document.querySelector("#childGateMsg");
-    if (!msg) {
-      msg = document.createElement("p");
-      msg.id = "childGateMsg";
-      msg.className = "children-hint child-gate-msg";
-      msg.setAttribute("role", "status");
-      els.childForm.insertAdjacentElement("afterend", msg);
-    }
-    msg.textContent = p
-      ? `Add your child, then we'll pick weeks for ${p.name}.`
-      : "Add your child, then we'll pick weeks for that camp.";
-    document.querySelector("#children").scrollIntoView({ behavior: "smooth" });
-    els.childName.focus({ preventScroll: true });
-    return;
+    document.querySelector('#childrenHint').textContent = 'Add a child to choose days for this camp. Your plan stays on this device.';
+    document.querySelector('#children').scrollIntoView({behavior:'smooth'}); els.childAge.focus(); return;
   }
-  pickerCtx = { mode: "camp", campId };
-  pickerReturnFocus = `[data-addplan="${cssEsc(campId)}"]`;
+  pickerCtx = { mode:'target', campId }; pickerReturnFocus = `[data-addplan="${cssEsc(campId)}"]`;
+  renderPicker(); els.pickerDialog.showModal();
+}
+function startDraft(weekId, childId, entry, days, editId) {
+  const full = entry.type === 'camp' && plannerOf(providerById(entry.campId) || {}).fullWeekOnly;
+  pickerCtx = {mode:'draft', weekId:Number(weekId), childId, editId, draft:{...entry,id:entry.id || bookingId(),days:full ? weekDays(weekId) : [...days]}};
   renderPicker();
-  els.pickerDialog.showModal();
 }
-
-function pickerOptionHtml(provider, weekId, opts = {}) {
-  const pl = plannerOf(provider);
-  const cost = weekCost(provider, weekId);
-  const costText = isHafOnly(provider)
-    ? "Free*"
-    : cost ? `${money(cost.value)}${cost.estimate ? " est." : ""}` : "£?";
-  const warns = [];
-  if (opts.unconfirmed) warns.push("October dates unconfirmed — check before relying on it");
-  if (pl.reconfirm) warns.push("Reconfirm dates with provider");
-  if (pl.fridaysOnly) warns.push("Friday only — covers one day of this week");
-  if (pl.priceStale) warns.push(`Price from ${pl.priceStale}`);
-  if (opts.ageWarn) warns.push(`Listed ages ${provider.ageLabel} — outside this child's age`);
-  const av = availabilityInfo(provider);
-  if (av) warns.push(av.text);
-  const bb = bookByInfo(pl);
-  const allowed = allowedDaysFor(provider, weekId);
-  const dayRate = (pl.price || {}).day;
-  const daysBtn = allowed.length > 1
-    ? `<button class="btn-mini btn-mini-ghost" type="button" data-pick-camp-days="${escapeHtml(provider.id)}">
-         Pick days${Number.isFinite(dayRate) ? ` · ${money(dayRate)}/day` : ""}
-       </button>`
-    : "";
-  return `
-    <div class="picker-option ${opts.current ? "is-current" : ""}">
-      <span class="po-name">${escapeHtml(provider.name)}</span>
-      <span class="po-cost">${escapeHtml(costText)}</span>
-      <span class="po-meta">${escapeHtml(provider.ageLabel)} · ${escapeHtml(hoursLabel(provider))} · ${escapeHtml(provider.area)}</span>
-      ${warns.length ? `<span class="po-warn">⚠ ${escapeHtml(warns.join(" · "))}</span>` : ""}
-      ${bb ? `<span class="po-warn deadline-note">⏰ ${escapeHtml(bb.label)}</span>` : ""}
-      <span class="po-actions">
-        <button class="btn-mini" type="button" data-pick-camp="${escapeHtml(provider.id)}">Whole week</button>
-        ${daysBtn}
-      </span>
-    </div>`;
+function draftCostText() {
+  const cost = entryCost(pickerCtx.draft, pickerCtx.weekId);
+  return cost ? `${money(cost.value)}${cost.estimate ? ' estimate' : ''}` : 'Price to confirm';
 }
-
+function readDraftFields() {
+  const d = pickerCtx.draft;
+  if (!d) return;
+  const price = document.querySelector('#draftPrice');
+  if (price) {
+    const key = d.type === 'camp' ? 'myCost' : 'cost';
+    if (price.value.trim() && price.validity.valid) d[key] = Number(price.value); else delete d[key];
+  }
+  if (d.type === 'other') {
+    d.label = document.querySelector('#draftName')?.value.trim().slice(0,60) || 'My own camp';
+    d.costBasis = document.querySelector('#draftBasis')?.value || 'week';
+  }
+}
 function renderPicker() {
-  if (!pickerCtx) return;
-
-  if (pickerCtx.mode === "camp") {
-    const provider = providerById(pickerCtx.campId);
-    if (!provider) return;
-    const pl = plannerOf(provider);
-    els.pickerTitle.textContent = provider.name;
-    els.pickerSub.textContent = "Pick the weeks to add — solid buttons are provider-confirmed 2026 weeks.";
-    const campAv = availabilityInfo(provider);
-    const campBb = bookByInfo(pl);
-    const campNotices = (campAv || campBb) ? `<p class="picker-note deadline-note">${[
-      campAv ? `⚠ ${escapeHtml(campAv.text)}${campAv.note ? ` — ${escapeHtml(campAv.note)}` : ""}` : "",
-      campBb ? `⏰ ${escapeHtml(campBb.label)}` : ""
-    ].filter(Boolean).join(" · ")}</p>` : "";
-    els.pickerBody.innerHTML = campNotices + state.children.map((c) => {
-      const fits = ageFits(provider, c.age);
-      const dayRows = P.weeks.filter((w) => !w.stub).map((w) => {
-        const current = planEntry(w.id, c.id);
-        const isThis = current && current.type === "camp" && current.campId === provider.id;
-        if (!isThis) return "";
-        const info = entryDays(current, w.id);
-        const cost = entryCost(current, w.id);
-        return `<div class="day-editor is-inline">
-          <span class="day-editor-label">Wk ${w.id}:</span>
-          ${[1, 2, 3, 4, 5].map((d) => `
-            <button type="button" class="day-chip ${info.days.includes(d) ? "is-on" : ""}"
-              data-camp-day="${d}" data-camp-day-week="${w.id}" data-camp-day-child="${escapeHtml(c.id)}"
-              aria-pressed="${info.days.includes(d) ? "true" : "false"}"
-              ${info.allowed.includes(d) ? "" : "disabled"}>${DAY_LABELS[d - 1]}</button>`).join("")}
-          <span class="day-editor-cost">${cost ? money(cost.value) + (cost.estimate ? " est." : "") : "£? — no day rate published"}</span>
-        </div>`;
-      }).join("");
-      return `<div>
-        <p class="picker-group-title"><span class="child-dot" style="background:${c.color};display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px"></span>${escapeHtml(c.name)} (${c.age})${fits ? "" : " — ⚠ outside listed ages " + escapeHtml(provider.ageLabel)}</p>
-        <div class="age-row" style="margin:0 6px 6px">
-          ${P.weeks.filter((w) => !w.stub).map((w) => {
-            const confirmed = (pl.weeks || []).includes(w.id);
-            const current = planEntry(w.id, c.id);
-            const isThis = current && current.type === "camp" && current.campId === provider.id;
-            return `<button class="age-chip ${isThis ? "is-active" : ""}" type="button"
-              ${confirmed ? "" : 'style="border-style:dashed"'}
-              data-assign-week="${w.id}" data-assign-child="${escapeHtml(c.id)}"
-              title="${escapeHtml(w.dates)}${confirmed ? "" : " — dates unconfirmed for this provider"}">
-              ${isThis ? "✓ " : ""}Wk ${w.id}${confirmed ? "" : ` <small>· dates TBC</small><span class="sr-only"> (dates unconfirmed)</span>`}
-            </button>`;
-          }).join("")}
-        </div>
-        ${dayRows}
-      </div>`;
-    }).join("") + `<p class="picker-note">Tap a week to add or remove it — its days appear underneath, already set to every day this camp runs, so untick any your child will skip. Dashed weeks mean the provider hasn't published dates for that week — confirm before counting on it.</p>`;
-    return;
+  const ctx = pickerCtx;
+  if (!ctx) return;
+  if (ctx.mode === 'target') {
+    const p = providerById(ctx.campId);
+    els.pickerTitle.textContent = p.name;
+    els.pickerSub.textContent = 'Choose a child, then the days you need.';
+    els.pickerBody.innerHTML = state.children.map(c => P.weeks.map(w => `<button type="button" class="picker-option" data-target-child="${escapeHtml(c.id)}" data-target-week="${w.id}"><strong>${escapeHtml(c.name)} · ${ageLabel(c.age)}</strong><span>${escapeHtml(w.dates)}${ageFits(p,c.age) ? '' : ' · outside listed ages — check eligibility'}</span></button>`).join('')).join(''); return;
   }
-
-  // cell mode
-  const wk = weekById(pickerCtx.weekId);
-  const child = childById(pickerCtx.childId);
-  if (!wk || !child) return;
-  const current = planEntry(wk.id, child.id);
-
-  els.pickerTitle.textContent = `${wk.label} · ${wk.dates}`;
-  els.pickerSub.textContent = `Cover for ${child.name} (age ${child.age})${wk.note ? " — " + wk.note : ""}`;
-
-  const fits = (p) => ageFits(p, child.age);
-  const confirmed = [];
-  const likely = [];
-  const sessions = [];
-  const hafOnly = [];
-
-  D.providers.forEach((p) => {
-    const pl = plannerOf(p);
-    if (pl.plannerRole === "route") return;
-    const fit = fits(p);
-    if (!fit && !state.pickerShowAll) return;
-    const target = isHafOnly(p) ? hafOnly
-      : (pl.weeks || []).includes(wk.id) ? confirmed
-      : pl.sessionBased ? sessions
-      : pl.weeksLikely ? likely
-      : null;
-    if (target) target.push({ p, ageWarn: !fit });
-  });
-
-  const sortByCost = (arr) => arr.sort((a, b) => {
-    const ca = weekCost(a.p, wk.id); const cb = weekCost(b.p, wk.id);
-    return (ca ? ca.value : Infinity) - (cb ? cb.value : Infinity) || a.p.name.localeCompare(b.p.name);
-  });
-
-  const group = (title, arr, opts = {}) => arr.length
-    ? `<p class="picker-group-title">${escapeHtml(title)}</p>` +
-      sortByCost(arr).map(({ p, ageWarn }) => pickerOptionHtml(p, wk.id, {
-        ...opts, ageWarn,
-        current: current && current.type === "camp" && current.campId === p.id
-      })).join("")
-    : "";
-
-  const customs = [
-    { type: "leave", label: "Annual leave — I'm off that week" },
-    { type: "family", label: "Family / grandparents cover" },
-    { type: "swap", label: "Friend or childcare swap" }
-  ].map((c) => `
-    <button class="picker-option is-custom" type="button" data-pick-custom="${c.type}">
-      <span class="po-name">${escapeHtml(c.label)}</span>
-      <span class="po-cost">£0</span>
-    </button>`).join("");
-
-  // Day editor for the current assignment (camps, and custom camps priced per day).
-  const dayEditor = (() => {
-    if (!current) return "";
-    if (current.type !== "camp" && current.costBasis !== "day") return "";
-    const info = entryDays(current, wk.id);
-    const cost = entryCost(current, wk.id);
-    return `<div class="day-editor">
-      <span class="day-editor-label">Days:</span>
-      ${[1, 2, 3, 4, 5].map((d) => `
-        <button type="button" class="day-chip ${info.days.includes(d) ? "is-on" : ""}"
-          aria-pressed="${info.days.includes(d) ? "true" : "false"}"
-          data-day-toggle="${d}" ${info.allowed.includes(d) ? "" : "disabled"}>${DAY_LABELS[d - 1]}</button>`).join("")}
-      <span class="day-editor-cost">${cost ? money(cost.value) + (cost.estimate ? " est." : "") : "£? — no day rate published, ask provider"}</span>
-    </div>`;
-  })();
-
-  const cur = current && current.type === "other" ? current : null;
-  const curDays = cur && Array.isArray(cur.days) && cur.days.length ? cur.days : [1, 2, 3, 4, 5];
-  const customCampForm = `
-    <p class="picker-group-title">Camp not in this list? Add your own</p>
-    <div class="custom-camp-form">
-      <label class="field"><span>Camp name</span>
-        <input type="text" id="customCampName" maxlength="34"
-          placeholder="e.g. Vestry holiday club"
-          value="${cur ? escapeHtml(cur.label || "") : ""}"></label>
-      <label class="field"><span>Cost (£)</span>
-        <input type="number" id="customCampCost" min="0" step="0.01" inputmode="decimal"
-          placeholder="0"
-          value="${cur && Number.isFinite(cur.cost) && cur.cost ? cur.cost : ""}"></label>
-      <label class="field"><span>That's the price…</span>
-        <select id="customCampBasis">
-          <option value="week" ${cur && cur.costBasis === "day" ? "" : "selected"}>for the week</option>
-          <option value="day" ${cur && cur.costBasis === "day" ? "selected" : ""}>per day</option>
-        </select></label>
-      <button class="btn btn-add" type="button" data-pick-customcamp="1">${cur ? "Save changes" : "Add to this week"}</button>
-    </div>
-    <div class="custom-days">
-      <span class="day-editor-label">Days:</span>
-      ${[1, 2, 3, 4, 5].map((d) => `
-        <button type="button" class="day-chip ${curDays.includes(d) ? "is-on" : ""}"
-          aria-pressed="${curDays.includes(d) ? "true" : "false"}" data-form-day="${d}">${DAY_LABELS[d - 1]}</button>`).join("")}
-    </div>
-    <p class="picker-note">Goes straight into your totals like any other camp. Pick the days, and if you only know the day rate choose "per day" — it multiplies up for you.</p>`;
-
-  els.pickerBody.innerHTML = [
-    current ? `<button class="picker-remove" type="button" data-pick-remove="1">Remove “${escapeHtml(assignmentLabel(current))}” from this week</button>` : "",
-    dayEditor,
-    current && current.type === "camp" ? `
-      <div class="day-editor my-price-row">
-        <label class="field my-price-field"><span>What you'll actually pay this week (£)</span>
-          <input type="number" id="myCostInput" min="0" step="0.01" inputmode="decimal"
-            placeholder="e.g. 120"
-            value="${Number.isFinite(current.myCost) ? current.myCost : ""}"></label>
-        <button class="btn-mini" type="button" data-set-mycost="1">${Number.isFinite(current.myCost) ? "Update my price" : "Use my price"}</button>
-        ${Number.isFinite(current.myCost) ? `<button class="btn-mini btn-mini-ghost" type="button" data-clear-mycost="1">Back to estimate</button>` : ""}
-      </div>
-      <p class="picker-note">Know the real price — a sibling rate, early-bird discount or a quote from the provider? Enter it and your budget uses that figure instead of our estimate.</p>` : "",
-    wk.stub ? `<p class="picker-note">ℹ ${escapeHtml(wk.note)}</p>` : "",
-    group("Confirmed for this week", confirmed),
-    group("October dates to confirm", likely, { unconfirmed: true }),
-    group("Workshops & sessions (part-week)", sessions, { unconfirmed: true }),
-    group("Free HAF camps (benefits-related FSM)", hafOnly, { unconfirmed: true }),
-    hafOnly.length ? `<p class="picker-note">*HAF places are free for eligible children and include food — book via the <a href="https://eequ.org/hafwalthamforest" target="_blank" rel="noreferrer">Eequ feed</a> for current sessions.</p>` : "",
-    customCampForm,
-    `<p class="picker-group-title">Not a camp</p>`,
-    customs,
-    `<label class="toggle-chip" style="margin:10px 6px 0">
-      <input type="checkbox" id="pickerShowAll" ${state.pickerShowAll ? "checked" : ""}>
-      <span>Show camps outside ${escapeHtml(child.name)}'s age range</span>
-    </label>`
-  ].join("");
-
-  const showAll = els.pickerBody.querySelector("#pickerShowAll");
-  if (showAll) showAll.addEventListener("change", (e) => {
-    state.pickerShowAll = e.target.checked;
-    renderPicker();
-    refocusPicker("#pickerShowAll");
-  });
+  const c = childById(ctx.childId), wk = weekById(ctx.weekId);
+  if (!c || !wk) return;
+  els.pickerTitle.textContent = `${c.name} · ${wk.dates}`;
+  if (ctx.mode === 'choose') {
+    els.pickerSub.textContent = 'Choose a camp or other cover. You can review the days before saving.';
+    const options = confirmed => D.providers.filter(p => plannerOf(p).plannerRole !== 'route' && ageFits(p,c.age) && (!!plannerOf(p).weeks?.includes(wk.id) === confirmed)).map(p => `<button type="button" class="picker-option" data-choose-camp="${escapeHtml(p.id)}"><strong>${escapeHtml(p.name)}</strong><span>${escapeHtml(p.ageLabel)} · ${escapeHtml(priceFact(p))}</span><small>${escapeHtml(bookingState(p))}</small></button>`).join('');
+    els.pickerBody.innerHTML = `<p class="picker-group-title">Dates published for this holiday</p>${options(true) || '<p>No date-confirmed camps fit this age. Check eligibility with providers or add your own.</p>'}<details><summary>Other providers — October unconfirmed</summary>${options(false)}</details>
+      <p class="picker-group-title">Other cover</p>${[['family','Family / grandparents'],['leave','Annual leave'],['swap','Friend / childcare swap'],['other','Add my own camp']].map(([v,t])=>`<button type="button" class="picker-option" data-choose-type="${v}">${t}</button>`).join('')}`; return;
+  }
+  const d = ctx.draft, p = d.type === 'camp' ? providerById(d.campId) : null, full = p && plannerOf(p).fullWeekOnly;
+  els.pickerSub.textContent = assignmentLabel(d);
+  const conflicts = conflictingEntries(ctx);
+  els.pickerBody.innerHTML = `<p>${p ? escapeHtml(bookingState(p)) : 'Choose which days this cover applies to.'}</p>
+    ${p && !ageFits(p,c.age) ? `<p class="po-warn">Outside listed ages (${escapeHtml(p.ageLabel)}). Check eligibility before booking.</p>` : ''}
+    ${full ? '<p class="full-week-note"><strong>Full-week booking only.</strong> All five days are included. Individual days cannot be bought separately.</p>' : ''}
+    <fieldset class="draft-days"><legend>Days to cover</legend>${weekDays(wk.id).map(day=>`<label><input type="checkbox" data-draft-day="${day}" ${d.days.includes(day)?'checked':''} ${full?'disabled':''}> ${DAY_LABELS[day-1]} ${new Date(Date.parse(wk.mon+'T12:00:00Z')+(day-1)*86400000).getUTCDate()}</label>`).join('')}</fieldset>
+    ${d.type === 'other' ? `<label class="field"><span>Camp name</span><input id="draftName" maxlength="60" value="${escapeHtml(d.label || '')}"></label><label class="field"><span>Price applies to</span><select id="draftBasis"><option value="week">All selected days</option><option value="day" ${d.costBasis==='day'?'selected':''}>Each day</option></select></label>` : ''}
+    ${isBooking(d) ? `<label class="field"><span>${p ? 'Your total price for this booking (£, optional)' : 'Price (£, leave blank if unknown)'}</span><input id="draftPrice" type="number" min="0" step="0.01" inputmode="decimal" value="${Number.isFinite(p ? d.myCost : d.cost) ? (p ? d.myCost : d.cost) : ''}"></label>` : ''}
+    <p class="draft-price" id="draftCost" aria-live="polite">${draftCostText()}</p>
+    ${p && plannerOf(p).priceBasis ? `<p class="picker-note">${escapeHtml(plannerOf(p).priceBasis)}</p>` : ''}
+    <div id="draftConflict" role="status">${ctx.reviewOverlap && conflicts.length ? `<div class="overlap-review"><strong>These days already have cover:</strong><ul>${conflicts.map(e=>`<li>${escapeHtml(assignmentLabel(e))} — ${e.days.filter(day=>d.days.includes(day)).map(day=>DAY_LABELS[day-1]).join(', ')}${e.type==='camp' && plannerOf(providerById(e.campId)||{}).fullWeekOnly ? '. Replacing any day removes this full-week booking from the plan.' : ''}${e.booked ? ' This is marked booked; changing the plan does not cancel your provider booking.' : ''}</li>`).join('')}</ul><button class="btn btn-danger" type="button" data-confirm-replace="1">Replace this cover</button><button class="btn-sub" type="button" data-review-cancel="1">Keep existing cover</button></div>` : ''}</div>
+    ${d.booked ? '<p>This booking is marked booked. Changing dates resets that status; changing or removing it here does not cancel a provider booking.</p>' : ''}<p id="draftError" role="alert"></p><div class="draft-actions"><button type="button" class="btn btn-solid" data-save-draft="1">Save cover</button>${ctx.editId ? '<button type="button" class="btn btn-danger" data-remove-draft="1">Remove from plan</button>' : ''}</div>`;
+  for (const el of els.pickerBody.querySelectorAll('#draftPrice,#draftBasis,#draftName')) el.addEventListener('input',()=>{readDraftFields();document.querySelector('#draftCost').textContent=draftCostText();});
 }
-
+function conflictingEntries(ctx) {
+  return planEntries(ctx.weekId,ctx.childId).filter(e=>e.id!==ctx.editId && e.days.some(d=>ctx.draft.days.includes(d)));
+}
+function commitDraft() {
+  const {weekId,childId,draft,editId} = pickerCtx;
+  let entries = planEntries(weekId,childId).filter(e=>e.id!==editId).flatMap(e=>{
+    const days=e.days.filter(d=>!draft.days.includes(d));
+    if (days.length===e.days.length) return [e];
+    // A full-week reservation is atomic: never turn it into an invented daily rate.
+    if (e.type==='camp' && plannerOf(providerById(e.campId)||{}).fullWeekOnly) return [];
+    const remainder={...e,days};
+    // A quoted total cannot safely be prorated after dates change.
+    if ('myCost' in remainder) delete remainder.myCost;
+    if (remainder.type==='other' && remainder.costBasis!=='day') delete remainder.cost;
+    return days.length?[remainder]:[];
+  });
+  const previous = planEntries(weekId,childId).find(e=>e.id===editId);
+  if(previous && previous.days.join() !== [...draft.days].sort().join()) delete draft.booked;
+  entries.push({...draft,days:[...draft.days].sort()});
+  writeEntries(weekId,childId,entries); els.pickerDialog.close();
+}
 function handlePickerClick(event) {
-  const campBtn = event.target.closest("[data-pick-camp]");
-  const customBtn = event.target.closest("[data-pick-custom]");
-  const customCampBtn = event.target.closest("[data-pick-customcamp]");
-  const removeBtn = event.target.closest("[data-pick-remove]");
-  const assignWeekBtn = event.target.closest("[data-assign-week]");
-
-  if (pickerCtx && pickerCtx.mode === "camp") {
-    const campDayBtn = event.target.closest("[data-camp-day]");
-    if (campDayBtn) {
-      const weekId = Number(campDayBtn.dataset.campDayWeek);
-      const childId = campDayBtn.dataset.campDayChild;
-      const cur = planEntry(weekId, childId);
-      if (!cur) return;
-      const d = Number(campDayBtn.dataset.campDay);
-      const info = entryDays(cur, weekId);
-      const days = info.days.includes(d)
-        ? info.days.filter((x) => x !== d)
-        : [...info.days, d].sort((a, b) => a - b);
-      if (!days.length) return; // keep at least one day
-      setPlanEntry(weekId, childId, { ...cur, days });
-      renderPicker();
-      refocusPicker(`[data-camp-day="${d}"][data-camp-day-week="${weekId}"][data-camp-day-child="${cssEsc(childId)}"]`);
-      return;
-    }
-    if (assignWeekBtn) {
-      const weekId = Number(assignWeekBtn.dataset.assignWeek);
-      const childId = assignWeekBtn.dataset.assignChild;
-      const current = planEntry(weekId, childId);
-      const isThis = current && current.type === "camp" && current.campId === pickerCtx.campId;
-      setPlanEntry(weekId, childId, isThis ? null : { type: "camp", campId: pickerCtx.campId });
-      renderPicker();
-      refocusPicker(`[data-assign-week="${weekId}"][data-assign-child="${cssEsc(childId)}"]`);
-      return;
-    }
+  const ctx=pickerCtx;
+  if (!ctx) return;
+  const target=event.target.closest('[data-target-child]');
+  if (target) { const w=Number(target.dataset.targetWeek), c=target.dataset.targetChild;const occupied=new Set(planEntries(w,c).flatMap(e=>e.days)); const free=weekDays(w).filter(d=>!occupied.has(d));startDraft(w,c,{type:'camp',campId:ctx.campId},free.length?free:weekDays(w));return; }
+  const camp=event.target.closest('[data-choose-camp]'), type=event.target.closest('[data-choose-type]');
+  if (camp || type) {startDraft(ctx.weekId,ctx.childId,camp?{type:'camp',campId:camp.dataset.chooseCamp}:{type:type.dataset.chooseType},ctx.days);return;}
+  if (ctx.mode!=='draft') return;
+  if (event.target.matches('[data-draft-day]')) {
+    readDraftFields();ctx.draft.days=[...els.pickerBody.querySelectorAll('[data-draft-day]:checked')].map(el=>Number(el.dataset.draftDay));ctx.reviewOverlap=false;renderPicker();return;
   }
-
-  if (!pickerCtx || pickerCtx.mode !== "cell") return;
-  const { weekId, childId } = pickerCtx;
-
-  const formDayBtn = event.target.closest("[data-form-day]");
-  if (formDayBtn) {
-    formDayBtn.classList.toggle("is-on");
-    formDayBtn.setAttribute("aria-pressed", formDayBtn.classList.contains("is-on") ? "true" : "false");
-    return;
-  }
-
-  const campDaysBtn = event.target.closest("[data-pick-camp-days]");
-  if (campDaysBtn) {
-    // Assign the camp but keep the picker open on the day editor.
-    setPlanEntry(weekId, childId, carryBooked(weekId, childId, { type: "camp", campId: campDaysBtn.dataset.pickCampDays }));
-    renderPicker();
-    els.pickerBody.scrollTop = 0;
-    refocusPicker("[data-day-toggle]:not([disabled])");
-    return;
-  }
-
-  const myCostBtn = event.target.closest("[data-set-mycost]");
-  if (myCostBtn) {
-    const cur = planEntry(weekId, childId);
-    if (!cur) return;
-    const inp = els.pickerBody.querySelector("#myCostInput");
-    const raw = parseFloat(inp && inp.value);
-    const next = { ...cur };
-    if (Number.isFinite(raw) && raw >= 0) next.myCost = Math.round(raw * 100) / 100;
-    else delete next.myCost;
-    setPlanEntry(weekId, childId, next);
-    renderPicker();
-    refocusPicker("[data-set-mycost]");
-    return;
-  }
-
-  const clearCostBtn = event.target.closest("[data-clear-mycost]");
-  if (clearCostBtn) {
-    const cur = planEntry(weekId, childId);
-    if (!cur) return;
-    const next = { ...cur };
-    delete next.myCost;
-    setPlanEntry(weekId, childId, next);
-    renderPicker();
-    refocusPicker("[data-set-mycost]");
-    return;
-  }
-
-  const dayBtn = event.target.closest("[data-day-toggle]");
-  if (dayBtn) {
-    const d = Number(dayBtn.dataset.dayToggle);
-    const cur = planEntry(weekId, childId);
-    if (!cur) return;
-    const info = entryDays(cur, weekId);
-    const days = info.days.includes(d)
-      ? info.days.filter((x) => x !== d)
-      : [...info.days, d].sort((a, b) => a - b);
-    if (!days.length) return; // keep at least one day
-    setPlanEntry(weekId, childId, { ...cur, days });
-    renderPicker();
-    refocusPicker(`[data-day-toggle="${d}"]`);
-    return;
-  }
-
-  if (campBtn) {
-    setPlanEntry(weekId, childId, carryBooked(weekId, childId, { type: "camp", campId: campBtn.dataset.pickCamp }));
-    els.pickerDialog.close();
-  } else if (customCampBtn) {
-    const nameInput = els.pickerBody.querySelector("#customCampName");
-    const costInput = els.pickerBody.querySelector("#customCampCost");
-    const basisInput = els.pickerBody.querySelector("#customCampBasis");
-    const label = ((nameInput && nameInput.value) || "").trim().slice(0, 34) || "My own camp";
-    const raw = parseFloat(costInput && costInput.value);
-    const cost = Number.isFinite(raw) && raw >= 0 ? Math.round(raw * 100) / 100 : 0;
-    const costBasis = (basisInput && basisInput.value) === "day" ? "day" : "week";
-    const days = [...els.pickerBody.querySelectorAll("[data-form-day].is-on")]
-      .map((b) => Number(b.dataset.formDay)).sort((a, b) => a - b);
-    setPlanEntry(weekId, childId, carryBooked(weekId, childId, {
-      type: "other", label, cost, costBasis,
-      days: days.length && days.length < 5 ? days : undefined
-    }));
-    els.pickerDialog.close();
-  } else if (customBtn) {
-    setPlanEntry(weekId, childId, { type: customBtn.dataset.pickCustom });
-    els.pickerDialog.close();
-  } else if (removeBtn) {
-    setPlanEntry(weekId, childId, null);
-    els.pickerDialog.close();
+  if (event.target.closest('[data-review-cancel]')) {ctx.reviewOverlap=false;renderPicker();return;}
+  if (event.target.closest('[data-remove-draft]')) {writeEntries(ctx.weekId,ctx.childId,planEntries(ctx.weekId,ctx.childId).filter(e=>e.id!==ctx.editId));els.pickerDialog.close();return;}
+  if (event.target.closest('[data-save-draft],[data-confirm-replace]')) {
+    const bad=[...els.pickerBody.querySelectorAll('input')].find(el=>!el.validity.valid);
+    if (bad) {bad.reportValidity();return;}
+    readDraftFields();
+    if (!ctx.draft.days.length) {document.querySelector('#draftError').textContent='Choose at least one day.';return;}
+    if (conflictingEntries(ctx).length && !event.target.closest('[data-confirm-replace]')) {ctx.reviewOverlap=true;renderPicker();return;}
+    commitDraft();
   }
 }
 
@@ -1327,8 +935,7 @@ function planCalendarText() {
   const stamp = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
   P.weeks.forEach((wk) => {
     state.children.forEach((c) => {
-      const entry = planEntry(wk.id, c.id);
-      if (!entry) return;
+      planEntries(wk.id, c.id).forEach(entry => {
       const label = assignmentLabel(entry);
       const info = entryDays(entry, wk.id);
       const cost = entryCost(entry, wk.id);
@@ -1339,22 +946,24 @@ function planCalendarText() {
         descBits.push(`Hours: ${hoursLabel(p)}`);
         descBits.push(`Booking: ${p.source.url}`);
       }
-      if (cost && cost.value != null) descBits.push(`Cost: ${money(cost.value)}${cost.estimate ? " (est.)" : ""}`);
+      if (cost && cost.value != null) descBits.push(`Cost for this booking: ${money(cost.value)}${cost.estimate ? " (est.)" : ""}`);
       else if (entry.type === "camp") descBits.push("Cost: confirm with provider");
       descBits.push("Planned with KidSorted (kidsorted.co.uk) — confirm details with the provider before the day.");
       contiguousRuns(info.days).forEach(([a, b]) => {
         events.push([
           "BEGIN:VEVENT",
-          `UID:e17hc-${wk.id}-${c.id}-${a}${b}@e17studio.com`,
+          `UID:e17hc-${P.season}-${wk.id}-${c.id}-${entry.id}-${a}${b}@kidsorted.co.uk`,
           `DTSTAMP:${stamp}`,
           `DTSTART;VALUE=DATE:${addDaysCompact(wk.mon, a - 1)}`,
           `DTEND;VALUE=DATE:${addDaysCompact(wk.mon, b)}`,
           icsFold(`SUMMARY:${icsEscape(`${c.name}: ${label}`)}`),
           ...(p ? [icsFold(`LOCATION:${icsEscape(`${p.venue}${p.address ? ", " + p.address : ""}`)}`)] : []),
           icsFold(`DESCRIPTION:${icsEscape(descBits.join("\n"))}`),
+          `STATUS:${!isBooking(entry) || entry.booked ? "CONFIRMED" : "TENTATIVE"}`,
           "TRANSP:TRANSPARENT",
           "END:VEVENT"
         ].join("\r\n"));
+      });
       });
     });
   });
@@ -1365,7 +974,7 @@ function planCalendarText() {
     "PRODID:-//KidSorted//Holiday Camp Planner//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
-    icsFold("X-WR-CALNAME:E17 holiday camps — October half term 2026"),
+    icsFold(`X-WR-CALNAME:KidSorted — ${P.seasonLabel}`),
     events.join("\r\n"),
     "END:VCALENDAR"
   ].join("\r\n") + "\r\n";
@@ -1374,38 +983,22 @@ function planCalendarText() {
 /* ────────────────────────── copy / print / clear ────────────────────────── */
 
 function planSummaryText() {
-  const lines = [];
-  let bookable = 0;
-  let booked = 0;
-  lines.push("KIDSORTED HOLIDAY CAMP PLAN — SUMMER 2026");
-  lines.push(`Made with KidSorted — kidsorted.co.uk (data checked ${D.updated}).`);
-  lines.push("");
-  state.children.forEach((c) => {
-    lines.push(`${c.name} (age ${c.age})`);
-    let total = 0; let unknown = 0;
-    P.weeks.forEach((wk) => {
-      const entry = planEntry(wk.id, c.id);
-      if (!entry) {
-        if (!wk.stub) lines.push(`  ${wk.label} (${wk.dates}): — not covered yet`);
-        return;
+  const lines = [`KIDSORTED — ${P.seasonLabel}`, ''];
+  for (const c of state.children) {
+    lines.push(`${c.name} (${ageLabel(c.age)})`);
+    let total=0, unknown=0;
+    for (const wk of P.weeks) {
+      const entries=planEntries(wk.id,c.id);
+      for (const day of weekDays(wk.id)) {
+        const e=entries.find(e=>e.days.includes(day));
+        lines.push(`${wk.dates} · ${DAY_LABELS[day-1]}: ${e ? assignmentLabel(e) + (isBooking(e) ? e.booked ? ' — booked' : ' — not booked' : '') : 'NEEDS COVER'}`);
       }
-      const cost = entryCost(entry, wk.id);
-      let costText = "£0";
-      if (cost && cost.value != null) { costText = money(cost.value) + (cost.estimate ? " est." : ""); total += cost.value; }
-      else if (entry.type === "camp") { costText = "£? confirm"; unknown += 1; }
-      const meta = entryMeta(entry, wk.id);
-      if (entry.type === "camp" || entry.type === "other") {
-        bookable += 1;
-        if (entry.booked) booked += 1;
-      }
-      lines.push(`  ${wk.label} (${wk.dates}): ${assignmentLabel(entry)}${meta ? ` (${meta})` : ""} — ${costText}${entry.booked ? " — booked ✓" : ""}`);
-    });
-    lines.push(`  Total: ${money(total)}${unknown ? ` + ${unknown} unpriced` : ""}`);
-    lines.push("");
-  });
-  if (bookable) lines.push(`Bookings made so far: ${booked} of ${bookable}.`);
-  lines.push("October prices checked 5 September 2026 — always confirm with the provider before booking.");
-  return lines.join("\n");
+      for (const e of entries) {const cost=entryCost(e,wk.id);if(cost)total+=cost.value;else unknown++;}
+    }
+    lines.push(`Total: ${totalLabel(total,unknown)}`, '');
+  }
+  lines.push(`Source dates: ${D.updated}. Confirm prices and places with providers.`);
+  return lines.join('\n');
 }
 
 function bindPlannerActions() {
@@ -1418,7 +1011,7 @@ function bindPlannerActions() {
   if (tellBtn) {
     tellBtn.addEventListener("click", async () => {
       const url = toolUrl();
-      const msg = `Free local tool for planning October holiday camps in and around Walthamstow — every camp with dates, prices and free council places, plus a week-by-week planner you fill in yourself: ${url}`;
+      const msg = `Free local tool for planning October holiday camps in and around Walthamstow — local camps with clearly marked confirmed and unconfirmed dates, plus a daily planner you fill in yourself: ${url}`;
       tellWa.href = "https://wa.me/?text=" + encodeURIComponent(msg);
       tellWa.hidden = false;
       try {
@@ -1427,7 +1020,7 @@ function bindPlannerActions() {
       } catch {
         tellBtn.textContent = "Use WhatsApp →";
       }
-      setTimeout(() => { tellBtn.textContent = "Tell other parents"; }, 2000);
+      setTimeout(() => { tellBtn.textContent = "Share blank planner"; }, 2000);
     });
   }
 
@@ -1440,18 +1033,12 @@ function bindPlannerActions() {
       setTimeout(() => { shareBtn.textContent = SHARE_LABEL; }, 1800);
       return;
     }
-    // Hard guard: this link reveals where the children are each week. Make the
-    // user confirm so it can't be mistaken for the broadcast link.
-    const names = state.children.map((c) => c.name).join(" and ");
-    const plural = state.children.length > 1;
-    const okay = window.confirm(
-      `This makes a PRIVATE link that shows ${names}'s name${plural ? "s" : ""} and which camp they're at each week — in other words, where ${plural ? "they'll" : (state.children[0].name + " will")} be.\n\n` +
-      `Only send it to someone you'd trust with that, like a partner or grandparent. To share the planner with a group of parents, close this and use “Tell other parents” instead.\n\n` +
-      `Copy the private link?`
-    );
-    if (!okay) return;
+    document.querySelector('#privateShareReview').hidden = false;
+  });
+  document.querySelector('#confirmPrivateShare').addEventListener('click', async () => {
+    document.querySelector('#privateShareReview').hidden = true;
     const url = planShareUrl();
-    waShare.href = "https://wa.me/?text=" + encodeURIComponent(`Our October half term 2026 holiday camp plan — week-by-week cover and costs: ${url}`);
+    waShare.href = "https://wa.me/?text=" + encodeURIComponent(`Our ${P.seasonLabel} holiday camp plan — daily cover and costs: ${url}`);
     waShare.hidden = false;
     try {
       await navigator.clipboard.writeText(url);
@@ -1498,7 +1085,7 @@ function bindPlannerActions() {
 
   document.querySelector("#clearPlan").addEventListener("click", () => {
     if (!Object.keys(state.plan).length) return;
-    if (confirm("Clear every week of the plan? Your children and shortlist stay.")) {
+    if (confirm("Clear all planned days? Your children and shortlist stay.")) {
       state.plan = {};
       saveState();
       renderPlanner();
@@ -1528,7 +1115,7 @@ function planShareUrl() {
     if (row && Object.keys(row).length) plan[weekId] = row;
   });
   const payload = {
-    v: 1,
+    v: 2,
     season: P.season,
     children: state.children.map((c) => ({ id: c.id, name: c.name, age: c.age })),
     plan
@@ -1539,49 +1126,16 @@ function planShareUrl() {
 /* Validate an incoming #plan= hash into {children, plan}, or null. Every field
  * is whitelisted — a malformed link must never corrupt local state. */
 function parseSharedPlan(hash) {
-  const m = /^#plan=([A-Za-z0-9_-]+)$/.exec(hash || "");
-  if (!m) return null;
+  const m = /^#plan=([A-Za-z0-9_-]+)$/.exec(hash || '');
+  if (!m || m[1].length > 100000) return null;
   try {
-    const data = JSON.parse(base64urlDecode(m[1]));
-    if (!data || data.v !== 1 || data.season !== P.season || !Array.isArray(data.children)) return null;
-    const children = data.children
-      .filter((c) => c && typeof c.id === "string" && Number.isFinite(c.age))
-      .slice(0, CHILD_COLORS.length)
-      .map((c) => ({
-        id: c.id.slice(0, 24),
-        name: String(c.name || "").trim().slice(0, 20) || "Child",
-        age: Math.max(2, Math.min(17, Math.round(c.age)))
-      }));
+    const data=JSON.parse(base64urlDecode(m[1]));
+    if (![1,2].includes(data.v) || data.season!==P.season || !Array.isArray(data.children)) return null;
+    const ids=new Set();
+    const children=data.children.filter(c=>c && /^[a-zA-Z0-9_-]{1,60}$/.test(c.id) && Number.isFinite(c.age) && !ids.has(c.id) && ids.add(c.id)).slice(0,6).map(c=>({id:c.id,name:String(c.name||'Child').slice(0,20),age:Math.round(Math.max(2,Math.min(17.99,c.age))*12)/12}));
     if (!children.length) return null;
-    const childIds = new Set(children.map((c) => c.id));
-    const types = ["camp", "leave", "family", "swap", "other"];
-    const plan = {};
-    Object.entries(data.plan && typeof data.plan === "object" ? data.plan : {}).forEach(([weekId, row]) => {
-      if (!weekById(weekId) || !row || typeof row !== "object") return;
-      Object.entries(row).forEach(([childId, raw]) => {
-        if (!childIds.has(childId) || !raw || !types.includes(raw.type)) return;
-        const entry = { type: raw.type };
-        if (raw.type === "camp") {
-          if (typeof raw.campId !== "string") return;
-          entry.campId = raw.campId.slice(0, 60);
-          if (Number.isFinite(raw.myCost) && raw.myCost >= 0) entry.myCost = Math.round(raw.myCost * 100) / 100;
-        }
-        if (raw.type === "other") {
-          entry.label = String(raw.label || "").trim().slice(0, 34) || "My own camp";
-          entry.cost = Number.isFinite(raw.cost) && raw.cost >= 0 ? Math.round(raw.cost * 100) / 100 : 0;
-          entry.costBasis = raw.costBasis === "day" ? "day" : "week";
-        }
-        if (Array.isArray(raw.days)) {
-          const days = [...new Set(raw.days.filter((d) => [1, 2, 3, 4, 5].includes(d)))].sort((a, b) => a - b);
-          if (days.length && days.length < 5) entry.days = days;
-        }
-        if (raw.booked === true) entry.booked = true;
-        if (!plan[weekId]) plan[weekId] = {};
-        plan[weekId][childId] = entry;
-      });
-    });
-    return { children, plan };
-  } catch (e) { return null; /* malformed link — just ignore it */ }
+    return {children,plan:normalizePlan(data.plan,children)};
+  } catch {return null;}
 }
 
 function applySharedPlan(shared, mode) {
@@ -1589,16 +1143,26 @@ function applySharedPlan(shared, mode) {
     state.children = shared.children.map((c, i) => ({ ...c, color: CHILD_COLORS[i % CHILD_COLORS.length] }));
     state.plan = shared.plan;
   } else {
-    // Merge: add children we don't already have; incoming entries win for the
-    // incoming children's cells only — everyone else's weeks are untouched.
+    // Merge adds children and fills free dates while preserving existing cover.
     shared.children.forEach((c) => {
-      if (!childById(c.id)) {
+      if (!childById(c.id) && state.children.length < 6) {
         state.children.push({ ...c, color: CHILD_COLORS[state.children.length % CHILD_COLORS.length] });
       }
     });
-    Object.entries(shared.plan).forEach(([weekId, row]) => {
-      if (!state.plan[weekId]) state.plan[weekId] = {};
-      Object.assign(state.plan[weekId], row);
+    Object.entries(shared.plan).forEach(([weekId,row])=>{
+      for (const [childId,incoming] of Object.entries(row)) {
+        if (!childById(childId)) continue;
+        // Merge fills free dates only. Existing cover always wins.
+        const current=planEntries(weekId,childId), occupied=new Set(current.flatMap(e=>e.days));
+        const added=incoming.flatMap(e=>{
+          const days=e.days.filter(d=>!occupied.has(d));
+          if (!days.length || (e.type==='camp' && plannerOf(providerById(e.campId)||{}).fullWeekOnly && days.length!==e.days.length)) return [];
+          const copy={...e,id:bookingId(),days};
+          if(days.length!==e.days.length) {delete copy.myCost;if(copy.costBasis!=='day')delete copy.cost;}
+          return [copy];
+        });
+        state.plan[weekId] ||= {};state.plan[weekId][childId]=[...current,...added];
+      }
     });
   }
   saveState();
@@ -1609,12 +1173,23 @@ function applySharedPlan(shared, mode) {
 function offerSharedPlan() {
   const shared = parseSharedPlan(location.hash);
   pendingShared = shared;
-  if (!shared) { els.shareBanner.hidden = true; return; }
-  const names = shared.children.map((c) => `${c.name} (${c.age})`).join(", ");
+  document.querySelector('#legacyShareNotice').hidden = true;
+  if (!shared) {
+    els.shareBanner.hidden = true;
+    if (location.hash.startsWith('#plan=')) {
+      const notice=document.querySelector('#legacyShareNotice');notice.hidden=false;
+      let old=false;
+      try {const data=JSON.parse(base64urlDecode(location.hash.slice(6)));old=data.v===1 && (!data.season || data.season==='summer-2026');}catch{}
+      document.querySelector('#legacyShareText').textContent=old ? 'This link is for summer 2026. Open the archived plan to view or export it; your October plan stays here.' : 'This plan link is invalid or belongs to another holiday. Your current plan has not changed.';
+      const link=document.querySelector('#legacyShareLink');link.hidden=!old;link.href='previous-plans.html'+location.hash;
+    }
+    return;
+  }
+  const names = shared.children.map((c) => `${c.name} (${ageLabel(c.age)})`).join(", ");
   const weeks = Object.keys(shared.plan).length;
   els.shareBannerText.textContent =
-    `Someone sent you a October plan for ${names} — ${weeks} week${weeks === 1 ? "" : "s"} planned. ` +
-    `Loading it only changes this browser; your shortlist and checklist ticks stay as they are.`;
+    `Someone sent you a ${P.seasonLabel} plan for ${names} — ${weeks} week${weeks === 1 ? "" : "s"} planned. ` +
+    `Replace loads their plan. Merge adds children and fills free days; your existing cover wins. Shortlist and checklist stay on this device.`;
   els.shareMerge.hidden = !state.children.length;
   els.shareBanner.hidden = false;
 }
@@ -1723,9 +1298,8 @@ function populateSelect(select, label, values) {
 /* ────────────────────────── events & init ────────────────────────── */
 
 function applyFilters() {
-  // Any filter change re-collapses the "Show all" escape hatches.
+  // Any filter change re-collapses the HAF table.
   state.hafShowAll = false;
-  mobileShowAll = false;
   renderProviders();
   renderHaf();
 }
@@ -1814,11 +1388,12 @@ function init() {
   // Children
   els.childForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const age = Number(els.childAge.value);
-    if (!Number.isFinite(age) || age < 2) return;
+    const age = Number(els.childAge.value) + Number(document.querySelector("#childMonths").value) / 12;
+    if (!Number.isFinite(age) || age < 2 || state.children.length >= 6) return;
     addChild(els.childName.value.trim(), age);
     els.childName.value = "";
     els.childAge.selectedIndex = 0;
+    document.querySelector("#childMonths").value = "0";
     els.childName.focus();
     // If they tapped "+ Add to plan" before any child existed, resume that flow.
     if (pendingCampId) {
@@ -1844,7 +1419,7 @@ function init() {
       renderCompare();
       if (wasHeart) {
         // The grid was re-rendered — put focus back on this camp's new heart button.
-        const newHeart = els.providerGrid.querySelector(`.heart-btn[data-shortlist="${cssEsc(id)}"]`);
+        const newHeart = document.querySelector(`.heart-btn[data-shortlist="${cssEsc(id)}"]`);
         if (newHeart) newHeart.focus();
       }
       return;
@@ -1858,13 +1433,6 @@ function init() {
       renderHaf();
       return;
     }
-    const showAllCampsBtn = event.target.closest("[data-show-all-camps]");
-    if (showAllCampsBtn) {
-      mobileShowAll = true;
-      renderProviders();
-      return;
-    }
-
     const removeChildBtn = event.target.closest("[data-removechild]");
     if (removeChildBtn) {
       const child = childById(removeChildBtn.dataset.removechild);
@@ -1873,19 +1441,17 @@ function init() {
       }
       return;
     }
-    const bookedBtn = event.target.closest("[data-booked-week]");
-    if (bookedBtn) {
-      const entry = planEntry(bookedBtn.dataset.bookedWeek, bookedBtn.dataset.bookedChild);
-      if (entry) {
-        if (entry.booked) delete entry.booked; // keep stored entries minimal
-        else entry.booked = true;
-        saveState();
-        renderPlanner();
-      }
-      return;
+    const day = event.target.closest('[data-open-day]');
+    if (day) { openCellPicker(day.dataset.week,day.dataset.child,day.dataset.openDay); return; }
+    const edit = event.target.closest('[data-edit-booking]');
+    if (edit) {
+      const e = planEntries(edit.dataset.week,edit.dataset.child).find(e=>e.id===edit.dataset.editBooking);
+      if (e) { pickerReturnFocus = `[data-edit-booking="${e.id}"]`;startDraft(edit.dataset.week,edit.dataset.child,{...e},e.days,e.id);els.pickerDialog.showModal(); } return;
     }
-    const cell = event.target.closest(".assign-btn");
-    if (cell) { openCellPicker(cell.dataset.week, cell.dataset.child); }
+    const toggle = event.target.closest('[data-booking-toggle]');
+    if (toggle) {
+      writeEntries(toggle.dataset.week,toggle.dataset.child,planEntries(toggle.dataset.week,toggle.dataset.child).map(e=>e.id===toggle.dataset.bookingToggle ? {...e,booked:!e.booked} : e));
+    }
   });
 
   // Picker

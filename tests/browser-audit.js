@@ -1,0 +1,79 @@
+window.addEventListener('load', async () => {
+  const results=[];
+  const check=(value,label)=>{if(!value)throw Error(label);results.push(label);};
+  const $=s=>document.querySelector(s);
+  const click=s=>{const el=$(s);if(!el)throw Error('Missing '+s);el.click();};
+  const fill=(s,v)=>{$(s).value=v;$(s).dispatchEvent(new Event('input',{bubbles:true}));};
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  const save=()=>click('[data-save-draft]');
+  const close=()=>els.pickerDialog.close();
+  const day=(c,d)=>click(`[data-open-day="${d}"][data-child="${c}"]`);
+  const chooseCamp=id=>click(`[data-choose-camp="${id}"]`);
+  const toggleDay=d=>click(`[data-draft-day="${d}"]`);
+  try {
+    check(!$('#tellWa').getClientRects().length && !$('#waShare').getClientRects().length,'WhatsApp controls hidden before sharing');
+    check($('#providerGrid').children.length===6 && !$('#unconfirmedProviders').open,'six confirmed options, old providers collapsed');
+    check(planEntries(1,'legacy')[0].days.join()==='1,2' && planEntries(1,'legacy')[0].booked,'legacy October booking migrated with dates and booked flag');
+    check(!!localStorage.getItem(STORE_KEY+'.before-daily'),'pre-migration backup kept');
+    check($('#legacyShareNotice').textContent.includes('summer 2026') && !$('#legacyShareNotice').hidden,'old shared link offers summer archive');
+    history.replaceState(null,'',location.pathname);
+    fill('#childName','Audit');fill('#childAge','4');fill('#childMonths','6');$('#childForm').requestSubmit();
+    const child=state.children.find(c=>c.name==='Audit');
+    check(child.age===4.5 && ageFits(providerById('sylvestrian-leisure-holiday-activities'),child.age),'four years six months eligible for 4.5 minimum');
+    check(ageFits(providerById('all-about-dance'),4+11/12) && !ageFits(providerById('all-about-dance'),5),'inclusive upper ages include all months before the next birthday');
+    check(D.providers.filter(p=>!plannerOf(p).weeks?.length).every(p=>weekCost(p,1)===null),'unconfirmed providers all have unknown costs');
+    const c=child.id;
+    click('[data-addplan="all-about-dance"]');click(`[data-target-child="${c}"]`);
+    [2,3,4,5].forEach(toggleDay);save();await wait(10);
+    check(planEntries(1,c)[0].days.join()==='1','Monday-only booking saved');
+    check($('#budgetCards').textContent.includes('1 of 5 days planned · 4 still to cover'),'partial week leaves four visible gaps');
+    check(entryCost(planEntries(1,c)[0],1).value===35,'Monday dance price £35');
+    day(c,2);chooseCamp('barracudas-woodford');toggleDay(3);save();await wait(10);
+    day(c,4);click('[data-choose-type="family"]');toggleDay(5);save();await wait(10);
+    check(planEntries(1,c).length===3 && planEntries(1,c).map(e=>e.days.join()).join('|')==='1|2,3|4,5','mixed camps and family days preserve all bookings');
+    day(c,1);chooseCamp('barracudas-woodford');save();
+    check(!!$('[data-confirm-replace]') && planEntries(1,c)[0].campId==='all-about-dance','overlap requires explicit replacement');
+    click('[data-confirm-replace]');await wait(10);
+    check(!planEntries(1,c).some(e=>e.campId==='all-about-dance') && planEntries(1,c).some(e=>e.days.join()==='4,5'),'replacement keeps non-overlapping cover');
+    const single=planEntries(1,c).find(e=>e.days.join()==='1');click(`[data-booking-toggle="${single.id}"]`);
+    check(planEntries(1,c).find(e=>e.id===single.id).booked && $('#budgetCards').textContent.includes('1 camp day booked'),'booked state separate from planned days');
+    day(c,5);chooseCamp('church-hill-playscheme');save();click('[data-confirm-replace]');await wait(10);
+    check($('#budgetCards').textContent.includes('price to confirm'),'unknown cost stays unknown in child total');
+    click('[data-addplan="sylvestrian-leisure-holiday-activities"]');click(`[data-target-child="${c}"]`);
+    check([...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled&&el.checked),'full-week-only camp locks five days');
+    check(bookingState(providerById('sylvestrian-leisure-holiday-activities'), new Date('2026-09-05T12:00:00Z')).includes('Opens 16 September') && !bookingState(providerById('sylvestrian-leisure-holiday-activities'), new Date('2026-09-17T12:00:00Z')).includes('Opens'),'booking opening date separate from published dates');close();await wait(10);
+    const url=planShareUrl(), shared=parseSharedPlan(url.slice(url.indexOf('#')));
+    check(shared.children.find(x=>x.id===c).age===4.5 && shared.plan[1][c].length===4,'mixed bookings and fractional age survive share round trip');
+    const cal=planCalendarText();
+    check(cal.includes('DTSTART;VALUE=DATE:20261026') && cal.includes('DTEND;VALUE=DATE:20261031') && cal.includes('STATUS:TENTATIVE'),'calendar has selected October dates and tentative booking status');
+    check(!planSummaryText().includes('SUMMER') && planSummaryText().includes('price to confirm'),'summary reflects current season and unknown costs');
+    // Actual sharing buttons; clipboard can be unavailable in file-based CI, WhatsApp remains usable.
+    click('#sharePlan');check(!$('#privateShareReview').hidden,'private share review shown');click('#confirmPrivateShare');await wait(20);
+    check(!$('#waShare').hidden && $('#waShare').href.includes('text=') && decodeURIComponent($('#waShare').href).includes('#plan='),'private share produces current plan link');
+    click(`[data-booking-toggle="${single.id}"]`);check($('#waShare').hidden,'editing plan invalidates stale share link');
+    // A merge cannot overwrite existing cover.
+    const before=JSON.stringify(state.plan[1][c]);
+    applySharedPlan({children:[child],plan:{1:{[c]:[{id:'incoming',type:'family',days:[1,2,3,4,5]}]}}},'merge');
+    check(JSON.stringify(state.plan[1][c])===before,'merge preserves existing day assignments');
+    fill('#searchInput','Gravity');$('#searchInput').dispatchEvent(new Event('input',{bubbles:true}));await wait(350);
+    check($('#providerGrid').children.length===1 && $('#providerGrid').textContent.includes('Gravity'),'search filters confirmed cards');
+    click('#resetFilters');click('#providerGrid [data-shortlist="barracudas-woodford"]');check($('#compareTable').textContent.includes('Barracudas'),'shortlist comparison works');
+    saveState();const stored=JSON.parse(localStorage.getItem(STORE_KEY));
+    check(stored.version===2 && Array.isArray(stored.plan[1][c]),'daily format persists');
+    state.children=[];state.plan={};loadState();renderChildren();renderPlanner();check(planEntries(1,c).length===4,'saved daily plan restores');
+    check(JSON.parse(localStorage.getItem('e17planner.v1')).children[0].name==='Summer child','summer state untouched');
+    if(innerWidth<=680) {
+      check(document.documentElement.scrollWidth<=document.documentElement.clientWidth,'mobile document has no horizontal overflow');
+      check($('#plannerWrap').scrollWidth <= $('#plannerWrap').clientWidth,'mobile planner needs no sideways scrolling');
+      check(getComputedStyle($('.daily-grid')).gridTemplateColumns.split(' ').length===1,'phone uses stacked day cards');
+    }
+    const archive = document.createElement('iframe');
+    archive.src='previous-plans.html#plan='+base64urlEncode(JSON.stringify({v:1,children:[{id:'summer',name:'Summer child',age:7}],plan:{1:{summer:{type:'family'}}}}));
+    const ready=new Promise((resolve,reject)=>{archive.onload=resolve;archive.onerror=reject;});document.body.append(archive);await ready;
+    check(archive.contentDocument.querySelector('#historyPlan').textContent.includes('Family cover'),'summer shared link renders archived booking');
+    check(!archive.contentDocument.querySelector('#exportHistory').hidden,'archive offers private JSON export');
+    check(JSON.parse(localStorage.getItem(STORE_KEY)).plan[1][c].length===4,'archive leaves October plan unchanged');
+    archive.remove();
+    const out=document.createElement('pre');out.id='test-result';out.textContent=JSON.stringify({ok:true,results});document.body.append(out);
+  } catch(e) {const out=document.createElement('pre');out.id='test-result';out.textContent=JSON.stringify({ok:false,error:e.message,results});document.body.append(out);}
+});

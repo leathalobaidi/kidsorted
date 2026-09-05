@@ -1331,7 +1331,7 @@ div.picker-option { cursor: default; }
   .dates-band { margin: 0 0 12px; box-shadow: none; border: 1px solid #000; grid-template-columns: repeat(4, 1fr); }
   .planner-section, .checklist-section { margin-top: 12px; }
   .planner-section::before {
-    content: "E17 Holiday Camp Planner — Summer 2026 (data checked 9 June 2026)";
+    content: attr(data-print-title);
     font-family: var(--font-display);
     font-size: 16pt;
     font-weight: 700;
@@ -1349,4 +1349,62 @@ div.picker-option { cursor: default; }
   .check-item { border: 1px solid #999; }
   .site-footer { border-top: 1px solid #000; }
   a { text-decoration: none; color: #000; }
+}
+
+/* Daily planning and truthful hidden states. */
+[hidden] { display: none !important; }
+.confirmed-count { font-weight: 700; margin: 24px 0 12px; }
+.unconfirmed-providers { margin: 30px 0; padding: 20px; border: 1px solid var(--line-strong); border-radius: 16px; }
+.unconfirmed-providers summary, .export-menu summary { cursor: pointer; font-weight: 700; min-height: 44px; align-content: center; }
+.daily-planner { border: 0; overflow: visible; background: transparent; box-shadow: none; }
+.child-plan { margin: 24px 0; padding: 24px; border: 2px solid var(--green); border-radius: 18px; background: var(--panel); }
+.child-plan h3 { font-size: 1.7rem; margin: 0 0 18px; }
+.child-plan h3 small { font: 1rem 'Atkinson Hyperlegible', sans-serif; color: var(--muted); }
+.week-plan h4 { font-size: 1.1rem; margin: 12px 0 8px; }
+.school-note { font-size: .9rem; color: var(--ink-soft); margin: 0 0 14px; }
+.daily-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 10px; }
+.daily-card { display: flex; flex-direction: column; text-align: left; gap: 12px; padding: 14px; min-height: 150px; border: 1px solid var(--line-strong); border-radius: 12px; background: white; color: var(--ink); font: inherit; cursor: pointer; overflow-wrap: anywhere; }
+.daily-card:hover, .daily-card:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.daily-card.needs-cover { background: var(--marigold-tint); border-style: dashed; }
+.daily-card.has-cover { background: var(--green-tint); }
+.daily-date { font-weight: 700; font-size: .95rem; }
+.daily-status { font-size: .8rem; margin-top: auto; }
+.booking-list { margin-top: 16px; }
+.booking-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); }
+.booking-row p { margin: 6px 0 0; }
+.booking-actions { display: flex; flex-wrap: wrap; gap: 8px; flex-shrink: 0; }
+.booking-actions button { min-height: 44px; }
+.is-booked { background: var(--green-tint); }
+.budget-band { margin: 12px 0 24px; }
+.budget-value { font-size: clamp(1.3rem,2.5vw,2.1rem); overflow-wrap: anywhere; }
+.export-menu { margin: 24px 0; padding: 16px 20px; border: 1px solid var(--line); border-radius: 14px; }
+.export-menu .planner-actions { justify-content: flex-start; margin: 16px 0; gap: 10px; }
+#privateShareReview, #legacyShareNotice { padding: 16px; border: 1px solid var(--marigold-deep); border-radius: 12px; background: var(--marigold-tint); }
+.draft-days { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 10px 0; margin: 16px 0; }
+.draft-days label { padding: 12px; border: 1px solid var(--line-strong); border-radius: 10px; cursor: pointer; }
+.draft-days input { width: 18px; height: 18px; vertical-align: middle; accent-color: var(--green); }
+.draft-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.picker-body > .field { margin: 16px 0; }
+.picker-option { text-align: left; color: var(--ink); }
+.picker-option small { grid-column: 1 / -1; }
+.draft-price { font-size: 1.5rem; font-weight: 700; }
+.overlap-review { padding: 16px; border: 2px solid var(--tomato); border-radius: 12px; background: var(--tomato-tint); }
+.overlap-review button { margin: 8px 8px 0 0; }
+#draftError { color: var(--tomato); }
+.full-week-note { padding: 12px; background: var(--marigold-tint); border-radius: 10px; }
+@media (max-width: 680px) {
+  .child-plan { padding: 14px; }
+  .daily-grid { grid-template-columns: 1fr; }
+  .daily-card { min-height: 102px; gap: 8px; }
+  .booking-row { align-items: flex-start; flex-direction: column; }
+  .booking-actions { width: 100%; }
+  .child-form > .field { min-width: 0; }
+  .budget-card { min-width: 0; }
+  .export-menu { padding: 12px; }
+}
+@media print {
+  .daily-grid { grid-template-columns: repeat(5,minmax(0,1fr)); }
+  .daily-card { min-height: 110px; break-inside: avoid; color: #000; }
+  .child-plan, .booking-row { break-inside: avoid; }
+  .export-menu, .booking-actions { display: none; }
 }

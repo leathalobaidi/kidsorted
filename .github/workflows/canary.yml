@@ -24,7 +24,7 @@ jobs:
               heroPresent: html.includes("October half term"),
               plannerPresent: html.includes("plannerTable"),
               appStatus: app.status === 200,
-              appIntact: js.includes("E17_PLANNER") && js.includes("data-pick-customcamp")
+              appIntact: js.includes("E17_PLANNER") && js.includes("data-save-draft")
             };
           }
           (async () => {

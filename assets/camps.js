@@ -15,7 +15,7 @@ window.E17_DIRECTORY = {
       "venue": "Hillyfield Primary Academy",
       "address": "Aveling Park Road, Walthamstow, E17 4NR",
       "ageMin": 3,
-      "ageMax": 4.9,
+      "ageMax": 4,
       "ageLabel": "3–4 years; fully toilet trained",
       "categories": [
         "Dance",

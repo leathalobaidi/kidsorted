@@ -6,12 +6,12 @@
     <title>KidSorted — Holiday Camp Planner · October half term 2026, Walthamstow &amp; nearby</title>
     <meta
       name="description"
-      content="Plan your children's October half term 2026 week by week: local holiday camps in and around Walthamstow with confirmed October dates and clearly marked unconfirmed options and a budget calculator."
+      content="Plan your children's October half term 2026 day by day: local holiday camps in and around Walthamstow with confirmed October dates and clearly marked unconfirmed options and a budget calculator."
     />
     <link rel="canonical" href="https://kidsorted.co.uk/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="KidSorted — Holiday Camp Planner · October half term 2026, Walthamstow &amp; nearby" />
-    <meta property="og:description" content="Local October half-term camps with confirmed dates and clearly marked unconfirmed options — plus a week-by-week planner that adds up the cost as you go." />
+    <meta property="og:description" content="Local October half-term camps with confirmed dates and clearly marked unconfirmed options — plus a daily planner that adds up the cost as you go." />
     <meta property="og:url" content="https://kidsorted.co.uk/" />
     <meta property="og:image" content="https://kidsorted.co.uk/assets/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -33,7 +33,7 @@
         rel="stylesheet"
       />
     </noscript>
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/styles.css?v=daily-20260905" />
   </head>
   <body>
     <a class="skip-link" href="#plan">Skip to your plan</a>
@@ -118,8 +118,8 @@
         </div>
         <div class="step">
           <span class="step-num">3</span>
-          <h3>Fill the grid, watch the budget</h3>
-          <p>Assign a camp (or annual leave, or grandparents) to each week. The planner totals the cost and flags uncovered weeks.</p>
+          <h3>Plan each day, watch the budget</h3>
+          <p>Choose cover for each day. The planner totals booking costs and shows which days still need cover.</p>
         </div>
       </section>
 
@@ -138,12 +138,12 @@
               <input id="childName" type="text" maxlength="20" placeholder="e.g. Maya" />
             </label>
             <label class="field child-age-field" for="childAge">
-              <span>Age this October</span>
+              <span>Age in years this October</span>
               <select id="childAge" required>
                 <option value="" disabled selected>Age…</option>
               </select>
             </label>
-            <button class="btn btn-solid" type="submit">Add child</button>
+            <label class="field" for="childMonths"><span>Additional months</span><select id="childMonths"><option value="0">0 months</option><option value="1">1 month</option><option value="2">2 months</option><option value="3">3 months</option><option value="4">4 months</option><option value="5">5 months</option><option value="6">6 months</option><option value="7">7 months</option><option value="8">8 months</option><option value="9">9 months</option><option value="10">10 months</option><option value="11">11 months</option></select></label><button class="btn btn-solid" type="submit">Add child</button>
           </form>
           <div class="child-chips" id="childChips" aria-live="polite"></div>
           <p class="children-hint" id="childrenHint">
@@ -236,7 +236,9 @@
           </div>
         </div>
 
+        <p id="confirmedCount" class="confirmed-count"></p>
         <div class="card-grid" id="providerGrid"><p class="grid-loading">Loading camps…</p></div>
+        <details id="unconfirmedProviders" class="unconfirmed-providers"><summary id="unconfirmedCount">Previous providers — October unconfirmed</summary><p>These are previous leads. Dates, prices and eligibility still need checking for this holiday.</p><div id="unconfirmedGrid" class="card-grid"></div></details>
         <p class="empty-state" id="emptyState" hidden>
           No camps match those filters. Try widening the day length or price, or
           clear the “confirmed dates” toggle. October availability is still being published; check provider booking pages for updates.
@@ -265,58 +267,47 @@
       <section class="planner-section" id="plan">
         <div class="section-heading">
           <div>
-            <p class="eyebrow dark">Step 3 · The grid</p>
+            <p class="eyebrow dark">Step 3 · Daily cover</p>
             <h2>Your October half term</h2>
           </div>
-          <div class="planner-actions">
-            <button class="btn btn-add" type="button" id="tellParents"
-              title="Copies the plain planner link — no names, no plan. Safe to post in a group.">Share blank planner<span class="btn-sub">No names — safe for school groups</span></button>
-            <a class="btn btn-ghost" id="tellWa" hidden href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp ↗</a>
-            <button class="btn btn-ghost" type="button" id="sharePlan"
-              title="Copies a private link that contains your children's names and camps — only for a partner, never a group">Share MY plan<span class="btn-sub">Includes your children’s names — partner only</span></button>
-            <a class="btn btn-ghost" id="waShare" hidden href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp ↗</a>
-            <button class="btn btn-ghost" type="button" id="calendarPlan"
-              title="Downloads an .ics file that opens in Apple Calendar and Outlook, and imports into Google Calendar">Add to calendar</button>
-            <button class="btn btn-ghost" type="button" id="copyPlan">Copy summary</button>
-            <button class="btn btn-ghost" type="button" id="printPlan">Print plan</button>
-            <button class="btn btn-danger" type="button" id="clearPlan">Clear plan</button>
-          </div>
+
         </div>
 
-        <details class="planner-hint">
-          <summary>How sharing &amp; privacy work</summary>
-          <p>
-          Tap any cell to choose a camp for that child and week — or mark it as
-          annual leave, family cover or a friend swap. Costs use verified prices
-          where published; everything else shows as “£?” until you confirm with
-          the provider. Once you've actually booked a week, tick
-          <strong>booked</strong> on its cell — the budget below counts your
-          bookings. When it's settled, <strong>Add to calendar</strong>
-          downloads the whole plan for your Apple, Outlook or Google calendar —
-          every camp as an all-day event with venue, hours and booking link.
-          Two ways to share: <strong>Tell other parents</strong> copies the
-          plain planner link with <em>no</em> names and <em>no</em> plan — that's
-          the one to post in a school group, and everyone who opens it gets their
-          own private, blank planner. <strong>Share my plan (private)</strong> is
-          different: it packs your children's names and camps into the link
-          itself (nothing is uploaded), so only ever send that one to a partner
-          or family — never a group.
-          </p>
-        </details>
 
         <div class="planner-empty" id="plannerEmpty">
-          <p><strong>Add a child above to unlock the grid.</strong> The planner
-          builds one column per child across the October half-term week.</p>
-        </div>
-
-        <div class="table-wrap planner-wrap" id="plannerWrap" hidden>
-          <table class="planner-table" id="plannerTable"></table>
+          <p><strong>Add a child above to plan each day.</strong> The planner
+          shows Monday–Friday for each child. Mix camps, family care and leave.</p>
         </div>
 
         <div class="budget-band" id="budgetBand" hidden>
           <div class="budget-cards" id="budgetCards"></div>
           <div class="budget-notes" id="budgetNotes" aria-live="polite"></div>
         </div>
+        <div class="planner-wrap daily-planner" id="plannerWrap" hidden>
+          <div id="plannerTable"></div>
+        </div>
+
+
+        <details class="export-menu"><summary>Share / export your plan</summary>
+          <p>The blank planner link contains no names. Your private plan link includes names and camp dates: share it only with someone you trust.</p>
+          <div class="planner-actions">
+            <button class="btn btn-add" type="button" id="tellParents"
+              title="Copies the plain planner link — no names, no plan. Safe to post in a group.">Share blank planner</button>
+            <a class="btn btn-ghost" id="tellWa" hidden target="_blank" rel="noreferrer">WhatsApp ↗</a>
+            <button class="btn btn-ghost" type="button" id="sharePlan"
+              title="Copies a private link that contains your children's names and camps — only for a partner, never a group">Share my plan (private)</button>
+            <a class="btn btn-ghost" id="waShare" hidden target="_blank" rel="noreferrer">WhatsApp ↗</a>
+            <button class="btn btn-ghost" type="button" id="calendarPlan"
+              title="Downloads an .ics file that opens in Apple Calendar and Outlook, and imports into Google Calendar">Add to calendar</button>
+            <button class="btn btn-ghost" type="button" id="copyPlan">Copy summary</button>
+            <button class="btn btn-ghost" type="button" id="printPlan">Print plan</button>
+            <button class="btn btn-danger" type="button" id="clearPlan">Clear plan</button>
+          </div>
+          <div id="privateShareReview" hidden role="status"><p><strong>This link includes your children’s names and where they will be.</strong> Send it only to a trusted partner or family member.</p><button type="button" class="btn btn-solid" id="confirmPrivateShare">Create private link</button></div>
+        </details>
+        <p><a href="previous-plans.html">View or export your saved summer 2026 plan</a></p>
+        <div id="legacyShareNotice" hidden role="status"><p id="legacyShareText"></p><a id="legacyShareLink" href="previous-plans.html">Open summer plan</a></div>
+
       </section>
 
       <!-- ───────────────────────── Money help ───────────────────────── -->
@@ -465,9 +456,9 @@
       <div class="picker-body" id="pickerBody"></div>
     </dialog>
 
-    <script defer src="assets/camps.js"></script>
-    <script defer src="assets/planner-data.js"></script>
-    <script defer src="assets/app.js"></script>
+    <script defer src="assets/camps.js?v=daily-20260905"></script>
+    <script defer src="assets/planner-data.js?v=daily-20260905"></script>
+    <script defer src="assets/app.js?v=daily-20260905"></script>
 
     <!-- Cloudflare Web Analytics — cookieless, privacy-friendly visit counts -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa7d8f9b64aa4833b18eecf0ddd1d163"}'></script>

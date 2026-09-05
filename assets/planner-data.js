@@ -1,4 +1,3 @@
-// October 2026 refresh. See OCTOBER-2026-REFRESH.md for source notes.
 window.E17_PLANNER = {
   "updated": "2026-09-05",
   "keyDates": {
@@ -217,7 +216,10 @@ window.E17_PLANNER = {
         "extEnd": "18:00"
       },
       "coverage": "working",
-      "ofsted": true
+      "ofsted": true,
+      "fullWeekOnly": true,
+      "bookingOpens": "2026-09-16T10:00:00+01:00",
+      "bookingOpensLabel": "16 September, 10am"
     },
     "perform-walthamstow-village": {
       "weeks": [],
