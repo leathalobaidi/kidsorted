@@ -22,3 +22,7 @@ Tests now perform actual clicks at desktop and phone widths, including migration
 ## Parent newsletter
 
 The newsletter signup uses the official embed from https://kidsorted.substack.com/, a separate publication managed in Leath's existing Substack account. The iframe loads lazily and has a direct subscription fallback. Newsletter subscriptions are stored by Substack, independently of browser-only planner data. The newsletter section is hidden when printing a plan.
+
+## Camp updates and contact
+
+The contact link at `#contact` is for parent feedback and provider listing updates. Incoming email to hello@kidsorted.co.uk forwards to the owner's Zoho inbox through Squarespace's free forwarding service; outgoing mail is sent from the same address through Zoho Mail. Listing changes are reviewed manually before publication.
