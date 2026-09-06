@@ -20,14 +20,14 @@ window.addEventListener('load', async () => {
     fill('#childName','Audit');fill('#childAge','4');fill('#childMonths','6');$('#childForm').requestSubmit();
     const child=state.children.find(c=>c.name==='Audit');
     check(child.age===4.5 && ageFits(providerById('sylvestrian-leisure-holiday-activities'),child.age),'four years six months eligible for 4.5 minimum');
-    check(ageFits(providerById('all-about-dance'),4+11/12) && !ageFits(providerById('all-about-dance'),5),'inclusive upper ages include all months before the next birthday');
+    check(ageFits(providerById('all-about-dance'),11+11/12) && !ageFits(providerById('all-about-dance'),12),'inclusive upper ages include all months before the next birthday');
     check(D.providers.filter(p=>!plannerOf(p).weeks?.length).every(p=>weekCost(p,1)===null),'unconfirmed providers all have unknown costs');
     const c=child.id;
     click('[data-addplan="all-about-dance"]');click(`[data-target-child="${c}"]`);
     [2,3,4,5].forEach(toggleDay);save();await wait(10);
     check(planEntries(1,c)[0].days.join()==='1','Monday-only booking saved');
     check($('#budgetCards').textContent.includes('1 of 5 days planned · 4 still to cover'),'partial week leaves four visible gaps');
-    check(entryCost(planEntries(1,c)[0],1).value===35,'Monday dance price £35');
+    check(entryCost(planEntries(1,c)[0],1)===null,'dance price remains unknown until age-specific fees are confirmed');
     day(c,2);chooseCamp('barracudas-woodford');toggleDay(3);save();await wait(10);
     day(c,4);click('[data-choose-type="family"]');toggleDay(5);save();await wait(10);
     check(planEntries(1,c).length===3 && planEntries(1,c).map(e=>e.days.join()).join('|')==='1|2,3|4,5','mixed camps and family days preserve all bookings');

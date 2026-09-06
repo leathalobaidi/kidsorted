@@ -81,12 +81,8 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Provider lists 26–30 October 2026; checked 5 September 2026.",
-      "price": {
-        "day": 35,
-        "week": 175
-      },
-      "priceBasis": "October preschool listing: £35/day or £175/week; extended-hour prices not verified.",
+      "weeksBasis": "Provider email, 6 September 2026: Monday 26–Friday 30 October 2026, ages 3–11; main day 10am–3pm, extended day 8am–6pm.",
+      "priceBasis": "Provider email confirms ages 3–11 but no prices. Previously verified £35/day or £175/week applies only to preschool; confirm age-specific and extended-hour fees on Class4Kids.",
       "hours": {
         "start": "10:00",
         "end": "15:00",

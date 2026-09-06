@@ -4,8 +4,8 @@ window.E17_DIRECTORY = {
     {
       "id": "all-about-dance",
       "checkedOn": "2026-09-06",
-      "name": "All About Dance UK — October Preschool Club",
-      "kind": "Preschool holiday club",
+      "name": "All About Dance UK — October Half-Term Holiday Camp (Ages 3–11)",
+      "kind": "Holiday camp",
       "area": "Walthamstow / Chingford",
       "areas": [
         "Walthamstow",
@@ -14,8 +14,8 @@ window.E17_DIRECTORY = {
       "venue": "Hillyfield Primary Academy",
       "address": "Aveling Park Road, Walthamstow, E17 4NR",
       "ageMin": 3,
-      "ageMax": 4,
-      "ageLabel": "3–4 years; fully toilet trained",
+      "ageMax": 11,
+      "ageLabel": "3–11 years; dedicated programme for ages 3–4",
       "categories": [
         "Dance",
         "Drama"
@@ -23,26 +23,32 @@ window.E17_DIRECTORY = {
       "funding": [
         "Paid"
       ],
-      "hours": "10am–3pm; optional early drop-off 8–10am and late collection 3–6pm",
-      "price": "£35/day or £175/week; extended hours cost extra — check booking",
-      "summary": "Halloween play, movement and creative activities for preschool children, 26–30 October 2026. Children must be fully toilet trained.",
-      "goodFor": "Toilet-trained preschool children who enjoy creative play and movement.",
-      "booking": "Book the October preschool camp on ClassForKids.",
-      "confidence": "October source checked 6 September 2026",
+      "hours": "Main day 10am–3pm; extended day 8am–6pm, with flexible early drop-off and late collection options",
+      "price": "Preschool programme previously listed at £35/day or £175/week; confirm prices for your child’s age and extended hours on Class4Kids",
+      "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
+      "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
+      "booking": "Book through Class4Kids; choose the appropriate age group and childcare hours.",
+      "confidence": "Dates, ages, hours and Ofsted registration confirmed by provider email, 6 September 2026",
       "source": {
-        "label": "All About Dance October preschool booking",
-        "url": "https://all-about-dance-uk.classforkids.io/camp/36"
+        "label": "All About Dance UK Class4Kids bookings",
+        "url": "https://all-about-dance-uk.classforkids.io/"
       },
       "availability": {
-        "status": "open",
+        "status": "unknown",
         "asOf": "2026-09-06",
-        "note": "October ClassForKids page explicitly shows Spaces Available."
+        "note": "Provider confirms October camp and Class4Kids booking; check spaces for the appropriate age group."
       },
       "lastCheck": {
         "date": "2026-09-06",
         "status": "confirmed",
-        "note": "October ClassForKids page shows spaces; preschool ages 3–4.9, £35/day or £175/week."
-      }
+        "note": "Provider email from Rachel confirms 26–30 October, ages 3–11, Ofsted registration, 10am–3pm main day and 8am–6pm extended day. Prices and venue were not reconfirmed in the email; previous venue retained. Preschool fees do not establish older-child prices."
+      },
+      "secondarySources": [
+        {
+          "label": "Preschool programme booking (ages 3–4 only)",
+          "url": "https://all-about-dance-uk.classforkids.io/camp/36"
+        }
+      ]
     },
     {
       "id": "barracudas-woodford",
@@ -699,7 +705,7 @@ window.E17_DIRECTORY = {
         "Leytonstone",
         "Leyton"
       ],
-      "venue": "Leytonstone Community Sports Centre",
+      "venue": "Leytonstone School (next to Whipps Cross Hospital)",
       "address": "James Lane, Leytonstone, London, E11 1NS",
       "ageMin": 5,
       "ageMax": 12,
@@ -714,10 +720,10 @@ window.E17_DIRECTORY = {
       ],
       "hours": "26–29 October: 9am–3:30pm",
       "price": "£35/day or £126 for all four days; 50% off additional siblings",
-      "summary": "October football camp on Monday 26–Thursday 29 October 2026, with inflatable football activities, skills and matches. No Friday session listed.",
+      "summary": "October football camp on Monday 26–Thursday 29 October 2026 for boys and girls aged 5–12, featuring an inflatable goal, dartboard and pitch. No Friday session listed. The provider plans to run every school holiday: February half-term, Easter, May half-term and summer booking links are due soon; Christmas depends on demand.",
       "goodFor": "Children of all football abilities, ages 5–12.",
-      "booking": "Spaces available for full-camp or individual-day bookings.",
-      "confidence": "October source checked 6 September 2026",
+      "booking": "October half-term confirmed and open for booking. Book individual days or the full camp; 50% off additional siblings.",
+      "confidence": "October booking, venue, ages, hours and discounts confirmed by provider email, 6 September 2026",
       "source": {
         "label": "Football Fun Factory October camp booking",
         "url": "https://booking.thefootballfunfactory.co.uk/event/5136"
@@ -736,7 +742,7 @@ window.E17_DIRECTORY = {
       "lastCheck": {
         "date": "2026-09-06",
         "status": "confirmed",
-        "note": "Live booking explicitly shows spaces; 26–29 October only, £126/four days or £35/day."
+        "note": "Ashley’s provider email confirms Leytonstone School E11 1NS, ages 5–12, 9am–3:30pm, £35/day, full-week discounts and 50% off additional siblings, with October event 5136 open. Earlier booking-page check supplies 26–29 October dates and £126 four-day price. Future holidays planned; Christmas unconfirmed."
       }
     },
     {
