@@ -12,7 +12,7 @@ window.addEventListener('load', async () => {
   const toggleDay=d=>click(`[data-draft-day="${d}"]`);
   try {
     check(!$('#tellWa').getClientRects().length && !$('#waShare').getClientRects().length,'WhatsApp controls hidden before sharing');
-    check($('#providerGrid').children.length===6 && !$('#unconfirmedProviders').open,'six confirmed options, old providers collapsed');
+    check($('#providerGrid').children.length===D.providers.filter(p=>plannerOf(p).weeks?.length).length && !$('#unconfirmedProviders').open,'all confirmed options shown, old providers collapsed');
     check(planEntries(1,'legacy')[0].days.join()==='1,2' && planEntries(1,'legacy')[0].booked,'legacy October booking migrated with dates and booked flag');
     check(!!localStorage.getItem(STORE_KEY+'.before-daily'),'pre-migration backup kept');
     check($('#legacyShareNotice').textContent.includes('summer 2026') && !$('#legacyShareNotice').hidden,'old shared link offers summer archive');
@@ -42,6 +42,16 @@ window.addEventListener('load', async () => {
     click('[data-addplan="sylvestrian-leisure-holiday-activities"]');click(`[data-target-child="${c}"]`);
     check([...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled&&el.checked),'full-week-only camp locks five days');
     check(bookingState(providerById('sylvestrian-leisure-holiday-activities'), new Date('2026-09-05T12:00:00Z')).includes('Opens 16 September') && !bookingState(providerById('sylvestrian-leisure-holiday-activities'), new Date('2026-09-17T12:00:00Z')).includes('Opens'),'booking opening date separate from published dates');close();await wait(10);
+    startDraft(1,c,{type:'camp',campId:'art-k-highams-park'},[1,2,3,4,5]);
+    check(pickerCtx.draft.days.join()==='1,2,3' && $('[data-draft-day="4"]').disabled && $('[data-draft-day="5"]').disabled,'art-K limits new plans to Monday–Wednesday');
+    check(entryCost(pickerCtx.draft,1).value===210,'three art-K full days total £210');
+    check(weeksFact(providerById('art-k-highams-park'))==='26–28 October' && weeksFact(providerById('wee-movers-holiday'))==='28–30 October','directory shows the actual partial-week dates');close();
+    startDraft(1,c,{type:'camp',campId:'football-fun-factory'},[1,2,3,4,5]);
+    check(pickerCtx.draft.days.join()==='1,2,3,4' && $('[data-draft-day="5"]').disabled && entryCost(pickerCtx.draft,1).value===126,'football four-day bundle excludes Friday and costs £126');close();
+    startDraft(1,c,{type:'camp',campId:'wee-movers-holiday'},[1]);
+    check(pickerCtx.draft.days.join()==='3,4,5' && [...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled) && entryCost(pickerCtx.draft,1).value===192,'Wee Movers locks only its three-day course at £192');close();
+    check(entryCost({type:'camp',campId:'art-k-highams-park',days:[5]},1)===null,'old plans on unlisted days never receive an invented price');
+    check(bookingState(providerById('football-fun-factory')).includes('Booking open'),'verified booking status reaches planner');
     const url=planShareUrl(), shared=parseSharedPlan(url.slice(url.indexOf('#')));
     check(shared.children.find(x=>x.id===c).age===4.5 && shared.plan[1][c].length===4,'mixed bookings and fractional age survive share round trip');
     const cal=planCalendarText();

@@ -1,10 +1,9 @@
-// October 2026 refresh. See OCTOBER-2026-REFRESH.md for source notes.
 window.E17_DIRECTORY = {
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "providers": [
     {
       "id": "all-about-dance",
-      "checkedOn": "2026-09-05",
+      "checkedOn": "2026-09-06",
       "name": "All About Dance UK — October Preschool Club",
       "kind": "Preschool holiday club",
       "area": "Walthamstow / Chingford",
@@ -29,10 +28,20 @@ window.E17_DIRECTORY = {
       "summary": "Halloween play, movement and creative activities for preschool children, 26–30 October 2026. Children must be fully toilet trained.",
       "goodFor": "Toilet-trained preschool children who enjoy creative play and movement.",
       "booking": "Book the October preschool camp on ClassForKids.",
-      "confidence": "October source checked 5 September 2026",
+      "confidence": "October source checked 6 September 2026",
       "source": {
         "label": "All About Dance October preschool booking",
         "url": "https://all-about-dance-uk.classforkids.io/camp/36"
+      },
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "October ClassForKids page explicitly shows Spaces Available."
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "October ClassForKids page shows spaces; preschool ages 3–4.9, £35/day or £175/week."
       }
     },
     {
@@ -68,13 +77,24 @@ window.E17_DIRECTORY = {
       "booking": "Check current October prices and spaces through Barracudas.",
       "confidence": "October source checked 5 September 2026",
       "source": {
-        "label": "Barracudas Woodford October dates and prices",
-        "url": "https://front-facing-live.barracudas.co.uk/camps/woodford/"
+        "label": "Barracudas Woodford official camp page",
+        "url": "https://www.barracudas.co.uk/camps/woodford/"
+      },
+      "secondarySources": [
+        {
+          "label": "Barracudas October dates and prices (indexed source)",
+          "url": "https://front-facing-live.barracudas.co.uk/camps/woodford/"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "Indexed official source reconfirms October dates and prices; direct secondary-domain fetch fails with expired TLS certificate. Booking link changed to main official domain."
       }
     },
     {
       "id": "church-hill-playscheme",
-      "checkedOn": "2026-09-05",
+      "checkedOn": "2026-09-06",
       "name": "Church Hill Nursery Holiday Playscheme",
       "kind": "Early years playscheme",
       "area": "Walthamstow",
@@ -98,16 +118,27 @@ window.E17_DIRECTORY = {
       "summary": "The nursery’s 2026–27 calendar lists playscheme on 26–30 October. Confirm the application window, ages, hours and fees directly.",
       "goodFor": "Younger children who need a nursery-style local holiday day.",
       "booking": "Contact the nursery for the October playscheme form.",
-      "confidence": "October source checked 5 September 2026",
+      "confidence": "October source checked 6 September 2026",
       "source": {
-        "label": "Church Hill 2026–27 calendar",
-        "url": "https://www.fans.waltham.sch.uk/attachments/download.asp?file=719&type=pdf"
+        "label": "Church Hill 2026–27 term dates",
+        "url": "https://www.fans.waltham.sch.uk/term-dates"
       },
-      "bookingUrl": "https://www.fans.waltham.sch.uk/holiday-playscheme"
+      "bookingUrl": "https://www.fans.waltham.sch.uk/holiday-playscheme",
+      "secondarySources": [
+        {
+          "label": "Church Hill playscheme and booking forms",
+          "url": "https://www.fans.waltham.sch.uk/holiday-playscheme"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "Old calendar download returns 404; official term-dates page confirms 26–30 October 2026. October application form and fees still unverified."
+      }
     },
     {
       "id": "gravity-performing-arts",
-      "checkedOn": "2026-09-05",
+      "checkedOn": "2026-09-06",
       "name": "Gravity Performing Arts",
       "kind": "Musical theatre holiday camp",
       "area": "Walthamstow",
@@ -127,20 +158,40 @@ window.E17_DIRECTORY = {
       "funding": [
         "Paid"
       ],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
+      "hours": "9am–3pm; early drop-off 8am and late pickup 4pm",
+      "price": "£45/day or £210/week; early and late sessions £10 each per day",
       "summary": "October musical theatre camp at Walthamstow School for Girls, with separate groups for ages 5–6 and 7–16. Runs 26–30 October; bring a nut-free packed lunch.",
       "goodFor": "Children who want a performance-led camp with dance, drama and music.",
-      "booking": "Choose the October age group on ClassForKids. Confirm hours and price at booking.",
-      "confidence": "October source checked 5 September 2026",
+      "booking": "Spaces available for both October age groups on ClassForKids.",
+      "confidence": "October source checked 6 September 2026",
       "source": {
         "label": "Gravity Performing Arts camps",
         "url": "https://gravityperformingarts.classforkids.io/camps"
+      },
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "Both 5–6 and 7–16 October bookings explicitly show Spaces Available."
+      },
+      "secondarySources": [
+        {
+          "label": "Gravity October ages 5–6 booking",
+          "url": "https://gravityperformingarts.classforkids.io/camp/106"
+        },
+        {
+          "label": "Gravity October ages 7–16 booking",
+          "url": "https://gravityperformingarts.classforkids.io/camp/107"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "Both October age-group booking pages show spaces, £45/day or £210/week; 9am–3pm."
       }
     },
     {
       "id": "sylvestrian-leisure-holiday-activities",
-      "checkedOn": "2026-09-05",
+      "checkedOn": "2026-09-06",
       "name": "Sylvestrian Leisure Holiday Activities",
       "kind": "Ofsted-registered multi-activity camp",
       "area": "Snaresbrook / Forest School",
@@ -168,16 +219,21 @@ window.E17_DIRECTORY = {
       "summary": "October activity camp at Forest School for ages 4½–15. Runs 19–23 and 26–30 October; this planner covers the council half-term week. Full-week bookings only. Bookings open 16 September at 10am.",
       "goodFor": "Families near the E17/Snaresbrook edge who need a long day and a broad activity mix.",
       "booking": "Bookings open Wednesday 16 September at 10am through Pembee.",
-      "confidence": "October source checked 5 September 2026",
+      "confidence": "October source checked 6 September 2026",
       "source": {
         "label": "Sylvestrian holiday activities",
         "url": "https://www.sylvestrian-leisure.co.uk/holiday-activities/"
       },
-      "bookingUrl": "https://sylvestrian-leisure-centre.pembee.app/"
+      "bookingUrl": "https://sylvestrian-leisure-centre.pembee.app/",
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "October dates and £246/week reconfirmed. Booking opens 16 September at 10am."
+      }
     },
     {
       "id": "the-strings-club-walthamstow",
-      "checkedOn": "2026-09-05",
+      "checkedOn": "2026-09-06",
       "name": "The Strings Club Walthamstow — October Minis",
       "kind": "Music holiday camp",
       "area": "Walthamstow",
@@ -204,10 +260,15 @@ window.E17_DIRECTORY = {
       "summary": "October music camp for Reception–Year 2 at Edinburgh Primary School, 26–30 October 2026.",
       "goodFor": "Children who want a music-led holiday camp with childcare-length hours.",
       "booking": "Select October Minis sessions on Enrolmy; older age-group availability has not been verified.",
-      "confidence": "October source checked 5 September 2026",
+      "confidence": "October source checked 6 September 2026",
       "source": {
         "label": "The Strings Club October Minis booking",
         "url": "https://enrolmy.com/the-strings-club/activity/589-Walthamstow_Holiday_Camp_October_Half_Term_Minis_Rec_Y2?emyatb=4w7ygdi444"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "October Minis listing reconfirmed at Edinburgh Primary. Published session range £61.50–£71.50; remaining places not independently verified."
       }
     },
     {
@@ -239,6 +300,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "360 Active camps",
         "url": "https://360-active.classforkids.io/camps"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Current ClassForKids camps page contains no camp listings."
       }
     },
     {
@@ -278,7 +344,12 @@ window.E17_DIRECTORY = {
           "label": "Act Out holiday workshops",
           "url": "https://www.act-out.co.uk/holidayworkshops"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "active-london",
@@ -316,11 +387,16 @@ window.E17_DIRECTORY = {
           "label": "Active London booking",
           "url": "https://activelondon.ipalbookings.com/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "blocked",
+        "note": "Main site blocks access and iPAL source requires JavaScript/login; October dates remain unverified."
+      }
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-06",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -328,25 +404,43 @@ window.E17_DIRECTORY = {
         "Highams Park",
         "Chingford"
       ],
-      "venue": "Previous listing: art-K Highams Park",
+      "venue": "art-K Highams Park",
       "address": "400 Hale End Road, Highams Park, E4 9PB",
       "ageMin": 6,
       "ageMax": 16,
-      "ageLabel": "Previously: Children and teens; check workshop page",
+      "ageLabel": "6–16; full days recommended for ages 7+",
       "categories": [
         "Workshop",
         "Arts"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed art workshop provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "26–28 October: 10am–3pm; half days 10am–12pm or 1–3pm",
+      "price": "£70/full day; £30/half day",
+      "summary": "October art workshops on Monday 26–Wednesday 28 October 2026. Individual projects in sculpture, painting and mixed media. No Thursday or Friday sessions listed.",
+      "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
+      "booking": "October enrolment is open. Choose a full-day or half-day session on the live calendar.",
+      "confidence": "October source checked 6 September 2026",
       "source": {
-        "label": "art-K Highams Park",
-        "url": "https://www.art-k.co.uk/class-highams-park/"
+        "label": "art-K October 2026 workshops and booking",
+        "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
+      },
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "Selectable sessions listed for 26–28 October. Check the provider calendar for remaining places."
+      },
+      "secondarySources": [
+        {
+          "label": "art-K October session calendar",
+          "url": "https://portal.art-k.co.uk/public/workshops/237/2744/sessions"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "Live October enrolment and session calendar checked; 26–28 October, full days and half days."
       }
     },
     {
@@ -378,6 +472,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "Walthamstow Leisure Centre holiday activities",
         "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/holiday-activities"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -409,6 +508,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "Break tha Cycle holiday clubs",
         "url": "https://www.breakthacycle.org/holiday-clubs"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -439,6 +543,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "Build a Band registration form (Sing17)",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLScnH-4SElRGZsNuD_8w6JYPitxgNzOkjrR4l_am4O7iNLDX-Q/viewform"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -471,23 +580,27 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "Camp Beaumont Woodbridge High School",
         "url": "https://www.campbeaumont.co.uk/our-camps/woodbridge-high-school"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
       "id": "chillie-kids-club",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-06",
       "name": "Chillie Kids Club",
       "kind": "Creative upcycling holiday club",
-      "area": "Walthamstow / Portobello Road",
+      "area": "Walthamstow",
       "areas": [
-        "Walthamstow",
-        "London"
+        "Walthamstow"
       ],
-      "venue": "Previous listing: Orford House, Walthamstow and Portobello Road hub",
-      "address": "Orford House, 73 Orford Road, E17 9QR; Portobello Road, W10",
+      "venue": "Orford House",
+      "address": "73 Orford Road, Walthamstow, E17 9QR",
       "ageMin": 5,
       "ageMax": 16,
-      "ageLabel": "Previously: 5+ on provider FAQ; teens sessions separate where listed",
+      "ageLabel": "5+; confirm suitability for older children",
       "categories": [
         "Short day",
         "Workshop",
@@ -495,13 +608,15 @@ window.E17_DIRECTORY = {
         "Fashion",
         "Sustainability"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed creative upcycling holiday club provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "26–30 October: 9am–3pm; calendar also offers 8:30am — confirm early-drop details",
+      "price": "Booking page displays £60; confirm price per day and any early-drop fee",
+      "summary": "October upcycling workshops at Orford House, Monday 26–Friday 30 October 2026. Children reuse fabrics and clothes in creative projects.",
+      "goodFor": "Children aged 5+ who enjoy making and sustainable fashion.",
+      "booking": "October calendar is open with available spots on 26 October. Confirm each required date and the total price.",
+      "confidence": "October source checked 6 September 2026",
       "source": {
         "label": "Chillie Walthamstow Club booking",
         "url": "https://www.chilliekidsclub.com/booking-calendar/walthamstow-club"
@@ -515,7 +630,17 @@ window.E17_DIRECTORY = {
           "label": "Chillie Kids Club FAQ",
           "url": "https://www.chilliekidsclub.com/about"
         }
-      ]
+      ],
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "October calendar shows available spots; individual-date capacity may vary."
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "October 2026 calendar shows available spots for 26 October. £60 displayed with inconsistent duration; price unit remains unverified."
+      }
     },
     {
       "id": "cook-with-kasper",
@@ -556,11 +681,16 @@ window.E17_DIRECTORY = {
           "label": "Queens Road Family Hub cooking club",
           "url": "https://www.walthamforest.gov.uk/events/family-cooking-club-queens-road-family-hub"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "blocked",
+        "note": "Happity blocks access and social sources are unavailable. Search found term-time family sessions, not October holiday childcare."
+      }
     },
     {
       "id": "football-fun-factory",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-06",
       "name": "Football Fun Factory Walthamstow and Leyton",
       "kind": "Football camp",
       "area": "Walthamstow / Leytonstone",
@@ -569,26 +699,44 @@ window.E17_DIRECTORY = {
         "Leytonstone",
         "Leyton"
       ],
-      "venue": "Previous listing: Leytonstone Community Sports Centre and local football session venues",
-      "address": "James Lane, Leytonstone, E11 1NS and Walthamstow/Leyton venues",
+      "venue": "Leytonstone Community Sports Centre",
+      "address": "James Lane, Leytonstone, London, E11 1NS",
       "ageMin": 5,
       "ageMax": 12,
-      "ageLabel": "Previously: 5-12 for camps",
+      "ageLabel": "5–12",
       "categories": [
         "Short day",
         "Football",
         "Sports"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed football camp provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "26–29 October: 9am–3:30pm",
+      "price": "£35/day or £126 for all four days; 50% off additional siblings",
+      "summary": "October football camp on Monday 26–Thursday 29 October 2026, with inflatable football activities, skills and matches. No Friday session listed.",
+      "goodFor": "Children of all football abilities, ages 5–12.",
+      "booking": "Spaces available for full-camp or individual-day bookings.",
+      "confidence": "October source checked 6 September 2026",
       "source": {
-        "label": "Football Fun Factory Walthamstow and Leyton",
-        "url": "https://thefootballfunfactory.co.uk/locations/walthamstow-and-leyton/"
+        "label": "Football Fun Factory October camp booking",
+        "url": "https://booking.thefootballfunfactory.co.uk/event/5136"
+      },
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "Provider booking page explicitly shows Spaces Available, checked 6 September."
+      },
+      "secondarySources": [
+        {
+          "label": "Walthamstow and Leyton camp directory",
+          "url": "https://thefootballfunfactory.co.uk/locations/walthamstow-and-leyton/#camps"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "Live booking explicitly shows spaces; 26–29 October only, £126/four days or £35/day."
       }
     },
     {
@@ -626,44 +774,61 @@ window.E17_DIRECTORY = {
           "label": "Future Stars Walthamstow",
           "url": "https://www.futurestarswalthamstow.com/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Saved camp is from the previous holiday and provider homepage is under construction; October camp unverified."
+      }
     },
     {
       "id": "infinite-jest",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-06",
       "name": "Infinite Jest Drama Camp",
       "kind": "Drama holiday camp",
       "area": "Leyton",
       "areas": [
         "Leyton"
       ],
-      "venue": "Previous listing: Cornerstone Church",
-      "address": "Cornerstone Church, 149 Canterbury Road, Leyton, London E10 6EH",
+      "venue": "Sanctuary, Cornerstone Church Hall",
+      "address": "149 Canterbury Road, Leyton, London E10 6EH",
       "ageMin": 5,
       "ageMax": 11,
-      "ageLabel": "Previously: Ages 5-11",
+      "ageLabel": "5–11",
       "categories": [
         "Drama",
         "Dance",
         "Arts"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed drama holiday camp provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "26–30 October: 9:30am–3:30pm; wraparound add-ons available",
+      "price": "£215/week; £400 weekly ticket admits two siblings; individual-day prices unverified",
+      "summary": "Things that go bump in the night: a Halloween drama and storytelling camp, 26–30 October 2026, with acting, singing, dance and craft.",
+      "goodFor": "Children who enjoy devising stories, performing and creative group activities.",
+      "booking": "Weekly tickets are available on Pebble. Check single-day availability separately; the single-date view displayed a waitlist link.",
+      "confidence": "October source checked 6 September 2026",
       "source": {
-        "label": "Infinite Jest by the Seaside (Pebble booking)",
-        "url": "https://activities.bookpebble.co.uk/activity/infinite-jest-by-the-seaside-a-summer-holiday-party-week-london-b445da3e-6d37-402c-a401-4a3bfd7bbd3c"
+        "label": "Infinite Jest October drama camp booking",
+        "url": "https://activities.bookpebble.co.uk/activity/infinite-jest-things-that-go-bump-in-the-night-london-5ee9e382-d726-4c6a-abfb-e66500a215c9"
       },
       "secondarySources": [
         {
-          "label": "Infinite Jest Theatre Company",
-          "url": "https://www.infinitejest.co.uk/drama-camps"
+          "label": "Infinite Jest current activities",
+          "url": "https://activities.bookpebble.co.uk/supplier/infinite-jest-05e5e5d6-59fe-4d73-b6be-1b86252df9dc"
         }
-      ]
+      ],
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "Weekly ticket selection is open. Single-day availability is not confirmed; check Pebble. Wraparound charges are extra."
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "Live Pebble October week ticket verified at £215; £400 admits two siblings. Single-date view shows a waitlist link; daily rate unverified."
+      }
     },
     {
       "id": "leyton-orient-trust",
@@ -706,7 +871,12 @@ window.E17_DIRECTORY = {
           "label": "Leyton Orient HAF at SCORE Centre",
           "url": "https://eequ.org/book/leyton-orient-haf-score-centre-with-leyton-orient-trust-7132"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "blocked",
+        "note": "Source check was blocked or returned no usable listing; October dates remain unverified."
+      }
     },
     {
       "id": "little-soccer-stars-walthamstow",
@@ -747,7 +917,12 @@ window.E17_DIRECTORY = {
           "label": "Little Soccer Stars booking data",
           "url": "https://book.littlesoccerstars.co.uk/external/coursedata"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "lloyd-park-childrens-charity",
@@ -783,7 +958,12 @@ window.E17_DIRECTORY = {
           "label": "Lloyd Park Children's Charity fees",
           "url": "https://www.tlpcc.org.uk/fees-and-funding"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "make-it-do-it",
@@ -819,7 +999,12 @@ window.E17_DIRECTORY = {
           "label": "Good Shepherd Studios events",
           "url": "https://goodshepherdstudios.com/events"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "mb-summer-tottenham",
@@ -858,7 +1043,12 @@ window.E17_DIRECTORY = {
           "label": "MB Community CIC",
           "url": "https://mbcommunitycic.com/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "mb-summer-chingford",
@@ -897,7 +1087,12 @@ window.E17_DIRECTORY = {
           "label": "MB Community CIC",
           "url": "https://mbcommunitycic.com/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "mission-grove",
@@ -932,34 +1127,41 @@ window.E17_DIRECTORY = {
           "label": "Mission Grove on Eequ HAF",
           "url": "https://eequ.org/book/mission-grove-summer-holiday-club-2026-with-mission-grove-primary-14750"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "mother-nature-science-walthamstow",
-      "checkedOn": "2026-09-05",
+      "checkedOn": "2026-09-06",
       "name": "Mother Nature Science Walthamstow",
       "kind": "Science and STEM holiday camp",
       "area": "Walthamstow",
       "areas": [
         "Walthamstow"
       ],
-      "venue": "Previous listing: Walthamstow School for Girls",
-      "address": "Walthamstow School for Girls, Church Hill, E17 9RZ",
+      "venue": "Walthamstow School for Girls",
+      "address": "Church Hill, Walthamstow, E17 9RZ",
       "ageMin": 5,
-      "ageMax": 12,
-      "ageLabel": "Previously: 5-12 generally; 2026 summer Walthamstow listing says 5-11",
+      "ageMax": 11,
+      "ageLabel": "5–11",
       "categories": [
         "Science",
         "STEM",
         "Workshop"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "October 2026 Halloween science programme advertised for North East London. The Walthamstow venue and exact dates still need confirmation in the booking selector.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "26–30 October: 9am–3:30pm; extended 8:30am–4pm",
+      "price": "£295/week early-bird price; extended hours £10/day extra; £110/individual day",
+      "summary": "Halloween Science at Walthamstow School for Girls, 26–30 October 2026. Hands-on science experiments, craft and outdoor play.",
+      "goodFor": "Primary-age children who enjoy experiments and making things.",
+      "booking": "Select Walthamstow School for Girls and Week B, 26–30 October, on the provider booking form.",
+      "confidence": "October venue and week selected in provider booking form, 6 September 2026",
       "source": {
         "label": "Mother Nature Science October 2026 North East London",
         "url": "https://www.mnature.co.uk/product/october-half-term-holiday-science-activity-camp-nelondon/"
@@ -969,7 +1171,17 @@ window.E17_DIRECTORY = {
           "label": "Mother Nature Science holiday camps",
           "url": "https://www.mnature.co.uk/holiday-science-activity-camps/"
         }
-      ]
+      ],
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "Selected Walthamstow and Week B; live form shows In stock (can be backordered). Confirm places before paying."
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "Selected Walthamstow venue and October Week B in live form; £295 weekly early-bird price."
+      }
     },
     {
       "id": "myths-maps-monsters",
@@ -1010,7 +1222,12 @@ window.E17_DIRECTORY = {
           "label": "Good Shepherd Studios",
           "url": "https://goodshepherdstudios.com/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "blocked",
+        "note": "Ticket page access failed. Official upcoming-shows search lists summer 2026 and October 2025 events, not October 2026."
+      }
     },
     {
       "id": "noisy-book-club-summer",
@@ -1049,7 +1266,12 @@ window.E17_DIRECTORY = {
           "label": "Noisy Book Club",
           "url": "https://www.noisybookclub.com/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "perform-walthamstow-village",
@@ -1088,7 +1310,12 @@ window.E17_DIRECTORY = {
           "label": "Perform Peter Pan holiday course",
           "url": "https://www.perform.org.uk/holiday-courses/peterpan"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Current venue page is for weekly classes and says no session on 29 October; no October holiday camp verified."
+      }
     },
     {
       "id": "petite-productions",
@@ -1128,7 +1355,12 @@ window.E17_DIRECTORY = {
           "label": "Petite Productions booking (Bookwhen)",
           "url": "https://bookwhen.com/petiteproductions"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "ptc-sports-henry-maynard",
@@ -1171,7 +1403,12 @@ window.E17_DIRECTORY = {
           "label": "PTC Sports holiday clubs",
           "url": "https://ptcsports.co.uk/school-services/holiday-clubs/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Saved booking and both provider venue pages checked; no October 2026 Henry Maynard camp verified."
+      }
     },
     {
       "id": "ryan-fc-girls",
@@ -1208,7 +1445,12 @@ window.E17_DIRECTORY = {
           "label": "Ryan FC Girls",
           "url": "https://ryanfcgirls.com/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "sck-martial-arts",
@@ -1239,6 +1481,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "SCK Martial Arts on Eequ HAF",
         "url": "https://eequ.org/book/sck-martial-arts-holiday-camp-with-sck-martial-arts-holiday-camp-29869"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -1276,7 +1523,12 @@ window.E17_DIRECTORY = {
           "label": "Shining Starz Facebook group",
           "url": "https://www.facebook.com/groups/524345883519194/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "blocked",
+        "note": "Social pages did not expose usable listings; search did not establish October 2026 dates."
+      }
     },
     {
       "id": "showkids-walthamstow",
@@ -1318,7 +1570,12 @@ window.E17_DIRECTORY = {
           "label": "ShowKids holiday application",
           "url": "https://showkids.co.uk/showweek-application-form/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "blocked",
+        "note": "All saved provider pages block automated access; search only established old term dates, not an October 2026 camp."
+      }
     },
     {
       "id": "stagecoach-chingford-walthamstow",
@@ -1357,7 +1614,12 @@ window.E17_DIRECTORY = {
           "label": "Stagecoach holiday workshops",
           "url": "https://www.stagecoach.co.uk/holiday-workshops/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "study-right-stem",
@@ -1387,6 +1649,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "Study Right on Eequ HAF",
         "url": "https://eequ.org/book/study-right-stem-and-creative-club-with-study-right-22183"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -1418,6 +1685,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "The Creation Station Walthamstow",
         "url": "https://thecreationstation.co.uk/activities/walthamstow/"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -1449,6 +1721,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "Ultra FC holiday camps",
         "url": "https://www.ultrafc.co.uk/holiday-camps"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -1487,7 +1764,12 @@ window.E17_DIRECTORY = {
           "label": "UpScill kids registration",
           "url": "https://upscill.co.uk/event/register-kids-for-tech-courses-in-walthamstow-e10/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "blocked",
+        "note": "Both saved event links return 404; search did not establish an October 2026 camp."
+      }
     },
     {
       "id": "vestry-school-of-dance",
@@ -1525,7 +1807,12 @@ window.E17_DIRECTORY = {
           "label": "Vestry School of Dance",
           "url": "https://vestryschoolofdance.co.uk/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+      }
     },
     {
       "id": "waltham-forest-haf",
@@ -1566,48 +1853,61 @@ window.E17_DIRECTORY = {
           "label": "Eequ HAF Waltham Forest",
           "url": "https://eequ.org/hafwalthamforest"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Council page and Eequ directory checked. Eequ still describes summer bookings; no October HAF sessions verified."
+      }
     },
     {
       "id": "wee-movers-holiday",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-06",
       "name": "Wee Movers Creative Holiday School",
       "kind": "Creative arts & dance holiday camp",
       "area": "Leyton",
       "areas": [
         "Leyton"
       ],
-      "venue": "Previous listing: St Joseph's Infant School",
+      "venue": "St Joseph's Infant School",
       "address": "St Joseph's Infant School, Marsh Lane, London E10 7BL (Leyton; short walk from Leyton Cricket Ground)",
       "ageMin": 4,
       "ageMax": 10,
-      "ageLabel": "Previously: Ages 4-10",
+      "ageLabel": "4–10",
       "categories": [
         "Dance",
         "Arts",
         "Multi-activity"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed creative arts & dance holiday camp provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "28–30 October: 10am–4pm; optional wraparound 9am–5pm",
+      "price": "£192 for all three days, including lunch and snacks; wraparound extra",
+      "summary": "Three-day October Creative School, Wednesday 28–Friday 30 October 2026: dance, making, circus skills and outdoor activities. No Monday or Tuesday sessions listed.",
+      "goodFor": "Children aged 4–10 who enjoy movement, art and creative play.",
+      "booking": "Provider advertises October booking open. Book the three-day package; confirm places and wraparound charges.",
+      "confidence": "October source checked 6 September 2026",
       "source": {
-        "label": "Wee Movers Creative Holiday Schools",
-        "url": "https://www.weemovers.co.uk/holiday-clubs"
+        "label": "Wee Movers October three-day booking",
+        "url": "https://www.weemovers.co.uk/shopfront/p/creative-school-oct26"
       },
       "secondarySources": [
         {
-          "label": "Wee Movers week-one booking",
-          "url": "https://www.weemovers.co.uk/shopfront/p/creative-school-summer26-week-one"
-        },
-        {
-          "label": "Wee Movers",
-          "url": "https://www.weemovers.co.uk/"
+          "label": "Wee Movers holiday clubs",
+          "url": "https://www.weemovers.co.uk/holiday-clubs"
         }
-      ]
+      ],
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-06",
+        "note": "Provider October page says open for booking; confirm live stock at checkout."
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "confirmed",
+        "note": "October product has an enabled Purchase button: 28–30 October, three-day package £192."
+      }
     },
     {
       "id": "wo-sports",
@@ -1645,7 +1945,12 @@ window.E17_DIRECTORY = {
           "label": "WO Sports booking",
           "url": "https://bookings.wo-sports.co.uk/"
         }
-      ]
+      ],
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Main website and live booking list checked; term-time and old seasonal camps found, no October 2026 holiday camp verified."
+      }
     },
     {
       "id": "yellow-birds",
@@ -1677,6 +1982,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "Yellow Birds",
         "url": "https://yellowbirds.co.uk/"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     },
     {
@@ -1707,6 +2017,11 @@ window.E17_DIRECTORY = {
       "source": {
         "label": "YMCA Y Kidz Walthamstow",
         "url": "https://ymcastpaulsgroup.org/y-kidz-holiday-playschemes/y-kidz-walthamstow/"
+      },
+      "lastCheck": {
+        "date": "2026-09-06",
+        "status": "unconfirmed",
+        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
       }
     }
   ],

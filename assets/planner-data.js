@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -96,18 +96,40 @@ window.E17_PLANNER = {
       "coverage": "working"
     },
     "gravity-performing-arts": {
+      "price": {
+        "day": 45,
+        "week": 210
+      },
+      "priceBasis": "Both October age groups: £45/day or £210/week, plus £10/day each for early drop-off and late pickup.",
+      "hours": {
+        "start": "09:00",
+        "end": "15:00",
+        "extStart": "08:00",
+        "extEnd": "16:00"
+      },
+      "coverage": "standard",
       "weeks": [
         1
       ],
-      "weeksBasis": "Provider lists 26–30 October 2026; checked 5 September 2026.",
-      "lunch": {
-        "policy": "bring",
-        "note": "Nut-free packed lunch, snacks and water required."
-      }
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
     },
     "mother-nature-science-walthamstow": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "Selected Walthamstow School for Girls in the October 2026 booking form; Week B (26–30 October) remains available. Checked 6 September 2026.",
+      "price": {
+        "week": 295,
+        "day": 110
+      },
+      "priceBasis": "Selected October listing shows £295 early-bird weekly price (undiscounted five individual days £550). Extended hours £10 per day extra. Individual days £110 each, shown after selecting the venue and week.",
+      "hours": {
+        "start": "09:00",
+        "end": "15:30",
+        "extStart": "08:30",
+        "extEnd": "16:00"
+      },
+      "coverage": "standard"
     },
     "the-strings-club-walthamstow": {
       "weeks": [
@@ -123,8 +145,28 @@ window.E17_PLANNER = {
       "priceFrom": true
     },
     "football-fun-factory": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "price": {
+        "day": 35,
+        "week": 126
+      },
+      "priceBasis": "£35 per day or £126 for the complete four-day camp (26–29 October). 50% off each additional sibling; the planner does not automatically apply sibling discounts.",
+      "hours": {
+        "start": "09:00",
+        "end": "15:30"
+      },
+      "coverage": "standard",
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
     },
     "little-soccer-stars-walthamstow": {
       "weeks": [],
@@ -169,8 +211,26 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "art-k-highams-park": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3
+        ]
+      },
+      "price": {
+        "day": 70
+      },
+      "priceBasis": "£70 per full day, £210 for all three days. Half-day workshops cost £30; enter your own total if choosing half days. The planner records days, not half-day slots.",
+      "hours": {
+        "start": "10:00",
+        "end": "15:00"
+      },
+      "coverage": "short",
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -189,8 +249,16 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "chillie-kids-club": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "hours": {
+        "start": "09:00",
+        "end": "15:00"
+      },
+      "coverage": "standard",
+      "priceBasis": "Booking calendar shows £60 but an inconsistent multi-day duration. Price unit has not been verified, so the planner leaves cost unknown.",
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
     },
     "noisy-book-club-summer": {
       "weeks": [],
@@ -262,16 +330,48 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "wee-movers-holiday": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "dayPattern": {
+        "1": [
+          3,
+          4,
+          5
+        ]
+      },
+      "fullWeekOnly": true,
+      "price": {
+        "week": 192
+      },
+      "priceBasis": "£192 for the complete three-day course, including daily lunch and snacks. No individual-day purchase verified. Optional NOLUNCHOCT2026 code deducts £6/day when bringing lunch; wraparound costs extra.",
+      "hours": {
+        "start": "10:00",
+        "end": "16:00",
+        "extStart": "09:00",
+        "extEnd": "17:00"
+      },
+      "coverage": "standard",
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
     },
     "make-it-do-it": {
       "weeks": [],
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "infinite-jest": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "price": {
+        "week": 215
+      },
+      "priceBasis": "Standard weekly ticket £215. Sibling weekly ticket £400 admits two. No individual-day rate verified; wraparound charges unverified.",
+      "hours": {
+        "start": "09:30",
+        "end": "15:30"
+      },
+      "coverage": "standard",
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
     },
     "mb-summer-tottenham": {
       "weeks": [],

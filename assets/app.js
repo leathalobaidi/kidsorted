@@ -127,10 +127,10 @@ function formatShortDate(iso) {
 function availabilityInfo(provider) {
   const av = provider && provider.availability;
   if (!av || !av.status) return null;
-  const label = { waitlist: "Waitlist-only", full: "Full", mixed: "Some weeks full" }[av.status];
+  const label = { open: "Booking open", waitlist: "Waitlist-only", full: "Full", mixed: "Some sessions full" }[av.status];
   if (!label) return null;
   const asOf = formatShortDate(av.asOf);
-  return { label, asOf, note: av.note || "", text: label + (asOf ? " — as of " + asOf : "") };
+  return { status: av.status, label, asOf, note: av.note || "", text: label + (asOf ? " — as of " + asOf : "") };
 }
 
 /* planner entry bookBy "YYYY-MM-DD" → {label, daysLeft, closed} or null.
@@ -251,7 +251,7 @@ function weekCost(provider, weekId) {
   if (!wk) return null;
   if (isHafOnly(provider) && (pl.weeks || []).includes(Number(weekId))) return { value: 0, estimate: false, label: "Free (HAF, if eligible)" };
   const pr = pl.price || {};
-  const days = (pl.daysPerWeek && pl.daysPerWeek[String(weekId)]) || (wk.stub ? wk.days : 5);
+  const days = allowedDaysFor(provider, weekId).length;
 
   if (pr.weekByWeek && Number.isFinite(pr.weekByWeek[String(weekId)])) {
     return { value: pr.weekByWeek[String(weekId)], estimate: false, label: "listed week price" };
@@ -439,8 +439,8 @@ function badgeRow(provider) {
   if (pl.lunch && pl.lunch.policy === "included") badges.push(`<span class="badge badge-food">Meals included</span>`);
   if (pl.fridaysOnly) badges.push(`<span class="badge badge-tbc">Fridays only</span>`);
   const av = availabilityInfo(provider);
-  if (av) badges.push(`<span class="badge badge-waitlist"${av.note ? ` title="${escapeHtml(av.note)}"` : ""}>&#9888; ${escapeHtml(av.text)}</span>`);
-  badges.push(`<span class="badge badge-tbc">${escapeHtml(bookingState(provider))}</span>`);
+  if (av) badges.push(`<span class="badge ${av.status === 'open' ? 'badge-confirmed' : 'badge-waitlist'}"${av.note ? ` title="${escapeHtml(av.note)}"` : ""}>${escapeHtml(av.text)}</span>`);
+  else badges.push(`<span class="badge badge-tbc">${escapeHtml(bookingState(provider))}</span>`);
   return badges.join("");
 }
 
@@ -451,7 +451,7 @@ function priceFact(provider) {
   const bits = [];
   if (Number.isFinite(pr.day)) bits.push(`${money(pr.day)}/day`);
   if (Number.isFinite(pr.dayExtended)) bits.push(`${money(pr.dayExtended)}/ext day`);
-  if (Number.isFinite(pr.week)) bits.push(`${money(pr.week)}/wk`);
+  if (Number.isFinite(pr.week)) bits.push(`${money(pr.week)}/${allowedDaysFor(provider, P.weeks[0].id).length < 5 ? 'course' : 'wk'}`);
   if (pr.weekByWeek) {
     const vals = Object.values(pr.weekByWeek).filter(Number.isFinite);
     if (vals.length) bits.push(vals.map(money).join("–") + "/wk");
@@ -465,7 +465,12 @@ function priceFact(provider) {
 function weeksFact(provider) {
   const pl = plannerOf(provider);
   const wk = (pl.weeks || []).filter((w) => w <= 6);
-  if (wk.length === P.weeks.length) return "26–30 October";
+  if (wk.length === P.weeks.length && P.weeks.length === 1) {
+    const days = allowedDaysFor(provider, P.weeks[0].id);
+    const dates = days.map(d=>new Date(Date.parse(P.weeks[0].mon+'T12:00:00Z')+(d-1)*86400000).getUTCDate());
+    return dates.length > 1 && dates.every((d,i)=>i===0 || d===dates[i-1]+1)
+      ? `${dates[0]}–${dates[dates.length-1]} October` : `${dates.join(', ')} October`;
+  }
   if (wk.length) return "Weeks " + wk.join(", ");
   if (pl.sessionBased) return "Selected dates";
   if (pl.weeksLikely) return "Likely — confirm";
@@ -528,7 +533,8 @@ function renderProviders() {
             ${pl.priceBasis ? `<p><strong>Pricing:</strong> ${escapeHtml(pl.priceBasis)}</p>` : ""}
             ${pl.lunch ? `<p><strong>Food:</strong> ${escapeHtml(pl.lunch.note)}</p>` : ""}
             ${stalePrice}${reconfirm}
-            <p class="provenance">Verified against the sources below — checked ${escapeHtml(checkedShort || D.updated)} (${escapeHtml(provider.confidence)}).</p>
+            <p class="provenance">Last verified details: ${escapeHtml(checkedShort || D.updated)} (${escapeHtml(provider.confidence)}).</p>
+            ${provider.lastCheck ? `<p class="provenance">Latest check ${escapeHtml(formatShortDate(provider.lastCheck.date))}: ${escapeHtml(provider.lastCheck.note)}</p>` : ""}
             <div class="source-row">${sourceLinks(provider)}</div>
           </div>
         </details>
@@ -694,7 +700,10 @@ function entryCost(entry, weekId) {
   const p = providerById(entry.campId);
   if (!p) return null;
   const pl = plannerOf(p);
-  if (pl.fullWeekOnly || entry.days.length === allowedDaysFor(p, weekId).length) return weekCost(p, weekId);
+  const allowed = allowedDaysFor(p, weekId);
+  if (entry.days.some(day => !allowed.includes(day))) return null;
+  if (pl.fullWeekOnly && entry.days.length !== allowed.length) return null;
+  if (entry.days.length === allowed.length) return weekCost(p, weekId);
   if (Number.isFinite(pl.price?.day)) return { value: pl.price.day * entry.days.length, estimate: true };
   return null;
 }
@@ -705,6 +714,8 @@ function isBooking(e) { return e.type === 'camp' || e.type === 'other'; }
 function bookingState(p, now = new Date()) {
   const pl = plannerOf(p);
   if (pl.bookingOpens && now < new Date(pl.bookingOpens)) return 'Opens ' + pl.bookingOpensLabel;
+  const availability = availabilityInfo(p);
+  if (availability) return availability.text;
   return (pl.weeks || []).length ? 'Dates published · places unverified' : 'October availability unverified';
 }
 function ageLabel(age) {
@@ -739,7 +750,7 @@ function renderPlanner() {
         <div class="booking-list">${entries.map(e => {
           const cost = entryCost(e, wk.id);
           return `<article class="booking-row"><div><strong>${escapeHtml(assignmentLabel(e))}</strong><p>${e.days.map(d => DAY_LABELS[d-1]).join(', ')} · ${cost ? money(cost.value) + (cost.estimate ? ' estimate' : '') : 'Price to confirm'}</p>
-            ${e.type === 'camp' && !(plannerOf(providerById(e.campId) || {}).weeks || []).includes(wk.id) ? '<p class="po-warn">Dates unconfirmed — check with provider</p>' : ''}</div>
+            ${e.type === 'camp' && !(plannerOf(providerById(e.campId) || {}).weeks || []).includes(wk.id) ? '<p class="po-warn">Dates unconfirmed — check with provider</p>' : ''}${e.type === 'camp' && e.days.some(day=>!allowedDaysFor(providerById(e.campId)||{},wk.id).includes(day)) ? '<p class="po-warn">Your saved days include a day this camp does not list. Check and edit this booking.</p>' : ''}</div>
             <div class="booking-actions"><button type="button" class="btn-sub" data-edit-booking="${e.id}" data-week="${wk.id}" data-child="${escapeHtml(c.id)}">Edit booking</button>
             ${isBooking(e) ? `<button type="button" class="btn-sub ${e.booked ? 'is-booked' : ''}" aria-pressed="${!!e.booked}" data-booking-toggle="${e.id}" data-week="${wk.id}" data-child="${escapeHtml(c.id)}">${e.booked ? 'Booked ✓' : 'Mark booked'}</button>` : ''}</div></article>`;
         }).join('')}</div></section>`;
@@ -799,8 +810,10 @@ function openCampAssign(campId) {
   renderPicker(); els.pickerDialog.showModal();
 }
 function startDraft(weekId, childId, entry, days, editId) {
-  const full = entry.type === 'camp' && plannerOf(providerById(entry.campId) || {}).fullWeekOnly;
-  pickerCtx = {mode:'draft', weekId:Number(weekId), childId, editId, draft:{...entry,id:entry.id || bookingId(),days:full ? weekDays(weekId) : [...days]}};
+  const p = entry.type === 'camp' ? providerById(entry.campId) : null;
+  const full = p && plannerOf(p).fullWeekOnly;
+  const allowed = p ? allowedDaysFor(p, weekId) : weekDays(weekId);
+  pickerCtx = {mode:'draft', weekId:Number(weekId), childId, editId, draft:{...entry,id:entry.id || bookingId(),days:full ? allowed : days.filter(d => allowed.includes(d))}};
   renderPicker();
 }
 function draftCostText() {
@@ -843,13 +856,14 @@ function renderPicker() {
   const conflicts = conflictingEntries(ctx);
   els.pickerBody.innerHTML = `<p>${p ? escapeHtml(bookingState(p)) : 'Choose which days this cover applies to.'}</p>
     ${p && !ageFits(p,c.age) ? `<p class="po-warn">Outside listed ages (${escapeHtml(p.ageLabel)}). Check eligibility before booking.</p>` : ''}
-    ${full ? '<p class="full-week-note"><strong>Full-week booking only.</strong> All five days are included. Individual days cannot be bought separately.</p>' : ''}
-    <fieldset class="draft-days"><legend>Days to cover</legend>${weekDays(wk.id).map(day=>`<label><input type="checkbox" data-draft-day="${day}" ${d.days.includes(day)?'checked':''} ${full?'disabled':''}> ${DAY_LABELS[day-1]} ${new Date(Date.parse(wk.mon+'T12:00:00Z')+(day-1)*86400000).getUTCDate()}</label>`).join('')}</fieldset>
+    ${full ? `<p class="full-week-note"><strong>Complete course booking only.</strong> All ${allowedDaysFor(p,wk.id).length} listed days are included. Individual days cannot be bought separately.</p>` : ''}
+    ${p && allowedDaysFor(p,wk.id).length < weekDays(wk.id).length ? `<p class="picker-note">Runs ${allowedDaysFor(p,wk.id).map(d=>DAY_LABELS[d-1]).join(', ')} only. Other days need separate cover.</p>` : ''}
+    <fieldset class="draft-days"><legend>Days to cover</legend>${weekDays(wk.id).map(day=>`<label><input type="checkbox" data-draft-day="${day}" ${d.days.includes(day)?'checked':''} ${full || (p && !allowedDaysFor(p,wk.id).includes(day))?'disabled':''}> ${DAY_LABELS[day-1]} ${new Date(Date.parse(wk.mon+'T12:00:00Z')+(day-1)*86400000).getUTCDate()}</label>`).join('')}</fieldset>
     ${d.type === 'other' ? `<label class="field"><span>Camp name</span><input id="draftName" maxlength="60" value="${escapeHtml(d.label || '')}"></label><label class="field"><span>Price applies to</span><select id="draftBasis"><option value="week">All selected days</option><option value="day" ${d.costBasis==='day'?'selected':''}>Each day</option></select></label>` : ''}
     ${isBooking(d) ? `<label class="field"><span>${p ? 'Your total price for this booking (£, optional)' : 'Price (£, leave blank if unknown)'}</span><input id="draftPrice" type="number" min="0" step="0.01" inputmode="decimal" value="${Number.isFinite(p ? d.myCost : d.cost) ? (p ? d.myCost : d.cost) : ''}"></label>` : ''}
     <p class="draft-price" id="draftCost" aria-live="polite">${draftCostText()}</p>
     ${p && plannerOf(p).priceBasis ? `<p class="picker-note">${escapeHtml(plannerOf(p).priceBasis)}</p>` : ''}
-    <div id="draftConflict" role="status">${ctx.reviewOverlap && conflicts.length ? `<div class="overlap-review"><strong>These days already have cover:</strong><ul>${conflicts.map(e=>`<li>${escapeHtml(assignmentLabel(e))} — ${e.days.filter(day=>d.days.includes(day)).map(day=>DAY_LABELS[day-1]).join(', ')}${e.type==='camp' && plannerOf(providerById(e.campId)||{}).fullWeekOnly ? '. Replacing any day removes this full-week booking from the plan.' : ''}${e.booked ? ' This is marked booked; changing the plan does not cancel your provider booking.' : ''}</li>`).join('')}</ul><button class="btn btn-danger" type="button" data-confirm-replace="1">Replace this cover</button><button class="btn-sub" type="button" data-review-cancel="1">Keep existing cover</button></div>` : ''}</div>
+    <div id="draftConflict" role="status">${ctx.reviewOverlap && conflicts.length ? `<div class="overlap-review"><strong>These days already have cover:</strong><ul>${conflicts.map(e=>`<li>${escapeHtml(assignmentLabel(e))} — ${e.days.filter(day=>d.days.includes(day)).map(day=>DAY_LABELS[day-1]).join(', ')}${e.type==='camp' && plannerOf(providerById(e.campId)||{}).fullWeekOnly ? '. Replacing any day removes this complete-course booking from the plan.' : ''}${e.booked ? ' This is marked booked; changing the plan does not cancel your provider booking.' : ''}</li>`).join('')}</ul><button class="btn btn-danger" type="button" data-confirm-replace="1">Replace this cover</button><button class="btn-sub" type="button" data-review-cancel="1">Keep existing cover</button></div>` : ''}</div>
     ${d.booked ? '<p>This booking is marked booked. Changing dates resets that status; changing or removing it here does not cancel a provider booking.</p>' : ''}<p id="draftError" role="alert"></p><div class="draft-actions"><button type="button" class="btn btn-solid" data-save-draft="1">Save cover</button>${ctx.editId ? '<button type="button" class="btn btn-danger" data-remove-draft="1">Remove from plan</button>' : ''}</div>`;
   for (const el of els.pickerBody.querySelectorAll('#draftPrice,#draftBasis,#draftName')) el.addEventListener('input',()=>{readDraftFields();document.querySelector('#draftCost').textContent=draftCostText();});
 }
@@ -892,6 +906,7 @@ function handlePickerClick(event) {
     if (bad) {bad.reportValidity();return;}
     readDraftFields();
     if (!ctx.draft.days.length) {document.querySelector('#draftError').textContent='Choose at least one day.';return;}
+    if (ctx.draft.type === 'camp' && ctx.draft.days.some(day => !allowedDaysFor(providerById(ctx.draft.campId), ctx.weekId).includes(day))) {document.querySelector('#draftError').textContent='Choose only the days this camp runs.';return;}
     if (conflictingEntries(ctx).length && !event.target.closest('[data-confirm-replace]')) {ctx.reviewOverlap=true;renderPicker();return;}
     commitDraft();
   }
