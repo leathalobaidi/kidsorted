@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-06",
+  "updated": "2026-09-07",
   "providers": [
     {
       "id": "all-about-dance",
@@ -789,7 +789,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "infinite-jest",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-07",
       "name": "Infinite Jest Drama Camp",
       "kind": "Drama holiday camp",
       "area": "Leyton",
@@ -810,11 +810,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "26–30 October: 9:30am–3:30pm; wraparound add-ons available",
-      "price": "£215/week; £400 weekly ticket admits two siblings; individual-day prices unverified",
+      "price": "£43/day or £215/week; sibling tickets £80/day or £400/week admit two",
       "summary": "Things that go bump in the night: a Halloween drama and storytelling camp, 26–30 October 2026, with acting, singing, dance and craft.",
       "goodFor": "Children who enjoy devising stories, performing and creative group activities.",
-      "booking": "Weekly tickets are available on Pebble. Check single-day availability separately; the single-date view displayed a waitlist link.",
-      "confidence": "October source checked 6 September 2026",
+      "booking": "Weekly and individual-day tickets are available on Pebble. Choose a date and select the session before choosing tickets.",
+      "confidence": "October ticket selectors checked 7 September 2026",
       "source": {
         "label": "Infinite Jest October drama camp booking",
         "url": "https://activities.bookpebble.co.uk/activity/infinite-jest-things-that-go-bump-in-the-night-london-5ee9e382-d726-4c6a-abfb-e66500a215c9"
@@ -827,13 +827,13 @@ window.E17_DIRECTORY = {
       ],
       "availability": {
         "status": "open",
-        "asOf": "2026-09-06",
-        "note": "Weekly ticket selection is open. Single-day availability is not confirmed; check Pebble. Wraparound charges are extra."
+        "asOf": "2026-09-07",
+        "note": "Standard daily (£43) and weekly (£215) ticket selectors are open. Sibling tickets admit two. Wraparound charges extra."
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-07",
         "status": "confirmed",
-        "note": "Live Pebble October week ticket verified at £215; £400 admits two siblings. Single-date view shows a waitlist link; daily rate unverified."
+        "note": "Verified standard daily ticket £43 for 26 October; sibling daily £80 admits two. Weekly £215 and sibling weekly £400 reconfirmed."
       }
     },
     {

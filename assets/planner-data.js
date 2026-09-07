@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-06",
+  "updated": "2026-09-07",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -356,9 +356,10 @@ window.E17_PLANNER = {
     },
     "infinite-jest": {
       "price": {
+        "day": 43,
         "week": 215
       },
-      "priceBasis": "Standard weekly ticket £215. Sibling weekly ticket £400 admits two. No individual-day rate verified; wraparound charges unverified.",
+      "priceBasis": "Pebble October ticket selectors checked 7 September: £43/day or £215/week for one child. Sibling tickets £80/day or £400/week admit two. Wraparound extra; discounts are not applied automatically by the planner.",
       "hours": {
         "start": "09:30",
         "end": "15:30"
