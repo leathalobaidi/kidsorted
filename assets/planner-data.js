@@ -40,8 +40,21 @@ window.E17_PLANNER = {
       "plannerRole": "route"
     },
     "ymca-y-kidz": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "Provider email, 7 September 2026: both sites 26–30 October; Handsworth additionally 19–23 October, outside this planner.",
+      "price": {
+        "day": 36
+      },
+      "priceBasis": "£36/day covers 10am–4pm only. The 8:30am–5:30pm session costs £41/day; planner estimates use the standard session and exclude the £5/day upgrade. Confirm places and session when booking.",
+      "hours": {
+        "start": "10:00",
+        "end": "16:00",
+        "extStart": "08:30",
+        "extEnd": "17:30"
+      },
+      "coverage": "working"
     },
     "lloyd-park-childrens-charity": {
       "weeks": [],
@@ -199,8 +212,18 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "yellow-birds": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "Provider email, 7 September 2026: 26–30 October in Chingford. Exact venue and booking link pending.",
+      "priceBasis": "Provider quotes from £25.10/day without confirming the applicable session or extended-hour charges. Planner cost remains unknown until the chosen session price is confirmed. No funded places.",
+      "hours": {
+        "start": "10:00",
+        "end": "15:00",
+        "extStart": "07:30",
+        "extEnd": "18:30"
+      },
+      "coverage": "working"
     },
     "ultra-fc": {
       "weeks": [],

@@ -813,8 +813,8 @@ window.E17_DIRECTORY = {
       "price": "£43/day or £215/week; sibling tickets £80/day or £400/week admit two",
       "summary": "Things that go bump in the night: a Halloween drama and storytelling camp, 26–30 October 2026, with acting, singing, dance and craft.",
       "goodFor": "Children who enjoy devising stories, performing and creative group activities.",
-      "booking": "Weekly and individual-day tickets are available on Pebble. Choose a date and select the session before choosing tickets.",
-      "confidence": "October ticket selectors checked 7 September 2026",
+      "booking": "Book individual days or the full week through Pebble. The provider encourages full-week bookings but confirms single days are available.",
+      "confidence": "Daily booking confirmed by provider email and October ticket selectors checked 7 September 2026",
       "source": {
         "label": "Infinite Jest October drama camp booking",
         "url": "https://activities.bookpebble.co.uk/activity/infinite-jest-things-that-go-bump-in-the-night-london-5ee9e382-d726-4c6a-abfb-e66500a215c9"
@@ -1960,44 +1960,49 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "yellow-birds",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-07",
       "name": "Yellow Birds Play Academy",
       "kind": "Out of school club",
-      "area": "Chingford / Waltham Forest",
+      "area": "Chingford",
       "areas": [
-        "Chingford",
-        "Highams Park",
-        "Walthamstow"
+        "Chingford"
       ],
-      "venue": "Previous listing: Chingford and Waltham Forest club sites",
-      "address": "Sites vary",
-      "ageMin": 4,
-      "ageMax": 11,
-      "ageLabel": "Previously: Primary school age",
+      "venue": "Chingford — exact venue to be confirmed",
+      "address": "Exact address to be confirmed by provider",
+      "ageMin": 3,
+      "ageMax": 13,
+      "ageLabel": "3–13 years",
       "categories": [
         "Play",
         "Childcare"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed out of school club provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "10am–3pm; flexible extended hours 7:30am–6:30pm",
+      "price": "From £25.10/day; confirm session-specific and extended-hours prices",
+      "summary": "October half-term childcare, 26–30 October 2026, in Chingford for ages 3–13. Flexible extended hours available. No funded places. Exact venue and booking link are awaiting provider confirmation.",
+      "goodFor": "Families needing flexible childcare hours; confirm exact venue, session and price with the provider.",
+      "booking": "Booking link to follow. Contact Yellow Birds via its website or 020 8509 0006 for the exact venue, booking route and prices.",
+      "confidence": "October dates, ages, Chingford location, hours and starting price confirmed by provider email, 7 September 2026",
       "source": {
         "label": "Yellow Birds",
         "url": "https://yellowbirds.co.uk/"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-07",
+        "status": "confirmed",
+        "note": "Provider confirms 26–30 October, ages 3–13, standard and extended hours, from £25.10/day and no funded places. Exact venue and booking link pending."
+      },
+      "availability": {
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "asOf": "2026-09-07",
+        "note": "Dates confirmed; booking link and remaining places not yet confirmed."
       }
     },
     {
       "id": "ymca-y-kidz",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-07",
       "name": "YMCA Y Kidz Holiday Playscheme",
       "kind": "Childcare playscheme",
       "area": "Walthamstow / Highams Park",
@@ -2005,29 +2010,36 @@ window.E17_DIRECTORY = {
         "Walthamstow",
         "Highams Park"
       ],
-      "venue": "Previous listing: Whittingham Primary Academy and Handsworth Primary School",
+      "venue": "Whittingham Primary Academy and Handsworth Primary School",
       "address": "340 Higham Hill Road, E17 5QX; Handsworth Avenue, E4 9PJ",
       "ageMin": 4,
       "ageMax": 11,
-      "ageLabel": "Previously: 4-11",
+      "ageLabel": "4–11 years (Reception–Year 6)",
       "categories": [
         "Multi-activity"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed childcare playscheme provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "10am–4pm (£36/day) or 8:30am–5:30pm (£41/day)",
+      "price": "£36/day for 10am–4pm; £41/day for 8:30am–5:30pm",
+      "summary": "October holiday playscheme for Reception–Year 6. Whittingham Primary Academy runs 26–30 October 2026. Handsworth Primary School runs for two weeks, 19–30 October. The planner covers 26–30 October only.",
+      "goodFor": "Primary-school children needing standard or longer-day childcare at Walthamstow or Highams Park sites.",
+      "booking": "Choose Whittingham or Handsworth and the required session on the YMCA booking website; confirm places before booking.",
+      "confidence": "Dates, ages, venues, session hours and prices confirmed by provider email, 7 September 2026",
       "source": {
         "label": "YMCA Y Kidz Walthamstow",
         "url": "https://ymcastpaulsgroup.org/y-kidz-holiday-playschemes/y-kidz-walthamstow/"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-07",
+        "status": "confirmed",
+        "note": "Provider confirms both sites for 26–30 October; Handsworth also runs 19–23 October. £36 standard or £41 long day."
+      },
+      "availability": {
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "asOf": "2026-09-07",
+        "note": "October operation confirmed by provider; remaining places not confirmed."
       }
     }
   ],
