@@ -86,16 +86,10 @@ window.E17_DIRECTORY = {
         "label": "Barracudas Woodford official camp page",
         "url": "https://www.barracudas.co.uk/camps/woodford/"
       },
-      "secondarySources": [
-        {
-          "label": "Barracudas October dates and prices (indexed source)",
-          "url": "https://front-facing-live.barracudas.co.uk/camps/woodford/"
-        }
-      ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-07",
         "status": "confirmed",
-        "note": "Indexed official source reconfirms October dates and prices; direct secondary-domain fetch fails with expired TLS certificate. Booking link changed to main official domain."
+        "note": "Official Woodford page is reachable. Removed obsolete secondary host with expired TLS certificate; previously verified October dates and prices retained."
       }
     },
     {
@@ -1762,19 +1756,13 @@ window.E17_DIRECTORY = {
       "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
       "confidence": "Previous directory details; October availability unconfirmed",
       "source": {
-        "label": "UpScill Easter tech bootcamp",
-        "url": "https://upscill.co.uk/event/easter-tech-bootcamp-for-kids-in-walthamstow-e10/"
+        "label": "UpScill holiday bootcamps",
+        "url": "https://www.upscill.co.uk/bootcamps"
       },
-      "secondarySources": [
-        {
-          "label": "UpScill kids registration",
-          "url": "https://upscill.co.uk/event/register-kids-for-tech-courses-in-walthamstow-e10/"
-        }
-      ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "blocked",
-        "note": "Both saved event links return 404; search did not establish an October 2026 camp."
+        "date": "2026-09-07",
+        "status": "unconfirmed",
+        "note": "Current official bootcamps page says no upcoming holiday sessions. October 2026 dates remain unconfirmed; obsolete event links replaced."
       }
     },
     {
