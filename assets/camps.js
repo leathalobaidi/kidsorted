@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-07",
+  "updated": "2026-09-09",
   "providers": [
     {
       "id": "all-about-dance",
@@ -589,7 +589,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "chillie-kids-club",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-09",
       "name": "Chillie Kids Club",
       "kind": "Creative upcycling holiday club",
       "area": "Walthamstow",
@@ -611,12 +611,12 @@ window.E17_DIRECTORY = {
       "funding": [
         "Paid"
       ],
-      "hours": "26–30 October: 9am–3pm; calendar also offers 8:30am — confirm early-drop details",
-      "price": "Booking page displays £60; confirm price per day and any early-drop fee",
+      "hours": "26–30 October: 9am–3pm",
+      "price": "£60/day",
       "summary": "October upcycling workshops at Orford House, Monday 26–Friday 30 October 2026. Children reuse fabrics and clothes in creative projects.",
       "goodFor": "Children aged 5+ who enjoy making and sustainable fashion.",
-      "booking": "October calendar is open with available spots on 26 October. Confirm each required date and the total price.",
-      "confidence": "October source checked 6 September 2026",
+      "booking": "October calendar shows available spots on 26–30 October. Select each required date to check remaining places.",
+      "confidence": "October calendar and six-hour daily price verified 9 September 2026",
       "source": {
         "label": "Chillie Walthamstow Club booking",
         "url": "https://www.chilliekidsclub.com/booking-calendar/walthamstow-club"
@@ -633,13 +633,13 @@ window.E17_DIRECTORY = {
       ],
       "availability": {
         "status": "open",
-        "asOf": "2026-09-06",
+        "asOf": "2026-09-09",
         "note": "October calendar shows available spots; individual-date capacity may vary."
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-09",
         "status": "confirmed",
-        "note": "October 2026 calendar shows available spots for 26 October. £60 displayed with inconsistent duration; price unit remains unverified."
+        "note": "October calendar shows available spots on 26–30 October. Selected Monday and Friday service details each show £60, 9am start and six-hour duration. Earlier price-unit ambiguity resolved; current calendar no longer shows an 8:30am option."
       }
     },
     {
@@ -1136,7 +1136,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "mother-nature-science-walthamstow",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-09",
       "name": "Mother Nature Science Walthamstow",
       "kind": "Science and STEM holiday camp",
       "area": "Walthamstow",
@@ -1157,11 +1157,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "26–30 October: 9am–3:30pm; extended 8:30am–4pm",
-      "price": "£295/week early-bird price; extended hours £10/day extra; £110/individual day",
+      "price": "£345/week early-bird price; extended hours £10/day extra; £110/individual day",
       "summary": "Halloween Science at Walthamstow School for Girls, 26–30 October 2026. Hands-on science experiments, craft and outdoor play.",
       "goodFor": "Primary-age children who enjoy experiments and making things.",
       "booking": "Select Walthamstow School for Girls and Week B, 26–30 October, on the provider booking form.",
-      "confidence": "October venue and week selected in provider booking form, 6 September 2026",
+      "confidence": "October venue, week and prices verified in provider booking form, 9 September 2026",
       "source": {
         "label": "Mother Nature Science October 2026 North East London",
         "url": "https://www.mnature.co.uk/product/october-half-term-holiday-science-activity-camp-nelondon/"
@@ -1174,13 +1174,13 @@ window.E17_DIRECTORY = {
       ],
       "availability": {
         "status": "open",
-        "asOf": "2026-09-06",
+        "asOf": "2026-09-09",
         "note": "Selected Walthamstow and Week B; live form shows In stock (can be backordered). Confirm places before paying."
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-09",
         "status": "confirmed",
-        "note": "Selected Walthamstow venue and October Week B in live form; £295 weekly early-bird price."
+        "note": "Selected Walthamstow and Week B (26–30 October) in the live form. Weekly early-bird price increased to £345; individual days £110 and extended hours £10/day unchanged. Form shows In stock (can be backordered)."
       }
     },
     {

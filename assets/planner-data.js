@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-07",
+  "updated": "2026-09-09",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -126,12 +126,12 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Selected Walthamstow School for Girls in the October 2026 booking form; Week B (26–30 October) remains available. Checked 6 September 2026.",
+      "weeksBasis": "Selected Walthamstow School for Girls in the October 2026 booking form; Week B (26–30 October) remains available. Checked 9 September 2026.",
       "price": {
-        "week": 295,
+        "week": 345,
         "day": 110
       },
-      "priceBasis": "Selected October listing shows £295 early-bird weekly price (undiscounted five individual days £550). Extended hours £10 per day extra. Individual days £110 each, shown after selecting the venue and week.",
+      "priceBasis": "Selected October listing shows £345 early-bird weekly price (undiscounted five individual days £550). Extended hours £10 per day extra. Individual days £110 each, shown after selecting the venue and week.",
       "hours": {
         "start": "09:00",
         "end": "15:30",
@@ -273,11 +273,14 @@ window.E17_PLANNER = {
         "end": "15:00"
       },
       "coverage": "standard",
-      "priceBasis": "Booking calendar shows £60 but an inconsistent multi-day duration. Price unit has not been verified, so the planner leaves cost unknown.",
+      "priceBasis": "October booking calendar: £60 for a six-hour session starting 9am; Monday 26 and Friday 30 October service details checked 9 September 2026.",
       "weeks": [
         1
       ],
-      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-09.",
+      "price": {
+        "day": 60
+      }
     },
     "noisy-book-club-summer": {
       "weeks": [],
