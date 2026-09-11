@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-09",
+  "updated": "2026-09-11",
   "providers": [
     {
       "id": "all-about-dance",
@@ -94,7 +94,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "church-hill-playscheme",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-11",
       "name": "Church Hill Nursery Holiday Playscheme",
       "kind": "Early years playscheme",
       "area": "Walthamstow",
@@ -102,7 +102,7 @@ window.E17_DIRECTORY = {
         "Walthamstow"
       ],
       "venue": "Church Hill Nursery School",
-      "address": "Church Hill, Walthamstow",
+      "address": "47 Woodbury Road, Walthamstow, E17 9SB",
       "ageMin": 3,
       "ageMax": 8,
       "ageLabel": "3-8",
@@ -113,27 +113,36 @@ window.E17_DIRECTORY = {
       "funding": [
         "Paid"
       ],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "The nursery’s 2026–27 calendar lists playscheme on 26–30 October. Confirm the application window, ages, hours and fees directly.",
+      "hours": "9am–4pm core session; 8am–6pm full day",
+      "price": "£49/day (9am–4pm); £65/day (8am–6pm). Breakfast add-on £7; tea add-on £14.",
+      "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Core and full-day sessions are available through Pembee.",
       "goodFor": "Younger children who need a nursery-style local holiday day.",
-      "booking": "Contact the nursery for the October playscheme form.",
-      "confidence": "October source checked 6 September 2026",
+      "booking": "Book the October Playscheme on Pembee; choose the core or full-day session. Speak to the nursery before booking if your child needs additional support.",
+      "confidence": "October dates, venue, ages, hours, prices and available sessions checked 11 September 2026",
       "source": {
         "label": "Church Hill 2026–27 term dates",
         "url": "https://www.fans.waltham.sch.uk/term-dates"
       },
-      "bookingUrl": "https://www.fans.waltham.sch.uk/holiday-playscheme",
+      "bookingUrl": "https://fans.pembee.app/activity/6a994ecb8d892d23a4a39ba4",
       "secondarySources": [
         {
           "label": "Church Hill playscheme and booking forms",
           "url": "https://www.fans.waltham.sch.uk/holiday-playscheme"
+        },
+        {
+          "label": "Church Hill October Playscheme booking",
+          "url": "https://fans.pembee.app/activity/6a994ecb8d892d23a4a39ba4"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-11",
         "status": "confirmed",
-        "note": "Old calendar download returns 404; official term-dates page confirms 26–30 October 2026. October application form and fees still unverified."
+        "note": "Official nursery page and linked Pembee listing confirm 26–30 October 2026, ages 3–8, 47 Woodbury Road, core £49 (9–16) and full day £65 (8–18); all ten session options show Available."
+      },
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-11",
+        "note": "All five core and full-day sessions show Available on Pembee."
       }
     },
     {
@@ -396,7 +405,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-11",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -420,16 +429,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Wednesday 28 October 2026. Individual projects in sculpture, painting and mixed media. No Thursday or Friday sessions listed.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "October enrolment is open. Choose a full-day or half-day session on the live calendar.",
-      "confidence": "October source checked 6 September 2026",
+      "booking": "The workshop page says enrolment has not yet started, while the session calendar still displays selectable dates. Confirm enrolment with art-K before relying on a place.",
+      "confidence": "October dates and prices checked 11 September 2026; enrolment status needs confirmation",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-09-06",
-        "note": "Selectable sessions listed for 26–28 October. Check the provider calendar for remaining places."
+        "status": "unknown",
+        "asOf": "2026-09-11",
+        "note": "Conflicting public booking signals: main page says enrolment has not started; session calendar offers dates. Booking availability unresolved."
       },
       "secondarySources": [
         {
@@ -438,9 +447,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-11",
         "status": "confirmed",
-        "note": "Live October enrolment and session calendar checked; 26–28 October, full days and half days."
+        "note": "Dates, venue, ages, hours and prices unchanged. Main workshop page says enrolment has not yet started, but direct session calendar displays selectable 26–28 October sessions. Removed unqualified booking-open claim; availability remains unresolved."
       }
     },
     {
@@ -880,30 +889,32 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "little-soccer-stars-walthamstow",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-11",
       "name": "Little Soccer Stars Walthamstow",
       "kind": "Football holiday camp",
-      "area": "Walthamstow / Lloyd Park",
+      "area": "Walthamstow",
       "areas": [
         "Walthamstow"
       ],
-      "venue": "Previous listing: Lloyd Park, Walthamstow",
-      "address": "Walthamstow (Lloyd Park), E17",
-      "ageMin": 4,
-      "ageMax": 11,
-      "ageLabel": "Previously: Nursery/Reception-Year 6 in 2026 booking feed",
+      "venue": "Walthamstow School for Girls",
+      "address": "Walthamstow School for Girls, Walthamstow, E17",
+      "ageMin": null,
+      "ageMax": null,
+      "ageLabel": "School years 0–6 as listed; confirm minimum age with provider",
       "categories": [
         "Short day",
         "Football",
         "Sports"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed football holiday camp provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "9:30am–3:15pm on 26–28 October",
+      "price": "£32.50 per day",
+      "summary": "October football camp on Monday 26–Wednesday 28 October 2026 at Walthamstow School for Girls. No Thursday or Friday camp listed. The booking table lists school years 0–6; check your child’s eligibility.",
+      "goodFor": "Children who enjoy football and need three days of half-term activities; confirm age suitability before booking.",
+      "booking": "October dates show Book Now. Register or log in at the Little Soccer Stars booking portal to book.",
+      "confidence": "October dates, school venue, hours and daily fee verified in public booking listings, 11 September 2026",
       "source": {
         "label": "Little Soccer Stars football camps",
         "url": "http://www.littlesoccerstars.com/Services/FootballCamps"
@@ -919,9 +930,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "date": "2026-09-11",
+        "status": "confirmed",
+        "note": "Public rendered football-camps table and booking feed list 26, 27 and 28 October 2026 at Walthamstow School for Girls, 09:30–15:15, £32.50/day, Book Now/HasSpaces=true. School years 0–6 shown; generic feed ages 0–99 are not treated as eligibility."
+      },
+      "bookingUrl": "https://book.littlesoccerstars.co.uk",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-11",
+        "note": "All three October listings show Book Now and the provider feed reports spaces. Registration/login is required to book; exact age eligibility needs confirmation."
       }
     },
     {
@@ -985,10 +1002,10 @@ window.E17_DIRECTORY = {
       ],
       "funding": [],
       "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed creative art holiday camp provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
+      "price": "October links show £110 standard, £95 subsequent sibling and £40 low/no-income rates; duration and exact dates are unconfirmed.",
+      "summary": "Provider Linktree now lists GSS and HOST October camp payment options, but exact October 2026 dates, hours, age eligibility and remaining places are not yet verified. Confirm these before planning cover or paying.",
       "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
+      "booking": "Check the provider’s October details before using the GSS or HOST payment links; payment amounts alone do not confirm dates or availability.",
       "confidence": "Previous directory details; October availability unconfirmed",
       "source": {
         "label": "Make It Do It booking (Linktree)",
@@ -1001,9 +1018,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-11",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Linktree now lists GSS and HOST October camp rates £110/£95/£40. Followed GSS standard payment page: £110, no exact dates, hours or age eligibility. Venue events still show summer camps and regular workshops. October dates remain unconfirmed."
       }
     },
     {
@@ -1990,7 +2007,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "ymca-y-kidz",
-      "checkedOn": "2026-09-07",
+      "checkedOn": "2026-09-11",
       "name": "YMCA Y Kidz Holiday Playscheme",
       "kind": "Childcare playscheme",
       "area": "Walthamstow / Highams Park",
@@ -2013,22 +2030,23 @@ window.E17_DIRECTORY = {
       "price": "£36/day for 10am–4pm; £41/day for 8:30am–5:30pm",
       "summary": "October holiday playscheme for Reception–Year 6. Whittingham Primary Academy runs 26–30 October 2026. Handsworth Primary School runs for two weeks, 19–30 October. The planner covers 26–30 October only.",
       "goodFor": "Primary-school children needing standard or longer-day childcare at Walthamstow or Highams Park sites.",
-      "booking": "Choose Whittingham or Handsworth and the required session on the YMCA booking website; confirm places before booking.",
-      "confidence": "Dates, ages, venues, session hours and prices confirmed by provider email, 7 September 2026",
+      "booking": "October booking is open according to YMCA. Register or log in to Magicbooking, choose Whittingham or Handsworth and confirm places for your selected session.",
+      "confidence": "Official October dates, venues, ages, hours and prices checked 11 September 2026",
       "source": {
         "label": "YMCA Y Kidz Walthamstow",
         "url": "https://ymcastpaulsgroup.org/y-kidz-holiday-playschemes/y-kidz-walthamstow/"
       },
       "lastCheck": {
-        "date": "2026-09-07",
+        "date": "2026-09-11",
         "status": "confirmed",
-        "note": "Provider confirms both sites for 26–30 October; Handsworth also runs 19–23 October. £36 standard or £41 long day."
+        "note": "Official website now states October Half Term booking is open; both sites 26–30 October, Handsworth also 19–23. £36 standard 10–16 or £41 extended 8:30–17:30 unchanged. Followed Magicbooking: registration/login required; no remaining-place claim."
       },
       "availability": {
-        "status": "unconfirmed",
-        "asOf": "2026-09-07",
-        "note": "October operation confirmed by provider; remaining places not confirmed."
-      }
+        "status": "open",
+        "asOf": "2026-09-11",
+        "note": "YMCA publicly says October Half Term booking is open. Magicbooking requires an account; remaining places are not publicly verified."
+      },
+      "bookingUrl": "https://ymcaspg.magicbooking.co.uk/Register"
     }
   ],
   "hafSnapshot": []

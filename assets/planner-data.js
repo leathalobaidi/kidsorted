@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-09",
+  "updated": "2026-09-11",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -43,7 +43,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Provider email, 7 September 2026: both sites 26–30 October; Handsworth additionally 19–23 October, outside this planner.",
+      "weeksBasis": "Official YMCA website, checked 11 September 2026: both sites 26–30 October; Handsworth additionally 19–23 October, outside this planner.",
       "price": {
         "day": 36
       },
@@ -64,7 +64,18 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Nursery 2026–27 term calendar explicitly lists playscheme for 26–30 October; fees and booking window not yet verified."
+      "weeksBasis": "Official October Pembee listing, checked 11 September 2026: core and full-day sessions on 26–30 October.",
+      "price": {
+        "day": 49
+      },
+      "priceBasis": "£49/day covers 9am–4pm. Full day 8am–6pm costs £65; use your own total for that option. Separate breakfast £7 and tea £14 add-ons are not included in the estimate.",
+      "hours": {
+        "start": "09:00",
+        "end": "16:00",
+        "extStart": "08:00",
+        "extEnd": "18:00"
+      },
+      "coverage": "working"
     },
     "mission-grove": {
       "weeks": [],
@@ -178,8 +189,26 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
     },
     "little-soccer-stars-walthamstow": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "Public October listings checked 11 September 2026: 26–28 October only. No Thursday/Friday sessions listed; confirm age eligibility.",
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3
+        ]
+      },
+      "price": {
+        "day": 32.5
+      },
+      "priceBasis": "£32.50 per listed day; no weekly package or wraparound fee verified.",
+      "hours": {
+        "start": "09:30",
+        "end": "15:15"
+      },
+      "coverage": "short"
     },
     "leyton-orient-trust": {
       "weeks": [],
@@ -249,7 +278,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
+      "weeksBasis": "26–28 October 2026 dates remain published, checked 11 September. Main page and session calendar conflict on enrolment; confirm booking availability with art-K."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -378,7 +407,7 @@ window.E17_PLANNER = {
     },
     "make-it-do-it": {
       "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeksBasis": "October payment links found 11 September 2026, but exact dates and duration remain unconfirmed; no planner dates or price populated."
     },
     "infinite-jest": {
       "price": {

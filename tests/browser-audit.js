@@ -37,7 +37,7 @@ window.addEventListener('load', async () => {
     check(!planEntries(1,c).some(e=>e.campId==='all-about-dance') && planEntries(1,c).some(e=>e.days.join()==='4,5'),'replacement keeps non-overlapping cover');
     const single=planEntries(1,c).find(e=>e.days.join()==='1');click(`[data-booking-toggle="${single.id}"]`);
     check(planEntries(1,c).find(e=>e.id===single.id).booked && $('#budgetCards').textContent.includes('1 camp day booked'),'booked state separate from planned days');
-    day(c,5);chooseCamp('church-hill-playscheme');save();click('[data-confirm-replace]');await wait(10);
+    day(c,5);chooseCamp('all-about-dance');save();click('[data-confirm-replace]');await wait(10);
     check($('#budgetCards').textContent.includes('price to confirm'),'unknown cost stays unknown in child total');
     click('[data-addplan="sylvestrian-leisure-holiday-activities"]');click(`[data-target-child="${c}"]`);
     check([...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled&&el.checked),'full-week-only camp locks five days');
