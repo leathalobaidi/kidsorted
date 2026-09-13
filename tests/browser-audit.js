@@ -27,7 +27,7 @@ window.addEventListener('load', async () => {
     [2,3,4,5].forEach(toggleDay);save();await wait(10);
     check(planEntries(1,c)[0].days.join()==='1','Monday-only booking saved');
     check($('#budgetCards').textContent.includes('1 of 5 days planned · 4 still to cover'),'partial week leaves four visible gaps');
-    check(entryCost(planEntries(1,c)[0],1)===null,'dance price remains unknown until age-specific fees are confirmed');
+    check(entryCost(planEntries(1,c)[0],1).value===35,'verified dance daily price is £35');
     day(c,2);chooseCamp('barracudas-woodford');toggleDay(3);save();await wait(10);
     day(c,4);click('[data-choose-type="family"]');toggleDay(5);save();await wait(10);
     check(planEntries(1,c).length===3 && planEntries(1,c).map(e=>e.days.join()).join('|')==='1|2,3|4,5','mixed camps and family days preserve all bookings');
@@ -37,7 +37,7 @@ window.addEventListener('load', async () => {
     check(!planEntries(1,c).some(e=>e.campId==='all-about-dance') && planEntries(1,c).some(e=>e.days.join()==='4,5'),'replacement keeps non-overlapping cover');
     const single=planEntries(1,c).find(e=>e.days.join()==='1');click(`[data-booking-toggle="${single.id}"]`);
     check(planEntries(1,c).find(e=>e.id===single.id).booked && $('#budgetCards').textContent.includes('1 camp day booked'),'booked state separate from planned days');
-    day(c,5);chooseCamp('all-about-dance');save();click('[data-confirm-replace]');await wait(10);
+    day(c,5);click('[data-choose-type="other"]');save();click('[data-confirm-replace]');await wait(10);
     check($('#budgetCards').textContent.includes('price to confirm'),'unknown cost stays unknown in child total');
     click('[data-addplan="sylvestrian-leisure-holiday-activities"]');click(`[data-target-child="${c}"]`);
     check([...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled&&el.checked),'full-week-only camp locks five days');
@@ -50,6 +50,10 @@ window.addEventListener('load', async () => {
     check(pickerCtx.draft.days.join()==='1,2,3,4' && $('[data-draft-day="5"]').disabled && entryCost(pickerCtx.draft,1).value===126,'football four-day bundle excludes Friday and costs £126');close();
     startDraft(1,c,{type:'camp',campId:'wee-movers-holiday'},[1]);
     check(pickerCtx.draft.days.join()==='3,4,5' && [...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled) && entryCost(pickerCtx.draft,1).value===192,'Wee Movers locks only its three-day course at £192');close();
+    startDraft(1,c,{type:'camp',campId:'noisy-book-club-summer'},[1]);
+    check(pickerCtx.draft.days.join()==='1,2' && [...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled) && entryCost(pickerCtx.draft,1).value===150,'Noisy Book Club locks its two-day block at £150');close();
+    startDraft(1,c,{type:'camp',campId:'noisy-book-club-october-wednesday'},[1,2,3,4,5]);
+    check(pickerCtx.draft.days.join()==='3' && entryCost(pickerCtx.draft,1).value===75,'Noisy Book Club Wednesday is separate and costs £75');close();
     check(entryCost({type:'camp',campId:'art-k-highams-park',days:[5]},1)===null,'old plans on unlisted days never receive an invented price');
     check(bookingState(providerById('football-fun-factory')).includes('Booking open'),'verified booking status reaches planner');
     const url=planShareUrl(), shared=parseSharedPlan(url.slice(url.indexOf('#')));

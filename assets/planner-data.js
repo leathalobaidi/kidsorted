@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-11",
+  "updated": "2026-09-13",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -105,15 +105,19 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Provider email, 6 September 2026: Monday 26–Friday 30 October 2026, ages 3–11; main day 10am–3pm, extended day 8am–6pm.",
-      "priceBasis": "Provider email confirms ages 3–11 but no prices. Previously verified £35/day or £175/week applies only to preschool; confirm age-specific and extended-hour fees on Class4Kids.",
+      "weeksBasis": "Class4Kids October age-group listings verified 13 September 2026: 26–30 October, Hillyfield, 10am–3pm.",
+      "priceBasis": "Class4Kids October camps 36, 39, 40 and 41: £35/day or £175/week for 10am–3pm, checked 13 September 2026. Early/late childcare costs extra and is excluded.",
       "hours": {
         "start": "10:00",
         "end": "15:00",
         "extStart": "08:00",
         "extEnd": "18:00"
       },
-      "coverage": "working"
+      "coverage": "working",
+      "price": {
+        "day": 35,
+        "week": 175
+      }
     },
     "gravity-performing-arts": {
       "price": {
@@ -312,8 +316,26 @@ window.E17_PLANNER = {
       }
     },
     "noisy-book-club-summer": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "Official October calendar verified 13 September 2026. Separate listings preserve the compulsory two-day block and Wednesday venue change.",
+      "hours": {
+        "start": "10:00",
+        "end": "15:00"
+      },
+      "coverage": "short",
+      "priceBasis": "Official October booking calendar; 5% sibling discount not automatically applied. No extended hours published.",
+      "dayPattern": {
+        "1": [
+          1,
+          2
+        ]
+      },
+      "fullWeekOnly": true,
+      "price": {
+        "week": 150
+      }
     },
     "showkids-walthamstow": {
       "weeks": [],
@@ -436,6 +458,26 @@ window.E17_PLANNER = {
     "build-a-band-sing17": {
       "weeks": [],
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+    },
+    "noisy-book-club-october-wednesday": {
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "Wednesday 28 October only, at NBC HQ; confirm exact street address. Official calendar checked 13 September 2026.",
+      "hours": {
+        "start": "10:00",
+        "end": "15:00"
+      },
+      "coverage": "short",
+      "priceBasis": "Official October booking calendar; 5% sibling discount not automatically applied. No extended hours published.",
+      "dayPattern": {
+        "1": [
+          3
+        ]
+      },
+      "price": {
+        "day": 75
+      }
     }
   },
   "season": "october-2026",

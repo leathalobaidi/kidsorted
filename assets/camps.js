@@ -1,9 +1,9 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-11",
+  "updated": "2026-09-13",
   "providers": [
     {
       "id": "all-about-dance",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-13",
       "name": "All About Dance UK — October Half-Term Holiday Camp (Ages 3–11)",
       "kind": "Holiday camp",
       "area": "Walthamstow / Chingford",
@@ -15,7 +15,7 @@ window.E17_DIRECTORY = {
       "address": "Aveling Park Road, Walthamstow, E17 4NR",
       "ageMin": 3,
       "ageMax": 11,
-      "ageLabel": "3–11 years; dedicated programme for ages 3–4",
+      "ageLabel": "3–11 years; check the precise age band in Class4Kids before booking",
       "categories": [
         "Dance",
         "Drama"
@@ -24,29 +24,41 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "Main day 10am–3pm; extended day 8am–6pm, with flexible early drop-off and late collection options",
-      "price": "Preschool programme previously listed at £35/day or £175/week; confirm prices for your child’s age and extended hours on Class4Kids",
+      "price": "£35/day or £175/week for the 10am–3pm camp; early/late childcare booked separately, confirm additional fees",
       "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
       "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
       "booking": "Book through Class4Kids; choose the appropriate age group and childcare hours.",
-      "confidence": "Dates, ages, hours and Ofsted registration confirmed by provider email, 6 September 2026",
+      "confidence": "October dates, main hours, venue, prices and public places verified in Class4Kids, 13 September 2026",
       "source": {
-        "label": "All About Dance UK Class4Kids bookings",
-        "url": "https://all-about-dance-uk.classforkids.io/"
+        "label": "All About Dance October camps by age group",
+        "url": "https://all-about-dance-uk.classforkids.io/camps"
       },
       "availability": {
-        "status": "unknown",
-        "asOf": "2026-09-06",
-        "note": "Provider confirms October camp and Class4Kids booking; check spaces for the appropriate age group."
+        "status": "open",
+        "asOf": "2026-09-13",
+        "note": "Preschool and older-child October listings show Spaces Available. Choose the appropriate booking age band; extended childcare is separate."
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "confirmed",
-        "note": "Provider email from Rachel confirms 26–30 October, ages 3–11, Ofsted registration, 10am–3pm main day and 8am–6pm extended day. Prices and venue were not reconfirmed in the email; previous venue retained. Preschool fees do not establish older-child prices."
+        "note": "Followed rendered /camps page to camps 39, 40 and 41: ages 5–6, 7–8 and 9–11 all show 26–30 October 2026, Hillyfield E17 4NR, 10–15, £35/day or £175/week and Spaces Available. Preschool camp 36 matches. Exact booking age limits vary; extended-care fees not confirmed."
       },
       "secondarySources": [
         {
           "label": "Preschool programme booking (ages 3–4 only)",
           "url": "https://all-about-dance-uk.classforkids.io/camp/36"
+        },
+        {
+          "label": "October camp ages 5–6",
+          "url": "https://all-about-dance-uk.classforkids.io/camp/39"
+        },
+        {
+          "label": "October camp ages 7–8",
+          "url": "https://all-about-dance-uk.classforkids.io/camp/40"
+        },
+        {
+          "label": "October camp ages 9–11",
+          "url": "https://all-about-dance-uk.classforkids.io/camp/41"
         }
       ]
     },
@@ -87,9 +99,9 @@ window.E17_DIRECTORY = {
         "url": "https://www.barracudas.co.uk/camps/woodford/"
       },
       "lastCheck": {
-        "date": "2026-09-07",
-        "status": "confirmed",
-        "note": "Official Woodford page is reachable. Removed obsolete secondary host with expired TLS certificate; previously verified October dates and prices retained."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -135,9 +147,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-11",
-        "status": "confirmed",
-        "note": "Official nursery page and linked Pembee listing confirm 26–30 October 2026, ages 3–8, 47 Woodbury Road, core £49 (9–16) and full day £65 (8–18); all ten session options show Available."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Browser Pembee: all ten core/full-day sessions on 26–30 October Available; £49 9–16 or £65 8–18. Ages 3–8, 47 Woodbury Road. No material change."
       },
       "availability": {
         "status": "open",
@@ -193,9 +205,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "confirmed",
-        "note": "Both October age-group booking pages show spaces, £45/day or £210/week; 9am–3pm."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -235,9 +247,9 @@ window.E17_DIRECTORY = {
       },
       "bookingUrl": "https://sylvestrian-leisure-centre.pembee.app/",
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "confirmed",
-        "note": "October dates and £246/week reconfirmed. Booking opens 16 September at 10am."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -275,9 +287,9 @@ window.E17_DIRECTORY = {
         "url": "https://enrolmy.com/the-strings-club/activity/589-Walthamstow_Holiday_Camp_October_Half_Term_Minis_Rec_Y2?emyatb=4w7ygdi444"
       },
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "confirmed",
-        "note": "October Minis listing reconfirmed at Edinburgh Primary. Published session range £61.50–£71.50; remaining places not independently verified."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -311,9 +323,9 @@ window.E17_DIRECTORY = {
         "url": "https://360-active.classforkids.io/camps"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Current ClassForKids camps page contains no camp listings."
+        "note": "Browser camps page exposes navigation but no current camp listings. October remains unconfirmed."
       }
     },
     {
@@ -355,9 +367,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -398,9 +410,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "blocked",
-        "note": "Main site blocks access and iPAL source requires JavaScript/login; October dates remain unverified."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Official site fetch blocked; browser iPAL booking portal requires login. No October details verified; previous successful verification date retained."
       }
     },
     {
@@ -447,9 +459,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-11",
-        "status": "confirmed",
-        "note": "Dates, venue, ages, hours and prices unchanged. Main workshop page says enrolment has not yet started, but direct session calendar displays selectable 26–28 October sessions. Removed unqualified booking-open claim; availability remains unresolved."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Browser main page still says enrolment has not yet started. Published dates and £70/full-day, £30/half-day unchanged; availability remains unresolved."
       }
     },
     {
@@ -483,9 +495,9 @@ window.E17_DIRECTORY = {
         "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/holiday-activities"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -519,9 +531,9 @@ window.E17_DIRECTORY = {
         "url": "https://www.breakthacycle.org/holiday-clubs"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -554,9 +566,9 @@ window.E17_DIRECTORY = {
         "url": "https://docs.google.com/forms/d/e/1FAIpQLScnH-4SElRGZsNuD_8w6JYPitxgNzOkjrR4l_am4O7iNLDX-Q/viewform"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -591,9 +603,9 @@ window.E17_DIRECTORY = {
         "url": "https://www.campbeaumont.co.uk/our-camps/woodbridge-high-school"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -646,9 +658,9 @@ window.E17_DIRECTORY = {
         "note": "October calendar shows available spots; individual-date capacity may vary."
       },
       "lastCheck": {
-        "date": "2026-09-09",
-        "status": "confirmed",
-        "note": "October calendar shows available spots on 26–30 October. Selected Monday and Friday service details each show £60, 9am start and six-hour duration. Earlier price-unit ambiguity resolved; current calendar no longer shows an 8:30am option."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Browser calendar shows available spots 26–30 October; 26 October 09:00 service £60 / 6 hours, Orford House. No material change."
       }
     },
     {
@@ -692,9 +704,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "blocked",
-        "note": "Happity blocks access and social sources are unavailable. Search found term-time family sessions, not October holiday childcare."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained. At least one source remains blocked or incomplete; no new availability confirmation."
       }
     },
     {
@@ -743,9 +755,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "confirmed",
-        "note": "Ashley’s provider email confirms Leytonstone School E11 1NS, ages 5–12, 9am–3:30pm, £35/day, full-week discounts and 50% off additional siblings, with October event 5136 open. Earlier booking-page check supplies 26–29 October dates and £126 four-day price. Future holidays planned; Christmas unconfirmed."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Browser location and event 5136 verified: Spaces Available, 26–29 October 2026, James Lane E11 1NS, ages 5–12, 9–15:30, £35/day or £126/four days. No material change."
       }
     },
     {
@@ -785,9 +797,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Saved camp is from the previous holiday and provider homepage is under construction; October camp unverified."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -834,9 +846,9 @@ window.E17_DIRECTORY = {
         "note": "Standard daily (£43) and weekly (£215) ticket selectors are open. Sibling tickets admit two. Wraparound charges extra."
       },
       "lastCheck": {
-        "date": "2026-09-07",
-        "status": "confirmed",
-        "note": "Verified standard daily ticket £43 for 26 October; sibling daily £80 admits two. Weekly £215 and sibling weekly £400 reconfirmed."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Browser supplier/activity and ticket dialog: 26–30 October, 09:30–15:30, ages 5–11, Cornerstone Church Hall. £215 week / £400 admits two; listed daily from £43. No material change. Wraparound add-ons shown, fees not exposed without checkout."
       }
     },
     {
@@ -882,9 +894,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "blocked",
-        "note": "Source check was blocked or returned no usable listing; October dates remain unverified."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained. At least one source remains blocked or incomplete; no new availability confirmation."
       }
     },
     {
@@ -930,9 +942,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-11",
-        "status": "confirmed",
-        "note": "Public rendered football-camps table and booking feed list 26, 27 and 28 October 2026 at Walthamstow School for Girls, 09:30–15:15, £32.50/day, Book Now/HasSpaces=true. School years 0–6 shown; generic feed ages 0–99 are not treated as eligibility."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Browser public table: 26, 27, 28 October 2026, Walthamstow School for Girls, 09:30–15:15, £32.50/day, all Book Now. School years 0–6; actual minimum age still unverified. Feed differences affect term-time courses only."
       },
       "bookingUrl": "https://book.littlesoccerstars.co.uk",
       "availability": {
@@ -977,9 +989,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1018,9 +1030,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-11",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Linktree now lists GSS and HOST October camp rates £110/£95/£40. Followed GSS standard payment page: £110, no exact dates, hours or age eligibility. Venue events still show summer camps and regular workshops. October dates remain unconfirmed."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1062,9 +1074,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained. At least one source remains blocked or incomplete; no new availability confirmation."
       }
     },
     {
@@ -1106,9 +1118,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1146,9 +1158,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1195,9 +1207,9 @@ window.E17_DIRECTORY = {
         "note": "Selected Walthamstow and Week B; live form shows In stock (can be backordered). Confirm places before paying."
       },
       "lastCheck": {
-        "date": "2026-09-09",
-        "status": "confirmed",
-        "note": "Selected Walthamstow and Week B (26–30 October) in the live form. Weekly early-bird price increased to £345; individual days £110 and extended hours £10/day unchanged. Form shows In stock (can be backordered)."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Browser selected Walthamstow School for Girls and Week B 26–30 October 2026: £345/week, £110/day, £10/day extended hours, in stock (can be backordered). No material price change."
       }
     },
     {
@@ -1241,25 +1253,25 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "blocked",
-        "note": "Ticket page access failed. Official upcoming-shows search lists summer 2026 and October 2025 events, not October 2026."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained. At least one source remains blocked or incomplete; no new availability confirmation."
       }
     },
     {
       "id": "noisy-book-club-summer",
-      "checkedOn": "2026-07-04",
-      "name": "Noisy Book Club Summer Club",
-      "kind": "Books, art and growth-mindset summer club",
+      "checkedOn": "2026-09-13",
+      "name": "Noisy Book Club × Angry Dan — 26–27 October block",
+      "kind": "Art and growth-mindset holiday workshop",
       "area": "Walthamstow Central",
       "areas": [
         "Walthamstow"
       ],
-      "venue": "Previous listing: One of Six Cabin (Walthamstow Central) and nearby Noisy Book Club HQ",
-      "address": "One of Six Cabin, 259A High Street, E17 7BH; a few days at Noisy Book Club HQ, 5-minute walk",
+      "venue": "One of Six cabin",
+      "address": "259A High Street, Walthamstow, E17",
       "ageMin": 5,
       "ageMax": 11,
-      "ageLabel": "Previously: 5-11 (Chapter 4 now also listed 5-11 — checked 2 Jul 2026)",
+      "ageLabel": "5–11 years",
       "categories": [
         "Short day",
         "Arts",
@@ -1267,27 +1279,85 @@ window.E17_DIRECTORY = {
         "Creative",
         "Workshop"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed books, art and growth-mindset summer club provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "10am–3pm; no extended hours published",
+      "price": "£150 for the compulsory two-day block (26–27 October); 5% off second and third child",
+      "summary": "Mural-style painting with Angry Dan, with growth-mindset activities. Monday 26 and Tuesday 27 October 2026 are booked together. A separate Wednesday workshop runs at NBC HQ; no club on Thursday 29 or Friday 30.",
+      "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
+      "booking": "Book both 26–27 October together. Individual days within this block are waiting-list requests only and are not guaranteed.",
+      "confidence": "Official October booking calendar verified 13 September 2026",
       "source": {
-        "label": "Noisy Book Club Summer Club",
-        "url": "https://summer.noisybookclub.com/"
+        "label": "Noisy Book Club October half-term calendar and booking",
+        "url": "https://www.noisybookclub.com/half-term"
       },
       "secondarySources": [
         {
-          "label": "Noisy Book Club",
+          "label": "Noisy Book Club official website",
           "url": "https://www.noisybookclub.com/"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "date": "2026-09-13",
+        "status": "confirmed",
+        "note": "NEW official /half-term browser calendar: ages 5–11, 10–15. Mon 26–Tue 27 October compulsory two-day block £150 at One of Six cabin, 259A High Street E17; 17 places shown. Wed 28 October separate £75 session at NBC HQ, 12 places shown; HQ street address not published on this page. No club 29–30 October. Other advertised blocks 19–23 October and 2–6 November outside current planner week. Weekdays align with 2026."
+      },
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-13",
+        "note": "Calendar shows 17 places for the two-day block. Availability can change."
+      }
+    },
+    {
+      "id": "noisy-book-club-october-wednesday",
+      "checkedOn": "2026-09-13",
+      "name": "Noisy Book Club × Angry Dan — Wednesday 28 October",
+      "kind": "Art and growth-mindset holiday workshop",
+      "area": "Walthamstow Central",
+      "areas": [
+        "Walthamstow"
+      ],
+      "venue": "Noisy Book Club HQ (different from One of Six cabin)",
+      "address": "Walthamstow; confirm the NBC HQ street address with the provider before booking",
+      "ageMin": 5,
+      "ageMax": 11,
+      "ageLabel": "5–11 years",
+      "categories": [
+        "Short day",
+        "Arts",
+        "Books",
+        "Creative",
+        "Workshop"
+      ],
+      "funding": [
+        "Paid"
+      ],
+      "hours": "10am–3pm; no extended hours published",
+      "price": "£75 for Wednesday 28 October; 5% off second and third child",
+      "summary": "A standalone mural-style painting workshop with Angry Dan on Wednesday 28 October 2026, 10am–3pm. This session is at NBC HQ, a different venue from the Monday–Tuesday block. No club on Thursday 29 or Friday 30.",
+      "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
+      "booking": "Book Wednesday 28 October separately. Confirm the exact NBC HQ address with the provider.",
+      "confidence": "Official October booking calendar verified 13 September 2026",
+      "source": {
+        "label": "Noisy Book Club October half-term calendar and booking",
+        "url": "https://www.noisybookclub.com/half-term"
+      },
+      "secondarySources": [
+        {
+          "label": "Noisy Book Club official website",
+          "url": "https://www.noisybookclub.com/"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-09-13",
+        "status": "confirmed",
+        "note": "NEW official /half-term browser calendar: ages 5–11, 10–15. Mon 26–Tue 27 October compulsory two-day block £150 at One of Six cabin, 259A High Street E17; 17 places shown. Wed 28 October separate £75 session at NBC HQ, 12 places shown; HQ street address not published on this page. No club 29–30 October. Other advertised blocks 19–23 October and 2–6 November outside current planner week. Weekdays align with 2026."
+      },
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-13",
+        "note": "Calendar shows 12 places for Wednesday. Availability can change."
       }
     },
     {
@@ -1329,9 +1399,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Current venue page is for weekly classes and says no session on 29 October; no October holiday camp verified."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1374,9 +1444,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1422,9 +1492,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Saved booking and both provider venue pages checked; no October 2026 Henry Maynard camp verified."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1464,9 +1534,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1500,9 +1570,9 @@ window.E17_DIRECTORY = {
         "url": "https://eequ.org/book/sck-martial-arts-holiday-camp-with-sck-martial-arts-holiday-camp-29869"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1542,9 +1612,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "blocked",
-        "note": "Social pages did not expose usable listings; search did not establish October 2026 dates."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained. At least one source remains blocked or incomplete; no new availability confirmation."
       }
     },
     {
@@ -1589,9 +1659,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "blocked",
-        "note": "All saved provider pages block automated access; search only established old term dates, not an October 2026 camp."
+        "date": "2026-09-13",
+        "status": "unconfirmed",
+        "note": "Browser resolves fetch block: upcoming holiday course is February 2027; previous courses are summer/Easter. No October course shown; this does not prove cancellation."
       }
     },
     {
@@ -1633,9 +1703,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1668,9 +1738,9 @@ window.E17_DIRECTORY = {
         "url": "https://eequ.org/book/study-right-stem-and-creative-club-with-study-right-22183"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1704,9 +1774,9 @@ window.E17_DIRECTORY = {
         "url": "https://thecreationstation.co.uk/activities/walthamstow/"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1740,9 +1810,9 @@ window.E17_DIRECTORY = {
         "url": "https://www.ultrafc.co.uk/holiday-camps"
       },
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1777,9 +1847,9 @@ window.E17_DIRECTORY = {
         "url": "https://www.upscill.co.uk/bootcamps"
       },
       "lastCheck": {
-        "date": "2026-09-07",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Current official bootcamps page says no upcoming holiday sessions. October 2026 dates remain unconfirmed; obsolete event links replaced."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1820,9 +1890,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Source pages checked; no October 2026 dates verified. Earlier details remain historical."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1866,9 +1936,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Council page and Eequ directory checked. Eequ still describes summer bookings; no October HAF sessions verified."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1915,9 +1985,9 @@ window.E17_DIRECTORY = {
         "note": "Provider October page says open for booking; confirm live stock at checkout."
       },
       "lastCheck": {
-        "date": "2026-09-06",
-        "status": "confirmed",
-        "note": "October product has an enabled Purchase button: 28–30 October, three-day package £192."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1958,9 +2028,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "status": "unconfirmed",
-        "note": "Main website and live booking list checked; term-time and old seasonal camps found, no October 2026 holiday camp verified."
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       }
     },
     {
@@ -1995,9 +2065,9 @@ window.E17_DIRECTORY = {
         "url": "https://yellowbirds.co.uk/"
       },
       "lastCheck": {
-        "date": "2026-09-07",
-        "status": "confirmed",
-        "note": "Provider confirms 26–30 October, ages 3–13, standard and extended hours, from £25.10/day and no funded places. Exact venue and booking link pending."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       },
       "availability": {
         "status": "unconfirmed",
@@ -2037,9 +2107,9 @@ window.E17_DIRECTORY = {
         "url": "https://ymcastpaulsgroup.org/y-kidz-holiday-playschemes/y-kidz-walthamstow/"
       },
       "lastCheck": {
-        "date": "2026-09-11",
-        "status": "confirmed",
-        "note": "Official website now states October Half Term booking is open; both sites 26–30 October, Handsworth also 19–23. £36 standard 10–16 or £41 extended 8:30–17:30 unchanged. Followed Magicbooking: registration/login required; no remaining-place claim."
+        "date": "2026-09-13",
+        "status": "checked",
+        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
       },
       "availability": {
         "status": "open",
