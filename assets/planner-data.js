@@ -159,14 +159,21 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Provider lists 26–30 October 2026; checked 5 September 2026.",
+      "weeksBasis": "Enrolmy October Minis booking selector, checked 13 September 2026: 26–30 October, standard 9:30–16:00 or extended 8:00–17:30.",
       "price": {
         "day": 61.5
       },
       "priceBasis": "October listing range £61.50–£71.50 per session. Budget uses the lower price; confirm your session and enter the actual cost.",
       "tfc": true,
       "vouchers": true,
-      "priceFrom": true
+      "priceFrom": true,
+      "hours": {
+        "start": "09:30",
+        "end": "16:00",
+        "extStart": "08:00",
+        "extEnd": "17:30"
+      },
+      "coverage": "working"
     },
     "football-fun-factory": {
       "dayPattern": {

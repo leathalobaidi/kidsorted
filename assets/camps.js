@@ -276,7 +276,7 @@ window.E17_DIRECTORY = {
         "Tax-Free Childcare",
         "Childcare vouchers"
       ],
-      "hours": "Listing spans 8am–5:30pm; confirm hours for your selected session",
+      "hours": "Standard 9:30am–4pm; extended 8am–5:30pm",
       "price": "£61.50–£71.50 per session; check selected session",
       "summary": "October music camp for Reception–Year 2 at Edinburgh Primary School, 26–30 October 2026.",
       "goodFor": "Children who want a music-led holiday camp with childcare-length hours.",
@@ -289,7 +289,7 @@ window.E17_DIRECTORY = {
       "lastCheck": {
         "date": "2026-09-13",
         "status": "checked",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "note": "Enrolmy browser booking selector confirms standard 9:30–16:00 and extended 8:00–17:30 for 26–30 October. Price range £61.50–£71.50 retained; exact session price and remaining places not verified."
       }
     },
     {
