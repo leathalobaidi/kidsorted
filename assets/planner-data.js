@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-13",
+  "updated": "2026-09-15",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -398,12 +398,33 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "petite-productions": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "26–30 October 2026 verified on official workshop page, 15 September. Full week shown here; three-day ticket choices and venue details must be confirmed with provider.",
+      "fullWeekOnly": true,
+      "hours": {
+        "start": "09:00",
+        "end": "16:00"
+      },
+      "coverage": "standard",
+      "priceBasis": "October prices not yet verified. Three-day tickets advertised, but exact permitted combinations are not verified; planner conservatively represents the full week."
     },
     "ryan-fc-girls": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "26–30 October 2026 explicitly published in the official October form, checked 15 September. Requests do not guarantee places.",
+      "price": {
+        "day": 30,
+        "week": 130
+      },
+      "priceBasis": "£30 per day or £130 for all five days. Payment required to confirm a place.",
+      "hours": {
+        "start": "09:00",
+        "end": "15:00"
+      },
+      "coverage": "short"
     },
     "myths-maps-monsters": {
       "weeks": [],

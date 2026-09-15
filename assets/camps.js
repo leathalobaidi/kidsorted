@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-13",
+  "updated": "2026-09-15",
   "providers": [
     {
       "id": "all-about-dance",
@@ -1406,8 +1406,8 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "petite-productions",
-      "checkedOn": "2026-07-04",
-      "name": "Petite Productions Holiday Workshops",
+      "checkedOn": "2026-09-15",
+      "name": "Petite Productions — October Wicked Wonderland Workshops",
       "kind": "Musical theatre holiday workshop",
       "area": "Highams Park / Walthamstow",
       "areas": [
@@ -1415,38 +1415,49 @@ window.E17_DIRECTORY = {
         "Walthamstow",
         "Chingford"
       ],
-      "venue": "Previous listing: Highams Park and Blackhorse Road (Walthamstow) venues",
-      "address": "Highams Park, E4 and Blackhorse Road, Walthamstow, E17; exact venue confirmed at booking",
+      "venue": "Highams Park and Blackhorse Road venues",
+      "address": "Highams Park and Blackhorse Road, Walthamstow; exact October venue address to confirm at booking",
       "ageMin": 4,
       "ageMax": 13,
-      "ageLabel": "Previously: 4-13, sorted into age-appropriate groups",
+      "ageLabel": "4–13 years, grouped by age",
       "categories": [
         "Drama",
         "Music",
         "Dance",
         "Arts"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed musical theatre holiday workshop provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "9am–4pm, Monday–Friday",
+      "price": "October ticket prices to confirm; full-week and three-day options advertised",
+      "summary": "Descendants Wicked Wonderland musical theatre workshops, Monday 26–Friday 30 October 2026. Songs, choreography, script writing, crafts, cooking and an end-of-week showcase.",
+      "goodFor": "Children aged 4–13 who enjoy musical theatre and creative activities.",
+      "booking": "October workshops advertised as booking now at Highams Park and Blackhorse Road. Confirm the exact venue, ticket price and three-day choices in Bookwhen. Childcare vouchers and tax-free childcare are not accepted.",
+      "confidence": "October 2026 dates, age range and hours verified on official workshop page; prices, addresses and remaining places unresolved",
       "source": {
         "label": "Petite Productions holiday workshops",
         "url": "https://www.petiteproductions.co.uk/workshops"
       },
       "secondarySources": [
         {
-          "label": "Petite Productions booking (Bookwhen)",
-          "url": "https://bookwhen.com/petiteproductions"
+          "label": "Highams Park October booking",
+          "url": "https://bookwhen.com/petiteproductions#focus=ev-sl7ew-20261026000000"
+        },
+        {
+          "label": "Blackhorse Road October booking",
+          "url": "https://bookwhen.com/petiteproductions#focus=ev-s06ft-20261026000000"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-09-15",
+        "status": "confirmed",
+        "note": "Official page explicitly lists 26–30 October 2026, ages 4–13 and 9–16. Bookwhen announces October booking open; detail navigation could not complete because automatic approval review timed out. Do not interpret fully booked after-school pickup as a camp status."
+      },
+      "availability": {
+        "status": "unknown",
+        "asOf": "2026-09-15",
+        "note": "Provider and Bookwhen announce October booking open. Individual October ticket capacity could not be checked."
       }
     },
     {
@@ -1499,44 +1510,51 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "ryan-fc-girls",
-      "checkedOn": "2026-07-04",
-      "name": "Ryan FC Girls Summer Football Camp",
+      "checkedOn": "2026-09-15",
+      "name": "Ryan FC Girls October Half-Term Football Camp",
       "kind": "Girls-only football camp",
       "area": "Walthamstow",
       "areas": [
         "Walthamstow"
       ],
-      "venue": "Previous listing: Matchday Centres (Pitch 10, astro)",
-      "address": "Matchday Centres, Walthamstow, E17 4LL; Pitch 10 (astro surface)",
-      "ageMin": 6,
-      "ageMax": 11,
-      "ageLabel": "Previously: Girls only; ages 6-11 (school years 1-6)",
+      "venue": "Matchday Centre",
+      "address": "Matchday Centre, Walthamstow, E17 4LL",
+      "ageMin": null,
+      "ageMax": null,
+      "ageLabel": "Girls in school years 1–6; eligibility is by school year",
       "categories": [
         "Football",
         "Sports",
         "Girls only"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed girls-only football camp provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "9am–3pm",
+      "price": "£30/day or £130 for all five days",
+      "summary": "Girls-only football, games and activities, 26–30 October 2026. Beginners and all abilities welcome; book individual days or the full week.",
+      "goodFor": "Girls in school years 1–6 who enjoy football or want to try it.",
+      "booking": "Use the October booking form below. The provider confirms places after payment; some Book Now buttons on its website still lead to the old summer form.",
+      "confidence": "October dates, school years, venue, hours and prices verified on the official October form, 15 September 2026",
       "source": {
-        "label": "Ryan FC Girls football camp",
-        "url": "https://ryanfcgirls.com/football-camp"
+        "label": "Ryan FC Girls October booking form",
+        "url": "https://forms.gle/7ruoZvhsAuBW2vQt9"
       },
       "secondarySources": [
         {
-          "label": "Ryan FC Girls",
-          "url": "https://ryanfcgirls.com/"
+          "label": "Ryan FC Girls official camp information",
+          "url": "https://ryanfcgirls.com/football-camp"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-09-15",
+        "status": "confirmed",
+        "note": "Official page and two linked October forms explicitly confirm 26–30 October 2026, years 1–6, Matchday Centre E17 4LL, 9–15, £30/day or £130/week. Top Book Now link still opens summer; linked the verified October form."
+      },
+      "availability": {
+        "status": "unknown",
+        "asOf": "2026-09-15",
+        "note": "October booking form accepts requests. Remaining capacity is not published; a place is confirmed only after payment."
       }
     },
     {
