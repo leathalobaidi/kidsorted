@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -233,12 +233,12 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Provider lists 26–30 October 2026; checked 5 September 2026.",
+      "weeksBasis": "Live October availability dialog verifies 26–30 October 2026, with full-week and daily places shown on 16 September.",
       "price": {
-        "day": 52,
-        "week": 215
+        "day": 56,
+        "week": 229
       },
-      "priceBasis": "Provider October listing shows £215/week and £52 individual days; promotional prices can change.",
+      "priceBasis": "Live October ticket totals checked 16 September: £56/day or £229/full week. Promotional rates may change; extended hours and extras are additional.",
       "hours": {
         "start": "08:30",
         "end": "17:30",
@@ -401,14 +401,17 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October 2026 verified on official workshop page, 15 September. Full week shown here; three-day ticket choices and venue details must be confirmed with provider.",
+      "weeksBasis": "26–30 October 2026 verified in both Bookwhen listings, 16 September. Planner represents five-day ticket; choose venue and confirm any three-day arrangement directly.",
       "fullWeekOnly": true,
       "hours": {
         "start": "09:00",
         "end": "16:00"
       },
       "coverage": "standard",
-      "priceBasis": "October prices not yet verified. Three-day tickets advertised, but exact permitted combinations are not verified; planner conservatively represents the full week."
+      "priceBasis": "£225/full week. A separate three-day ticket costs £135; three consecutive days are recommended. Planner currently represents the five-day ticket only. Two-sibling full-week ticket £405 must be booked directly; no sibling discount on three-day tickets.",
+      "price": {
+        "week": 225
+      }
     },
     "ryan-fc-girls": {
       "weeks": [

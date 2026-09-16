@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "providers": [
     {
       "id": "all-about-dance",
@@ -64,7 +64,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "barracudas-woodford",
-      "checkedOn": "2026-09-05",
+      "checkedOn": "2026-09-16",
       "name": "Barracudas Woodford",
       "kind": "Multi-activity day camp",
       "area": "Woodford Green",
@@ -89,19 +89,25 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "8:30am–5:30pm; optional 8am–6pm",
-      "price": "October listing: £215/week or £52 for an individual day; confirm current offer",
+      "price": "£56/day or £229 for 26–30 October; promotional rates may change, extras cost more",
       "summary": "October activity camp at Woodford County High School, 26–30 October 2026, for ages 4–14.",
       "goodFor": "Families who can travel to Woodford for a long-day commercial camp with lots of activity choice and childcare-payment options.",
-      "booking": "Check current October prices and spaces through Barracudas.",
-      "confidence": "October source checked 5 September 2026",
+      "booking": "October full-week and individual days shown available; use the Woodford October booking page.",
+      "confidence": "Live October prices and availability verified 16 September 2026",
       "source": {
         "label": "Barracudas Woodford official camp page",
         "url": "https://www.barracudas.co.uk/camps/woodford/"
       },
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "checked",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-09-16",
+        "status": "confirmed",
+        "note": "Live Woodford Prices & Availability dialog: 26–30 October 2026, £229/full week, £56 each day, all available. Replaces earlier £215/£52 rates. Headline daily-equivalent arithmetic is inconsistent; used explicit ticket totals."
+      },
+      "bookingUrl": "https://www.barracudas.co.uk/bookings/woodford?season=october",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-16",
+        "note": "Prices & Availability shows the full week and every day 26–30 October available. Confirm final price and extras before payment."
       }
     },
     {
@@ -1406,7 +1412,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "petite-productions",
-      "checkedOn": "2026-09-15",
+      "checkedOn": "2026-09-16",
       "name": "Petite Productions — October Wicked Wonderland Workshops",
       "kind": "Musical theatre holiday workshop",
       "area": "Highams Park / Walthamstow",
@@ -1415,8 +1421,8 @@ window.E17_DIRECTORY = {
         "Walthamstow",
         "Chingford"
       ],
-      "venue": "Highams Park and Blackhorse Road venues",
-      "address": "Highams Park and Blackhorse Road, Walthamstow; exact October venue address to confirm at booking",
+      "venue": "Highams Park Baptist Church or Harmony Hall (Blackhorse Road workshop)",
+      "address": "Highams Park: 129 Cavendish Road, E4 9NH. Blackhorse Road workshop: Harmony Hall, 10 Truro Road, E17 7BY.",
       "ageMin": 4,
       "ageMax": 13,
       "ageLabel": "4–13 years, grouped by age",
@@ -1430,34 +1436,34 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "9am–4pm, Monday–Friday",
-      "price": "October ticket prices to confirm; full-week and three-day options advertised",
+      "price": "£225/five days or £135/three days; two siblings £405/five days (no three-day sibling discount)",
       "summary": "Descendants Wicked Wonderland musical theatre workshops, Monday 26–Friday 30 October 2026. Songs, choreography, script writing, crafts, cooking and an end-of-week showcase.",
       "goodFor": "Children aged 4–13 who enjoy musical theatre and creative activities.",
-      "booking": "October workshops advertised as booking now at Highams Park and Blackhorse Road. Confirm the exact venue, ticket price and three-day choices in Bookwhen. Childcare vouchers and tax-free childcare are not accepted.",
-      "confidence": "October 2026 dates, age range and hours verified on official workshop page; prices, addresses and remaining places unresolved",
+      "booking": "Both October Bookwhen listings offer five-day and three-day tickets. Three consecutive days are strongly recommended; confirm your chosen days with the provider. Blackhorse Road workshop has moved to Harmony Hall during church renovations. Childcare vouchers and tax-free childcare are not accepted.",
+      "confidence": "October prices, both venue addresses and available ticket options verified in Bookwhen, 16 September 2026",
       "source": {
         "label": "Petite Productions holiday workshops",
         "url": "https://www.petiteproductions.co.uk/workshops"
       },
       "secondarySources": [
         {
-          "label": "Highams Park October booking",
-          "url": "https://bookwhen.com/petiteproductions#focus=ev-sl7ew-20261026000000"
+          "label": "Highams Park October tickets",
+          "url": "https://bookwhen.com/petiteproductions/e/ev-sl7ew-20261026000000"
         },
         {
-          "label": "Blackhorse Road October booking",
-          "url": "https://bookwhen.com/petiteproductions#focus=ev-s06ft-20261026000000"
+          "label": "Blackhorse Road October tickets — Harmony Hall",
+          "url": "https://bookwhen.com/petiteproductions/e/ev-s06ft-20261026000000"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-15",
+        "date": "2026-09-16",
         "status": "confirmed",
-        "note": "Official page explicitly lists 26–30 October 2026, ages 4–13 and 9–16. Bookwhen announces October booking open; detail navigation could not complete because automatic approval review timed out. Do not interpret fully booked after-school pickup as a camp status."
+        "note": "Bookwhen events sl7ew and s06ft verify 26–30 October 2026, ages 4–13, 9–16; £225 five days, £135 three days, £405 two siblings/full week. Highams Park Baptist Church E4 9NH; Blackhorse workshop now Harmony Hall E17 7BY. Tickets offered; none added."
       },
       "availability": {
-        "status": "unknown",
-        "asOf": "2026-09-15",
-        "note": "Provider and Bookwhen announce October booking open. Individual October ticket capacity could not be checked."
+        "status": "open",
+        "asOf": "2026-09-16",
+        "note": "Both venue listings offer Add to basket for five-day, three-day and sibling tickets; exact remaining capacity is not displayed."
       }
     },
     {
