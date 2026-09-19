@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-16",
+  "updated": "2026-09-19",
   "providers": [
     {
       "id": "all-about-dance",
@@ -218,7 +218,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "sylvestrian-leisure-holiday-activities",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-19",
       "name": "Sylvestrian Leisure Holiday Activities",
       "kind": "Ofsted-registered multi-activity camp",
       "area": "Snaresbrook / Forest School",
@@ -243,20 +243,31 @@ window.E17_DIRECTORY = {
       ],
       "hours": "8:30am–5:30pm; optional 8am–6pm",
       "price": "£246/week; early drop-off and late collection £5 each per child",
-      "summary": "October activity camp at Forest School for ages 4½–15. Runs 19–23 and 26–30 October; this planner covers the council half-term week. Full-week bookings only. Bookings open 16 September at 10am.",
+      "summary": "October activity camp at Forest School for ages 4½–15. Runs 19–23 and 26–30 October; this planner covers the council half-term week. Full-week bookings only. The 26–30 October camp is now waitlist-only.",
       "goodFor": "Families near the E17/Snaresbrook edge who need a long day and a broad activity mix.",
-      "booking": "Bookings open Wednesday 16 September at 10am through Pembee.",
-      "confidence": "October source checked 6 September 2026",
+      "booking": "The 26–30 October 2026 booking page offers Join Waitlist only. Joining the waitlist does not confirm a place.",
+      "confidence": "October booking page verified 19 September 2026",
       "source": {
         "label": "Sylvestrian holiday activities",
         "url": "https://www.sylvestrian-leisure.co.uk/holiday-activities/"
       },
-      "bookingUrl": "https://sylvestrian-leisure-centre.pembee.app/",
+      "bookingUrl": "https://sylvestrian-leisure-centre.pembee.app/activity/6a96c77067aef6ff67526c57",
       "lastCheck": {
-        "date": "2026-09-13",
+        "date": "2026-09-19",
         "status": "checked",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
-      }
+        "note": "Public Pembee detail shows £246 all-sessions ticket and Join Waitlist only; hours and £5 early/late add-ons unchanged."
+      },
+      "availability": {
+        "status": "waitlist",
+        "asOf": "2026-09-19",
+        "note": "26–30 October: all-sessions ticket offers Join Waitlist only."
+      },
+      "secondarySources": [
+        {
+          "label": "October week 2 booking and waitlist",
+          "url": "https://sylvestrian-leisure-centre.pembee.app/activity/6a96c77067aef6ff67526c57"
+        }
+      ]
     },
     {
       "id": "the-strings-club-walthamstow",
@@ -472,38 +483,51 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "better-walthamstow-leisure-centre",
-      "checkedOn": "2026-07-04",
-      "name": "Better Walthamstow Leisure Centre holiday activities",
-      "kind": "Leisure centre holiday sessions",
+      "checkedOn": "2026-09-19",
+      "name": "Better Walthamstow — October Basketball Short Course",
+      "kind": "Two-hour basketball holiday session",
       "area": "Walthamstow",
       "areas": [
         "Walthamstow"
       ],
-      "venue": "Previous listing: Walthamstow Leisure Centre",
-      "address": "Walthamstow Leisure Centre",
-      "ageMin": 5,
-      "ageMax": 17,
-      "ageLabel": "Previously: 5-17 depending on activity",
+      "venue": "Walthamstow Leisure Centre",
+      "address": "Walthamstow, E17 8RN",
+      "ageMin": 8,
+      "ageMax": 15,
+      "ageLabel": "8–15",
       "categories": [
         "Workshop",
-        "Sports",
-        "Gymnastics"
+        "Sports"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed leisure centre holiday sessions provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "Monday 26 October, 2pm–4pm",
+      "price": "£13.50 for the two-hour session",
+      "summary": "Basketball holiday short course on Monday 26 October 2026 for ages 8–15, 2pm–4pm. A two-hour activity, not full-day childcare. Public booking page shows places available.",
+      "goodFor": "Children aged 8–15 looking for a coached basketball afternoon.",
+      "booking": "Book the Basketball Short Courses session starting 26 October through Better. The listing showed 20 spaces on 19 September; availability may change.",
+      "confidence": "October provider and public booking listing verified 19 September 2026",
       "source": {
         "label": "Walthamstow Leisure Centre holiday activities",
         "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/holiday-activities"
       },
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-09-19",
+        "status": "checked",
+        "note": "Official holiday page publishes 26 October 2026, ages 8–15, 14:00–16:00 and £13.50. Public course listing shows 20 spaces."
+      },
+      "bookingUrl": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5%5D,%22centre%22:26%7D",
+      "secondarySources": [
+        {
+          "label": "Better basketball booking listing",
+          "url": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5%5D,%22centre%22:26%7D"
+        }
+      ],
+      "availability": {
+        "status": "open",
+        "asOf": "2026-09-19",
+        "note": "26 October 2–4pm short course: 20 spaces shown."
       }
     },
     {

@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-16",
+  "updated": "2026-09-19",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -300,8 +300,24 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "better-walthamstow-leisure-centre": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1
+        ]
+      },
+      "weeksBasis": "Official page and public booking listing confirm Monday 26 October 2026 only, checked 19 September 2026.",
+      "price": {
+        "day": 13.5
+      },
+      "priceBasis": "£13.50 for the single 14:00–16:00 basketball session, not a full day. Official October holiday page.",
+      "hours": {
+        "start": "14:00",
+        "end": "16:00"
+      },
+      "coverage": "short"
     },
     "shining-starz-walthamstow": {
       "weeks": [],
@@ -352,7 +368,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Provider lists 26–30 October 2026; checked 5 September 2026.",
+      "weeksBasis": "26–30 October 2026 published; public booking is waitlist-only, checked 19 September 2026. Existing bookings remain valid; confirm any new place with the provider.",
       "price": {
         "week": 246
       },
