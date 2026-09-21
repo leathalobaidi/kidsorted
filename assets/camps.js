@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "providers": [
     {
       "id": "all-about-dance",
@@ -434,7 +434,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-09-11",
+      "checkedOn": "2026-09-21",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -458,16 +458,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Wednesday 28 October 2026. Individual projects in sculpture, painting and mixed media. No Thursday or Friday sessions listed.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "The workshop page says enrolment has not yet started, while the session calendar still displays selectable dates. Confirm enrolment with art-K before relying on a place.",
-      "confidence": "October dates and prices checked 11 September 2026; enrolment status needs confirmation",
+      "booking": "Enrolment is open. Full-day and half-day sessions on 26–28 October are selectable in the public booking calendar; places may change before checkout.",
+      "confidence": "October dates, prices and selectable booking sessions verified 21 September 2026",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "unknown",
-        "asOf": "2026-09-11",
-        "note": "Conflicting public booking signals: main page says enrolment has not started; session calendar offers dates. Booking availability unresolved."
+        "status": "open",
+        "asOf": "2026-09-21",
+        "note": "The main page now offers Enrol now; all full-day and half-day options on 26–28 October are selectable."
       },
       "secondarySources": [
         {
@@ -476,9 +476,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Browser main page still says enrolment has not yet started. Published dates and £70/full-day, £30/half-day unchanged; availability remains unresolved."
+        "date": "2026-09-21",
+        "status": "verified",
+        "note": "Browser verified Enrol now and selectable 26–28 October sessions; previous conflicting enrolment notice is gone."
       }
     },
     {
@@ -985,7 +985,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "lloyd-park-childrens-charity",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-09-21",
       "name": "Lloyd Park Children's Charity Holiday Club",
       "kind": "Inclusive holiday club",
       "area": "Lloyd Park / Higham Hill",
@@ -993,21 +993,21 @@ window.E17_DIRECTORY = {
         "Walthamstow",
         "Highams Park"
       ],
-      "venue": "Previous listing: Lloyd Park Centre and Higham Hill Centre",
+      "venue": "Lloyd Park Centre and Higham Hill Centre",
       "address": "Lloyd Park and Higham Hill centres",
       "ageMin": 4,
       "ageMax": 11,
-      "ageLabel": "Previously: Primary school age",
+      "ageLabel": "Primary school age; confirm individual eligibility",
       "categories": [
         "Multi-activity"
       ],
       "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed inclusive holiday club provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "hours": "26–30 October, 8am–5:50pm",
+      "price": "£48.30/day",
+      "summary": "Inclusive October holiday clubs on 26–30 October 2026 at the Lloyd Park and Higham Hill centres, with arts, sports, imaginative play and outdoor activities.",
+      "goodFor": "Primary school children needing a long childcare day; discuss individual support needs with the provider.",
+      "booking": "October bookings open Tuesday 22 September 2026 at 9am. Use the provider application page; remaining places and acceptance are not yet verified.",
+      "confidence": "October dates, opening time, centres, hours and published daily fee verified 21 September 2026",
       "source": {
         "label": "Lloyd Park Children's Charity holiday club",
         "url": "https://www.tlpcc.org.uk/teatime-and-holiday-club"
@@ -1016,12 +1016,25 @@ window.E17_DIRECTORY = {
         {
           "label": "Lloyd Park Children's Charity fees",
           "url": "https://www.tlpcc.org.uk/fees-and-funding"
+        },
+        {
+          "label": "2026 holiday club dates",
+          "url": "https://www.tlpcc.org.uk/dates-for-your-diary"
+        },
+        {
+          "label": "Holiday club application",
+          "url": "https://www.tlpcc.org.uk/holiday-club-booking"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-09-21",
+        "status": "verified",
+        "note": "Official holiday-club announcement, 2026 diary and fees checked. Application page has no October form available yet."
+      },
+      "availability": {
+        "status": "unknown",
+        "asOf": "2026-09-21",
+        "note": "Bookings announced to open 22 September at 9am; no current place availability verified."
       }
     },
     {

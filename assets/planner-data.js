@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -57,8 +57,22 @@ window.E17_PLANNER = {
       "coverage": "working"
     },
     "lloyd-park-childrens-charity": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "weeksBasis": "Official 2026 diary confirms 26–30 October. Booking opens 22 September at 9am; places not yet verified. Checked 21 September 2026.",
+      "price": {
+        "day": 48.3
+      },
+      "priceBasis": "Current holiday-club fee £48.30/day for Lloyd Park and Higham Hill centres; confirm the final quote and individual eligibility when applying.",
+      "hours": {
+        "start": "08:00",
+        "end": "17:50"
+      },
+      "coverage": "working",
+      "bookingOpens": "2026-09-22T09:00:00+01:00",
+      "bookingOpensLabel": "22 September, 9am",
+      "bookingUrl": "https://www.tlpcc.org.uk/holiday-club-booking"
     },
     "church-hill-playscheme": {
       "weeks": [
@@ -289,7 +303,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–28 October 2026 dates remain published, checked 11 September. Main page and session calendar conflict on enrolment; confirm booking availability with art-K."
+      "weeksBasis": "26–28 October 2026, verified 21 September. Enrol now links to selectable full-day and half-day sessions; no Thursday or Friday sessions listed."
     },
     "creation-station-walthamstow": {
       "weeks": [],
