@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-21",
+  "updated": "2026-09-23",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -60,7 +60,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Official 2026 diary confirms 26–30 October. Booking opens 22 September at 9am; places not yet verified. Checked 21 September 2026.",
+      "weeksBasis": "Official 2026 diary confirms 26–30 October. October application form is open and adds children to a queue; acceptance and remaining places unverified. Checked 23 September 2026.",
       "price": {
         "day": 48.3
       },

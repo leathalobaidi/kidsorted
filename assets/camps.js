@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-21",
+  "updated": "2026-09-23",
   "providers": [
     {
       "id": "all-about-dance",
@@ -985,7 +985,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "lloyd-park-childrens-charity",
-      "checkedOn": "2026-09-21",
+      "checkedOn": "2026-09-23",
       "name": "Lloyd Park Children's Charity Holiday Club",
       "kind": "Inclusive holiday club",
       "area": "Lloyd Park / Higham Hill",
@@ -1006,8 +1006,8 @@ window.E17_DIRECTORY = {
       "price": "£48.30/day",
       "summary": "Inclusive October holiday clubs on 26–30 October 2026 at the Lloyd Park and Higham Hill centres, with arts, sports, imaginative play and outdoor activities.",
       "goodFor": "Primary school children needing a long childcare day; discuss individual support needs with the provider.",
-      "booking": "October bookings open Tuesday 22 September 2026 at 9am. Use the provider application page; remaining places and acceptance are not yet verified.",
-      "confidence": "October dates, opening time, centres, hours and published daily fee verified 21 September 2026",
+      "booking": "October applications are open. The public form adds your child to a queue for a place; submitting an application does not confirm a booking. Confirm acceptance and remaining places with the provider.",
+      "confidence": "October dates, centres, hours and daily fee verified; application form open, checked 23 September 2026",
       "source": {
         "label": "Lloyd Park Children's Charity holiday club",
         "url": "https://www.tlpcc.org.uk/teatime-and-holiday-club"
@@ -1027,14 +1027,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-21",
+        "date": "2026-09-23",
         "status": "verified",
-        "note": "Official holiday-club announcement, 2026 diary and fees checked. Application page has no October form available yet."
+        "note": "Browser verified the live October 2026 Place Application Form and its queue notice. Published dates, hours and fees unchanged."
       },
       "availability": {
         "status": "unknown",
-        "asOf": "2026-09-21",
-        "note": "Bookings announced to open 22 September at 9am; no current place availability verified."
+        "asOf": "2026-09-23",
+        "note": "October application form is open and explicitly queues children for a place. Actual place availability is unverified."
       }
     },
     {
