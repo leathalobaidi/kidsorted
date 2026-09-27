@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-23",
+  "updated": "2026-09-27",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -149,7 +149,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
+      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06. Booking checked 27 September: ages 7–16 have limited spaces; ages 5–6 have spaces."
     },
     "mother-nature-science-walthamstow": {
       "weeks": [
@@ -288,13 +288,15 @@ window.E17_PLANNER = {
         "1": [
           1,
           2,
-          3
+          3,
+          4,
+          5
         ]
       },
       "price": {
         "day": 70
       },
-      "priceBasis": "£70 per full day, £210 for all three days. Half-day workshops cost £30; enter your own total if choosing half days. The planner records days, not half-day slots.",
+      "priceBasis": "£70 per full day. Half-day workshops cost £30; enter your own total if choosing half days. The planner records days, not half-day slots.",
       "hours": {
         "start": "10:00",
         "end": "15:00"
@@ -303,7 +305,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–28 October 2026, verified 21 September. Enrol now links to selectable full-day and half-day sessions; no Thursday or Friday sessions listed."
+      "weeksBasis": "26–30 October 2026, verified 27 September. Full-day and half-day sessions are selectable, including newly added Thursday and Friday."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -524,7 +526,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Wednesday 28 October only, at NBC HQ; confirm exact street address. Official calendar checked 13 September 2026.",
+      "weeksBasis": "Wednesday 28 October at NBC HQ is full, verified 27 September 2026. Date retained for existing saved bookings; no new places offered.",
       "hours": {
         "start": "10:00",
         "end": "15:00"

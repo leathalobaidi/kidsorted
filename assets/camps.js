@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-23",
+  "updated": "2026-09-27",
   "providers": [
     {
       "id": "all-about-dance",
@@ -165,7 +165,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "gravity-performing-arts",
-      "checkedOn": "2026-09-06",
+      "checkedOn": "2026-09-27",
       "name": "Gravity Performing Arts",
       "kind": "Musical theatre holiday camp",
       "area": "Walthamstow",
@@ -189,16 +189,16 @@ window.E17_DIRECTORY = {
       "price": "£45/day or £210/week; early and late sessions £10 each per day",
       "summary": "October musical theatre camp at Walthamstow School for Girls, with separate groups for ages 5–6 and 7–16. Runs 26–30 October; bring a nut-free packed lunch.",
       "goodFor": "Children who want a performance-led camp with dance, drama and music.",
-      "booking": "Spaces available for both October age groups on ClassForKids.",
-      "confidence": "October source checked 6 September 2026",
+      "booking": "October bookings remain open: ages 7–16 now show Limited Spaces Available; ages 5–6 show Spaces Available.",
+      "confidence": "Official October booking sources verified 27 September 2026",
       "source": {
         "label": "Gravity Performing Arts camps",
         "url": "https://gravityperformingarts.classforkids.io/camps"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-09-06",
-        "note": "Both 5–6 and 7–16 October bookings explicitly show Spaces Available."
+        "asOf": "2026-09-27",
+        "note": "Ages 7–16 show Limited Spaces Available; ages 5–6 show Spaces Available."
       },
       "secondarySources": [
         {
@@ -211,9 +211,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "checked",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-09-27",
+        "status": "verified",
+        "note": "Ages 7–16 show Limited Spaces Available; ages 5–6 show Spaces Available."
       }
     },
     {
@@ -434,7 +434,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-09-21",
+      "checkedOn": "2026-09-27",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -454,20 +454,20 @@ window.E17_DIRECTORY = {
       "funding": [
         "Paid"
       ],
-      "hours": "26–28 October: 10am–3pm; half days 10am–12pm or 1–3pm",
+      "hours": "26–30 October: 10am–3pm; half days 10am–12pm or 1–3pm",
       "price": "£70/full day; £30/half day",
-      "summary": "October art workshops on Monday 26–Wednesday 28 October 2026. Individual projects in sculpture, painting and mixed media. No Thursday or Friday sessions listed.",
+      "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Enrolment is open. Full-day and half-day sessions on 26–28 October are selectable in the public booking calendar; places may change before checkout.",
-      "confidence": "October dates, prices and selectable booking sessions verified 21 September 2026",
+      "booking": "Enrolment is open. Full-day and half-day sessions on 26–30 October are selectable in the public booking calendar; places may change before checkout.",
+      "confidence": "Official October booking sources verified 27 September 2026",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-09-21",
-        "note": "The main page now offers Enrol now; all full-day and half-day options on 26–28 October are selectable."
+        "asOf": "2026-09-27",
+        "note": "Full-day and half-day sessions on 26–30 October are selectable, including newly added Thursday and Friday."
       },
       "secondarySources": [
         {
@@ -476,9 +476,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-21",
+        "date": "2026-09-27",
         "status": "verified",
-        "note": "Browser verified Enrol now and selectable 26–28 October sessions; previous conflicting enrolment notice is gone."
+        "note": "Full-day and half-day sessions on 26–30 October are selectable, including newly added Thursday and Friday."
       }
     },
     {
@@ -1354,7 +1354,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "noisy-book-club-october-wednesday",
-      "checkedOn": "2026-09-13",
+      "checkedOn": "2026-09-27",
       "name": "Noisy Book Club × Angry Dan — Wednesday 28 October",
       "kind": "Art and growth-mindset holiday workshop",
       "area": "Walthamstow Central",
@@ -1380,8 +1380,8 @@ window.E17_DIRECTORY = {
       "price": "£75 for Wednesday 28 October; 5% off second and third child",
       "summary": "A standalone mural-style painting workshop with Angry Dan on Wednesday 28 October 2026, 10am–3pm. This session is at NBC HQ, a different venue from the Monday–Tuesday block. No club on Thursday 29 or Friday 30.",
       "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
-      "booking": "Book Wednesday 28 October separately. Confirm the exact NBC HQ address with the provider.",
-      "confidence": "Official October booking calendar verified 13 September 2026",
+      "booking": "Wednesday 28 October is full and cannot be selected in the booking calendar. The separate Monday–Tuesday block remains available.",
+      "confidence": "Official October booking sources verified 27 September 2026",
       "source": {
         "label": "Noisy Book Club October half-term calendar and booking",
         "url": "https://www.noisybookclub.com/half-term"
@@ -1393,14 +1393,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "confirmed",
-        "note": "NEW official /half-term browser calendar: ages 5–11, 10–15. Mon 26–Tue 27 October compulsory two-day block £150 at One of Six cabin, 259A High Street E17; 17 places shown. Wed 28 October separate £75 session at NBC HQ, 12 places shown; HQ street address not published on this page. No club 29–30 October. Other advertised blocks 19–23 October and 2–6 November outside current planner week. Weekdays align with 2026."
+        "date": "2026-09-27",
+        "status": "verified",
+        "note": "Official calendar labels Wednesday 28 October Full and disables selection. No Wednesday waitlist is offered on this page."
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-09-13",
-        "note": "Calendar shows 12 places for Wednesday. Availability can change."
+        "status": "full",
+        "asOf": "2026-09-27",
+        "note": "Official calendar labels Wednesday 28 October Full and disables selection. No Wednesday waitlist is offered on this page."
       }
     },
     {
