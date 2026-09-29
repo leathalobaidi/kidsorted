@@ -1,9 +1,9 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-27",
+  "updated": "2026-09-29",
   "providers": [
     {
       "id": "all-about-dance",
-      "checkedOn": "2026-09-13",
+      "checkedOn": "2026-09-29",
       "name": "All About Dance UK — October Half-Term Holiday Camp (Ages 3–11)",
       "kind": "Holiday camp",
       "area": "Walthamstow / Chingford",
@@ -28,20 +28,20 @@ window.E17_DIRECTORY = {
       "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
       "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
       "booking": "Book through Class4Kids; choose the appropriate age group and childcare hours.",
-      "confidence": "October dates, main hours, venue, prices and public places verified in Class4Kids, 13 September 2026",
+      "confidence": "October dates, main hours, venue, prices and public places verified in Class4Kids, 29 September 2026",
       "source": {
         "label": "All About Dance October camps by age group",
         "url": "https://all-about-dance-uk.classforkids.io/camps"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-09-13",
-        "note": "Preschool and older-child October listings show Spaces Available. Choose the appropriate booking age band; extended childcare is separate."
+        "asOf": "2026-09-29",
+        "note": "Preschool ages 3–4 now show Limited Spaces Available. Ages 5–6, 7–8 and 9–11 show Spaces Available. Choose the appropriate booking age band; extended childcare is separate."
       },
       "lastCheck": {
-        "date": "2026-09-13",
+        "date": "2026-09-29",
         "status": "confirmed",
-        "note": "Followed rendered /camps page to camps 39, 40 and 41: ages 5–6, 7–8 and 9–11 all show 26–30 October 2026, Hillyfield E17 4NR, 10–15, £35/day or £175/week and Spaces Available. Preschool camp 36 matches. Exact booking age limits vary; extended-care fees not confirmed."
+        "note": "Preschool camp 36 verified in browser: Limited Spaces Available. Official camps 39, 40 and 41 still show Spaces Available. All retain 26–30 October, Hillyfield E17 4NR, 10am–3pm, £35/day or £175/week. Extended childcare fees remain unconfirmed."
       },
       "secondarySources": [
         {

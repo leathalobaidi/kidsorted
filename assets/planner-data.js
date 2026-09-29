@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-27",
+  "updated": "2026-09-29",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -119,8 +119,8 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Class4Kids October age-group listings verified 13 September 2026: 26–30 October, Hillyfield, 10am–3pm.",
-      "priceBasis": "Class4Kids October camps 36, 39, 40 and 41: £35/day or £175/week for 10am–3pm, checked 13 September 2026. Early/late childcare costs extra and is excluded.",
+      "weeksBasis": "Class4Kids October age-group listings verified 29 September 2026: 26–30 October, Hillyfield, 10am–3pm. Preschool places limited; older age groups show spaces available.",
+      "priceBasis": "Class4Kids October camps 36, 39, 40 and 41: £35/day or £175/week for 10am–3pm, checked 29 September 2026. Early/late childcare costs extra and is excluded.",
       "hours": {
         "start": "10:00",
         "end": "15:00",
