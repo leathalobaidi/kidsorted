@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -119,7 +119,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Class4Kids October age-group listings verified 29 September 2026: 26–30 October, Hillyfield, 10am–3pm. Preschool places limited; older age groups show spaces available.",
+      "weeksBasis": "Class4Kids dates remain 26–30 October, Hillyfield, 10am–3pm. Preschool capacity last verified 29 September; public badge absent and date selection requires login on 30 September. Older groups show spaces.",
       "priceBasis": "Class4Kids October camps 36, 39, 40 and 41: £35/day or £175/week for 10am–3pm, checked 29 September 2026. Early/late childcare costs extra and is excluded.",
       "hours": {
         "start": "10:00",
@@ -155,12 +155,12 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Selected Walthamstow School for Girls in the October 2026 booking form; Week B (26–30 October) remains available. Checked 9 September 2026.",
+      "weeksBasis": "Selected Walthamstow School for Girls and Week B, 26–30 October 2026, in provider form on 30 September. In stock (can be backordered); confirm places before paying.",
       "price": {
-        "week": 345,
+        "week": 445,
         "day": 110
       },
-      "priceBasis": "Selected October listing shows £345 early-bird weekly price (undiscounted five individual days £550). Extended hours £10 per day extra. Individual days £110 each, shown after selecting the venue and week.",
+      "priceBasis": "Selected Walthamstow Week B booking form shows £445 for the full week on 30 September 2026 (five individual days £550). Individual days £110; extended hours £10/day extra.",
       "hours": {
         "start": "09:00",
         "end": "15:30",
@@ -305,7 +305,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October 2026, verified 27 September. Full-day and half-day sessions are selectable, including newly added Thursday and Friday."
+      "weeksBasis": "26–30 October 2026, verified 27 September. Full-day and half-day sessions are selectable, including newly added Thursday and Friday. Calendar checked 30 September: all five days selectable; Monday–Wednesday places limited."
     },
     "creation-station-walthamstow": {
       "weeks": [],

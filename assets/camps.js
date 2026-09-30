@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "providers": [
     {
       "id": "all-about-dance",
@@ -36,12 +36,12 @@ window.E17_DIRECTORY = {
       "availability": {
         "status": "open",
         "asOf": "2026-09-29",
-        "note": "Preschool ages 3–4 now show Limited Spaces Available. Ages 5–6, 7–8 and 9–11 show Spaces Available. Choose the appropriate booking age band; extended childcare is separate."
+        "note": "Preschool showed limited spaces on 29 September. On 30 September its public availability badge was absent and date selection required login, so current preschool capacity is unconfirmed. Older age-group listings still show Spaces Available."
       },
       "lastCheck": {
-        "date": "2026-09-29",
-        "status": "confirmed",
-        "note": "Preschool camp 36 verified in browser: Limited Spaces Available. Official camps 39, 40 and 41 still show Spaces Available. All retain 26–30 October, Hillyfield E17 4NR, 10am–3pm, £35/day or £175/week. Extended childcare fees remain unconfirmed."
+        "date": "2026-09-30",
+        "status": "checked",
+        "note": "Preschool booking button remains, but capacity badge removed; following Select dates requires login. Do not infer sold out or renewed availability. Last successful preschool capacity check remains 29 September."
       },
       "secondarySources": [
         {
@@ -466,8 +466,8 @@ window.E17_DIRECTORY = {
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-09-27",
-        "note": "Full-day and half-day sessions on 26–30 October are selectable, including newly added Thursday and Friday."
+        "asOf": "2026-09-30",
+        "note": "All 26–30 October sessions selectable. Monday shows 1 spot; Tuesday full day/afternoon and Wednesday sessions show 2 spots. Thursday and Friday remain selectable. Availability can change."
       },
       "secondarySources": [
         {
@@ -476,9 +476,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-27",
+        "date": "2026-09-30",
         "status": "verified",
-        "note": "Full-day and half-day sessions on 26–30 October are selectable, including newly added Thursday and Friday."
+        "note": "Public session calendar verified: all five days selectable, with limited places on Monday–Wednesday. Dates, session hours and prices unchanged."
       }
     },
     {
@@ -1208,7 +1208,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "mother-nature-science-walthamstow",
-      "checkedOn": "2026-09-09",
+      "checkedOn": "2026-09-30",
       "name": "Mother Nature Science Walthamstow",
       "kind": "Science and STEM holiday camp",
       "area": "Walthamstow",
@@ -1229,11 +1229,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "26–30 October: 9am–3:30pm; extended 8:30am–4pm",
-      "price": "£345/week early-bird price; extended hours £10/day extra; £110/individual day",
+      "price": "£445/week; extended hours £10/day extra; £110/individual day",
       "summary": "Halloween Science at Walthamstow School for Girls, 26–30 October 2026. Hands-on science experiments, craft and outdoor play.",
       "goodFor": "Primary-age children who enjoy experiments and making things.",
       "booking": "Select Walthamstow School for Girls and Week B, 26–30 October, on the provider booking form.",
-      "confidence": "October venue, week and prices verified in provider booking form, 9 September 2026",
+      "confidence": "October venue, week and prices verified in provider booking form, 30 September 2026",
       "source": {
         "label": "Mother Nature Science October 2026 North East London",
         "url": "https://www.mnature.co.uk/product/october-half-term-holiday-science-activity-camp-nelondon/"
@@ -1246,13 +1246,13 @@ window.E17_DIRECTORY = {
       ],
       "availability": {
         "status": "open",
-        "asOf": "2026-09-09",
+        "asOf": "2026-09-30",
         "note": "Selected Walthamstow and Week B; live form shows In stock (can be backordered). Confirm places before paying."
       },
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "checked",
-        "note": "Browser selected Walthamstow School for Girls and Week B 26–30 October 2026: £345/week, £110/day, £10/day extended hours, in stock (can be backordered). No material price change."
+        "date": "2026-09-30",
+        "status": "verified",
+        "note": "Browser selected Walthamstow School for Girls and Week B, 26–30 October 2026. Full-week total £445 (previously £345), individual days £110, extended hours £10/day. In stock (can be backordered); confirm places before paying."
       }
     },
     {
