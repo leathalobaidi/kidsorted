@@ -1,9 +1,9 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "providers": [
     {
       "id": "all-about-dance",
-      "checkedOn": "2026-09-29",
+      "checkedOn": "2026-10-01",
       "name": "All About Dance UK — October Half-Term Holiday Camp (Ages 3–11)",
       "kind": "Holiday camp",
       "area": "Walthamstow / Chingford",
@@ -24,24 +24,24 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "Main day 10am–3pm; extended day 8am–6pm, with flexible early drop-off and late collection options",
-      "price": "£35/day or £175/week for the 10am–3pm camp; early/late childcare booked separately, confirm additional fees",
+      "price": "£42.50/day or £212.50/week for the 10am–3pm camp; early/late childcare booked separately, confirm additional fees",
       "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
       "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
       "booking": "Book through Class4Kids; choose the appropriate age group and childcare hours.",
-      "confidence": "October dates, main hours, venue, prices and public places verified in Class4Kids, 29 September 2026",
+      "confidence": "October dates, main hours, venue and prices verified in Class4Kids, 1 October 2026; preschool capacity unconfirmed",
       "source": {
         "label": "All About Dance October camps by age group",
         "url": "https://all-about-dance-uk.classforkids.io/camps"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-09-29",
-        "note": "Preschool showed limited spaces on 29 September. On 30 September its public availability badge was absent and date selection required login, so current preschool capacity is unconfirmed. Older age-group listings still show Spaces Available."
+        "asOf": "2026-10-01",
+        "note": "Ages 7–8 show Limited Spaces Available; ages 5–6 and 9–11 show Spaces Available. Preschool has no public capacity badge; its last successful capacity check was 29 September (limited spaces)."
       },
       "lastCheck": {
-        "date": "2026-09-30",
-        "status": "checked",
-        "note": "Preschool booking button remains, but capacity badge removed; following Select dates requires login. Do not infer sold out or renewed availability. Last successful preschool capacity check remains 29 September."
+        "date": "2026-10-01",
+        "status": "verified",
+        "note": "All four October age-group listings now £42.50/day or £212.50/week. Browser camp 40 confirms limited spaces for ages 7–8. Dates 26–30 October, Hillyfield, 10am–3pm unchanged. Preschool capacity remains unconfirmed."
       },
       "secondarySources": [
         {
@@ -112,7 +112,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "church-hill-playscheme",
-      "checkedOn": "2026-09-11",
+      "checkedOn": "2026-10-01",
       "name": "Church Hill Nursery Holiday Playscheme",
       "kind": "Early years playscheme",
       "area": "Walthamstow",
@@ -133,10 +133,10 @@ window.E17_DIRECTORY = {
       ],
       "hours": "9am–4pm core session; 8am–6pm full day",
       "price": "£49/day (9am–4pm); £65/day (8am–6pm). Breakfast add-on £7; tea add-on £14.",
-      "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Core and full-day sessions are available through Pembee.",
+      "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Some core and full-day sessions are waitlist-only; check the session before booking.",
       "goodFor": "Younger children who need a nursery-style local holiday day.",
       "booking": "Book the October Playscheme on Pembee; choose the core or full-day session. Speak to the nursery before booking if your child needs additional support.",
-      "confidence": "October dates, venue, ages, hours, prices and available sessions checked 11 September 2026",
+      "confidence": "October dates, venue, ages, hours, prices and session availability checked 1 October 2026",
       "source": {
         "label": "Church Hill 2026–27 term dates",
         "url": "https://www.fans.waltham.sch.uk/term-dates"
@@ -153,14 +153,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "checked",
-        "note": "Browser Pembee: all ten core/full-day sessions on 26–30 October Available; £49 9–16 or £65 8–18. Ages 3–8, 47 Woodbury Road. No material change."
+        "date": "2026-10-01",
+        "status": "verified",
+        "note": "Browser Pembee confirms core Thursday and full-day Wednesday/Thursday Join Waitlist. Remaining core sessions 4–5 places; full-day Monday available, Tuesday 6, Friday 4. £49 core/£65 full day unchanged. Existing saved dates retained."
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-09-11",
-        "note": "All five core and full-day sessions show Available on Pembee."
+        "status": "mixed",
+        "asOf": "2026-10-01",
+        "note": "Core 9am–4pm: Thursday 29 waitlist-only; Monday–Wednesday and Friday have places. Full day 8am–6pm: Wednesday 28 and Thursday 29 waitlist-only; Monday, Tuesday and Friday have places."
       }
     },
     {
@@ -528,6 +528,55 @@ window.E17_DIRECTORY = {
         "status": "open",
         "asOf": "2026-09-19",
         "note": "26 October 2–4pm short course: 20 spaces shown."
+      }
+    },
+    {
+      "id": "better-walthamstow-gymnastics",
+      "checkedOn": "2026-10-01",
+      "name": "Better Walthamstow — October Gymnastics Short Course",
+      "kind": "Two-hour gymnastics holiday session",
+      "area": "Walthamstow",
+      "areas": [
+        "Walthamstow"
+      ],
+      "venue": "Walthamstow Leisure Centre",
+      "address": "Walthamstow, E17 8RN",
+      "ageMin": 5,
+      "ageMax": null,
+      "ageLabel": "Separate groups: 5–7 and 8+; upper age limit for 8+ not stated",
+      "categories": [
+        "Workshop",
+        "Sports"
+      ],
+      "funding": [
+        "Paid"
+      ],
+      "hours": "Monday 26 October, 2pm–4pm",
+      "price": "£15.60 for the two-hour session",
+      "summary": "Gymnastics holiday short courses on Monday 26 October 2026, 2pm–4pm, in separate 5–7 and 8+ age groups. A two-hour activity, not full-day childcare.",
+      "goodFor": "Children aged 5+ seeking a gymnastics afternoon; choose the appropriate age group and confirm any upper age limit.",
+      "booking": "Select Gymnastics and Holiday and Short Courses on Better. Choose the appropriate 26 October age group.",
+      "confidence": "Official holiday page and both public booking prices verified 1 October 2026",
+      "source": {
+        "label": "Walthamstow Leisure Centre holiday activities",
+        "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/holiday-activities"
+      },
+      "lastCheck": {
+        "date": "2026-10-01",
+        "status": "verified",
+        "note": "Official page corrected date to Monday 26 October. Browser holiday-course results show both gymnastics age groups 14–16, 8 spaces each, £15.60 per session. Upper age limit for 8+ unstated."
+      },
+      "bookingUrl": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5,6%5D,%22centre%22:26,%22courseType%22:2%7D",
+      "secondarySources": [
+        {
+          "label": "Better holiday gymnastics booking listings",
+          "url": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5,6%5D,%22centre%22:26,%22courseType%22:2%7D"
+        }
+      ],
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-01",
+        "note": "Both 5–7 and 8+ groups show 8 spaces. Availability can change."
       }
     },
     {
@@ -1303,8 +1352,8 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "noisy-book-club-summer",
-      "checkedOn": "2026-09-13",
-      "name": "Noisy Book Club × Angry Dan — 26–27 October block",
+      "checkedOn": "2026-10-01",
+      "name": "Noisy Book Club × Angry Dan — 26–27 October",
       "kind": "Art and growth-mindset holiday workshop",
       "area": "Walthamstow Central",
       "areas": [
@@ -1326,11 +1375,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "10am–3pm; no extended hours published",
-      "price": "£150 for the compulsory two-day block (26–27 October); 5% off second and third child",
-      "summary": "Mural-style painting with Angry Dan, with growth-mindset activities. Monday 26 and Tuesday 27 October 2026 are booked together. A separate Wednesday workshop runs at NBC HQ; no club on Thursday 29 or Friday 30.",
+      "price": "£75 per day, booked individually; 5% off second and third child",
+      "summary": "Mural-style painting with Angry Dan, with growth-mindset activities. Monday 26 and Tuesday 27 October 2026 can now be booked individually. Wednesday is a separate, full workshop at NBC HQ; no club on Thursday 29 or Friday 30.",
       "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
-      "booking": "Book both 26–27 October together. Individual days within this block are waiting-list requests only and are not guaranteed.",
-      "confidence": "Official October booking calendar verified 13 September 2026",
+      "booking": "Choose Monday 26 October, Tuesday 27 October, or both on the official booking calendar.",
+      "confidence": "Official October booking calendar verified 1 October 2026",
       "source": {
         "label": "Noisy Book Club October half-term calendar and booking",
         "url": "https://www.noisybookclub.com/half-term"
@@ -1342,14 +1391,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "confirmed",
-        "note": "NEW official /half-term browser calendar: ages 5–11, 10–15. Mon 26–Tue 27 October compulsory two-day block £150 at One of Six cabin, 259A High Street E17; 17 places shown. Wed 28 October separate £75 session at NBC HQ, 12 places shown; HQ street address not published on this page. No club 29–30 October. Other advertised blocks 19–23 October and 2–6 November outside current planner week. Weekdays align with 2026."
+        "date": "2026-10-01",
+        "status": "verified",
+        "note": "Browser calendar now offers separate enabled Mon 26 and Tue 27 October single-day buttons, £75 each, 7 places each. Ages 5–11, 10am–3pm, One of Six cabin 259A High Street unchanged. Compulsory block restriction removed."
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-09-13",
-        "note": "Calendar shows 17 places for the two-day block. Availability can change."
+        "asOf": "2026-10-01",
+        "note": "Monday 26 and Tuesday 27 October each show 7 places, £75 per day. Individual-day booking is now offered."
       }
     },
     {

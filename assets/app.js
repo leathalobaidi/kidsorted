@@ -275,9 +275,9 @@ function weekCost(provider, weekId) {
 }
 
 function ageFits(provider, age) {
-  return Number.isFinite(provider.ageMin) && Number.isFinite(provider.ageMax)
-    ? age >= provider.ageMin && (Number.isInteger(provider.ageMax) ? age < provider.ageMax + 1 : age <= provider.ageMax)
-    : true;
+  const aboveMinimum = !Number.isFinite(provider.ageMin) || age >= provider.ageMin;
+  const belowMaximum = !Number.isFinite(provider.ageMax) || (Number.isInteger(provider.ageMax) ? age < provider.ageMax + 1 : age <= provider.ageMax);
+  return aboveMinimum && belowMaximum;
 }
 
 function childById(id) {
@@ -354,8 +354,8 @@ function ageMatches(item) {
     return ageFits(item, child.age);
   }
   if (state.age === "under5") return item.ageMin < 5;
-  if (state.age === "primary") return item.ageMin <= 11 && item.ageMax >= 5;
-  if (state.age === "teen") return item.ageMax >= 12;
+  if (state.age === "primary") return item.ageMin <= 11 && (!Number.isFinite(item.ageMax) || item.ageMax >= 5);
+  if (state.age === "teen") return !Number.isFinite(item.ageMax) || item.ageMax >= 12;
   return true;
 }
 

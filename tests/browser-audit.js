@@ -22,12 +22,13 @@ window.addEventListener('load', async () => {
     check(child.age===4.5 && ageFits(providerById('sylvestrian-leisure-holiday-activities'),child.age),'four years six months eligible for 4.5 minimum');
     check(ageFits(providerById('all-about-dance'),11+11/12) && !ageFits(providerById('all-about-dance'),12),'inclusive upper ages include all months before the next birthday');
     check(D.providers.filter(p=>!plannerOf(p).weeks?.length).every(p=>weekCost(p,1)===null),'unconfirmed providers all have unknown costs');
+    check(!ageFits(providerById('better-walthamstow-gymnastics'),4) && ageFits(providerById('better-walthamstow-gymnastics'),8),'known gymnastics minimum enforced without inventing an upper age');
     const c=child.id;
     click('[data-addplan="all-about-dance"]');click(`[data-target-child="${c}"]`);
     [2,3,4,5].forEach(toggleDay);save();await wait(10);
     check(planEntries(1,c)[0].days.join()==='1','Monday-only booking saved');
     check($('#budgetCards').textContent.includes('1 of 5 days planned · 4 still to cover'),'partial week leaves four visible gaps');
-    check(entryCost(planEntries(1,c)[0],1).value===35,'verified dance daily price is £35');
+    check(entryCost(planEntries(1,c)[0],1).value===42.5,'verified dance daily price is £42.50');
     day(c,2);chooseCamp('barracudas-woodford');toggleDay(3);save();await wait(10);
     day(c,4);click('[data-choose-type="family"]');toggleDay(5);save();await wait(10);
     check(planEntries(1,c).length===3 && planEntries(1,c).map(e=>e.days.join()).join('|')==='1|2,3|4,5','mixed camps and family days preserve all bookings');
@@ -51,7 +52,8 @@ window.addEventListener('load', async () => {
     startDraft(1,c,{type:'camp',campId:'wee-movers-holiday'},[1]);
     check(pickerCtx.draft.days.join()==='3,4,5' && [...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled) && entryCost(pickerCtx.draft,1).value===192,'Wee Movers locks only its three-day course at £192');close();
     startDraft(1,c,{type:'camp',campId:'noisy-book-club-summer'},[1]);
-    check(pickerCtx.draft.days.join()==='1,2' && [...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled) && entryCost(pickerCtx.draft,1).value===150,'Noisy Book Club locks its two-day block at £150');close();
+    check(pickerCtx.draft.days.join()==='1' && !$('[data-draft-day="2"]').disabled && entryCost(pickerCtx.draft,1).value===75,'Noisy Book Club allows one day at £75');toggleDay(2);
+    check(pickerCtx.draft.days.join()==='1,2' && entryCost(pickerCtx.draft,1).value===150,'Noisy Book Club still prices existing two-day selections at £150');close();
     startDraft(1,c,{type:'camp',campId:'noisy-book-club-october-wednesday'},[1,2,3,4,5]);
     check(pickerCtx.draft.days.join()==='3' && entryCost(pickerCtx.draft,1).value===75,'Noisy Book Club Wednesday is separate and costs £75');close();
     check(entryCost({type:'camp',campId:'football-fun-factory',days:[5]},1)===null,'old plans on unlisted days never receive an invented price');

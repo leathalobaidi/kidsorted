@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -78,7 +78,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Official October Pembee listing, checked 11 September 2026: core and full-day sessions on 26–30 October.",
+      "weeksBasis": "26–30 October dates retained for existing plans. On 1 October core Thursday and full-day Wednesday/Thursday are waitlist-only; other sessions have places. A planner selection does not secure a booking.",
       "price": {
         "day": 49
       },
@@ -119,8 +119,8 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Class4Kids dates remain 26–30 October, Hillyfield, 10am–3pm. Preschool capacity last verified 29 September; public badge absent and date selection requires login on 30 September. Older groups show spaces.",
-      "priceBasis": "Class4Kids October camps 36, 39, 40 and 41: £35/day or £175/week for 10am–3pm, checked 29 September 2026. Early/late childcare costs extra and is excluded.",
+      "weeksBasis": "26–30 October at Hillyfield, 10am–3pm. Ages 7–8 limited; ages 5–6 and 9–11 show spaces. Preschool capacity unconfirmed.",
+      "priceBasis": "Class4Kids October camps 36, 39, 40 and 41 now £42.50/day or £212.50/week for 10am–3pm, verified 1 October 2026. Early/late childcare fees excluded.",
       "hours": {
         "start": "10:00",
         "end": "15:00",
@@ -129,8 +129,8 @@ window.E17_PLANNER = {
       },
       "coverage": "working",
       "price": {
-        "day": 35,
-        "week": 175
+        "day": 42.5,
+        "week": 212.5
       }
     },
     "gravity-performing-arts": {
@@ -358,22 +358,21 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Official October calendar verified 13 September 2026. Separate listings preserve the compulsory two-day block and Wednesday venue change.",
+      "weeksBasis": "Official calendar verified 1 October 2026: 26 and 27 October now bookable individually; Wednesday remains a separate venue/listing.",
       "hours": {
         "start": "10:00",
         "end": "15:00"
       },
       "coverage": "short",
-      "priceBasis": "Official October booking calendar; 5% sibling discount not automatically applied. No extended hours published.",
+      "priceBasis": "£75 per selected day. Previous compulsory two-day block removed; 5% sibling discount not applied automatically. No extended hours published.",
       "dayPattern": {
         "1": [
           1,
           2
         ]
       },
-      "fullWeekOnly": true,
       "price": {
-        "week": 150
+        "day": 75
       }
     },
     "showkids-walthamstow": {
@@ -541,6 +540,26 @@ window.E17_PLANNER = {
       "price": {
         "day": 75
       }
+    },
+    "better-walthamstow-gymnastics": {
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1
+        ]
+      },
+      "weeksBasis": "Official holiday page and public course listings verify Monday 26 October 2026 only, checked 1 October.",
+      "price": {
+        "day": 15.6
+      },
+      "priceBasis": "Both 5–7 and 8+ public pricing panels show £15.60/session.",
+      "hours": {
+        "start": "14:00",
+        "end": "16:00"
+      },
+      "coverage": "short"
     }
   },
   "season": "october-2026",
