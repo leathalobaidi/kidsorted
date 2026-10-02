@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -149,7 +149,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06. Booking checked 27 September: ages 7–16 have limited spaces; ages 5–6 have spaces."
+      "weeksBasis": "26–30 October 2026. Booking checked 2 October: ages 7–16 show Very Limited Spaces Available; ages 5–6 show Spaces Available."
     },
     "mother-nature-science-walthamstow": {
       "weeks": [
@@ -305,7 +305,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October 2026, verified 27 September. Full-day and half-day sessions are selectable, including newly added Thursday and Friday. Calendar checked 30 September: all five days selectable; Monday–Wednesday places limited."
+      "weeksBasis": "26–30 October dates retained for existing plans. Calendar checked 2 October: Wednesday 28 full-day and half-day sessions are full/unavailable to select; Monday, Tuesday, Thursday and Friday remain selectable, with limited Monday/Tuesday places. Planner selection does not secure a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],

@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "providers": [
     {
       "id": "all-about-dance",
@@ -153,9 +153,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-01",
+        "date": "2026-10-02",
         "status": "verified",
-        "note": "Browser Pembee confirms core Thursday and full-day Wednesday/Thursday Join Waitlist. Remaining core sessions 4–5 places; full-day Monday available, Tuesday 6, Friday 4. £49 core/£65 full day unchanged. Existing saved dates retained."
+        "note": "Browser: waitlist sessions unchanged. Core Monday now 3 places, Tuesday/Wednesday/Friday 4. Full-day Monday available, Tuesday 6, Friday 4. Prices unchanged."
       },
       "availability": {
         "status": "mixed",
@@ -165,7 +165,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "gravity-performing-arts",
-      "checkedOn": "2026-09-27",
+      "checkedOn": "2026-10-02",
       "name": "Gravity Performing Arts",
       "kind": "Musical theatre holiday camp",
       "area": "Walthamstow",
@@ -189,16 +189,16 @@ window.E17_DIRECTORY = {
       "price": "£45/day or £210/week; early and late sessions £10 each per day",
       "summary": "October musical theatre camp at Walthamstow School for Girls, with separate groups for ages 5–6 and 7–16. Runs 26–30 October; bring a nut-free packed lunch.",
       "goodFor": "Children who want a performance-led camp with dance, drama and music.",
-      "booking": "October bookings remain open: ages 7–16 now show Limited Spaces Available; ages 5–6 show Spaces Available.",
-      "confidence": "Official October booking sources verified 27 September 2026",
+      "booking": "October bookings remain open: ages 7–16 now show Very Limited Spaces Available; ages 5–6 show Spaces Available.",
+      "confidence": "Official October booking sources verified 2 October 2026",
       "source": {
         "label": "Gravity Performing Arts camps",
         "url": "https://gravityperformingarts.classforkids.io/camps"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-09-27",
-        "note": "Ages 7–16 show Limited Spaces Available; ages 5–6 show Spaces Available."
+        "asOf": "2026-10-02",
+        "note": "Ages 7–16 show Very Limited Spaces Available; ages 5–6 show Spaces Available."
       },
       "secondarySources": [
         {
@@ -211,9 +211,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-27",
+        "date": "2026-10-02",
         "status": "verified",
-        "note": "Ages 7–16 show Limited Spaces Available; ages 5–6 show Spaces Available."
+        "note": "Older-group capacity warning increased to Very Limited. Dates, venue, hours and £45/day or £210/week unchanged."
       }
     },
     {
@@ -434,7 +434,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-09-27",
+      "checkedOn": "2026-10-02",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -458,16 +458,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Enrolment is open. Full-day and half-day sessions on 26–30 October are selectable in the public booking calendar; places may change before checkout.",
-      "confidence": "Official October booking sources verified 27 September 2026",
+      "booking": "Monday 26, Tuesday 27, Thursday 29 and Friday 30 October sessions are selectable. Wednesday 28 October full-day and half-day sessions are disabled/full in the public calendar. Places may change before checkout.",
+      "confidence": "Official October booking calendar verified 2 October 2026",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-09-30",
-        "note": "All 26–30 October sessions selectable. Monday shows 1 spot; Tuesday full day/afternoon and Wednesday sessions show 2 spots. Thursday and Friday remain selectable. Availability can change."
+        "status": "mixed",
+        "asOf": "2026-10-02",
+        "note": "Wednesday 28 October sessions are full/unavailable to select. Monday shows 1 spot in each session; Tuesday full day/afternoon 1 spot and morning 3 spots. Thursday and Friday remain selectable."
       },
       "secondarySources": [
         {
@@ -476,9 +476,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-30",
+        "date": "2026-10-02",
         "status": "verified",
-        "note": "Public session calendar verified: all five days selectable, with limited places on Monday–Wednesday. Dates, session hours and prices unchanged."
+        "note": "Browser calendar verifies Wednesday sessions disabled, remaining days selectable. Hours and prices unchanged. Existing saved dates retained."
       }
     },
     {
@@ -682,9 +682,9 @@ window.E17_DIRECTORY = {
         "url": "https://www.campbeaumont.co.uk/our-camps/woodbridge-high-school"
       },
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-10-02",
+        "status": "blocked",
+        "note": "Woodbridge detail URL returns Page Not Found. Official location finder still links to the same missing page; October dates and booking availability remain unconfirmed. Successful verification date preserved."
       }
     },
     {
