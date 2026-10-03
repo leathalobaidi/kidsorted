@@ -52,8 +52,10 @@ window.addEventListener('load', async () => {
     startDraft(1,c,{type:'camp',campId:'wee-movers-holiday'},[1]);
     check(pickerCtx.draft.days.join()==='3,4,5' && [...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled) && entryCost(pickerCtx.draft,1).value===192,'Wee Movers locks only its three-day course at £192');close();
     startDraft(1,c,{type:'camp',campId:'noisy-book-club-summer'},[1]);
-    check(pickerCtx.draft.days.join()==='1' && !$('[data-draft-day="2"]').disabled && entryCost(pickerCtx.draft,1).value===75,'Noisy Book Club allows one day at £75');toggleDay(2);
-    check(pickerCtx.draft.days.join()==='1,2' && entryCost(pickerCtx.draft,1).value===150,'Noisy Book Club still prices existing two-day selections at £150');close();
+    check(pickerCtx.draft.days.join()==='1,2' && [...document.querySelectorAll('[data-draft-day]')].every(el=>el.disabled) && entryCost(pickerCtx.draft,1).value===150,'Noisy locks current compulsory two-day block at £150');close();
+    const oldNoisy=normalizePlan({1:{[c]:[{type:'camp',campId:'noisy-book-club-summer',days:[1],booked:true}]}},state.children)[1][c][0];
+    check(oldNoisy.days.join()==='1' && oldNoisy.booked && entryCost(oldNoisy,1)===null && entryCost({...oldNoisy,myCost:75},1).value===75,'old Noisy single-day plans remain intact with own cost or unknown price');
+    check(allowedDaysFor(providerById('leyton-orient-trust'),1).join()==='2,3,4,5' && bookingState(providerById('leyton-orient-trust'),new Date('2026-10-03T12:00:00Z')).includes('Opens 5 October') && !bookingState(providerById('leyton-orient-trust'),new Date('2026-10-06T12:00:00Z')).includes('Booking open'),'Leyton HAF dates exclude Monday and elapsed opening date never implies availability');
     startDraft(1,c,{type:'camp',campId:'noisy-book-club-october-wednesday'},[1,2,3,4,5]);
     check(pickerCtx.draft.days.join()==='3' && entryCost(pickerCtx.draft,1).value===75,'Noisy Book Club Wednesday is separate and costs £75');close();
     check(entryCost({type:'camp',campId:'football-fun-factory',days:[5]},1)===null,'old plans on unlisted days never receive an invented price');

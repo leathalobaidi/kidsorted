@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "providers": [
     {
       "id": "all-about-dance",
@@ -153,9 +153,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-02",
+        "date": "2026-10-03",
         "status": "verified",
-        "note": "Browser: waitlist sessions unchanged. Core Monday now 3 places, Tuesday/Wednesday/Friday 4. Full-day Monday available, Tuesday 6, Friday 4. Prices unchanged."
+        "note": "Waitlist sessions unchanged. Core Mon/Wed 3 places, Tue/Fri 4; full day Mon available, Tue 5, Fri 4. Prices unchanged."
       },
       "availability": {
         "status": "mixed",
@@ -434,7 +434,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-02",
+      "checkedOn": "2026-10-03",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -458,16 +458,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Monday 26, Tuesday 27, Thursday 29 and Friday 30 October sessions are selectable. Wednesday 28 October full-day and half-day sessions are disabled/full in the public calendar. Places may change before checkout.",
-      "confidence": "Official October booking calendar verified 2 October 2026",
+      "booking": "All 26–30 October full-day and half-day sessions are selectable again. Places are limited; confirm availability before checkout.",
+      "confidence": "Official October booking calendar verified 3 October 2026",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "mixed",
-        "asOf": "2026-10-02",
-        "note": "Wednesday 28 October sessions are full/unavailable to select. Monday shows 1 spot in each session; Tuesday full day/afternoon 1 spot and morning 3 spots. Thursday and Friday remain selectable."
+        "status": "open",
+        "asOf": "2026-10-03",
+        "note": "Wednesday 28 October is selectable again with 2 spots per session. Thursday and Friday also show 2 spots per session. Monday 1 spot; Tuesday full day/afternoon 1 and morning 3."
       },
       "secondarySources": [
         {
@@ -476,9 +476,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-02",
+        "date": "2026-10-03",
         "status": "verified",
-        "note": "Browser calendar verifies Wednesday sessions disabled, remaining days selectable. Hours and prices unchanged. Existing saved dates retained."
+        "note": "Browser calendar confirms all five days selectable; Wednesday reopened, Thursday/Friday now limited. Prices and hours unchanged."
       }
     },
     {
@@ -932,51 +932,47 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "leyton-orient-trust",
-      "checkedOn": "2026-07-02",
-      "name": "Leyton Orient Trust football camps",
-      "kind": "Football and HAF camps",
-      "area": "Walthamstow / Leyton",
+      "checkedOn": "2026-10-03",
+      "name": "Leyton Orient Trust — October HAF at SCORE Centre",
+      "kind": "Multi-sports HAF camp",
+      "area": "Leyton",
       "areas": [
-        "Walthamstow",
-        "Leyton",
-        "Woodford",
-        "Loughton"
+        "Leyton"
       ],
-      "venue": "Previous listing: Peter May Sports Centre, SCORE Centre and Roding Valley High School (summer 2026 camps)",
-      "address": "Peter May Sports Centre, Walthamstow; SCORE Centre, Leyton; Roding Valley High School, Loughton",
-      "ageMin": 6,
+      "venue": "SCORE Centre",
+      "address": "2 Coronation Square, London, E10 5UN",
+      "ageMin": 8,
       "ageMax": 14,
-      "ageLabel": "Previously: 6-13 for summer holiday camps; 8-14 in HAF feed",
+      "ageLabel": "8–14 (activity listing; ticket dialog generically says all ages)",
       "categories": [
         "Football",
         "Sports"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed football and haf camps provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Free/HAF"
+      ],
+      "hours": "27–30 October, 10am–2pm",
+      "price": "£0 Child HAF Ticket; confirm funding eligibility when booking",
+      "summary": "October HAF multi-sports camp at SCORE Centre, Tuesday 27–Friday 30 October 2026, with sports, enrichment and a hot meal. Bookings open 5 October at 9am; places are not yet verified.",
+      "goodFor": "Children aged 8–14 interested in multi-sports and enrichment. Confirm eligibility and any support needs with the provider.",
+      "booking": "Bookings open Monday 5 October 2026 at 9am on Eequ. The page currently offers registration of interest, not a confirmed place. Check eligibility before booking.",
+      "confidence": "October dates, venue, hours, activity age range, £0 ticket and booking-opening time verified 3 October 2026",
       "source": {
-        "label": "Leyton Orient soccer schools",
-        "url": "https://officialsoccerschools.co.uk/leytonorient/"
+        "label": "Leyton Orient October HAF at SCORE Centre",
+        "url": "https://eequ.org/book/leyton-orient-haf-score-centre-with-leyton-orient-trust-7132"
       },
       "secondarySources": [
         {
-          "label": "Leyton Orient camp news",
-          "url": "https://www.leytonorient.com/news/2026/april/23/Book-now--May-half-term-football-camps/"
-        },
-        {
-          "label": "Leyton Orient HAF at SCORE Centre",
-          "url": "https://eequ.org/book/leyton-orient-haf-score-centre-with-leyton-orient-trust-7132"
+          "label": "Leyton Orient soccer schools (separate paid camps unconfirmed)",
+          "url": "https://officialsoccerschools.co.uk/leytonorient/"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained. At least one source remains blocked or incomplete; no new availability confirmation."
-      }
+        "date": "2026-10-03",
+        "status": "verified",
+        "note": "Browser schedule explicitly lists 27–30 October 2026, 10–14, booking opens 5 October 09:00. £0 HAF ticket. Activity ages 8–14 retained despite generic all-ages ticket dialog. Capacity/eligibility not established; no registration submitted."
+      },
+      "bookingUrl": "https://eequ.org/book/leyton-orient-haf-score-centre-with-leyton-orient-trust-7132"
     },
     {
       "id": "little-soccer-stars-walthamstow",
@@ -1352,7 +1348,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "noisy-book-club-summer",
-      "checkedOn": "2026-10-01",
+      "checkedOn": "2026-10-03",
       "name": "Noisy Book Club × Angry Dan — 26–27 October",
       "kind": "Art and growth-mindset holiday workshop",
       "area": "Walthamstow Central",
@@ -1375,11 +1371,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "10am–3pm; no extended hours published",
-      "price": "£75 per day, booked individually; 5% off second and third child",
-      "summary": "Mural-style painting with Angry Dan, with growth-mindset activities. Monday 26 and Tuesday 27 October 2026 can now be booked individually. Wednesday is a separate, full workshop at NBC HQ; no club on Thursday 29 or Friday 30.",
+      "price": "£150 for the compulsory 26–27 October two-day block (£75/day); 5% off second and third child",
+      "summary": "Mural-style painting with Angry Dan and growth-mindset activities. Monday 26 and Tuesday 27 October 2026 are now booked together as a two-day block. Wednesday is a separate, full workshop at NBC HQ; no club Thursday or Friday.",
       "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
-      "booking": "Choose Monday 26 October, Tuesday 27 October, or both on the official booking calendar.",
-      "confidence": "Official October booking calendar verified 1 October 2026",
+      "booking": "Book the 26–27 October two-day block on the official calendar. Individual-day booking is no longer offered for these dates.",
+      "confidence": "Official October booking calendar verified 3 October 2026",
       "source": {
         "label": "Noisy Book Club October half-term calendar and booking",
         "url": "https://www.noisybookclub.com/half-term"
@@ -1391,14 +1387,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-01",
+        "date": "2026-10-03",
         "status": "verified",
-        "note": "Browser calendar now offers separate enabled Mon 26 and Tue 27 October single-day buttons, £75 each, 7 places each. Ages 5–11, 10am–3pm, One of Six cabin 259A High Street unchanged. Compulsory block restriction removed."
+        "note": "Browser now shows one compulsory two-day block, replacing the individual-day options verified 1 October. Existing saved single-day plans retained with price to confirm unless the parent entered their own cost."
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-10-01",
-        "note": "Monday 26 and Tuesday 27 October each show 7 places, £75 per day. Individual-day booking is now offered."
+        "asOf": "2026-10-03",
+        "note": "26–27 October two-day block shows 7 places at £150. Both dates must be booked together."
       }
     },
     {

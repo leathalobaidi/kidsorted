@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -236,8 +236,29 @@ window.E17_PLANNER = {
       "coverage": "short"
     },
     "leyton-orient-trust": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 0
+      },
+      "priceBasis": "£0 Child HAF Ticket. Funding eligibility must be confirmed; a planner selection is not a booking.",
+      "hours": {
+        "start": "10:00",
+        "end": "14:00"
+      },
+      "coverage": "short",
+      "weeksBasis": "27–30 October 2026 confirmed on Eequ. Bookings open 5 October 09:00; capacity unverified. Activity listing ages 8–14.",
+      "bookingOpens": "2026-10-05T09:00:00+01:00",
+      "bookingOpensLabel": "5 October at 9am"
     },
     "camp-beaumont-woodbridge": {
       "weeks": [],
@@ -305,7 +326,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October dates retained for existing plans. Calendar checked 2 October: Wednesday 28 full-day and half-day sessions are full/unavailable to select; Monday, Tuesday, Thursday and Friday remain selectable, with limited Monday/Tuesday places. Planner selection does not secure a booking."
+      "weeksBasis": "26–30 October 2026. Calendar checked 3 October: all days selectable again; Wednesday–Friday two spots per session, Monday one and Tuesday one to three. Availability can change."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -358,13 +379,13 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Official calendar verified 1 October 2026: 26 and 27 October now bookable individually; Wednesday remains a separate venue/listing.",
+      "weeksBasis": "26–27 October now must be booked together; seven block places on 3 October. Existing saved dates are preserved.",
       "hours": {
         "start": "10:00",
         "end": "15:00"
       },
       "coverage": "short",
-      "priceBasis": "£75 per selected day. Previous compulsory two-day block removed; 5% sibling discount not applied automatically. No extended hours published.",
+      "priceBasis": "£150 compulsory two-day block for 26–27 October, verified 3 October. Existing single-day plans keep their dates but need a confirmed cost; enter your actual cost if previously booked.",
       "dayPattern": {
         "1": [
           1,
@@ -372,8 +393,9 @@ window.E17_PLANNER = {
         ]
       },
       "price": {
-        "day": 75
-      }
+        "week": 150
+      },
+      "fullWeekOnly": true
     },
     "showkids-walthamstow": {
       "weeks": [],
