@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-03",
+  "updated": "2026-10-05",
   "providers": [
     {
       "id": "all-about-dance",
@@ -841,44 +841,54 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "future-stars-walthamstow",
-      "checkedOn": "2026-07-04",
-      "name": "Future Stars Walthamstow",
+      "checkedOn": "2026-10-05",
+      "name": "Future Stars Walthamstow — October Holiday Club",
       "kind": "Full-day multi-activity club",
       "area": "Walthamstow",
       "areas": [
         "Walthamstow"
       ],
-      "venue": "Previous listing: Match Day Centres",
+      "venue": "Match Day Centres",
       "address": "Kitchener Road, Walthamstow, E17 4LL",
       "ageMin": 5,
       "ageMax": 12,
-      "ageLabel": "Previously: 5-12",
+      "ageLabel": "5–12",
       "categories": [
         "Sports",
         "Arts",
         "Multi-activity"
       ],
       "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed full-day multi-activity club provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "hours": "26–30 October: 10am–3pm; extended 8am–6pm",
+      "price": "Main session £20/day or £80/week; extended day £40/day or £160/week",
+      "summary": "October multi-activity holiday club at Match Day Centres, 26–30 October 2026. Main and extended sessions both show spaces available.",
+      "goodFor": "Children aged 5–12 interested in indoor activities, arts and crafts and sports.",
+      "booking": "Book main sessions (10am–3pm) or the separate full-day listing (8am–6pm) through ClassForKids. Half-day times on the full-day listing are not specified.",
+      "confidence": "Dates, ages, venue, main/extended hours and prices verified 5 October 2026. Both October listings show Spaces Available; exact remaining capacity unspecified.",
       "source": {
-        "label": "Future Stars holiday club booking",
-        "url": "https://future-stars-development.classforkids.io/camp/92"
+        "label": "Future Stars October main session",
+        "url": "https://future-stars-development.classforkids.io/camp/99"
       },
       "secondarySources": [
         {
-          "label": "Future Stars Walthamstow",
-          "url": "https://www.futurestarswalthamstow.com/"
+          "label": "Future Stars October full day",
+          "url": "https://future-stars-development.classforkids.io/camp/100"
+        },
+        {
+          "label": "Future Stars current camps",
+          "url": "https://future-stars-development.classforkids.io/camps"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-10-05",
+        "status": "verified",
+        "note": "Dates, ages, venue, main/extended hours and prices verified 5 October 2026. Both October listings show Spaces Available; exact remaining capacity unspecified."
+      },
+      "bookingUrl": "https://future-stars-development.classforkids.io/camp/99",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-05",
+        "note": "Main and full-day October listings show Spaces Available. Capacity may change."
       }
     },
     {
@@ -1213,43 +1223,46 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "mission-grove",
-      "checkedOn": "2026-07-04",
-      "name": "Mission Grove Primary Holiday Club",
+      "checkedOn": "2026-10-05",
+      "name": "Mission Grove Primary — October HAF Holiday Club",
       "kind": "School holiday club",
       "area": "Walthamstow",
       "areas": [
         "Walthamstow"
       ],
-      "venue": "Previous listing: Mission Grove Primary School",
-      "address": "Buxton Road, Walthamstow",
-      "ageMin": 3,
+      "venue": "Mission Grove Primary School",
+      "address": "Buxton Road, London, E17 7EJ",
+      "ageMin": 4,
       "ageMax": 11,
-      "ageLabel": "Previously: 3-11 on school page; 4-11 in HAF feed",
+      "ageLabel": "4–11 for the October HAF ticket; general description says 3–11",
       "categories": [
         "Multi-activity"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed school holiday club provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Free/HAF"
+      ],
+      "hours": "26–30 October, 8:45am–4:30pm",
+      "price": "£0 October HAF ticket; confirm funding eligibility",
+      "summary": "October half-term holiday club with sports, art, creative and cooking activities, 26–30 October 2026. Bookings are scheduled to open 5 October at 9am; remaining places are not yet verified.",
+      "goodFor": "Children aged 4–11 using the October HAF ticket; confirm eligibility and support needs.",
+      "booking": "Eequ currently offers registration of interest. Bookings open 5 October 2026 at 9am. A planner selection is not a confirmed booking.",
+      "confidence": "October dates, hours, venue, £0 HAF ticket and ticket ages 4–11 verified in browser 5 October 2026. General description says 3–11; use ticket-specific ages. Eligibility and capacity unconfirmed.",
       "source": {
-        "label": "Mission Grove Holiday Club",
-        "url": "https://www.missiongroveschool.co.uk/page/?title=Holiday+Club&pid=547"
+        "label": "Mission Grove October HAF booking",
+        "url": "https://eequ.org/book/mission-grove-half-term-holiday-club-2026-with-mission-grove-primary-14750"
       },
       "secondarySources": [
         {
-          "label": "Mission Grove on Eequ HAF",
-          "url": "https://eequ.org/book/mission-grove-summer-holiday-club-2026-with-mission-grove-primary-14750"
+          "label": "Mission Grove school holiday club",
+          "url": "https://www.missiongroveschool.co.uk/page/?title=Holiday+Club&pid=547"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
-      }
+        "date": "2026-10-05",
+        "status": "verified",
+        "note": "October dates, hours, venue, £0 HAF ticket and ticket ages 4–11 verified in browser 5 October 2026. General description says 3–11; use ticket-specific ages. Eligibility and capacity unconfirmed."
+      },
+      "bookingUrl": "https://eequ.org/book/mission-grove-half-term-holiday-club-2026-with-mission-grove-primary-14750"
     },
     {
       "id": "mother-nature-science-walthamstow",
@@ -2098,45 +2111,48 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "wo-sports",
-      "checkedOn": "2026-07-04",
-      "name": "WO Sports",
-      "kind": "Sports and HAF camps",
-      "area": "Waltham Forest",
+      "checkedOn": "2026-10-05",
+      "name": "WO Sports — Woodside October Multi-Sports",
+      "kind": "October sports camp",
+      "area": "Walthamstow",
       "areas": [
-        "Walthamstow",
-        "Leyton",
-        "Leytonstone",
-        "Chingford"
+        "Walthamstow"
       ],
-      "venue": "Previous listing: Woodside, George Tomlinson, Score Leyton, Leytonstone Leisure Centre and other sites",
-      "address": "Waltham Forest venues vary by holiday",
-      "ageMin": 3,
-      "ageMax": 16,
-      "ageLabel": "Previously: 3-15 generally; HAF entries often 4-16",
+      "venue": "Woodside Primary Academy, Bridge Site",
+      "address": "Barret Road, Walthamstow, E17 3ND",
+      "ageMin": 4,
+      "ageMax": 14,
+      "ageLabel": "4–14",
       "categories": [
         "Sports"
       ],
       "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed sports and haf camps provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "hours": "26–30 October, 9am–3pm or 9am–5pm",
+      "price": "£25/day 9am–3pm; £39/day 9am–5pm",
+      "summary": "October multi-sports camp at Woodside, 26–30 October 2026. Two session lengths available.",
+      "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
+      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
+      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
       "source": {
-        "label": "WO Sports",
-        "url": "https://wo-sports.co.uk/"
+        "label": "WO Sports — Woodside October Multi-Sports booking",
+        "url": "https://bookings.wo-sports.co.uk/project/85433"
       },
       "secondarySources": [
         {
-          "label": "WO Sports booking",
-          "url": "https://bookings.wo-sports.co.uk/"
+          "label": "Woodside booking grid",
+          "url": "https://bookings.wo-sports.co.uk/book/343083"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-10-05",
+        "status": "verified",
+        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+      },
+      "bookingUrl": "https://bookings.wo-sports.co.uk/project/85433",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-05",
+        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
       }
     },
     {
@@ -2223,6 +2239,190 @@ window.E17_DIRECTORY = {
         "note": "YMCA publicly says October Half Term booking is open. Magicbooking requires an account; remaining places are not publicly verified."
       },
       "bookingUrl": "https://ymcaspg.magicbooking.co.uk/Register"
+    },
+    {
+      "id": "wo-sports-leytonstone-swimming",
+      "checkedOn": "2026-10-05",
+      "name": "WO Sports — Leytonstone Swimming Camp",
+      "kind": "October sports camp",
+      "area": "Leytonstone",
+      "areas": [
+        "Leytonstone"
+      ],
+      "venue": "Leytonstone Leisure Centre",
+      "address": "Cathall Road, Leytonstone, E11 4LA; entrance via Lincoln Road",
+      "ageMin": 4,
+      "ageMax": 14,
+      "ageLabel": "4–14",
+      "categories": [
+        "Sports"
+      ],
+      "funding": [],
+      "hours": "26–30 October, 9am–5pm",
+      "price": "£39/day; free HAF entitlement not established",
+      "summary": "October swimming and multi-sports camp, 26–30 October 2026. The title says HAF, but the public grid charges £39/day; no free place is assumed. Some template wording still refers to May.",
+      "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
+      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
+      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
+      "source": {
+        "label": "WO Sports — Leytonstone Swimming Camp booking",
+        "url": "https://bookings.wo-sports.co.uk/project/85432"
+      },
+      "secondarySources": [
+        {
+          "label": "Swimming booking grid",
+          "url": "https://bookings.wo-sports.co.uk/book/343082"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-10-05",
+        "status": "verified",
+        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+      },
+      "bookingUrl": "https://bookings.wo-sports.co.uk/project/85432",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-05",
+        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+      }
+    },
+    {
+      "id": "wo-sports-george-tomlinson",
+      "checkedOn": "2026-10-05",
+      "name": "WO Sports — George Tomlinson October Camp",
+      "kind": "October sports camp",
+      "area": "Leytonstone",
+      "areas": [
+        "Leytonstone"
+      ],
+      "venue": "George Tomlinson Primary School",
+      "address": "Vernon Road, Leytonstone, E11 4QU",
+      "ageMin": 4,
+      "ageMax": 14,
+      "ageLabel": "4–14",
+      "categories": [
+        "Sports"
+      ],
+      "funding": [],
+      "hours": "Hours conflict: overview 9am–5pm; Tuesday booking grid 5pm–6pm",
+      "price": "£39/session; Tuesday duration needs confirmation",
+      "summary": "26–30 October dates published. Overview says 9am–5pm, but Tuesday 27 October is listed as 5pm–6pm in the booking grid. Confirm Tuesday before planning care. Additional 2 November session is outside this planner.",
+      "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
+      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
+      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Hours conflict remains unresolved.",
+      "source": {
+        "label": "WO Sports — George Tomlinson October Camp booking",
+        "url": "https://bookings.wo-sports.co.uk/project/85431"
+      },
+      "secondarySources": [
+        {
+          "label": "George Tomlinson booking grid — hours conflict",
+          "url": "https://bookings.wo-sports.co.uk/book/343080"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-10-05",
+        "status": "verified",
+        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Hours conflict remains unresolved."
+      },
+      "bookingUrl": "https://bookings.wo-sports.co.uk/project/85431",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-05",
+        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+      }
+    },
+    {
+      "id": "wo-sports-football",
+      "checkedOn": "2026-10-05",
+      "name": "WO Sports — SCORE October Football (5–16)",
+      "kind": "October sports camp",
+      "area": "Leyton",
+      "areas": [
+        "Leyton"
+      ],
+      "venue": "SCORE Centre",
+      "address": "2 Coronation Street, Leyton, E10 5UN (provider address)",
+      "ageMin": 5,
+      "ageMax": 16,
+      "ageLabel": "5–16",
+      "categories": [
+        "Sports"
+      ],
+      "funding": [],
+      "hours": "26–30 October, 10am–3pm",
+      "price": "£20/day",
+      "summary": "October football, 26–30 October 2026: Player Development ages 5–10 and Player Progression ages 11–16. Both cost £20/day, 10am–3pm. Select the correct age group.",
+      "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
+      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
+      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
+      "source": {
+        "label": "WO Sports — SCORE October Football (5–16) booking",
+        "url": "https://bookings.wo-sports.co.uk/project/85434"
+      },
+      "secondarySources": [
+        {
+          "label": "Football booking grid",
+          "url": "https://bookings.wo-sports.co.uk/book/343085"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-10-05",
+        "status": "verified",
+        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+      },
+      "bookingUrl": "https://bookings.wo-sports.co.uk/project/85434",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-05",
+        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+      }
+    },
+    {
+      "id": "wo-sports-football-beginners",
+      "checkedOn": "2026-10-05",
+      "name": "WO Sports — SCORE October Football Beginners",
+      "kind": "October sports camp",
+      "area": "Leyton",
+      "areas": [
+        "Leyton"
+      ],
+      "venue": "SCORE Centre",
+      "address": "2 Coronation Street, Leyton, E10 5UN (provider address)",
+      "ageMin": 3,
+      "ageMax": 5,
+      "ageLabel": "3–5",
+      "categories": [
+        "Sports"
+      ],
+      "funding": [],
+      "hours": "26–30 October, 10am–noon",
+      "price": "£10/day",
+      "summary": "October football beginners for ages 3–5, 26–30 October 2026, 10am–noon. Separate from the older-child five-hour sessions.",
+      "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
+      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
+      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
+      "source": {
+        "label": "WO Sports — SCORE October Football Beginners booking",
+        "url": "https://bookings.wo-sports.co.uk/project/85434"
+      },
+      "secondarySources": [
+        {
+          "label": "Beginners booking grid",
+          "url": "https://bookings.wo-sports.co.uk/book/343086"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-10-05",
+        "status": "verified",
+        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+      },
+      "bookingUrl": "https://bookings.wo-sports.co.uk/project/85434",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-05",
+        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+      }
     }
   ],
   "hafSnapshot": []

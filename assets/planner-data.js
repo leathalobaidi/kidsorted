@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-03",
+  "updated": "2026-10-05",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -92,8 +92,30 @@ window.E17_PLANNER = {
       "coverage": "working"
     },
     "mission-grove": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 0
+      },
+      "priceBasis": "£0 HAF ticket, subject to eligibility and acceptance. A planner selection does not secure a funded place.",
+      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "coverage": "working",
+      "bookingOpens": "2026-10-05T09:00:00+01:00",
+      "bookingOpensLabel": "5 October at 9am",
+      "hours": {
+        "start": "08:45",
+        "end": "16:30"
+      }
     },
     "active-london": {
       "weeks": [],
@@ -108,12 +130,57 @@ window.E17_PLANNER = {
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "future-stars-walthamstow": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 20,
+        "week": 80
+      },
+      "priceBasis": "Estimate covers main session 10am–3pm only: £20/day or £80 for all five days. Extended 8am–6pm is £40/day or £160/week; enter your own total for that option.",
+      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "coverage": "working",
+      "hours": {
+        "start": "10:00",
+        "end": "15:00",
+        "extStart": "08:00",
+        "extEnd": "18:00"
+      }
     },
     "wo-sports": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 25
+      },
+      "priceBasis": "£25/day estimate covers 9am–3pm only. 9am–5pm costs £39/day; enter your own total for that option.",
+      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "coverage": "working",
+      "hours": {
+        "start": "09:00",
+        "end": "15:00",
+        "extStart": "09:00",
+        "extEnd": "17:00"
+      }
     },
     "all-about-dance": {
       "weeks": [
@@ -582,6 +649,97 @@ window.E17_PLANNER = {
         "end": "16:00"
       },
       "coverage": "short"
+    },
+    "wo-sports-leytonstone-swimming": {
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 39
+      },
+      "priceBasis": "£39/day; free HAF entitlement not established; public booking grid checked 5 October 2026.",
+      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "coverage": "working",
+      "hours": {
+        "start": "09:00",
+        "end": "17:00"
+      }
+    },
+    "wo-sports-george-tomlinson": {
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 39
+      },
+      "priceBasis": "£39/session; Tuesday duration needs confirmation; public booking grid checked 5 October 2026.",
+      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026. Hours intentionally unknown because Tuesday contradicts the overview."
+    },
+    "wo-sports-football": {
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 20
+      },
+      "priceBasis": "£20/day; public booking grid checked 5 October 2026.",
+      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "coverage": "short",
+      "hours": {
+        "start": "10:00",
+        "end": "15:00"
+      }
+    },
+    "wo-sports-football-beginners": {
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "price": {
+        "day": 10
+      },
+      "priceBasis": "£10/day; public booking grid checked 5 October 2026.",
+      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "coverage": "short",
+      "hours": {
+        "start": "10:00",
+        "end": "12:00"
+      }
     }
   },
   "season": "october-2026",
