@@ -2425,5 +2425,22 @@ window.E17_DIRECTORY = {
       }
     }
   ],
-  "hafSnapshot": []
+  "hafSnapshot": [
+    {
+      "name": "Mission Grove — 26–30 October; places unverified",
+      "venue": "Mission Grove Primary, Buxton Road E17 7EJ",
+      "ages": "4–11 (HAF ticket)",
+      "ageMin": 4,
+      "ageMax": 11,
+      "area": "Walthamstow"
+    },
+    {
+      "name": "Leyton Orient — 27–30 October; places unverified",
+      "venue": "SCORE Centre, E10 5UN",
+      "ages": "8–14",
+      "ageMin": 8,
+      "ageMax": 14,
+      "area": "Leyton"
+    }
+  ]
 };
