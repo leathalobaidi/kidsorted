@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -108,7 +108,7 @@ window.E17_PLANNER = {
         "day": 0
       },
       "priceBasis": "£0 HAF ticket, subject to eligibility and acceptance. A planner selection does not secure a funded place.",
-      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "weeksBasis": "26–30 October, 8:45am–4:30pm: Eequ ticket is Sold out and booking button is Fully booked. Email-when-available option offered. Existing saved dates retained; a planner selection is not a booking.",
       "coverage": "working",
       "bookingOpens": "2026-10-05T09:00:00+01:00",
       "bookingOpensLabel": "5 October at 9am",
@@ -323,7 +323,7 @@ window.E17_PLANNER = {
         "end": "14:00"
       },
       "coverage": "short",
-      "weeksBasis": "27–30 October 2026 confirmed on Eequ. Bookings open 5 October 09:00; capacity unverified. Activity listing ages 8–14.",
+      "weeksBasis": "27–30 October, 10am–2pm: Eequ now offers Book single sessions for the £0 Child HAF Ticket. Exact remaining capacity is not published; confirm eligibility. Existing saved dates retained; a planner selection is not a booking.",
       "bookingOpens": "2026-10-05T09:00:00+01:00",
       "bookingOpensLabel": "5 October at 9am"
     },
@@ -393,7 +393,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October 2026. Calendar checked 3 October: all days selectable again; Wednesday–Friday two spots per session, Monday one and Tuesday one to three. Availability can change."
+      "weeksBasis": "26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots. Existing saved dates retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -446,7 +446,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–27 October now must be booked together; seven block places on 3 October. Existing saved dates are preserved.",
+      "weeksBasis": "26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together. Existing saved dates retained; a planner selection is not a booking.",
       "hours": {
         "start": "10:00",
         "end": "15:00"
@@ -614,7 +614,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Wednesday 28 October at NBC HQ is full, verified 27 September 2026. Date retained for existing saved bookings; no new places offered.",
+      "weeksBasis": "Wednesday 28 October is Full; the official calendar now offers Join the waiting list. £75, 10am–3pm at NBC HQ; street address remains unconfirmed. Existing saved dates retained; a planner selection is not a booking.",
       "hours": {
         "start": "10:00",
         "end": "15:00"
@@ -691,7 +691,7 @@ window.E17_PLANNER = {
         "day": 39
       },
       "priceBasis": "£39/session; Tuesday duration needs confirmation; public booking grid checked 5 October 2026.",
-      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026. Hours intentionally unknown because Tuesday contradicts the overview."
+      "weeksBasis": "26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours. Existing saved dates retained; a planner selection is not a booking."
     },
     "wo-sports-football": {
       "weeks": [

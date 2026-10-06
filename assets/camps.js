@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "providers": [
     {
       "id": "all-about-dance",
@@ -434,7 +434,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-03",
+      "checkedOn": "2026-10-06",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -458,16 +458,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "All 26–30 October full-day and half-day sessions are selectable again. Places are limited; confirm availability before checkout.",
-      "confidence": "Official October booking calendar verified 3 October 2026",
+      "booking": "Monday 26 and Friday 30 October sessions are unavailable. Tuesday–Thursday sessions remain selectable with limited places; confirm your chosen session before checkout.",
+      "confidence": "Official October booking page checked in browser 6 October 2026. 26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-03",
-        "note": "Wednesday 28 October is selectable again with 2 spots per session. Thursday and Friday also show 2 spots per session. Monday 1 spot; Tuesday full day/afternoon 1 and morning 3."
+        "status": "mixed",
+        "asOf": "2026-10-06",
+        "note": "26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots."
       },
       "secondarySources": [
         {
@@ -476,9 +476,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-03",
+        "date": "2026-10-06",
         "status": "verified",
-        "note": "Browser calendar confirms all five days selectable; Wednesday reopened, Thursday/Friday now limited. Prices and hours unchanged."
+        "note": "26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots."
       }
     },
     {
@@ -715,7 +715,7 @@ window.E17_DIRECTORY = {
       "price": "£60/day",
       "summary": "October upcycling workshops at Orford House, Monday 26–Friday 30 October 2026. Children reuse fabrics and clothes in creative projects.",
       "goodFor": "Children aged 5+ who enjoy making and sustainable fashion.",
-      "booking": "October calendar shows available spots on 26–30 October. Select each required date to check remaining places.",
+      "booking": "Booking website currently shows a disconnected-domain error (6 October). Previously published 26–30 October dates are retained, but current places cannot be verified.",
       "confidence": "October calendar and six-hour daily price verified 9 September 2026",
       "source": {
         "label": "Chillie Walthamstow Club booking",
@@ -737,9 +737,9 @@ window.E17_DIRECTORY = {
         "note": "October calendar shows available spots; individual-date capacity may vary."
       },
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "checked",
-        "note": "Browser calendar shows available spots 26–30 October; 26 October 09:00 service £60 / 6 hours, Orford House. No material change."
+        "date": "2026-10-06",
+        "status": "blocked",
+        "note": "Official booking page and website show a disconnected-domain error. Current availability cannot be checked; last successful details retained."
       }
     },
     {
@@ -942,7 +942,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "leyton-orient-trust",
-      "checkedOn": "2026-10-03",
+      "checkedOn": "2026-10-06",
       "name": "Leyton Orient Trust — October HAF at SCORE Centre",
       "kind": "Multi-sports HAF camp",
       "area": "Leyton",
@@ -963,10 +963,10 @@ window.E17_DIRECTORY = {
       ],
       "hours": "27–30 October, 10am–2pm",
       "price": "£0 Child HAF Ticket; confirm funding eligibility when booking",
-      "summary": "October HAF multi-sports camp at SCORE Centre, Tuesday 27–Friday 30 October 2026, with sports, enrichment and a hot meal. Bookings open 5 October at 9am; places are not yet verified.",
+      "summary": "October HAF multi-sports camp at SCORE Centre, Tuesday 27–Friday 30 October 2026, with sports, enrichment and a hot meal. Single-session booking is now open; confirm funding eligibility.",
       "goodFor": "Children aged 8–14 interested in multi-sports and enrichment. Confirm eligibility and any support needs with the provider.",
-      "booking": "Bookings open Monday 5 October 2026 at 9am on Eequ. The page currently offers registration of interest, not a confirmed place. Check eligibility before booking.",
-      "confidence": "October dates, venue, hours, activity age range, £0 ticket and booking-opening time verified 3 October 2026",
+      "booking": "Single-session booking is now open on Eequ for 27–30 October. Confirm HAF eligibility and availability for your chosen dates before booking.",
+      "confidence": "Official October booking page checked in browser 6 October 2026. 27–30 October, 10am–2pm: Eequ now offers Book single sessions for the £0 Child HAF Ticket. Exact remaining capacity is not published; confirm eligibility.",
       "source": {
         "label": "Leyton Orient October HAF at SCORE Centre",
         "url": "https://eequ.org/book/leyton-orient-haf-score-centre-with-leyton-orient-trust-7132"
@@ -978,11 +978,16 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-03",
+        "date": "2026-10-06",
         "status": "verified",
-        "note": "Browser schedule explicitly lists 27–30 October 2026, 10–14, booking opens 5 October 09:00. £0 HAF ticket. Activity ages 8–14 retained despite generic all-ages ticket dialog. Capacity/eligibility not established; no registration submitted."
+        "note": "27–30 October, 10am–2pm: Eequ now offers Book single sessions for the £0 Child HAF Ticket. Exact remaining capacity is not published; confirm eligibility."
       },
-      "bookingUrl": "https://eequ.org/book/leyton-orient-haf-score-centre-with-leyton-orient-trust-7132"
+      "bookingUrl": "https://eequ.org/book/leyton-orient-haf-score-centre-with-leyton-orient-trust-7132",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-06",
+        "note": "27–30 October, 10am–2pm: Eequ now offers Book single sessions for the £0 Child HAF Ticket. Exact remaining capacity is not published; confirm eligibility."
+      }
     },
     {
       "id": "little-soccer-stars-walthamstow",
@@ -1223,7 +1228,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "mission-grove",
-      "checkedOn": "2026-10-05",
+      "checkedOn": "2026-10-06",
       "name": "Mission Grove Primary — October HAF Holiday Club",
       "kind": "School holiday club",
       "area": "Walthamstow",
@@ -1243,10 +1248,10 @@ window.E17_DIRECTORY = {
       ],
       "hours": "26–30 October, 8:45am–4:30pm",
       "price": "£0 October HAF ticket; confirm funding eligibility",
-      "summary": "October half-term holiday club with sports, art, creative and cooking activities, 26–30 October 2026. Bookings are scheduled to open 5 October at 9am; remaining places are not yet verified.",
+      "summary": "October half-term holiday club with sports, art, creative and cooking activities, 26–30 October 2026. October HAF tickets are currently sold out.",
       "goodFor": "Children aged 4–11 using the October HAF ticket; confirm eligibility and support needs.",
-      "booking": "Eequ currently offers registration of interest. Bookings open 5 October 2026 at 9am. A planner selection is not a confirmed booking.",
-      "confidence": "October dates, hours, venue, £0 HAF ticket and ticket ages 4–11 verified in browser 5 October 2026. General description says 3–11; use ticket-specific ages. Eligibility and capacity unconfirmed.",
+      "booking": "October HAF tickets are sold out. Eequ offers an email-when-available option; no new place is currently bookable.",
+      "confidence": "Official October booking page checked in browser 6 October 2026. 26–30 October, 8:45am–4:30pm: Eequ ticket is Sold out and booking button is Fully booked. Email-when-available option offered.",
       "source": {
         "label": "Mission Grove October HAF booking",
         "url": "https://eequ.org/book/mission-grove-half-term-holiday-club-2026-with-mission-grove-primary-14750"
@@ -1258,11 +1263,16 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-05",
+        "date": "2026-10-06",
         "status": "verified",
-        "note": "October dates, hours, venue, £0 HAF ticket and ticket ages 4–11 verified in browser 5 October 2026. General description says 3–11; use ticket-specific ages. Eligibility and capacity unconfirmed."
+        "note": "26–30 October, 8:45am–4:30pm: Eequ ticket is Sold out and booking button is Fully booked. Email-when-available option offered."
       },
-      "bookingUrl": "https://eequ.org/book/mission-grove-half-term-holiday-club-2026-with-mission-grove-primary-14750"
+      "bookingUrl": "https://eequ.org/book/mission-grove-half-term-holiday-club-2026-with-mission-grove-primary-14750",
+      "availability": {
+        "status": "full",
+        "asOf": "2026-10-06",
+        "note": "26–30 October, 8:45am–4:30pm: Eequ ticket is Sold out and booking button is Fully booked. Email-when-available option offered."
+      }
     },
     {
       "id": "mother-nature-science-walthamstow",
@@ -1361,7 +1371,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "noisy-book-club-summer",
-      "checkedOn": "2026-10-03",
+      "checkedOn": "2026-10-06",
       "name": "Noisy Book Club × Angry Dan — 26–27 October",
       "kind": "Art and growth-mindset holiday workshop",
       "area": "Walthamstow Central",
@@ -1387,8 +1397,8 @@ window.E17_DIRECTORY = {
       "price": "£150 for the compulsory 26–27 October two-day block (£75/day); 5% off second and third child",
       "summary": "Mural-style painting with Angry Dan and growth-mindset activities. Monday 26 and Tuesday 27 October 2026 are now booked together as a two-day block. Wednesday is a separate, full workshop at NBC HQ; no club Thursday or Friday.",
       "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
-      "booking": "Book the 26–27 October two-day block on the official calendar. Individual-day booking is no longer offered for these dates.",
-      "confidence": "Official October booking calendar verified 3 October 2026",
+      "booking": "Book the 26–27 October two-day block on the official calendar; 5 places shown on 6 October. Individual-day booking is not offered for these dates.",
+      "confidence": "Official October booking page checked in browser 6 October 2026. 26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together.",
       "source": {
         "label": "Noisy Book Club October half-term calendar and booking",
         "url": "https://www.noisybookclub.com/half-term"
@@ -1400,19 +1410,19 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-03",
+        "date": "2026-10-06",
         "status": "verified",
-        "note": "Browser now shows one compulsory two-day block, replacing the individual-day options verified 1 October. Existing saved single-day plans retained with price to confirm unless the parent entered their own cost."
+        "note": "26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together."
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-10-03",
-        "note": "26–27 October two-day block shows 7 places at £150. Both dates must be booked together."
+        "asOf": "2026-10-06",
+        "note": "26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together."
       }
     },
     {
       "id": "noisy-book-club-october-wednesday",
-      "checkedOn": "2026-09-27",
+      "checkedOn": "2026-10-06",
       "name": "Noisy Book Club × Angry Dan — Wednesday 28 October",
       "kind": "Art and growth-mindset holiday workshop",
       "area": "Walthamstow Central",
@@ -1438,8 +1448,8 @@ window.E17_DIRECTORY = {
       "price": "£75 for Wednesday 28 October; 5% off second and third child",
       "summary": "A standalone mural-style painting workshop with Angry Dan on Wednesday 28 October 2026, 10am–3pm. This session is at NBC HQ, a different venue from the Monday–Tuesday block. No club on Thursday 29 or Friday 30.",
       "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
-      "booking": "Wednesday 28 October is full and cannot be selected in the booking calendar. The separate Monday–Tuesday block remains available.",
-      "confidence": "Official October booking sources verified 27 September 2026",
+      "booking": "Wednesday 28 October is full, with a waiting-list option now available on the official page. Joining does not guarantee a place. The Monday–Tuesday block is booked separately.",
+      "confidence": "Official October booking page checked in browser 6 October 2026. Wednesday 28 October is Full; the official calendar now offers Join the waiting list. £75, 10am–3pm at NBC HQ; street address remains unconfirmed.",
       "source": {
         "label": "Noisy Book Club October half-term calendar and booking",
         "url": "https://www.noisybookclub.com/half-term"
@@ -1451,14 +1461,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-27",
+        "date": "2026-10-06",
         "status": "verified",
-        "note": "Official calendar labels Wednesday 28 October Full and disables selection. No Wednesday waitlist is offered on this page."
+        "note": "Wednesday 28 October is Full; the official calendar now offers Join the waiting list. £75, 10am–3pm at NBC HQ; street address remains unconfirmed."
       },
       "availability": {
-        "status": "full",
-        "asOf": "2026-09-27",
-        "note": "Official calendar labels Wednesday 28 October Full and disables selection. No Wednesday waitlist is offered on this page."
+        "status": "waitlist",
+        "asOf": "2026-10-06",
+        "note": "Wednesday 28 October is Full; the official calendar now offers Join the waiting list. £75, 10am–3pm at NBC HQ; street address remains unconfirmed."
       }
     },
     {
@@ -2288,7 +2298,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "wo-sports-george-tomlinson",
-      "checkedOn": "2026-10-05",
+      "checkedOn": "2026-10-06",
       "name": "WO Sports — George Tomlinson October Camp",
       "kind": "October sports camp",
       "area": "Leytonstone",
@@ -2308,8 +2318,8 @@ window.E17_DIRECTORY = {
       "price": "£39/session; Tuesday duration needs confirmation",
       "summary": "26–30 October dates published. Overview says 9am–5pm, but Tuesday 27 October is listed as 5pm–6pm in the booking grid. Confirm Tuesday before planning care. Additional 2 November session is outside this planner.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
-      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
-      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Hours conflict remains unresolved.",
+      "booking": "Provider shows Availability — Limited for 26–30 October. Confirm Tuesday hours, which conflict between the overview and booking grid, before booking.",
+      "confidence": "Official October booking page checked in browser 6 October 2026. 26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours.",
       "source": {
         "label": "WO Sports — George Tomlinson October Camp booking",
         "url": "https://bookings.wo-sports.co.uk/project/85431"
@@ -2321,15 +2331,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-05",
+        "date": "2026-10-06",
         "status": "verified",
-        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Hours conflict remains unresolved."
+        "note": "26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours."
       },
       "bookingUrl": "https://bookings.wo-sports.co.uk/project/85431",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-05",
-        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+        "asOf": "2026-10-06",
+        "note": "26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours."
       }
     },
     {
@@ -2427,7 +2437,7 @@ window.E17_DIRECTORY = {
   ],
   "hafSnapshot": [
     {
-      "name": "Mission Grove — 26–30 October; places unverified",
+      "name": "Mission Grove — 26–30 October; sold out",
       "venue": "Mission Grove Primary, Buxton Road E17 7EJ",
       "ages": "4–11 (HAF ticket)",
       "ageMin": 4,
@@ -2435,7 +2445,7 @@ window.E17_DIRECTORY = {
       "area": "Walthamstow"
     },
     {
-      "name": "Leyton Orient — 27–30 October; places unverified",
+      "name": "Leyton Orient — 27–30 October; booking open",
       "venue": "SCORE Centre, E10 5UN",
       "ages": "8–14",
       "ageMin": 8,
