@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "providers": [
     {
       "id": "all-about-dance",
@@ -391,50 +391,60 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "active-london",
-      "checkedOn": "2026-07-04",
-      "name": "Active London",
-      "kind": "Multi-activity childcare",
-      "area": "Waltham Forest",
+      "checkedOn": "2026-10-07",
+      "name": "Active London — Chapel End October Holiday Club",
+      "kind": "Multi-activity HAF holiday club",
+      "area": "Walthamstow",
       "areas": [
-        "Walthamstow",
-        "Leyton",
-        "Chingford",
-        "Highams Park"
+        "Walthamstow"
       ],
-      "venue": "Previous listing: Multiple school and council sites",
-      "address": "Waltham Forest sites vary by holiday",
+      "venue": "Chapel End Infants School",
+      "address": "3 Beresford Road, E17 4LN; drop-off at Roberts Road entrance",
       "ageMin": 5,
       "ageMax": 11,
-      "ageLabel": "Previously: 5-11",
+      "ageLabel": "5–11",
       "categories": [
         "Multi-activity"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed multi-activity childcare provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Free/HAF",
+        "Paid"
+      ],
+      "hours": "26–29 October, 9am–1pm",
+      "price": "£0 HAF ticket if eligible; separate paid places advertised at £20/day including hot meal",
+      "summary": "October multi-activity club at Chapel End, Monday 26–Thursday 29 October 2026, with sports, arts, crafts and a hot meal. No Friday session listed.",
+      "goodFor": "Children aged 5–11. Contact provider about additional support; published 1:1 support deadline is 16 October 2026.",
+      "booking": "Eequ offers single-session HAF booking. Confirm eligibility and your chosen date; paid places use the separate Active London booking route.",
+      "confidence": "Official public booking details verified in browser 7 October 2026. Eequ Book single sessions enabled for 26–29 October, 9am–1pm. Exact capacity not shown; HAF eligibility required. Paid-place capacity not verified.",
       "source": {
-        "label": "Active London",
-        "url": "https://active-london.com/"
+        "label": "Active London Chapel End October booking",
+        "url": "https://eequ.org/book/active-london-chapel-end-with-active-london-limited-13484"
       },
       "secondarySources": [
         {
-          "label": "Active London booking",
+          "label": "Active London official website",
+          "url": "https://active-london.com/"
+        },
+        {
+          "label": "Active London paid booking portal",
           "url": "https://activelondon.ipalbookings.com/"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Official site fetch blocked; browser iPAL booking portal requires login. No October details verified; previous successful verification date retained."
+        "date": "2026-10-07",
+        "status": "verified",
+        "note": "Eequ Book single sessions enabled for 26–29 October, 9am–1pm. Exact capacity not shown; HAF eligibility required. Paid-place capacity not verified."
+      },
+      "bookingUrl": "https://eequ.org/book/active-london-chapel-end-with-active-london-limited-13484",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-07",
+        "note": "Eequ Book single sessions enabled for 26–29 October, 9am–1pm. Exact capacity not shown; HAF eligibility required. Paid-place capacity not verified."
       }
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-06",
+      "checkedOn": "2026-10-07",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -458,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Monday 26 and Friday 30 October sessions are unavailable. Tuesday–Thursday sessions remain selectable with limited places; confirm your chosen session before checkout.",
-      "confidence": "Official October booking page checked in browser 6 October 2026. 26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots.",
+      "booking": "Monday 26 and Friday 30 October have reopened. All five days are selectable, with limited places; check your chosen session before checkout.",
+      "confidence": "Official public booking details verified in browser 7 October 2026. All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "mixed",
-        "asOf": "2026-10-06",
-        "note": "26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots."
+        "status": "open",
+        "asOf": "2026-10-07",
+        "note": "All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day."
       },
       "secondarySources": [
         {
@@ -476,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-06",
+        "date": "2026-10-07",
         "status": "verified",
-        "note": "26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots."
+        "note": "All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day."
       }
     },
     {
@@ -689,7 +699,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "chillie-kids-club",
-      "checkedOn": "2026-09-09",
+      "checkedOn": "2026-10-07",
       "name": "Chillie Kids Club",
       "kind": "Creative upcycling holiday club",
       "area": "Walthamstow",
@@ -715,8 +725,8 @@ window.E17_DIRECTORY = {
       "price": "£60/day",
       "summary": "October upcycling workshops at Orford House, Monday 26–Friday 30 October 2026. Children reuse fabrics and clothes in creative projects.",
       "goodFor": "Children aged 5+ who enjoy making and sustainable fashion.",
-      "booking": "Booking website currently shows a disconnected-domain error (6 October). Previously published 26–30 October dates are retained, but current places cannot be verified.",
-      "confidence": "October calendar and six-hour daily price verified 9 September 2026",
+      "booking": "Booking website is working again. Calendar shows available spots for 26–30 October; select each required date to check remaining places.",
+      "confidence": "Official public booking details verified in browser 7 October 2026. Booking website recovered. Calendar shows Available Spots on all 26–30 October dates; selected 26 October service £60 for six hours, 9am–3pm, Orford House.",
       "source": {
         "label": "Chillie Walthamstow Club booking",
         "url": "https://www.chilliekidsclub.com/booking-calendar/walthamstow-club"
@@ -733,13 +743,13 @@ window.E17_DIRECTORY = {
       ],
       "availability": {
         "status": "open",
-        "asOf": "2026-09-09",
-        "note": "October calendar shows available spots; individual-date capacity may vary."
+        "asOf": "2026-10-07",
+        "note": "Booking website recovered. Calendar shows Available Spots on all 26–30 October dates; selected 26 October service £60 for six hours, 9am–3pm, Orford House."
       },
       "lastCheck": {
-        "date": "2026-10-06",
-        "status": "blocked",
-        "note": "Official booking page and website show a disconnected-domain error. Current availability cannot be checked; last successful details retained."
+        "date": "2026-10-07",
+        "status": "verified",
+        "note": "Booking website recovered. Calendar shows Available Spots on all 26–30 October dates; selected 26 October service £60 for six hours, 9am–3pm, Orford House."
       }
     },
     {
@@ -1573,50 +1583,52 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "ptc-sports-henry-maynard",
-      "checkedOn": "2026-07-04",
-      "name": "PTC Sports Holiday Club (Gwyn Jones)",
-      "kind": "Multi-sports holiday club",
-      "area": "Leytonstone",
+      "checkedOn": "2026-10-07",
+      "name": "PTC Sports — Henry Maynard October Holiday Club",
+      "kind": "Multi-sports holiday camp",
+      "area": "Walthamstow",
       "areas": [
-        "Leytonstone",
-        "Leyton",
         "Walthamstow"
       ],
-      "venue": "Previous listing: Gwyn Jones Primary School; Henry Maynard Infants Site (Walthamstow)",
-      "address": "219 Hainault Road, Leytonstone, E11 1EU (Gwyn Jones); Henry Maynard Infants Site, Walthamstow",
+      "venue": "Henry Maynard Primary School (Junior Site)",
+      "address": "Addison Road, Walthamstow, E17 9LT",
       "ageMin": 4,
       "ageMax": 12,
-      "ageLabel": "Previously: 4-12",
+      "ageLabel": "4–12",
       "categories": [
         "Sports",
         "Multi-activity",
         "Dance"
       ],
-      "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed multi-sports holiday club provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "funding": [
+        "Paid"
+      ],
+      "hours": "26–30 October, 9am–5pm",
+      "price": "£32/day or £150/week",
+      "summary": "October multi-sports holiday club, 26–30 October 2026, at Henry Maynard Junior Site. Very limited spaces; bring a nut-free packed lunch and refillable water bottle.",
+      "goodFor": "Children aged 4–12 who enjoy a range of sports and team activities.",
+      "booking": "Very Limited Spaces Available on the public booking page; book individual days or the full week.",
+      "confidence": "October dates, venue, hours, ages and prices verified on current Class4Kids listings 7 October 2026.",
       "source": {
-        "label": "PTC Sports summer booking (Gwyn Jones)",
-        "url": "https://ptcsports.classforkids.io/camp/117"
+        "label": "PTC Henry Maynard October booking",
+        "url": "https://ptcsports.classforkids.io/camp/120"
       },
       "secondarySources": [
         {
-          "label": "PTC Sports Henry Maynard",
-          "url": "https://ptcsports.co.uk/henry-maynard/"
-        },
-        {
-          "label": "PTC Sports holiday clubs",
-          "url": "https://ptcsports.co.uk/school-services/holiday-clubs/"
+          "label": "PTC current camps",
+          "url": "https://ptcsports.classforkids.io/camps"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-10-07",
+        "status": "verified",
+        "note": "Followed current camps directory from old summer link. Henry Maynard October /120, ages 4–12, 9–17, £32/day or £150/week; very limited spaces."
+      },
+      "bookingUrl": "https://ptcsports.classforkids.io/camp/120",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-07",
+        "note": "Very Limited Spaces Available; 26–30 October, £32/day or £150/week."
       }
     },
     {
@@ -2026,7 +2038,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "waltham-forest-haf",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-10-07",
       "name": "Waltham Forest Holiday Activity and Food Programme",
       "kind": "Council route",
       "area": "Borough-wide",
@@ -2039,35 +2051,35 @@ window.E17_DIRECTORY = {
         "Woodford",
         "Loughton"
       ],
-      "venue": "Previous listing: Multiple Waltham Forest venues via Eequ",
+      "venue": "Multiple Waltham Forest venues via Eequ",
       "address": "Borough-wide",
       "ageMin": 5,
       "ageMax": 16,
-      "ageLabel": "Previously: 5-16",
+      "ageLabel": "Varies by activity; check each ticket",
       "categories": [
         "Multi-activity"
       ],
       "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Check the council’s live Eequ directory for funded activities. No October 2026 HAF sessions have been verified for this refresh.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Check dates and eligibility on the live council directory.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "hours": "Varies by activity",
+      "price": "Funded tickets subject to eligibility and availability",
+      "summary": "Council Eequ directory now lists eight October activities. Eligible school-aged children receiving targeted free school meals can book up to four sessions; check each listing for dates and remaining places.",
+      "goodFor": "Families seeking funded holiday activities; check the individual provider’s age range and support arrangements.",
+      "booking": "October booking opened 5 October at 9am. Some tickets are sold out. Use the live Eequ directory to select an activity.",
+      "confidence": "Official public booking details verified in browser 7 October 2026. Council collection has eight October listings and states up to four sessions for eligible school-aged children. This is a directory route, not one bookable camp.",
       "source": {
-        "label": "Waltham Forest holiday activities",
-        "url": "https://www.walthamforest.gov.uk/schools-education-and-learning/holiday-activities-school-children"
+        "label": "Waltham Forest live October HAF directory",
+        "url": "https://eequ.org/hafwalthamforest"
       },
       "secondarySources": [
         {
-          "label": "Eequ HAF Waltham Forest",
-          "url": "https://eequ.org/hafwalthamforest"
+          "label": "Waltham Forest holiday activities",
+          "url": "https://www.walthamforest.gov.uk/schools-education-and-learning/holiday-activities-school-children"
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
-        "status": "unconfirmed",
-        "note": "Source text compared with 11 September audit; no material October change established. Earlier verified details retained."
+        "date": "2026-10-07",
+        "status": "verified",
+        "note": "Council collection has eight October listings and states up to four sessions for eligible school-aged children. This is a directory route, not one bookable camp."
       }
     },
     {
@@ -2270,7 +2282,7 @@ window.E17_DIRECTORY = {
       "funding": [],
       "hours": "26–30 October, 9am–5pm",
       "price": "£39/day; free HAF entitlement not established",
-      "summary": "October swimming and multi-sports camp, 26–30 October 2026. The title says HAF, but the public grid charges £39/day; no free place is assumed. Some template wording still refers to May.",
+      "summary": "October swimming and multi-sports camp, 26–30 October 2026, at £39/day for 9am–5pm. A separate Eequ four-hour programme runs 26–29 October with different ages and ticket prices; do not assume this full-day ticket is funded.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
       "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
       "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
@@ -2282,6 +2294,10 @@ window.E17_DIRECTORY = {
         {
           "label": "Swimming booking grid",
           "url": "https://bookings.wo-sports.co.uk/book/343082"
+        },
+        {
+          "label": "Separate four-hour HAF / paid ticket route",
+          "url": "https://eequ.org/book/wo-sports-haf-leytonstone-leisure-centre-with-wo-sports-17751"
         }
       ],
       "lastCheck": {
@@ -2433,6 +2449,100 @@ window.E17_DIRECTORY = {
         "asOf": "2026-10-05",
         "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
       }
+    },
+    {
+      "id": "wo-sports-leytonstone-haf",
+      "checkedOn": "2026-10-07",
+      "name": "WO Sports — Leytonstone October Four-Hour Camp",
+      "kind": "Multi-sports HAF and paid sessions",
+      "area": "Leytonstone",
+      "areas": [
+        "Leytonstone"
+      ],
+      "venue": "Leytonstone Leisure Centre",
+      "address": "Cathall Road, Leytonstone, E11 4LA; entrance via Lincoln Road",
+      "ageMin": 5,
+      "ageMax": 16,
+      "ageLabel": "5–16 for Eequ tickets; description mentions age 4 but ticket eligibility is 5–16",
+      "categories": [
+        "Sports"
+      ],
+      "funding": [
+        "Free/HAF",
+        "Paid"
+      ],
+      "hours": "26–29 October, 10am–2pm; optional extension 2–5pm",
+      "price": "£15 paid ticket; £0 HAF tickets sold out; extension £15",
+      "summary": "Four-hour multi-sports sessions at Leytonstone Leisure Centre, 26–29 October 2026, with meals. HAF tickets are sold out; paid non-HAF tickets remain offered. Separate from the £39 full-day swimming programme.",
+      "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
+      "booking": "Eequ offers £15 Paid Non HAF Child tickets and £15 extension tickets. HAF tickets are sold out, with an email-when-available option. Confirm the correct ticket and eligibility.",
+      "confidence": "Official public booking details verified in browser 7 October 2026. 26–29 October 10am–2pm: HAF ticket Sold out; £15 paid non-HAF and extension tickets offered with Book single sessions. Exact paid capacity not shown.",
+      "source": {
+        "label": "WO Sports Leytonstone October HAF and paid tickets",
+        "url": "https://eequ.org/book/wo-sports-haf-leytonstone-leisure-centre-with-wo-sports-17751"
+      },
+      "secondarySources": [],
+      "lastCheck": {
+        "date": "2026-10-07",
+        "status": "verified",
+        "note": "26–29 October 10am–2pm: HAF ticket Sold out; £15 paid non-HAF and extension tickets offered with Book single sessions. Exact paid capacity not shown."
+      },
+      "bookingUrl": "https://eequ.org/book/wo-sports-haf-leytonstone-leisure-centre-with-wo-sports-17751",
+      "availability": {
+        "status": "mixed",
+        "asOf": "2026-10-07",
+        "note": "26–29 October 10am–2pm: HAF ticket Sold out; £15 paid non-HAF and extension tickets offered with Book single sessions. Exact paid capacity not shown."
+      }
+    },
+    {
+      "id": "ptc-sports-gwyn-jones",
+      "checkedOn": "2026-10-07",
+      "name": "PTC Sports — Gwyn Jones October Holiday Club",
+      "kind": "Multi-sports holiday camp",
+      "area": "Leytonstone",
+      "areas": [
+        "Leytonstone"
+      ],
+      "venue": "Gwyn Jones Primary School",
+      "address": "219 Hainault Road, Leytonstone, E11 1EU",
+      "ageMin": 4,
+      "ageMax": 12,
+      "ageLabel": "4–12",
+      "categories": [
+        "Sports",
+        "Multi-activity",
+        "Dance"
+      ],
+      "funding": [
+        "Paid"
+      ],
+      "hours": "26–30 October, 9am–4:30pm",
+      "price": "£30/day or £140/week",
+      "summary": "October multi-sports holiday club, 26–30 October 2026, at Gwyn Jones Primary School. Bring a nut-free packed lunch and refillable water bottle.",
+      "goodFor": "Children aged 4–12 who enjoy a range of sports and team activities.",
+      "booking": "Spaces Available on the public booking page; book individual days or the full week.",
+      "confidence": "October dates, venue, hours, ages and prices verified on current Class4Kids listings 7 October 2026.",
+      "source": {
+        "label": "PTC Gwyn Jones October booking",
+        "url": "https://ptcsports.classforkids.io/camp/119"
+      },
+      "secondarySources": [
+        {
+          "label": "PTC current camps",
+          "url": "https://ptcsports.classforkids.io/camps"
+        }
+      ],
+      "lastCheck": {
+        "date": "2026-10-07",
+        "status": "verified",
+        "note": "Current October camp/119, ages 4–12, 9–16:30, £30/day or £140/week; spaces available."
+      },
+      "bookingUrl": "https://ptcsports.classforkids.io/camp/119",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-07",
+        "note": "Spaces Available; 26–30 October, £30/day or £140/week."
+      }
     }
   ],
   "hafSnapshot": [
@@ -2451,6 +2561,22 @@ window.E17_DIRECTORY = {
       "ageMin": 8,
       "ageMax": 14,
       "area": "Leyton"
+    },
+    {
+      "name": "Active London — 26–29 October; booking open",
+      "venue": "Chapel End Infants, E17 4LN",
+      "ages": "5–11",
+      "ageMin": 5,
+      "ageMax": 11,
+      "area": "Walthamstow"
+    },
+    {
+      "name": "WO Sports Leytonstone — 26–29 October; HAF sold out",
+      "venue": "Leytonstone Leisure Centre, E11 4LA",
+      "ages": "5–16",
+      "ageMin": 5,
+      "ageMax": 16,
+      "area": "Leytonstone"
     }
   ]
 };

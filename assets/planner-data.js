@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -36,7 +36,7 @@ window.E17_PLANNER = {
   "byId": {
     "waltham-forest-haf": {
       "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply.",
+      "weeksBasis": "Council route verified 7 October: eight October listings with varying dates. Select an individual camp rather than planning this directory route.",
       "plannerRole": "route"
     },
     "ymca-y-kidz": {
@@ -118,16 +118,56 @@ window.E17_PLANNER = {
       }
     },
     "active-london": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "hours": {
+        "start": "09:00",
+        "end": "13:00"
+      },
+      "coverage": "short",
+      "price": {
+        "day": 0
+      },
+      "priceBasis": "£0 HAF ticket subject to eligibility and acceptance. Separate paid places advertised at £20/day; enter the actual cost if using that route.",
+      "weeksBasis": "26–29 October 2026, 9am–1pm verified on Eequ 7 October. No Friday session."
     },
     "360-active": {
       "weeks": [],
       "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
     },
     "ptc-sports-henry-maynard": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "hours": {
+        "start": "09:00",
+        "end": "17:00"
+      },
+      "coverage": "standard",
+      "price": {
+        "day": 32,
+        "week": 150
+      },
+      "priceBasis": "October public booking page checked 7 October 2026. Bring packed lunch.",
+      "weeksBasis": "26–30 October 2026 confirmed on current Class4Kids camp/120; very limited spaces."
     },
     "future-stars-walthamstow": {
       "weeks": [
@@ -393,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26 and 30 October: all full-day and half-day sessions disabled/unavailable. 27 October full/morning/afternoon: 1/3/1 spots; 28 October: 1 each; 29 October: 1/1/2 spots. Existing saved dates retained; a planner selection is not a booking."
+      "weeksBasis": "All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day. Existing saved dates preserved."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -437,7 +477,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-09.",
+      "weeksBasis": "Booking website recovered. Calendar shows Available Spots on all 26–30 October dates; selected 26 October service £60 for six hours, 9am–3pm, Orford House.",
       "price": {
         "day": 60
       }
@@ -740,6 +780,55 @@ window.E17_PLANNER = {
         "start": "10:00",
         "end": "12:00"
       }
+    },
+    "wo-sports-leytonstone-haf": {
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "hours": {
+        "start": "10:00",
+        "end": "14:00",
+        "extEnd": "17:00"
+      },
+      "coverage": "short",
+      "price": {
+        "day": 15
+      },
+      "priceBasis": "£15 paid non-HAF ticket for 10am–2pm. HAF tickets are sold out; extension 2–5pm costs £15 extra and is not included.",
+      "weeksBasis": "26–29 October 2026 verified in Eequ schedule 7 October. Separate ticket route from £39 full-day swimming camp."
+    },
+    "ptc-sports-gwyn-jones": {
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "hours": {
+        "start": "09:00",
+        "end": "16:30"
+      },
+      "coverage": "standard",
+      "price": {
+        "day": 30,
+        "week": 140
+      },
+      "priceBasis": "October public booking page checked 7 October 2026. Bring packed lunch.",
+      "weeksBasis": "26–30 October 2026 verified on current Class4Kids camp/119; spaces available."
     }
   },
   "season": "october-2026",
