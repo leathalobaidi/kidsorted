@@ -736,7 +736,7 @@ window.E17_PLANNER = {
         "start": "09:00",
         "end": "17:00"
       },
-      "coverage": "working"
+      "coverage": "standard"
     },
     "wo-sports-football": {
       "weeks": [
