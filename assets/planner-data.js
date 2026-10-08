@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -138,7 +138,7 @@ window.E17_PLANNER = {
         "day": 0
       },
       "priceBasis": "£0 HAF ticket subject to eligibility and acceptance. Separate paid places advertised at £20/day; enter the actual cost if using that route.",
-      "weeksBasis": "26–29 October 2026, 9am–1pm verified on Eequ 7 October. No Friday session."
+      "weeksBasis": "26–29 October 2026 dates remain published; HAF sessions sold out 8 October. Saved plans retained; a planner selection is not a booking."
     },
     "360-active": {
       "weeks": [],
@@ -730,8 +730,13 @@ window.E17_PLANNER = {
       "price": {
         "day": 39
       },
-      "priceBasis": "£39/session; Tuesday duration needs confirmation; public booking grid checked 5 October 2026.",
-      "weeksBasis": "26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours. Existing saved dates retained; a planner selection is not a booking."
+      "priceBasis": "£39/day, verified 8 October 2026.",
+      "weeksBasis": "26–30 October 2026, 9am–5pm all five days. Tuesday hours corrected by provider; checked 8 October 2026. Existing saved dates retained.",
+      "hours": {
+        "start": "09:00",
+        "end": "17:00"
+      },
+      "coverage": "working"
     },
     "wo-sports-football": {
       "weeks": [
@@ -750,7 +755,7 @@ window.E17_PLANNER = {
         "day": 20
       },
       "priceBasis": "£20/day; public booking grid checked 5 October 2026.",
-      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "weeksBasis": "26–30 October 2026; venue updated to Feel Good Too on official booking page, checked 8 October 2026. Existing saved dates retained.",
       "coverage": "short",
       "hours": {
         "start": "10:00",
@@ -774,7 +779,7 @@ window.E17_PLANNER = {
         "day": 10
       },
       "priceBasis": "£10/day; public booking grid checked 5 October 2026.",
-      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "weeksBasis": "26–30 October 2026; venue updated to Feel Good Too on official booking page, checked 8 October 2026. Existing saved dates retained.",
       "coverage": "short",
       "hours": {
         "start": "10:00",

@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "providers": [
     {
       "id": "all-about-dance",
@@ -391,7 +391,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "active-london",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "name": "Active London — Chapel End October Holiday Club",
       "kind": "Multi-activity HAF holiday club",
       "area": "Walthamstow",
@@ -414,8 +414,8 @@ window.E17_DIRECTORY = {
       "price": "£0 HAF ticket if eligible; separate paid places advertised at £20/day including hot meal",
       "summary": "October multi-activity club at Chapel End, Monday 26–Thursday 29 October 2026, with sports, arts, crafts and a hot meal. No Friday session listed.",
       "goodFor": "Children aged 5–11. Contact provider about additional support; published 1:1 support deadline is 16 October 2026.",
-      "booking": "Eequ offers single-session HAF booking. Confirm eligibility and your chosen date; paid places use the separate Active London booking route.",
-      "confidence": "Official public booking details verified in browser 7 October 2026. Eequ Book single sessions enabled for 26–29 October, 9am–1pm. Exact capacity not shown; HAF eligibility required. Paid-place capacity not verified.",
+      "booking": "Eequ HAF sessions are sold out; use its availability notification option. Separate paid places are advertised at £20/day through Active London, but paid availability has not been verified.",
+      "confidence": "Official public booking checked 8 October 2026. 26–29 October, 9am–1pm HAF ticket shows Sold out and Fully booked disabled. Separate £20 paid-place capacity remains unverified.",
       "source": {
         "label": "Active London Chapel End October booking",
         "url": "https://eequ.org/book/active-london-chapel-end-with-active-london-limited-13484"
@@ -431,20 +431,20 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "status": "verified",
-        "note": "Eequ Book single sessions enabled for 26–29 October, 9am–1pm. Exact capacity not shown; HAF eligibility required. Paid-place capacity not verified."
+        "note": "26–29 October, 9am–1pm HAF ticket shows Sold out and Fully booked disabled. Separate £20 paid-place capacity remains unverified."
       },
       "bookingUrl": "https://eequ.org/book/active-london-chapel-end-with-active-london-limited-13484",
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-07",
-        "note": "Eequ Book single sessions enabled for 26–29 October, 9am–1pm. Exact capacity not shown; HAF eligibility required. Paid-place capacity not verified."
+        "status": "full",
+        "asOf": "2026-10-08",
+        "note": "26–29 October, 9am–1pm HAF ticket shows Sold out and Fully booked disabled. Separate £20 paid-place capacity remains unverified."
       }
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Monday 26 and Friday 30 October have reopened. All five days are selectable, with limited places; check your chosen session before checkout.",
-      "confidence": "Official public booking details verified in browser 7 October 2026. All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day.",
+      "booking": "All five days are selectable, with limited places; check your chosen session before checkout.",
+      "confidence": "Official public booking checked 8 October 2026. All 26–30 October sessions selectable. Monday/Friday two spots each session; Tuesday full/morning/afternoon 1/3/1; Wednesday one each; Thursday 1/1/2. Prices unchanged.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-10-07",
-        "note": "All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day."
+        "asOf": "2026-10-08",
+        "note": "All 26–30 October sessions selectable. Monday/Friday two spots each session; Tuesday full/morning/afternoon 1/3/1; Wednesday one each; Thursday 1/1/2. Prices unchanged."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "status": "verified",
-        "note": "All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day."
+        "note": "All 26–30 October sessions selectable. Monday/Friday two spots each session; Tuesday full/morning/afternoon 1/3/1; Wednesday one each; Thursday 1/1/2. Prices unchanged."
       }
     },
     {
@@ -2314,7 +2314,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "wo-sports-george-tomlinson",
-      "checkedOn": "2026-10-06",
+      "checkedOn": "2026-10-08",
       "name": "WO Sports — George Tomlinson October Camp",
       "kind": "October sports camp",
       "area": "Leytonstone",
@@ -2330,45 +2330,45 @@ window.E17_DIRECTORY = {
         "Sports"
       ],
       "funding": [],
-      "hours": "Hours conflict: overview 9am–5pm; Tuesday booking grid 5pm–6pm",
-      "price": "£39/session; Tuesday duration needs confirmation",
-      "summary": "26–30 October dates published. Overview says 9am–5pm, but Tuesday 27 October is listed as 5pm–6pm in the booking grid. Confirm Tuesday before planning care. Additional 2 November session is outside this planner.",
+      "hours": "26–30 October, 9am–5pm",
+      "price": "£39/day",
+      "summary": "October multi-sports camp, 26–30 October 2026, 9am–5pm each day. The provider has corrected Tuesday’s booking-grid hours to match the overview. Additional 2 November session is outside this planner.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
-      "booking": "Provider shows Availability — Limited for 26–30 October. Confirm Tuesday hours, which conflict between the overview and booking grid, before booking.",
-      "confidence": "Official October booking page checked in browser 6 October 2026. 26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours.",
+      "booking": "Provider shows limited availability. Choose your dates on the public booking page.",
+      "confidence": "Official public booking checked 8 October 2026. Booking grid now consistently shows 9am–5pm for 26–30 October, including Tuesday, at £39/day. Previous hours conflict resolved. Availability Limited.",
       "source": {
         "label": "WO Sports — George Tomlinson October Camp booking",
         "url": "https://bookings.wo-sports.co.uk/project/85431"
       },
       "secondarySources": [
         {
-          "label": "George Tomlinson booking grid — hours conflict",
+          "label": "George Tomlinson October booking grid",
           "url": "https://bookings.wo-sports.co.uk/book/343080"
         }
       ],
       "lastCheck": {
-        "date": "2026-10-06",
+        "date": "2026-10-08",
         "status": "verified",
-        "note": "26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours."
+        "note": "Booking grid now consistently shows 9am–5pm for 26–30 October, including Tuesday, at £39/day. Previous hours conflict resolved. Availability Limited."
       },
       "bookingUrl": "https://bookings.wo-sports.co.uk/project/85431",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-06",
-        "note": "26–30 October availability is now Limited. £39/session. Tuesday grid still says 5pm–6pm, contradicting the overview 9am–5pm; confirm Tuesday hours."
+        "asOf": "2026-10-08",
+        "note": "Booking grid now consistently shows 9am–5pm for 26–30 October, including Tuesday, at £39/day. Previous hours conflict resolved. Availability Limited."
       }
     },
     {
       "id": "wo-sports-football",
-      "checkedOn": "2026-10-05",
-      "name": "WO Sports — SCORE October Football (5–16)",
+      "checkedOn": "2026-10-08",
+      "name": "WO Sports — Feel Good Too October Football (5–16)",
       "kind": "October sports camp",
       "area": "Leyton",
       "areas": [
         "Leyton"
       ],
-      "venue": "SCORE Centre",
-      "address": "2 Coronation Street, Leyton, E10 5UN (provider address)",
+      "venue": "Feel Good Too",
+      "address": "1 Pavillion Walk, Leyton, E10 5UE (provider address)",
       "ageMin": 5,
       "ageMax": 16,
       "ageLabel": "5–16",
@@ -2381,9 +2381,9 @@ window.E17_DIRECTORY = {
       "summary": "October football, 26–30 October 2026: Player Development ages 5–10 and Player Progression ages 11–16. Both cost £20/day, 10am–3pm. Select the correct age group.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
       "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
-      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
+      "confidence": "Official public booking checked 8 October 2026. Provider now lists Feel Good Too, 1 Pavillion Walk, E10 5UE for all October football age groups. 26–30 October dates, prices and hours unchanged; availability Good.",
       "source": {
-        "label": "WO Sports — SCORE October Football (5–16) booking",
+        "label": "WO Sports — Feel Good Too October Football (5–16) booking",
         "url": "https://bookings.wo-sports.co.uk/project/85434"
       },
       "secondarySources": [
@@ -2393,28 +2393,28 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-05",
+        "date": "2026-10-08",
         "status": "verified",
-        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+        "note": "Provider now lists Feel Good Too, 1 Pavillion Walk, E10 5UE for all October football age groups. 26–30 October dates, prices and hours unchanged; availability Good."
       },
       "bookingUrl": "https://bookings.wo-sports.co.uk/project/85434",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-05",
-        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+        "asOf": "2026-10-08",
+        "note": "Provider now lists Feel Good Too, 1 Pavillion Walk, E10 5UE for all October football age groups. 26–30 October dates, prices and hours unchanged; availability Good."
       }
     },
     {
       "id": "wo-sports-football-beginners",
-      "checkedOn": "2026-10-05",
-      "name": "WO Sports — SCORE October Football Beginners",
+      "checkedOn": "2026-10-08",
+      "name": "WO Sports — Feel Good Too October Football Beginners",
       "kind": "October sports camp",
       "area": "Leyton",
       "areas": [
         "Leyton"
       ],
-      "venue": "SCORE Centre",
-      "address": "2 Coronation Street, Leyton, E10 5UN (provider address)",
+      "venue": "Feel Good Too",
+      "address": "1 Pavillion Walk, Leyton, E10 5UE (provider address)",
       "ageMin": 3,
       "ageMax": 5,
       "ageLabel": "3–5",
@@ -2427,9 +2427,9 @@ window.E17_DIRECTORY = {
       "summary": "October football beginners for ages 3–5, 26–30 October 2026, 10am–noon. Separate from the older-child five-hour sessions.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
       "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
-      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
+      "confidence": "Official public booking checked 8 October 2026. Provider now lists Feel Good Too, 1 Pavillion Walk, E10 5UE for all October football age groups. 26–30 October dates, prices and hours unchanged; availability Good.",
       "source": {
-        "label": "WO Sports — SCORE October Football Beginners booking",
+        "label": "WO Sports — Feel Good Too October Football Beginners booking",
         "url": "https://bookings.wo-sports.co.uk/project/85434"
       },
       "secondarySources": [
@@ -2439,15 +2439,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-05",
+        "date": "2026-10-08",
         "status": "verified",
-        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+        "note": "Provider now lists Feel Good Too, 1 Pavillion Walk, E10 5UE for all October football age groups. 26–30 October dates, prices and hours unchanged; availability Good."
       },
       "bookingUrl": "https://bookings.wo-sports.co.uk/project/85434",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-05",
-        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+        "asOf": "2026-10-08",
+        "note": "Provider now lists Feel Good Too, 1 Pavillion Walk, E10 5UE for all October football age groups. 26–30 October dates, prices and hours unchanged; availability Good."
       }
     },
     {
@@ -2563,7 +2563,7 @@ window.E17_DIRECTORY = {
       "area": "Leyton"
     },
     {
-      "name": "Active London — 26–29 October; booking open",
+      "name": "Active London — 26–29 October; HAF sold out",
       "venue": "Chapel End Infants, E17 4LN",
       "ages": "5–11",
       "ageMin": 5,
