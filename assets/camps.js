@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "providers": [
     {
       "id": "all-about-dance",
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-08",
+      "checkedOn": "2026-10-09",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "All five days are selectable, with limited places; check your chosen session before checkout.",
-      "confidence": "Official public booking checked 8 October 2026. All 26–30 October sessions selectable. Monday/Friday two spots each session; Tuesday full/morning/afternoon 1/3/1; Wednesday one each; Thursday 1/1/2. Prices unchanged.",
+      "booking": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged.",
+      "confidence": "Public booking verified in browser 9 October 2026. Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-08",
-        "note": "All 26–30 October sessions selectable. Monday/Friday two spots each session; Tuesday full/morning/afternoon 1/3/1; Wednesday one each; Thursday 1/1/2. Prices unchanged."
+        "status": "mixed",
+        "asOf": "2026-10-09",
+        "note": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-08",
+        "date": "2026-10-09",
         "status": "verified",
-        "note": "All 26–30 October sessions selectable. Monday/Friday two spots each session; Tuesday full/morning/afternoon 1/3/1; Wednesday one each; Thursday 1/1/2. Prices unchanged."
+        "note": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged."
       }
     },
     {
@@ -2133,7 +2133,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "wo-sports",
-      "checkedOn": "2026-10-05",
+      "checkedOn": "2026-10-09",
       "name": "WO Sports — Woodside October Multi-Sports",
       "kind": "October sports camp",
       "area": "Walthamstow",
@@ -2153,8 +2153,8 @@ window.E17_DIRECTORY = {
       "price": "£25/day 9am–3pm; £39/day 9am–5pm",
       "summary": "October multi-sports camp at Woodside, 26–30 October 2026. Two session lengths available.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
-      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
-      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
+      "booking": "26–30 October: 9am–3pm availability Good; 9am–5pm availability Limited. Check your chosen session before booking.",
+      "confidence": "Public booking verified in browser 9 October 2026. 26–30 October: 9am–3pm availability Good; 9am–5pm availability Limited. Check your chosen session before booking.",
       "source": {
         "label": "WO Sports — Woodside October Multi-Sports booking",
         "url": "https://bookings.wo-sports.co.uk/project/85433"
@@ -2166,15 +2166,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-05",
+        "date": "2026-10-09",
         "status": "verified",
-        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+        "note": "26–30 October: 9am–3pm availability Good; 9am–5pm availability Limited. Check your chosen session before booking."
       },
       "bookingUrl": "https://bookings.wo-sports.co.uk/project/85433",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-05",
-        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+        "asOf": "2026-10-09",
+        "note": "26–30 October: 9am–3pm availability Good; 9am–5pm availability Limited. Check your chosen session before booking."
       }
     },
     {
@@ -2264,7 +2264,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "wo-sports-leytonstone-swimming",
-      "checkedOn": "2026-10-05",
+      "checkedOn": "2026-10-09",
       "name": "WO Sports — Leytonstone Swimming Camp",
       "kind": "October sports camp",
       "area": "Leytonstone",
@@ -2284,8 +2284,8 @@ window.E17_DIRECTORY = {
       "price": "£39/day; free HAF entitlement not established",
       "summary": "October swimming and multi-sports camp, 26–30 October 2026, at £39/day for 9am–5pm. A separate Eequ four-hour programme runs 26–29 October with different ages and ticket prices; do not assume this full-day ticket is funded.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
-      "booking": "Public booking page shows Availability — Good. Choose dates and the correct age/session option on the provider website. No place is reserved by the planner.",
-      "confidence": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified.",
+      "booking": "26–30 October swimming camp now shows Availability — Limited. 9am–5pm, ages 4–14, £39/day unchanged.",
+      "confidence": "Public booking verified in browser 9 October 2026. 26–30 October swimming camp now shows Availability — Limited. 9am–5pm, ages 4–14, £39/day unchanged.",
       "source": {
         "label": "WO Sports — Leytonstone Swimming Camp booking",
         "url": "https://bookings.wo-sports.co.uk/project/85432"
@@ -2301,15 +2301,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-05",
+        "date": "2026-10-09",
         "status": "verified",
-        "note": "October dates, venue, ages and published prices checked on provider project and booking pages 5 October 2026. Public availability is Good; remaining capacity unspecified."
+        "note": "26–30 October swimming camp now shows Availability — Limited. 9am–5pm, ages 4–14, £39/day unchanged."
       },
       "bookingUrl": "https://bookings.wo-sports.co.uk/project/85432",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-05",
-        "note": "Provider displays Availability — Good. Confirm your chosen session and final price."
+        "asOf": "2026-10-09",
+        "note": "26–30 October swimming camp now shows Availability — Limited. 9am–5pm, ages 4–14, £39/day unchanged."
       }
     },
     {

@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -213,7 +213,7 @@ window.E17_PLANNER = {
         "day": 25
       },
       "priceBasis": "£25/day estimate covers 9am–3pm only. 9am–5pm costs £39/day; enter your own total for that option.",
-      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "weeksBasis": "26–30 October: 9am–3pm availability Good; 9am–5pm availability Limited. Check your chosen session before booking. Published October dates and saved plans retained; a planner selection is not a booking.",
       "coverage": "working",
       "hours": {
         "start": "09:00",
@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "All 26–30 October sessions selectable again. Monday/Friday one place each session; Tuesday full/morning/afternoon 1/3/1; Wednesday 2 each; Thursday 1/1/2. £70 full day or £30 half day. Existing saved dates preserved."
+      "weeksBasis": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged. Published October dates and saved plans retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -707,7 +707,7 @@ window.E17_PLANNER = {
         "day": 39
       },
       "priceBasis": "£39/day; free HAF entitlement not established; public booking grid checked 5 October 2026.",
-      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "weeksBasis": "26–30 October swimming camp now shows Availability — Limited. 9am–5pm, ages 4–14, £39/day unchanged. Published October dates and saved plans retained; a planner selection is not a booking.",
       "coverage": "working",
       "hours": {
         "start": "09:00",
