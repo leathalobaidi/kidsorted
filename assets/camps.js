@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "providers": [
     {
       "id": "all-about-dance",
@@ -112,7 +112,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "church-hill-playscheme",
-      "checkedOn": "2026-10-01",
+      "checkedOn": "2026-10-10",
       "name": "Church Hill Nursery Holiday Playscheme",
       "kind": "Early years playscheme",
       "area": "Walthamstow",
@@ -135,8 +135,8 @@ window.E17_DIRECTORY = {
       "price": "£49/day (9am–4pm); £65/day (8am–6pm). Breakfast add-on £7; tea add-on £14.",
       "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Some core and full-day sessions are waitlist-only; check the session before booking.",
       "goodFor": "Younger children who need a nursery-style local holiday day.",
-      "booking": "Book the October Playscheme on Pembee; choose the core or full-day session. Speak to the nursery before booking if your child needs additional support.",
-      "confidence": "October dates, venue, ages, hours, prices and session availability checked 1 October 2026",
+      "booking": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65.",
+      "confidence": "Public booking verified 10 October 2026. Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65.",
       "source": {
         "label": "Church Hill 2026–27 term dates",
         "url": "https://www.fans.waltham.sch.uk/term-dates"
@@ -153,14 +153,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-03",
+        "date": "2026-10-10",
         "status": "verified",
-        "note": "Waitlist sessions unchanged. Core Mon/Wed 3 places, Tue/Fri 4; full day Mon available, Tue 5, Fri 4. Prices unchanged."
+        "note": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65."
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-01",
-        "note": "Core 9am–4pm: Thursday 29 waitlist-only; Monday–Wednesday and Friday have places. Full day 8am–6pm: Wednesday 28 and Thursday 29 waitlist-only; Monday, Tuesday and Friday have places."
+        "asOf": "2026-10-10",
+        "note": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65."
       }
     },
     {
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-09",
+      "checkedOn": "2026-10-10",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged.",
-      "confidence": "Public booking verified in browser 9 October 2026. Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged.",
+      "booking": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
+      "confidence": "Public booking verified 10 October 2026. Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "mixed",
-        "asOf": "2026-10-09",
-        "note": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged."
+        "status": "open",
+        "asOf": "2026-10-10",
+        "note": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "status": "verified",
-        "note": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged."
+        "note": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
       }
     },
     {

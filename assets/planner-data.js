@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -78,7 +78,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October dates retained for existing plans. On 1 October core Thursday and full-day Wednesday/Thursday are waitlist-only; other sessions have places. A planner selection does not secure a booking.",
+      "weeksBasis": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65. Published dates and saved plans retained; a planner selection is not a booking.",
       "price": {
         "day": 49
       },
@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Thursday 29 October full-day and morning sessions are unavailable; afternoon has one spot. Other 26–30 October sessions remain selectable: Monday/Friday two each, Tuesday full/morning/afternoon 1/3/1, Wednesday one each. Prices unchanged. Published October dates and saved plans retained; a planner selection is not a booking."
+      "weeksBasis": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking. Published dates and saved plans retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
