@@ -1,9 +1,9 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "providers": [
     {
       "id": "all-about-dance",
-      "checkedOn": "2026-10-01",
+      "checkedOn": "2026-10-11",
       "name": "All About Dance UK — October Half-Term Holiday Camp (Ages 3–11)",
       "kind": "Holiday camp",
       "area": "Walthamstow / Chingford",
@@ -27,21 +27,21 @@ window.E17_DIRECTORY = {
       "price": "£42.50/day or £212.50/week for the 10am–3pm camp; early/late childcare booked separately, confirm additional fees",
       "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
       "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
-      "booking": "Book through Class4Kids; choose the appropriate age group and childcare hours.",
-      "confidence": "October dates, main hours, venue and prices verified in Class4Kids, 1 October 2026; preschool capacity unconfirmed",
+      "booking": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking.",
+      "confidence": "Public booking checked in browser 11 October 2026. The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking.",
       "source": {
         "label": "All About Dance October camps by age group",
         "url": "https://all-about-dance-uk.classforkids.io/camps"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-10-01",
-        "note": "Ages 7–8 show Limited Spaces Available; ages 5–6 and 9–11 show Spaces Available. Preschool has no public capacity badge; its last successful capacity check was 29 September (limited spaces)."
+        "asOf": "2026-10-11",
+        "note": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking."
       },
       "lastCheck": {
-        "date": "2026-10-01",
+        "date": "2026-10-11",
         "status": "verified",
-        "note": "All four October age-group listings now £42.50/day or £212.50/week. Browser camp 40 confirms limited spaces for ages 7–8. Dates 26–30 October, Hillyfield, 10am–3pm unchanged. Preschool capacity remains unconfirmed."
+        "note": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking."
       },
       "secondarySources": [
         {
@@ -112,7 +112,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "church-hill-playscheme",
-      "checkedOn": "2026-10-10",
+      "checkedOn": "2026-10-11",
       "name": "Church Hill Nursery Holiday Playscheme",
       "kind": "Early years playscheme",
       "area": "Walthamstow",
@@ -133,10 +133,10 @@ window.E17_DIRECTORY = {
       ],
       "hours": "9am–4pm core session; 8am–6pm full day",
       "price": "£49/day (9am–4pm); £65/day (8am–6pm). Breakfast add-on £7; tea add-on £14.",
-      "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Some core and full-day sessions are waitlist-only; check the session before booking.",
+      "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Thursday core session is waitlist-only; all full-day sessions currently have places. Check the session before booking.",
       "goodFor": "Younger children who need a nursery-style local holiday day.",
-      "booking": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65.",
-      "confidence": "Public booking verified 10 October 2026. Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65.",
+      "booking": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking.",
+      "confidence": "Public booking checked in browser 11 October 2026. Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking.",
       "source": {
         "label": "Church Hill 2026–27 term dates",
         "url": "https://www.fans.waltham.sch.uk/term-dates"
@@ -153,14 +153,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-10",
+        "date": "2026-10-11",
         "status": "verified",
-        "note": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65."
+        "note": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking."
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-10",
-        "note": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65."
+        "asOf": "2026-10-11",
+        "note": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking."
       }
     },
     {

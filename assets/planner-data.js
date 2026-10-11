@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -78,7 +78,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Thursday 29 October full day (8am–6pm, £65) has reopened with one place. Thursday core (9am–4pm) and Wednesday full day remain waitlist-only. Other sessions have places; core £49, full day £65. Published dates and saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking. Published dates and saved plans retained; a planner selection is not a booking.",
       "price": {
         "day": 49
       },
@@ -226,7 +226,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October at Hillyfield, 10am–3pm. Ages 7–8 limited; ages 5–6 and 9–11 show spaces. Preschool capacity unconfirmed.",
+      "weeksBasis": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking. Published dates and saved plans retained; a planner selection is not a booking.",
       "priceBasis": "Class4Kids October camps 36, 39, 40 and 41 now £42.50/day or £212.50/week for 10am–3pm, verified 1 October 2026. Early/late childcare fees excluded.",
       "hours": {
         "start": "10:00",
