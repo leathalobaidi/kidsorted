@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "providers": [
     {
       "id": "all-about-dance",
@@ -1381,7 +1381,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "noisy-book-club-summer",
-      "checkedOn": "2026-10-06",
+      "checkedOn": "2026-10-12",
       "name": "Noisy Book Club × Angry Dan — 26–27 October",
       "kind": "Art and growth-mindset holiday workshop",
       "area": "Walthamstow Central",
@@ -1407,8 +1407,8 @@ window.E17_DIRECTORY = {
       "price": "£150 for the compulsory 26–27 October two-day block (£75/day); 5% off second and third child",
       "summary": "Mural-style painting with Angry Dan and growth-mindset activities. Monday 26 and Tuesday 27 October 2026 are now booked together as a two-day block. Wednesday is a separate, full workshop at NBC HQ; no club Thursday or Friday.",
       "goodFor": "Children aged 5–11 who enjoy art and creative challenges.",
-      "booking": "Book the 26–27 October two-day block on the official calendar; 5 places shown on 6 October. Individual-day booking is not offered for these dates.",
-      "confidence": "Official October booking page checked in browser 6 October 2026. 26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together.",
+      "booking": "The compulsory 26–27 October two-day block is now full; a waiting list is available. £150 for both days, 10am–3pm at One of Six cabin. Wednesday 28 October is also full at its separate NBC HQ venue.",
+      "confidence": "Official public booking calendar verified in browser 12 October 2026. The compulsory 26–27 October two-day block is now full; a waiting list is available. £150 for both days, 10am–3pm at One of Six cabin. Wednesday 28 October is also full at its separate NBC HQ venue.",
       "source": {
         "label": "Noisy Book Club October half-term calendar and booking",
         "url": "https://www.noisybookclub.com/half-term"
@@ -1420,14 +1420,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-06",
+        "date": "2026-10-12",
         "status": "verified",
-        "note": "26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together."
+        "note": "The compulsory 26–27 October two-day block is now full; a waiting list is available. £150 for both days, 10am–3pm at One of Six cabin. Wednesday 28 October is also full at its separate NBC HQ venue."
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-06",
-        "note": "26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together."
+        "status": "waitlist",
+        "asOf": "2026-10-12",
+        "note": "The compulsory 26–27 October two-day block is now full; a waiting list is available. £150 for both days, 10am–3pm at One of Six cabin. Wednesday 28 October is also full at its separate NBC HQ venue."
       }
     },
     {

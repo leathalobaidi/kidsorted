@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -486,7 +486,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–27 October compulsory two-day block: 5 places shown at £150. Both dates must be booked together. Existing saved dates retained; a planner selection is not a booking.",
+      "weeksBasis": "The compulsory 26–27 October two-day block is now full; a waiting list is available. £150 for both days, 10am–3pm at One of Six cabin. Wednesday 28 October is also full at its separate NBC HQ venue. Published dates and existing saved plans retained; a planner selection is not a booking.",
       "hours": {
         "start": "10:00",
         "end": "15:00"
