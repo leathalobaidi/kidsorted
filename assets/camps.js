@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "providers": [
     {
       "id": "all-about-dance",
@@ -27,7 +27,7 @@ window.E17_DIRECTORY = {
       "price": "£42.50/day or £212.50/week for the 10am–3pm camp; early/late childcare booked separately, confirm additional fees",
       "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
       "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
-      "booking": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking.",
+      "booking": "The provider’s deadline for accepting Tax-Free Childcare payments is 20 October. Follow the provider’s payment and matching-form instructions; do not pay through Class4Kids when using Tax-Free Childcare. Places are confirmed only after payment is received and matched. After 20 October, book and pay directly through Class4Kids. Ages 7–8 remain very limited; other age-group capacity not reverified today.",
       "confidence": "Public booking checked in browser 11 October 2026. The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking.",
       "source": {
         "label": "All About Dance October camps by age group",
@@ -39,9 +39,9 @@ window.E17_DIRECTORY = {
         "note": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking."
       },
       "lastCheck": {
-        "date": "2026-10-11",
+        "date": "2026-10-13",
         "status": "verified",
-        "note": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking."
+        "note": "The provider’s deadline for accepting Tax-Free Childcare payments is 20 October. Follow the provider’s payment and matching-form instructions; do not pay through Class4Kids when using Tax-Free Childcare. Places are confirmed only after payment is received and matched. After 20 October, book and pay directly through Class4Kids. Ages 7–8 remain very limited; other age-group capacity not reverified today."
       },
       "secondarySources": [
         {
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-10",
+      "checkedOn": "2026-10-13",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
-      "confidence": "Public booking verified 10 October 2026. Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
+      "booking": "All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
+      "confidence": "Public booking verified in browser 13 October 2026. All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-10",
-        "note": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
+        "status": "mixed",
+        "asOf": "2026-10-13",
+        "note": "All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-10",
+        "date": "2026-10-13",
         "status": "verified",
-        "note": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
+        "note": "All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
       }
     },
     {

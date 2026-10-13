@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -226,7 +226,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking. Published dates and saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking. Published dates and saved plans retained; a planner selection is not a booking. Provider now publishes a 20 October Tax-Free Childcare payment deadline; follow its instructions and confirm the place is secured.",
       "priceBasis": "Class4Kids October camps 36, 39, 40 and 41 now £42.50/day or £212.50/week for 10am–3pm, verified 1 October 2026. Early/late childcare fees excluded.",
       "hours": {
         "start": "10:00",
@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Thursday 29 October full-day and morning sessions have reopened, with two spots each; afternoon has three. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking. Published dates and saved plans retained; a planner selection is not a booking."
+      "weeksBasis": "All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking. Published dates and existing saved plans retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
