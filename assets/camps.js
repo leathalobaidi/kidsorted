@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "providers": [
     {
       "id": "all-about-dance",
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-13",
+      "checkedOn": "2026-10-14",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
-      "confidence": "Public booking verified in browser 13 October 2026. All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
+      "booking": "Wednesday 28 October full-day, morning and afternoon sessions have reopened, with three spots each. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
+      "confidence": "Public booking verified in browser 14 October 2026. Wednesday 28 October full-day, morning and afternoon sessions have reopened, with three spots each. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "mixed",
-        "asOf": "2026-10-13",
-        "note": "All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
+        "status": "open",
+        "asOf": "2026-10-14",
+        "note": "Wednesday 28 October full-day, morning and afternoon sessions have reopened, with three spots each. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-13",
+        "date": "2026-10-14",
         "status": "verified",
-        "note": "All Wednesday 28 October sessions are unavailable to select. Monday, Tuesday, Thursday and Friday remain selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
+        "note": "Wednesday 28 October full-day, morning and afternoon sessions have reopened, with three spots each. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking."
       }
     },
     {
