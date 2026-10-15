@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "providers": [
     {
       "id": "all-about-dance",
@@ -294,19 +294,19 @@ window.E17_DIRECTORY = {
         "Childcare vouchers"
       ],
       "hours": "Standard 9:30am–4pm; extended 8am–5:30pm",
-      "price": "£61.50–£71.50 per session; check selected session",
+      "price": "£61.50–£71.50 per session; qualifying family bookings receive 10% off from the second child",
       "summary": "October music camp for Reception–Year 2 at Edinburgh Primary School, 26–30 October 2026.",
       "goodFor": "Children who want a music-led holiday camp with childcare-length hours.",
-      "booking": "Select October Minis sessions on Enrolmy; older age-group availability has not been verified.",
+      "booking": "Enrolmy advertises 10% off for the second child onward once the family has two or more bookings in activities running at the same time. Confirm eligibility and the final total when booking. Base session prices remain £61.50–£71.50; remaining places and older age groups not reverified.",
       "confidence": "October source checked 6 September 2026",
       "source": {
         "label": "The Strings Club October Minis booking",
         "url": "https://enrolmy.com/the-strings-club/activity/589-Walthamstow_Holiday_Camp_October_Half_Term_Minis_Rec_Y2?emyatb=4w7ygdi444"
       },
       "lastCheck": {
-        "date": "2026-09-13",
+        "date": "2026-10-15",
         "status": "checked",
-        "note": "Enrolmy browser booking selector confirms standard 9:30–16:00 and extended 8:00–17:30 for 26–30 October. Price range £61.50–£71.50 retained; exact session price and remaining places not verified."
+        "note": "Enrolmy advertises 10% off for the second child onward once the family has two or more bookings in activities running at the same time. Confirm eligibility and the final total when booking. Base session prices remain £61.50–£71.50; remaining places and older age groups not reverified."
       }
     },
     {

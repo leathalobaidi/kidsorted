@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -284,7 +284,7 @@ window.E17_PLANNER = {
       "price": {
         "day": 61.5
       },
-      "priceBasis": "October listing range £61.50–£71.50 per session. Budget uses the lower price; confirm your session and enter the actual cost.",
+      "priceBasis": "October listing range £61.50–£71.50 per session. Budget uses the lower base price and does not automatically apply discounts. Enrolmy advertises 10% off from the second child when a family has two or more bookings in activities running at the same time; confirm eligibility and enter the actual cost.",
       "tfc": true,
       "vouchers": true,
       "priceFrom": true,
