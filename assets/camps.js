@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "providers": [
     {
       "id": "all-about-dance",
@@ -1527,7 +1527,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "petite-productions",
-      "checkedOn": "2026-09-16",
+      "checkedOn": "2026-10-16",
       "name": "Petite Productions — October Wicked Wonderland Workshops",
       "kind": "Musical theatre holiday workshop",
       "area": "Highams Park / Walthamstow",
@@ -1551,11 +1551,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "9am–4pm, Monday–Friday",
-      "price": "£225/five days or £135/three days; two siblings £405/five days (no three-day sibling discount)",
+      "price": "£225/five days or £135/three days; £405 two-sibling/five-day ticket available at Highams Park, unavailable at Harmony Hall",
       "summary": "Descendants Wicked Wonderland musical theatre workshops, Monday 26–Friday 30 October 2026. Songs, choreography, script writing, crafts, cooking and an end-of-week showcase.",
       "goodFor": "Children aged 4–13 who enjoy musical theatre and creative activities.",
-      "booking": "Both October Bookwhen listings offer five-day and three-day tickets. Three consecutive days are strongly recommended; confirm your chosen days with the provider. Blackhorse Road workshop has moved to Harmony Hall during church renovations. Childcare vouchers and tax-free childcare are not accepted.",
-      "confidence": "October prices, both venue addresses and available ticket options verified in Bookwhen, 16 September 2026",
+      "booking": "Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking. Three consecutive days are strongly recommended. Childcare vouchers and tax-free childcare are not accepted.",
+      "confidence": "Both October Bookwhen listings checked in browser 16 October 2026. Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking.",
       "source": {
         "label": "Petite Productions holiday workshops",
         "url": "https://www.petiteproductions.co.uk/workshops"
@@ -1571,14 +1571,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-16",
-        "status": "confirmed",
-        "note": "Bookwhen events sl7ew and s06ft verify 26–30 October 2026, ages 4–13, 9–16; £225 five days, £135 three days, £405 two siblings/full week. Highams Park Baptist Church E4 9NH; Blackhorse workshop now Harmony Hall E17 7BY. Tickets offered; none added."
+        "date": "2026-10-16",
+        "status": "verified",
+        "note": "Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking."
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-09-16",
-        "note": "Both venue listings offer Add to basket for five-day, three-day and sibling tickets; exact remaining capacity is not displayed."
+        "status": "mixed",
+        "asOf": "2026-10-16",
+        "note": "Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking."
       }
     },
     {
@@ -2038,7 +2038,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "waltham-forest-haf",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-16",
       "name": "Waltham Forest Holiday Activity and Food Programme",
       "kind": "Council route",
       "area": "Borough-wide",
@@ -2062,10 +2062,10 @@ window.E17_DIRECTORY = {
       "funding": [],
       "hours": "Varies by activity",
       "price": "Funded tickets subject to eligibility and availability",
-      "summary": "Council Eequ directory now lists eight October activities. Eligible school-aged children receiving targeted free school meals can book up to four sessions; check each listing for dates and remaining places.",
+      "summary": "Council directory shows seven listings. October HAF is for school-aged children receiving targeted free school meals, not the expanded free-school-meal scheme; up to four sessions. Previous eligibility does not guarantee current eligibility. Check ticket availability separately.",
       "goodFor": "Families seeking funded holiday activities; check the individual provider’s age range and support arrangements.",
-      "booking": "October booking opened 5 October at 9am. Some tickets are sold out. Use the live Eequ directory to select an activity.",
-      "confidence": "Official public booking details verified in browser 7 October 2026. Council collection has eight October listings and states up to four sessions for eligible school-aged children. This is a directory route, not one bookable camp.",
+      "booking": "October booking opened 5 October at 9am. Eligibility is reassessed against current criteria; use the live directory and confirm your child qualifies. Some tickets are sold out.",
+      "confidence": "Council directory checked in browser 16 October 2026. Council directory shows seven listings. October HAF is for school-aged children receiving targeted free school meals, not the expanded free-school-meal scheme; up to four sessions. Previous eligibility does not guarantee current eligibility. Check ticket availability separately.",
       "source": {
         "label": "Waltham Forest live October HAF directory",
         "url": "https://eequ.org/hafwalthamforest"
@@ -2077,9 +2077,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-07",
+        "date": "2026-10-16",
         "status": "verified",
-        "note": "Council collection has eight October listings and states up to four sessions for eligible school-aged children. This is a directory route, not one bookable camp."
+        "note": "Council directory shows seven listings. October HAF is for school-aged children receiving targeted free school meals, not the expanded free-school-meal scheme; up to four sessions. Previous eligibility does not guarantee current eligibility. Check ticket availability separately."
       }
     },
     {
@@ -2452,7 +2452,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "wo-sports-leytonstone-haf",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-16",
       "name": "WO Sports — Leytonstone October Four-Hour Camp",
       "kind": "Multi-sports HAF and paid sessions",
       "area": "Leytonstone",
@@ -2472,26 +2472,26 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "26–29 October, 10am–2pm; optional extension 2–5pm",
-      "price": "£15 paid ticket; £0 HAF tickets sold out; extension £15",
+      "price": "£15.45 paid ticket including 3% fee; £0 HAF sold out; extension £15.45 including fee",
       "summary": "Four-hour multi-sports sessions at Leytonstone Leisure Centre, 26–29 October 2026, with meals. HAF tickets are sold out; paid non-HAF tickets remain offered. Separate from the £39 full-day swimming programme.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
-      "booking": "Eequ offers £15 Paid Non HAF Child tickets and £15 extension tickets. HAF tickets are sold out, with an email-when-available option. Confirm the correct ticket and eligibility.",
-      "confidence": "Official public booking details verified in browser 7 October 2026. 26–29 October 10am–2pm: HAF ticket Sold out; £15 paid non-HAF and extension tickets offered with Book single sessions. Exact paid capacity not shown.",
+      "booking": "26–29 October, 10am–2pm: HAF tickets remain sold out. Paid non-HAF tickets and the 2–5pm extension each cost £15.45 including a 3% fee. Paid tickets are offered with Book sessions; exact capacity is not shown.",
+      "confidence": "Public booking checked in browser 16 October 2026. 26–29 October, 10am–2pm: HAF tickets remain sold out. Paid non-HAF tickets and the 2–5pm extension each cost £15.45 including a 3% fee. Paid tickets are offered with Book sessions; exact capacity is not shown.",
       "source": {
         "label": "WO Sports Leytonstone October HAF and paid tickets",
         "url": "https://eequ.org/book/wo-sports-haf-leytonstone-leisure-centre-with-wo-sports-17751"
       },
       "secondarySources": [],
       "lastCheck": {
-        "date": "2026-10-07",
+        "date": "2026-10-16",
         "status": "verified",
-        "note": "26–29 October 10am–2pm: HAF ticket Sold out; £15 paid non-HAF and extension tickets offered with Book single sessions. Exact paid capacity not shown."
+        "note": "26–29 October, 10am–2pm: HAF tickets remain sold out. Paid non-HAF tickets and the 2–5pm extension each cost £15.45 including a 3% fee. Paid tickets are offered with Book sessions; exact capacity is not shown."
       },
       "bookingUrl": "https://eequ.org/book/wo-sports-haf-leytonstone-leisure-centre-with-wo-sports-17751",
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-07",
-        "note": "26–29 October 10am–2pm: HAF ticket Sold out; £15 paid non-HAF and extension tickets offered with Book single sessions. Exact paid capacity not shown."
+        "asOf": "2026-10-16",
+        "note": "26–29 October, 10am–2pm: HAF tickets remain sold out. Paid non-HAF tickets and the 2–5pm extension each cost £15.45 including a 3% fee. Paid tickets are offered with Book sessions; exact capacity is not shown."
       }
     },
     {

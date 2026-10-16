@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -36,7 +36,7 @@ window.E17_PLANNER = {
   "byId": {
     "waltham-forest-haf": {
       "weeks": [],
-      "weeksBasis": "Council route verified 7 October: eight October listings with varying dates. Select an individual camp rather than planning this directory route.",
+      "weeksBasis": "Council route checked 16 October: seven listings with varying dates. Targeted free school meals required, not expanded FSM; previous eligibility is not a guarantee. Select an individual camp rather than planning this route.",
       "plannerRole": "route"
     },
     "ymca-y-kidz": {
@@ -568,7 +568,7 @@ window.E17_PLANNER = {
         "end": "16:00"
       },
       "coverage": "standard",
-      "priceBasis": "£225/full week. A separate three-day ticket costs £135; three consecutive days are recommended. Planner currently represents the five-day ticket only. Two-sibling full-week ticket £405 must be booked directly; no sibling discount on three-day tickets.",
+      "priceBasis": "£225/full week; planner represents five-day ticket. Separate three-day ticket £135, consecutive days recommended. Two-sibling £405 full-week ticket is unavailable at Harmony Hall but offered at Highams Park; book directly. No three-day sibling discount.",
       "price": {
         "week": 225
       }
@@ -805,9 +805,9 @@ window.E17_PLANNER = {
       },
       "coverage": "short",
       "price": {
-        "day": 15
+        "day": 15.45
       },
-      "priceBasis": "£15 paid non-HAF ticket for 10am–2pm. HAF tickets are sold out; extension 2–5pm costs £15 extra and is not included.",
+      "priceBasis": "£15.45 paid non-HAF ticket for 10am–2pm, including the 3% fee. HAF tickets sold out. Optional 2–5pm extension costs another £15.45 including fee and is excluded from this estimate.",
       "weeksBasis": "26–29 October 2026 verified in Eequ schedule 7 October. Separate ticket route from £39 full-day swimming camp."
     },
     "ptc-sports-gwyn-jones": {
