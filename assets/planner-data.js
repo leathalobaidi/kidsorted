@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -568,7 +568,7 @@ window.E17_PLANNER = {
         "end": "16:00"
       },
       "coverage": "standard",
-      "priceBasis": "£225/full week; planner represents five-day ticket. Separate three-day ticket £135, consecutive days recommended. Two-sibling £405 full-week ticket is unavailable at Harmony Hall but offered at Highams Park; book directly. No three-day sibling discount.",
+      "priceBasis": "Highams Park: £225/full week; planner represents five-day ticket. Separate three-day ticket £135, consecutive days recommended. Two-sibling £405 full-week ticket must be booked directly; no three-day sibling discount. Harmony Hall fully booked; waiting list only.",
       "price": {
         "week": 225
       }

@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "providers": [
     {
       "id": "all-about-dance",
@@ -1527,7 +1527,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "petite-productions",
-      "checkedOn": "2026-10-16",
+      "checkedOn": "2026-10-17",
       "name": "Petite Productions — October Wicked Wonderland Workshops",
       "kind": "Musical theatre holiday workshop",
       "area": "Highams Park / Walthamstow",
@@ -1551,11 +1551,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "9am–4pm, Monday–Friday",
-      "price": "£225/five days or £135/three days; £405 two-sibling/five-day ticket available at Highams Park, unavailable at Harmony Hall",
+      "price": "Highams Park: £225/five days or £135/three days; two siblings £405/five days. Harmony Hall fully booked.",
       "summary": "Descendants Wicked Wonderland musical theatre workshops, Monday 26–Friday 30 October 2026. Songs, choreography, script writing, crafts, cooking and an end-of-week showcase.",
       "goodFor": "Children aged 4–13 who enjoy musical theatre and creative activities.",
-      "booking": "Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking. Three consecutive days are strongly recommended. Childcare vouchers and tax-free childcare are not accepted.",
-      "confidence": "Both October Bookwhen listings checked in browser 16 October 2026. Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking.",
+      "booking": "Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13. Three consecutive days are strongly recommended. Childcare vouchers and tax-free childcare are not accepted.",
+      "confidence": "Both Bookwhen listings checked in browser 17 October 2026. Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13.",
       "source": {
         "label": "Petite Productions holiday workshops",
         "url": "https://www.petiteproductions.co.uk/workshops"
@@ -1571,14 +1571,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-16",
+        "date": "2026-10-17",
         "status": "verified",
-        "note": "Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking."
+        "note": "Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13."
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-16",
-        "note": "Harmony Hall (Blackhorse Road workshop) shows only one space left: five-day £225 and three-day £135 tickets offered, but the £405 two-sibling ticket is unavailable. Highams Park still offers all three ticket types. Confirm venue and selected days before booking."
+        "asOf": "2026-10-17",
+        "note": "Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13."
       }
     },
     {
