@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Wednesday 28 October full-day, morning and afternoon sessions have reopened, with three spots each. All 26–30 October sessions are selectable, with one to three spots shown. £70 full day or £30 half day; check your chosen session before booking. Published dates and existing saved plans retained; a planner selection is not a booking."
+      "weeksBasis": "18 October check: Monday 26, Thursday 29 and Friday 30 unavailable; Tuesday 27 and Wednesday 28 selectable. Published dates and existing saved plans retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
