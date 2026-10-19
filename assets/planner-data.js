@@ -187,7 +187,7 @@ window.E17_PLANNER = {
         "week": 80
       },
       "priceBasis": "Estimate covers main session 10am–3pm only: £20/day or £80 for all five days. Extended 8am–6pm is £40/day or £160/week; enter your own total for that option.",
-      "weeksBasis": "26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "weeksBasis": "Main sessions (10am–3pm) show Spaces Available; full days (8am–6pm) show Limited Spaces Available. Checked 19 October 2026. 26–30 October 2026 verified on public booking pages 5 October 2026.",
       "coverage": "working",
       "hours": {
         "start": "10:00",
@@ -226,7 +226,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking. Published dates and saved plans retained; a planner selection is not a booking. Provider now publishes a 20 October Tax-Free Childcare payment deadline; follow its instructions and confirm the place is secured.",
+      "weeksBasis": "Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge. Checked 19 October 2026. Dates 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Published dates and saved plans retained; a planner selection is not a booking. Provider publishes a 20 October Tax-Free Childcare payment deadline; follow its instructions and confirm the place is secured.",
       "priceBasis": "Class4Kids October camps 36, 39, 40 and 41 now £42.50/day or £212.50/week for 10am–3pm, verified 1 October 2026. Early/late childcare fees excluded.",
       "hours": {
         "start": "10:00",
@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "18 October check: Monday 26, Thursday 29 and Friday 30 unavailable; Tuesday 27 and Wednesday 28 selectable. Published dates and existing saved plans retained; a planner selection is not a booking."
+      "weeksBasis": "19 October check: Monday 26, Wednesday 28, Thursday 29 and Friday 30 unavailable; Tuesday 27 has one spot per session. Published dates and existing saved plans retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -561,7 +561,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October 2026 verified in both Bookwhen listings, 16 September. Planner represents five-day ticket; choose venue and confirm any three-day arrangement directly.",
+      "weeksBasis": "Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable. Checked 19 October 2026. 26–30 October 2026 verified in both Bookwhen listings, 16 September. Planner represents five-day ticket; choose venue and confirm any three-day arrangement directly.",
       "fullWeekOnly": true,
       "hours": {
         "start": "09:00",

@@ -1,9 +1,9 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "providers": [
     {
       "id": "all-about-dance",
-      "checkedOn": "2026-10-11",
+      "checkedOn": "2026-10-19",
       "name": "All About Dance UK — October Half-Term Holiday Camp (Ages 3–11)",
       "kind": "Holiday camp",
       "area": "Walthamstow / Chingford",
@@ -27,21 +27,21 @@ window.E17_DIRECTORY = {
       "price": "£42.50/day or £212.50/week for the 10am–3pm camp; early/late childcare booked separately, confirm additional fees",
       "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
       "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
-      "booking": "The provider’s deadline for accepting Tax-Free Childcare payments is 20 October. Follow the provider’s payment and matching-form instructions; do not pay through Class4Kids when using Tax-Free Childcare. Places are confirmed only after payment is received and matched. After 20 October, book and pay directly through Class4Kids. Ages 7–8 remain very limited; other age-group capacity not reverified today.",
-      "confidence": "Public booking checked in browser 11 October 2026. The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking.",
+      "booking": "The provider’s deadline for accepting Tax-Free Childcare payments is 20 October. Follow the provider’s payment and matching-form instructions; do not pay through Class4Kids when using Tax-Free Childcare. Places are confirmed only after payment is received and matched. After 20 October, book and pay directly through Class4Kids. Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge.",
+      "confidence": "Public booking checked in browser 19 October 2026. Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge.",
       "source": {
         "label": "All About Dance October camps by age group",
         "url": "https://all-about-dance-uk.classforkids.io/camps"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-10-11",
-        "note": "The ages 7–8 group now shows Very Limited Spaces Available for 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Other age-group availability has not been reverified today; choose the appropriate group before booking."
+        "asOf": "2026-10-19",
+        "note": "Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge."
       },
       "lastCheck": {
-        "date": "2026-10-13",
+        "date": "2026-10-19",
         "status": "verified",
-        "note": "The provider’s deadline for accepting Tax-Free Childcare payments is 20 October. Follow the provider’s payment and matching-form instructions; do not pay through Class4Kids when using Tax-Free Childcare. Places are confirmed only after payment is received and matched. After 20 October, book and pay directly through Class4Kids. Ages 7–8 remain very limited; other age-group capacity not reverified today."
+        "note": "Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge."
       },
       "secondarySources": [
         {
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-18",
+      "checkedOn": "2026-10-19",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "All Monday 26, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 shows two spots and Wednesday 28 three spots for each full-day, morning and afternoon session. £70 full day or £30 half day; check your chosen session before booking.",
-      "confidence": "Public booking verified in browser 18 October 2026. Monday, Thursday and Friday sessions disabled; Tuesday and Wednesday selectable. Published dates remain 26–30 October.",
+      "booking": "Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session. £70 full day or £30 half day; check your chosen session before booking.",
+      "confidence": "Public booking checked in browser 19 October 2026. Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-18",
-        "note": "Monday 26, Thursday 29 and Friday 30 October unavailable. Tuesday 27: two spots per session; Wednesday 28: three spots per session."
+        "asOf": "2026-10-19",
+        "note": "Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-18",
+        "date": "2026-10-19",
         "status": "verified",
-        "note": "Monday 26, Thursday 29 and Friday 30 October unavailable. Tuesday 27: two spots per session; Wednesday 28: three spots per session."
+        "note": "Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session."
       }
     },
     {
@@ -851,7 +851,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "future-stars-walthamstow",
-      "checkedOn": "2026-10-05",
+      "checkedOn": "2026-10-19",
       "name": "Future Stars Walthamstow — October Holiday Club",
       "kind": "Full-day multi-activity club",
       "area": "Walthamstow",
@@ -874,7 +874,7 @@ window.E17_DIRECTORY = {
       "summary": "October multi-activity holiday club at Match Day Centres, 26–30 October 2026. Main and extended sessions both show spaces available.",
       "goodFor": "Children aged 5–12 interested in indoor activities, arts and crafts and sports.",
       "booking": "Book main sessions (10am–3pm) or the separate full-day listing (8am–6pm) through ClassForKids. Half-day times on the full-day listing are not specified.",
-      "confidence": "Dates, ages, venue, main/extended hours and prices verified 5 October 2026. Both October listings show Spaces Available; exact remaining capacity unspecified.",
+      "confidence": "Public booking checked in browser 19 October 2026. Main sessions (10am–3pm) show Spaces Available; full days (8am–6pm) show Limited Spaces Available.",
       "source": {
         "label": "Future Stars October main session",
         "url": "https://future-stars-development.classforkids.io/camp/99"
@@ -890,15 +890,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-05",
+        "date": "2026-10-19",
         "status": "verified",
-        "note": "Dates, ages, venue, main/extended hours and prices verified 5 October 2026. Both October listings show Spaces Available; exact remaining capacity unspecified."
+        "note": "Main sessions (10am–3pm) show Spaces Available; full days (8am–6pm) show Limited Spaces Available."
       },
       "bookingUrl": "https://future-stars-development.classforkids.io/camp/99",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-05",
-        "note": "Main and full-day October listings show Spaces Available. Capacity may change."
+        "asOf": "2026-10-19",
+        "note": "Main sessions (10am–3pm) show Spaces Available; full days (8am–6pm) show Limited Spaces Available."
       }
     },
     {
@@ -1527,7 +1527,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "petite-productions",
-      "checkedOn": "2026-10-17",
+      "checkedOn": "2026-10-19",
       "name": "Petite Productions — October Wicked Wonderland Workshops",
       "kind": "Musical theatre holiday workshop",
       "area": "Highams Park / Walthamstow",
@@ -1554,8 +1554,8 @@ window.E17_DIRECTORY = {
       "price": "Highams Park: £225/five days or £135/three days; two siblings £405/five days. Harmony Hall fully booked.",
       "summary": "Descendants Wicked Wonderland musical theatre workshops, Monday 26–Friday 30 October 2026. Songs, choreography, script writing, crafts, cooking and an end-of-week showcase.",
       "goodFor": "Children aged 4–13 who enjoy musical theatre and creative activities.",
-      "booking": "Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13. Three consecutive days are strongly recommended. Childcare vouchers and tax-free childcare are not accepted.",
-      "confidence": "Both Bookwhen listings checked in browser 17 October 2026. Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13.",
+      "booking": "Harmony Hall is fully booked with a waiting list. Highams Park shows three spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13. Three consecutive days are strongly recommended. Childcare vouchers and tax-free childcare are not accepted.",
+      "confidence": "Public booking checked in browser 19 October 2026. Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable.",
       "source": {
         "label": "Petite Productions holiday workshops",
         "url": "https://www.petiteproductions.co.uk/workshops"
@@ -1571,14 +1571,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-17",
+        "date": "2026-10-19",
         "status": "verified",
-        "note": "Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13."
+        "note": "Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable."
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-17",
-        "note": "Harmony Hall is fully booked with a waiting list. Highams Park shows four spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13."
+        "asOf": "2026-10-19",
+        "note": "Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable."
       }
     },
     {
