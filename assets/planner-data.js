@@ -78,7 +78,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking. Published dates and saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "19 October check: Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking. Published dates and saved plans retained; a planner selection is not a booking.",
       "price": {
         "day": 49
       },

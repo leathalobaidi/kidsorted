@@ -112,7 +112,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "church-hill-playscheme",
-      "checkedOn": "2026-10-11",
+      "checkedOn": "2026-10-19",
       "name": "Church Hill Nursery Holiday Playscheme",
       "kind": "Early years playscheme",
       "area": "Walthamstow",
@@ -135,8 +135,8 @@ window.E17_DIRECTORY = {
       "price": "£49/day (9am–4pm); £65/day (8am–6pm). Breakfast add-on £7; tea add-on £14.",
       "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Thursday core session is waitlist-only; all full-day sessions currently have places. Check the session before booking.",
       "goodFor": "Younger children who need a nursery-style local holiday day.",
-      "booking": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking.",
-      "confidence": "Public booking checked in browser 11 October 2026. Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking.",
+      "booking": "Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking.",
+      "confidence": "Public booking checked in browser 19 October 2026. Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking.",
       "source": {
         "label": "Church Hill 2026–27 term dates",
         "url": "https://www.fans.waltham.sch.uk/term-dates"
@@ -153,14 +153,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-11",
+        "date": "2026-10-19",
         "status": "verified",
-        "note": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking."
+        "note": "Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking."
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-11",
-        "note": "Wednesday 28 October full day (8am–6pm, £65) has reopened with two places. All full-day sessions now have places; Thursday core (9am–4pm, £49) remains waitlist-only. Check your chosen session before booking."
+        "asOf": "2026-10-19",
+        "note": "Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking."
       }
     },
     {
