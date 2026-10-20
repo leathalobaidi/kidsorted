@@ -1,9 +1,9 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "providers": [
     {
       "id": "all-about-dance",
-      "checkedOn": "2026-10-19",
+      "checkedOn": "2026-10-20",
       "name": "All About Dance UK — October Half-Term Holiday Camp (Ages 3–11)",
       "kind": "Holiday camp",
       "area": "Walthamstow / Chingford",
@@ -27,21 +27,21 @@ window.E17_DIRECTORY = {
       "price": "£42.50/day or £212.50/week for the 10am–3pm camp; early/late childcare booked separately, confirm additional fees",
       "summary": "Ofsted-registered October half-term holiday camp, Monday 26–Friday 30 October 2026, for ages 3–11. Dedicated age-appropriate activities for ages 3–4 alongside the main programme for older children.",
       "goodFor": "Children aged 3–11, with age-appropriate programmes and flexible childcare around the main camp day.",
-      "booking": "The provider’s deadline for accepting Tax-Free Childcare payments is 20 October. Follow the provider’s payment and matching-form instructions; do not pay through Class4Kids when using Tax-Free Childcare. Places are confirmed only after payment is received and matched. After 20 October, book and pay directly through Class4Kids. Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge.",
-      "confidence": "Public booking checked in browser 19 October 2026. Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge.",
+      "booking": "The provider’s deadline for accepting Tax-Free Childcare payments is 20 October. Follow the provider’s payment and matching-form instructions; do not pay through Class4Kids when using Tax-Free Childcare. Places are confirmed only after payment is received and matched. After 20 October, book and pay directly through Class4Kids. Ages 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Ages 3–4 and 5–6 have Book now links without a capacity badge; remaining places for those groups are not quantified.",
+      "confidence": "Public booking checked in browser 20 October 2026. Ages 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Ages 3–4 and 5–6 have Book now links without a capacity badge; remaining places for those groups are not quantified.",
       "source": {
         "label": "All About Dance October camps by age group",
         "url": "https://all-about-dance-uk.classforkids.io/camps"
       },
       "availability": {
         "status": "open",
-        "asOf": "2026-10-19",
-        "note": "Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge."
+        "asOf": "2026-10-20",
+        "note": "Ages 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Ages 3–4 and 5–6 have Book now links without a capacity badge; remaining places for those groups are not quantified."
       },
       "lastCheck": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "status": "verified",
-        "note": "Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge."
+        "note": "Ages 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Ages 3–4 and 5–6 have Book now links without a capacity badge; remaining places for those groups are not quantified."
       },
       "secondarySources": [
         {
@@ -112,7 +112,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "church-hill-playscheme",
-      "checkedOn": "2026-10-19",
+      "checkedOn": "2026-10-20",
       "name": "Church Hill Nursery Holiday Playscheme",
       "kind": "Early years playscheme",
       "area": "Walthamstow",
@@ -133,10 +133,10 @@ window.E17_DIRECTORY = {
       ],
       "hours": "9am–4pm core session; 8am–6pm full day",
       "price": "£49/day (9am–4pm); £65/day (8am–6pm). Breakfast add-on £7; tea add-on £14.",
-      "summary": "October playscheme for ages 3–8, Monday 26–Friday 30 October 2026, at Church Hill Nursery School. Thursday core session is waitlist-only; all full-day sessions currently have places. Check the session before booking.",
+      "summary": "October playscheme for ages 3–8 at Church Hill Nursery School. Published school dates remain 26–30 October; the current booking grid lists 28–30 October only. Check the session-specific availability before booking.",
       "goodFor": "Younger children who need a nursery-style local holiday day.",
-      "booking": "Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking.",
-      "confidence": "Public booking checked in browser 19 October 2026. Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking.",
+      "booking": "The current booking page lists 28–30 October only; Monday and Tuesday are not shown for booking. Core sessions (9am–4pm, £49) on Wednesday, Thursday and Friday are waitlist-only. Full days (8am–6pm, £65) show two places Wednesday, one Thursday, and a Friday waiting list.",
+      "confidence": "Public booking checked in browser 20 October 2026. The current booking page lists 28–30 October only; Monday and Tuesday are not shown for booking. Core sessions (9am–4pm, £49) on Wednesday, Thursday and Friday are waitlist-only. Full days (8am–6pm, £65) show two places Wednesday, one Thursday, and a Friday waiting list.",
       "source": {
         "label": "Church Hill 2026–27 term dates",
         "url": "https://www.fans.waltham.sch.uk/term-dates"
@@ -153,14 +153,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "status": "verified",
-        "note": "Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking."
+        "note": "The current booking page lists 28–30 October only; Monday and Tuesday are not shown for booking. Core sessions (9am–4pm, £49) on Wednesday, Thursday and Friday are waitlist-only. Full days (8am–6pm, £65) show two places Wednesday, one Thursday, and a Friday waiting list."
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-19",
-        "note": "Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking."
+        "asOf": "2026-10-20",
+        "note": "The current booking page lists 28–30 October only; Monday and Tuesday are not shown for booking. Core sessions (9am–4pm, £49) on Wednesday, Thursday and Friday are waitlist-only. Full days (8am–6pm, £65) show two places Wednesday, one Thursday, and a Friday waiting list."
       }
     },
     {
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-19",
+      "checkedOn": "2026-10-20",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session. £70 full day or £30 half day; check your chosen session before booking.",
-      "confidence": "Public booking checked in browser 19 October 2026. Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session.",
+      "booking": "Monday 26 and Tuesday 27 October sessions are unavailable. Wednesday 28 has one spot per session; Thursday 29 has two full-day/afternoon spots and three morning spots; Friday 30 has three full-day/morning spots and an available afternoon session without a count.",
+      "confidence": "Public booking checked in browser 20 October 2026. Monday 26 and Tuesday 27 October sessions are unavailable. Wednesday 28 has one spot per session; Thursday 29 has two full-day/afternoon spots and three morning spots; Friday 30 has three full-day/morning spots and an available afternoon session without a count.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-19",
-        "note": "Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session."
+        "asOf": "2026-10-20",
+        "note": "Monday 26 and Tuesday 27 October sessions are unavailable. Wednesday 28 has one spot per session; Thursday 29 has two full-day/afternoon spots and three morning spots; Friday 30 has three full-day/morning spots and an available afternoon session without a count."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "status": "verified",
-        "note": "Monday 26, Wednesday 28, Thursday 29 and Friday 30 October sessions are unavailable. Tuesday 27 has one spot per full-day, morning and afternoon session."
+        "note": "Monday 26 and Tuesday 27 October sessions are unavailable. Wednesday 28 has one spot per session; Thursday 29 has two full-day/afternoon spots and three morning spots; Friday 30 has three full-day/morning spots and an available afternoon session without a count."
       }
     },
     {
@@ -1527,7 +1527,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "petite-productions",
-      "checkedOn": "2026-10-19",
+      "checkedOn": "2026-10-20",
       "name": "Petite Productions — October Wicked Wonderland Workshops",
       "kind": "Musical theatre holiday workshop",
       "area": "Highams Park / Walthamstow",
@@ -1554,8 +1554,8 @@ window.E17_DIRECTORY = {
       "price": "Highams Park: £225/five days or £135/three days; two siblings £405/five days. Harmony Hall fully booked.",
       "summary": "Descendants Wicked Wonderland musical theatre workshops, Monday 26–Friday 30 October 2026. Songs, choreography, script writing, crafts, cooking and an end-of-week showcase.",
       "goodFor": "Children aged 4–13 who enjoy musical theatre and creative activities.",
-      "booking": "Harmony Hall is fully booked with a waiting list. Highams Park shows three spaces left and offers £225 five-day, £135 three-day and £405 two-sibling five-day tickets. Both workshops run 26–30 October, 9am–4pm, ages 4–13. Three consecutive days are strongly recommended. Childcare vouchers and tax-free childcare are not accepted.",
-      "confidence": "Public booking checked in browser 19 October 2026. Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable.",
+      "booking": "Harmony Hall remains fully booked with a waiting list. Highams Park shows two spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable. Three consecutive days are strongly recommended. Childcare vouchers and tax-free childcare are not accepted.",
+      "confidence": "Public booking checked in browser 20 October 2026. Harmony Hall remains fully booked with a waiting list. Highams Park shows two spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable.",
       "source": {
         "label": "Petite Productions holiday workshops",
         "url": "https://www.petiteproductions.co.uk/workshops"
@@ -1571,14 +1571,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "status": "verified",
-        "note": "Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable."
+        "note": "Harmony Hall remains fully booked with a waiting list. Highams Park shows two spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable."
       },
       "availability": {
         "status": "mixed",
-        "asOf": "2026-10-19",
-        "note": "Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable."
+        "asOf": "2026-10-20",
+        "note": "Harmony Hall remains fully booked with a waiting list. Highams Park shows two spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable."
       }
     },
     {
@@ -1633,7 +1633,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "ryan-fc-girls",
-      "checkedOn": "2026-09-15",
+      "checkedOn": "2026-10-20",
       "name": "Ryan FC Girls October Half-Term Football Camp",
       "kind": "Girls-only football camp",
       "area": "Walthamstow",
@@ -1654,11 +1654,11 @@ window.E17_DIRECTORY = {
         "Paid"
       ],
       "hours": "9am–3pm",
-      "price": "£30/day or £130 for all five days",
-      "summary": "Girls-only football, games and activities, 26–30 October 2026. Beginners and all abilities welcome; book individual days or the full week.",
+      "price": "£30/day",
+      "summary": "Girls-only football, games and activities, 26–28 October 2026. Beginners and all abilities welcome; book one or several days.",
       "goodFor": "Girls in school years 1–6 who enjoy football or want to try it.",
-      "booking": "Use the October booking form below. The provider confirms places after payment; some Book Now buttons on its website still lead to the old summer form.",
-      "confidence": "October dates, school years, venue, hours and prices verified on the official October form, 15 September 2026",
+      "booking": "Official page and booking form now specify 26–28 October 2026, 9am–3pm, £30/day, girls in school years 1–6 at Matchday Centre. Only Monday–Wednesday are offered in the form. Capacity is not published; payment is required to hold a place.",
+      "confidence": "Public booking checked in browser 20 October 2026. Official page and booking form now specify 26–28 October 2026, 9am–3pm, £30/day, girls in school years 1–6 at Matchday Centre. Only Monday–Wednesday are offered in the form. Capacity is not published; payment is required to hold a place.",
       "source": {
         "label": "Ryan FC Girls October booking form",
         "url": "https://forms.gle/7ruoZvhsAuBW2vQt9"
@@ -1670,14 +1670,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-15",
-        "status": "confirmed",
-        "note": "Official page and two linked October forms explicitly confirm 26–30 October 2026, years 1–6, Matchday Centre E17 4LL, 9–15, £30/day or £130/week. Top Book Now link still opens summer; linked the verified October form."
+        "date": "2026-10-20",
+        "status": "verified",
+        "note": "Official page and booking form now specify 26–28 October 2026, 9am–3pm, £30/day, girls in school years 1–6 at Matchday Centre. Only Monday–Wednesday are offered in the form. Capacity is not published; payment is required to hold a place."
       },
       "availability": {
         "status": "unknown",
-        "asOf": "2026-09-15",
-        "note": "October booking form accepts requests. Remaining capacity is not published; a place is confirmed only after payment."
+        "asOf": "2026-10-20",
+        "note": "Official page and booking form now specify 26–28 October 2026, 9am–3pm, £30/day, girls in school years 1–6 at Matchday Centre. Only Monday–Wednesday are offered in the form. Capacity is not published; payment is required to hold a place."
       }
     },
     {
@@ -2314,7 +2314,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "wo-sports-george-tomlinson",
-      "checkedOn": "2026-10-08",
+      "checkedOn": "2026-10-20",
       "name": "WO Sports — George Tomlinson October Camp",
       "kind": "October sports camp",
       "area": "Leytonstone",
@@ -2334,8 +2334,8 @@ window.E17_DIRECTORY = {
       "price": "£39/day",
       "summary": "October multi-sports camp, 26–30 October 2026, 9am–5pm each day. The provider has corrected Tuesday’s booking-grid hours to match the overview. Additional 2 November session is outside this planner.",
       "goodFor": "Age-appropriate sports activities; confirm individual support needs with the provider.",
-      "booking": "Provider shows limited availability. Choose your dates on the public booking page.",
-      "confidence": "Official public booking checked 8 October 2026. Booking grid now consistently shows 9am–5pm for 26–30 October, including Tuesday, at £39/day. Previous hours conflict resolved. Availability Limited.",
+      "booking": "Wednesday 28 October is sold out. Monday 26, Tuesday 27, Thursday 29 and Friday 30 remain selectable at £39/day, 9am–5pm. Overall availability is Limited.",
+      "confidence": "Public booking checked in browser 20 October 2026. Wednesday 28 October is sold out. Monday 26, Tuesday 27, Thursday 29 and Friday 30 remain selectable at £39/day, 9am–5pm. Overall availability is Limited.",
       "source": {
         "label": "WO Sports — George Tomlinson October Camp booking",
         "url": "https://bookings.wo-sports.co.uk/project/85431"
@@ -2347,15 +2347,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-08",
+        "date": "2026-10-20",
         "status": "verified",
-        "note": "Booking grid now consistently shows 9am–5pm for 26–30 October, including Tuesday, at £39/day. Previous hours conflict resolved. Availability Limited."
+        "note": "Wednesday 28 October is sold out. Monday 26, Tuesday 27, Thursday 29 and Friday 30 remain selectable at £39/day, 9am–5pm. Overall availability is Limited."
       },
       "bookingUrl": "https://bookings.wo-sports.co.uk/project/85431",
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-08",
-        "note": "Booking grid now consistently shows 9am–5pm for 26–30 October, including Tuesday, at £39/day. Previous hours conflict resolved. Availability Limited."
+        "status": "mixed",
+        "asOf": "2026-10-20",
+        "note": "Wednesday 28 October is sold out. Monday 26, Tuesday 27, Thursday 29 and Friday 30 remain selectable at £39/day, 9am–5pm. Overall availability is Limited."
       }
     },
     {

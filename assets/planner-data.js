@@ -78,7 +78,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "19 October check: Wednesday 28 and Thursday 29 October core sessions (9am–4pm, £49) are waitlist-only. Monday, Tuesday and Friday core sessions and all full days (8am–6pm, £65) have places. Check your chosen session before booking. Published dates and saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "20 October check: The current booking page lists 28–30 October only; Monday and Tuesday are not shown for booking. Core sessions (9am–4pm, £49) on Wednesday, Thursday and Friday are waitlist-only. Full days (8am–6pm, £65) show two places Wednesday, one Thursday, and a Friday waiting list. Existing saved plans retained; a planner selection is not a booking.",
       "price": {
         "day": 49
       },
@@ -226,7 +226,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Ages 5–6 and 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Preschool ages 3–4 has a Book now link without a capacity badge. Checked 19 October 2026. Dates 26–30 October, 10am–3pm, £42.50/day or £212.50/week. Published dates and saved plans retained; a planner selection is not a booking. Provider publishes a 20 October Tax-Free Childcare payment deadline; follow its instructions and confirm the place is secured.",
+      "weeksBasis": "20 October check: Ages 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Ages 3–4 and 5–6 have Book now links without a capacity badge; remaining places for those groups are not quantified. Existing saved plans retained; a planner selection is not a booking.",
       "priceBasis": "Class4Kids October camps 36, 39, 40 and 41 now £42.50/day or £212.50/week for 10am–3pm, verified 1 October 2026. Early/late childcare fees excluded.",
       "hours": {
         "start": "10:00",
@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "19 October check: Monday 26, Wednesday 28, Thursday 29 and Friday 30 unavailable; Tuesday 27 has one spot per session. Published dates and existing saved plans retained; a planner selection is not a booking."
+      "weeksBasis": "20 October check: Monday 26 and Tuesday 27 October sessions are unavailable. Wednesday 28 has one spot per session; Thursday 29 has two full-day/afternoon spots and three morning spots; Friday 30 has three full-day/morning spots and an available afternoon session without a count. Existing saved plans retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -561,7 +561,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Harmony Hall remains fully booked with a waiting list. Highams Park shows three spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable. Checked 19 October 2026. 26–30 October 2026 verified in both Bookwhen listings, 16 September. Planner represents five-day ticket; choose venue and confirm any three-day arrangement directly.",
+      "weeksBasis": "20 October check: Harmony Hall remains fully booked with a waiting list. Highams Park shows two spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable. Existing saved plans retained; a planner selection is not a booking.",
       "fullWeekOnly": true,
       "hours": {
         "start": "09:00",
@@ -577,12 +577,11 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October 2026 explicitly published in the official October form, checked 15 September. Requests do not guarantee places.",
+      "weeksBasis": "20 October check: Official page and booking form now specify 26–28 October 2026, 9am–3pm, £30/day, girls in school years 1–6 at Matchday Centre. Only Monday–Wednesday are offered in the form. Capacity is not published; payment is required to hold a place. Existing saved plans retained; a planner selection is not a booking. Only Monday–Wednesday are currently offered; do not rely on Thursday or Friday for cover. The previous planner pattern is retained to avoid removing saved selections.",
       "price": {
-        "day": 30,
-        "week": 130
+        "day": 30
       },
-      "priceBasis": "£30 per day or £130 for all five days. Payment required to confirm a place.",
+      "priceBasis": "£30/day on the current official form, checked 20 October 2026. The previous five-day price is no longer published.",
       "hours": {
         "start": "09:00",
         "end": "15:00"
@@ -731,7 +730,7 @@ window.E17_PLANNER = {
         "day": 39
       },
       "priceBasis": "£39/day, verified 8 October 2026.",
-      "weeksBasis": "26–30 October 2026, 9am–5pm all five days. Tuesday hours corrected by provider; checked 8 October 2026. Existing saved dates retained.",
+      "weeksBasis": "20 October check: Wednesday 28 October is sold out. Monday 26, Tuesday 27, Thursday 29 and Friday 30 remain selectable at £39/day, 9am–5pm. Overall availability is Limited. Existing saved plans retained; a planner selection is not a booking.",
       "hours": {
         "start": "09:00",
         "end": "17:00"
