@@ -78,7 +78,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "20 October check: The current booking page lists 28–30 October only; Monday and Tuesday are not shown for booking. Core sessions (9am–4pm, £49) on Wednesday, Thursday and Friday are waitlist-only. Full days (8am–6pm, £65) show two places Wednesday, one Thursday, and a Friday waiting list. Existing saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "22 October: the October booking link returns Page not found and the booking homepage lists no upcoming activities. Current availability cannot be confirmed. Published school dates remain 26–30 October; this does not establish cancellation or that the camp is full. Last successful session check: 20 October. Existing saved plans retained.",
       "price": {
         "day": 49
       },
@@ -187,7 +187,7 @@ window.E17_PLANNER = {
         "week": 80
       },
       "priceBasis": "Estimate covers main session 10am–3pm only: £20/day or £80 for all five days. Extended 8am–6pm is £40/day or £160/week; enter your own total for that option.",
-      "weeksBasis": "Main sessions (10am–3pm) show Spaces Available; full days (8am–6pm) show Limited Spaces Available. Checked 19 October 2026. 26–30 October 2026 verified on public booking pages 5 October 2026.",
+      "weeksBasis": "22 October check: Main sessions (10am–3pm) show Spaces Available. Full days (8am–6pm) have a Book now link without a capacity badge; remaining places are not quantified. Existing saved plans retained; a planner selection is not a booking.",
       "coverage": "working",
       "hours": {
         "start": "10:00",
@@ -213,7 +213,7 @@ window.E17_PLANNER = {
         "day": 25
       },
       "priceBasis": "£25/day estimate covers 9am–3pm only. 9am–5pm costs £39/day; enter your own total for that option.",
-      "weeksBasis": "26–30 October: 9am–3pm availability Good; 9am–5pm availability Limited. Check your chosen session before booking. Published October dates and saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "22 October check: 26–30 October: both the 9am–3pm and 9am–5pm Woodside sessions show Limited availability. Check your chosen date before booking. Existing saved plans retained; a planner selection is not a booking.",
       "coverage": "working",
       "hours": {
         "start": "09:00",
@@ -226,7 +226,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "20 October check: Ages 7–8 show Very Limited Spaces Available; ages 9–11 show Spaces Available. Ages 3–4 and 5–6 have Book now links without a capacity badge; remaining places for those groups are not quantified. Existing saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "22 October check: Ages 9–11 show Spaces Available. Ages 3–4, 5–6 and 7–8 have Book now links without a capacity badge; remaining places for those groups are not quantified. Existing saved plans retained; a planner selection is not a booking.",
       "priceBasis": "Class4Kids October camps 36, 39, 40 and 41 now £42.50/day or £212.50/week for 10am–3pm, verified 1 October 2026. Early/late childcare fees excluded.",
       "hours": {
         "start": "10:00",
@@ -318,7 +318,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "October 2026 dates verified on the linked provider booking page, checked 2026-09-06."
+      "weeksBasis": "26–30 October, 09:30–15:30 and Choose tickets confirmed on 22 October. Booking age label says 5–12 while description says 5–11; confirm eligibility for age 12 directly. Previous successful ticket-price verification retained."
     },
     "little-soccer-stars-walthamstow": {
       "weeks": [
@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "20 October check: Monday 26 and Tuesday 27 October sessions are unavailable. Wednesday 28 has one spot per session; Thursday 29 has two full-day/afternoon spots and three morning spots; Friday 30 has three full-day/morning spots and an available afternoon session without a count. Existing saved plans retained; a planner selection is not a booking."
+      "weeksBasis": "22 October check: 22 October: all 26–30 October sessions are selectable. Monday has two spots per session; Tuesday has one full-day/morning and two afternoon spots; Wednesday has one full-day/afternoon and two morning spots; Thursday has one full-day/afternoon and three morning spots; Friday has one full-day/afternoon and two morning spots. Existing saved plans retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -561,14 +561,14 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "20 October check: Harmony Hall remains fully booked with a waiting list. Highams Park shows two spaces left; five-day £225, three-day £135 and two-sibling five-day £405 tickets remain selectable. Existing saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "22 October check: Both Highams Park and Harmony Hall are fully booked for 26–30 October, with waiting lists. Five-day £225, three-day £135 and two-sibling five-day £405 tickets are all unavailable. Existing saved plans retained; a planner selection is not a booking.",
       "fullWeekOnly": true,
       "hours": {
         "start": "09:00",
         "end": "16:00"
       },
       "coverage": "standard",
-      "priceBasis": "Highams Park: £225/full week; planner represents five-day ticket. Separate three-day ticket £135, consecutive days recommended. Two-sibling £405 full-week ticket must be booked directly; no three-day sibling discount. Harmony Hall fully booked; waiting list only.",
+      "priceBasis": "Both venues are fully booked; waiting lists only. Published prices retained for existing plans: £225/full week, £135/three days, £405/two siblings for five days. The planner represents the five-day ticket.",
       "price": {
         "week": 225
       }
@@ -730,7 +730,7 @@ window.E17_PLANNER = {
         "day": 39
       },
       "priceBasis": "£39/day, verified 8 October 2026.",
-      "weeksBasis": "20 October check: Wednesday 28 October is sold out. Monday 26, Tuesday 27, Thursday 29 and Friday 30 remain selectable at £39/day, 9am–5pm. Overall availability is Limited. Existing saved plans retained; a planner selection is not a booking.",
+      "weeksBasis": "22 October check: All five dates, 26–30 October, are selectable again at £39/day, 9am–5pm, including Wednesday 28 October. Overall availability is Limited. An additional Monday 2 November session is listed at £39, 9am–5pm, outside this planner's week. Existing saved plans retained; a planner selection is not a booking.",
       "hours": {
         "start": "09:00",
         "end": "17:00"
