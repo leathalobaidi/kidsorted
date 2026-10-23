@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "providers": [
     {
       "id": "all-about-dance",
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-22",
+      "checkedOn": "2026-10-23",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "22 October: all 26–30 October sessions are selectable. Monday has two spots per session; Tuesday has one full-day/morning and two afternoon spots; Wednesday has one full-day/afternoon and two morning spots; Thursday has one full-day/afternoon and three morning spots; Friday has one full-day/afternoon and two morning spots.",
-      "confidence": "Current public booking page checked 22 October 2026; availability can change.",
+      "booking": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; the morning has one place. Tuesday and Wednesday full-day and afternoon sessions show two and three places respectively. Other 27–30 October sessions are selectable without a numeric capacity label. Full days are £70 (10am–3pm); half days £30 (10am–noon or 1–3pm).",
+      "confidence": "Current public booking page checked 23 October 2026; availability can change.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-22",
-        "note": "22 October: all 26–30 October sessions are selectable. Monday has two spots per session; Tuesday has one full-day/morning and two afternoon spots; Wednesday has one full-day/afternoon and two morning spots; Thursday has one full-day/afternoon and three morning spots; Friday has one full-day/afternoon and two morning spots."
+        "status": "limited",
+        "asOf": "2026-10-23",
+        "note": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; the morning has one place. Tuesday and Wednesday full-day and afternoon sessions show two and three places respectively. Other 27–30 October sessions are selectable without a numeric capacity label. Full days are £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "status": "verified",
-        "note": "22 October: all 26–30 October sessions are selectable. Monday has two spots per session; Tuesday has one full-day/morning and two afternoon spots; Wednesday has one full-day/afternoon and two morning spots; Thursday has one full-day/afternoon and three morning spots; Friday has one full-day/afternoon and two morning spots."
+        "note": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; the morning has one place. Tuesday and Wednesday full-day and afternoon sessions show two and three places respectively. Other 27–30 October sessions are selectable without a numeric capacity label. Full days are £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
       }
     },
     {
@@ -2496,7 +2496,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "ptc-sports-gwyn-jones",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-23",
       "name": "PTC Sports — Gwyn Jones October Holiday Club",
       "kind": "Multi-sports holiday camp",
       "area": "Leytonstone",
@@ -2520,8 +2520,8 @@ window.E17_DIRECTORY = {
       "price": "£30/day or £140/week",
       "summary": "October multi-sports holiday club, 26–30 October 2026, at Gwyn Jones Primary School. Bring a nut-free packed lunch and refillable water bottle.",
       "goodFor": "Children aged 4–12 who enjoy a range of sports and team activities.",
-      "booking": "Spaces Available on the public booking page; book individual days or the full week.",
-      "confidence": "October dates, venue, hours, ages and prices verified on current Class4Kids listings 7 October 2026.",
+      "booking": "23 October: Limited Spaces Available on the public booking page for 26–30 October, ages 4–12, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week.",
+      "confidence": "Current public booking page checked 23 October 2026; availability can change.",
       "source": {
         "label": "PTC Gwyn Jones October booking",
         "url": "https://ptcsports.classforkids.io/camp/119"
@@ -2533,15 +2533,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-07",
+        "date": "2026-10-23",
         "status": "verified",
-        "note": "Current October camp/119, ages 4–12, 9–16:30, £30/day or £140/week; spaces available."
+        "note": "23 October: Limited Spaces Available on the public booking page for 26–30 October, ages 4–12, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week."
       },
       "bookingUrl": "https://ptcsports.classforkids.io/camp/119",
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-07",
-        "note": "Spaces Available; 26–30 October, £30/day or £140/week."
+        "status": "limited",
+        "asOf": "2026-10-23",
+        "note": "23 October: Limited Spaces Available on the public booking page for 26–30 October, ages 4–12, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week."
       }
     }
   ],

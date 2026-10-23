@@ -433,7 +433,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "22 October check: 22 October: all 26–30 October sessions are selectable. Monday has two spots per session; Tuesday has one full-day/morning and two afternoon spots; Wednesday has one full-day/afternoon and two morning spots; Thursday has one full-day/afternoon and three morning spots; Friday has one full-day/afternoon and two morning spots. Existing saved plans retained; a planner selection is not a booking."
+      "weeksBasis": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; only the morning has one place. Sessions on 27–30 October are selectable. Existing saved plans are retained, but Monday cannot currently be booked as a full day. A planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -832,7 +832,7 @@ window.E17_PLANNER = {
         "week": 140
       },
       "priceBasis": "October public booking page checked 7 October 2026. Bring packed lunch.",
-      "weeksBasis": "26–30 October 2026 verified on current Class4Kids camp/119; spaces available."
+      "weeksBasis": "26–30 October 2026 verified on current Class4Kids camp/119 on 23 October; Limited Spaces Available."
     }
   },
   "season": "october-2026",
