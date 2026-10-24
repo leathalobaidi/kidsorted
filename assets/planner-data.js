@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-18",
+  "updated": "2026-10-24",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -368,8 +368,25 @@ window.E17_PLANNER = {
       "bookingOpensLabel": "5 October at 9am"
     },
     "camp-beaumont-woodbridge": {
-      "weeks": [],
-      "weeksBasis": "October 2026 availability has not yet been verified. Previous summer dates and prices do not apply."
+      "weeks": [
+        1
+      ],
+      "dayPattern": {
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "weeksBasis": "Official linked booking overview checked 24 October lists 26–30 October for all four age groups. Exact capacity and selected-day availability unverified. A planner selection is not a booking.",
+      "hours": {
+        "start": "08:30",
+        "end": "17:30"
+      },
+      "coverage": "working",
+      "priceBasis": "Price not entered: venue page advertises £63/day or £290/week, booking overview says from £58/day. Confirm the final total for chosen dates."
     },
     "barracudas-woodford": {
       "weeks": [
@@ -452,11 +469,11 @@ window.E17_PLANNER = {
           1
         ]
       },
-      "weeksBasis": "Official page and public booking listing confirm Monday 26 October 2026 only, checked 19 September 2026.",
+      "weeksBasis": "Official activity page checked 24 October 2026 still publishes Monday 26 October, 2pm to 4pm. Booking links return 404; remaining places unverified. A planner selection is not a booking.",
       "price": {
         "day": 13.5
       },
-      "priceBasis": "£13.50 for the single 14:00–16:00 basketball session, not a full day. Official October holiday page.",
+      "priceBasis": "Advertised two-hour session price on the official holiday activity page, checked 24 October 2026; booking unavailable, confirm before paying.",
       "hours": {
         "start": "14:00",
         "end": "16:00"
@@ -678,11 +695,11 @@ window.E17_PLANNER = {
           1
         ]
       },
-      "weeksBasis": "Official holiday page and public course listings verify Monday 26 October 2026 only, checked 1 October.",
+      "weeksBasis": "Official activity page checked 24 October 2026 still publishes Monday 26 October, 2pm to 4pm. Booking links return 404; remaining places unverified. A planner selection is not a booking.",
       "price": {
         "day": 15.6
       },
-      "priceBasis": "Both 5–7 and 8+ public pricing panels show £15.60/session.",
+      "priceBasis": "Advertised two-hour session price on the official holiday activity page, checked 24 October 2026; booking unavailable, confirm before paying.",
       "hours": {
         "start": "14:00",
         "end": "16:00"

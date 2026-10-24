@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "providers": [
     {
       "id": "all-about-dance",
@@ -493,7 +493,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "better-walthamstow-leisure-centre",
-      "checkedOn": "2026-09-19",
+      "checkedOn": "2026-10-24",
       "name": "Better Walthamstow — October Basketball Short Course",
       "kind": "Two-hour basketball holiday session",
       "area": "Walthamstow",
@@ -514,35 +514,29 @@ window.E17_DIRECTORY = {
       ],
       "hours": "Monday 26 October, 2pm–4pm",
       "price": "£13.50 for the two-hour session",
-      "summary": "Basketball holiday short course on Monday 26 October 2026 for ages 8–15, 2pm–4pm. A two-hour activity, not full-day childcare. Public booking page shows places available.",
+      "summary": "Basketball holiday short course on Monday 26 October 2026 for ages 8–15, 2pm–4pm. A two-hour activity, not full-day childcare. Online booking and remaining places are unverified.",
       "goodFor": "Children aged 8–15 looking for a coached basketball afternoon.",
-      "booking": "Book the Basketball Short Courses session starting 26 October through Better. The listing showed 20 spaces on 19 September; availability may change.",
-      "confidence": "October provider and public booking listing verified 19 September 2026",
+      "booking": "24 October: the official course booking links and main course portal return HTTP 404. No working session booking destination has been verified. Use the official activity information page and contact Walthamstow Leisure Centre to confirm how to book and whether places remain before travelling.",
+      "confidence": "Official activity dates, ages, times and advertised price checked 24 October 2026; booking and remaining places unverified.",
       "source": {
         "label": "Walthamstow Leisure Centre holiday activities",
         "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/holiday-activities"
       },
       "lastCheck": {
-        "date": "2026-09-19",
-        "status": "checked",
-        "note": "Official holiday page publishes 26 October 2026, ages 8–15, 14:00–16:00 and £13.50. Public course listing shows 20 spaces."
+        "date": "2026-10-24",
+        "status": "blocked",
+        "note": "24 October: the official course booking links and main course portal return HTTP 404. No working session booking destination has been verified. Use the official activity information page and contact Walthamstow Leisure Centre to confirm how to book and whether places remain before travelling."
       },
-      "bookingUrl": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5%5D,%22centre%22:26%7D",
-      "secondarySources": [
-        {
-          "label": "Better basketball booking listing",
-          "url": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5%5D,%22centre%22:26%7D"
-        }
-      ],
+      "secondarySources": [],
       "availability": {
-        "status": "open",
-        "asOf": "2026-09-19",
-        "note": "26 October 2–4pm short course: 20 spaces shown."
+        "status": "unknown",
+        "asOf": "2026-10-24",
+        "note": "Online booking unavailable at the checked URLs; remaining places unverified. This does not establish cancellation or that the session is full."
       }
     },
     {
       "id": "better-walthamstow-gymnastics",
-      "checkedOn": "2026-10-01",
+      "checkedOn": "2026-10-24",
       "name": "Better Walthamstow — October Gymnastics Short Course",
       "kind": "Two-hour gymnastics holiday session",
       "area": "Walthamstow",
@@ -563,30 +557,24 @@ window.E17_DIRECTORY = {
       ],
       "hours": "Monday 26 October, 2pm–4pm",
       "price": "£15.60 for the two-hour session",
-      "summary": "Gymnastics holiday short courses on Monday 26 October 2026, 2pm–4pm, in separate 5–7 and 8+ age groups. A two-hour activity, not full-day childcare.",
+      "summary": "Gymnastics holiday short courses on Monday 26 October 2026, 2pm–4pm, in separate 5–7 and 8+ age groups. A two-hour activity, not full-day childcare. Online booking and remaining places are unverified.",
       "goodFor": "Children aged 5+ seeking a gymnastics afternoon; choose the appropriate age group and confirm any upper age limit.",
-      "booking": "Select Gymnastics and Holiday and Short Courses on Better. Choose the appropriate 26 October age group.",
-      "confidence": "Official holiday page and both public booking prices verified 1 October 2026",
+      "booking": "24 October: the official course booking links and main course portal return HTTP 404. No working session booking destination has been verified. Use the official activity information page and contact Walthamstow Leisure Centre to confirm how to book and whether places remain before travelling.",
+      "confidence": "Official activity dates, ages, times and advertised price checked 24 October 2026; booking and remaining places unverified.",
       "source": {
         "label": "Walthamstow Leisure Centre holiday activities",
         "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/holiday-activities"
       },
       "lastCheck": {
-        "date": "2026-10-01",
-        "status": "verified",
-        "note": "Official page corrected date to Monday 26 October. Browser holiday-course results show both gymnastics age groups 14–16, 8 spaces each, £15.60 per session. Upper age limit for 8+ unstated."
+        "date": "2026-10-24",
+        "status": "blocked",
+        "note": "24 October: the official course booking links and main course portal return HTTP 404. No working session booking destination has been verified. Use the official activity information page and contact Walthamstow Leisure Centre to confirm how to book and whether places remain before travelling."
       },
-      "bookingUrl": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5,6%5D,%22centre%22:26,%22courseType%22:2%7D",
-      "secondarySources": [
-        {
-          "label": "Better holiday gymnastics booking listings",
-          "url": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:false,%22region%22:11,%22courseGroupCategory%22:%5B5,6%5D,%22centre%22:26,%22courseType%22:2%7D"
-        }
-      ],
+      "secondarySources": [],
       "availability": {
-        "status": "open",
-        "asOf": "2026-10-01",
-        "note": "Both 5–7 and 8+ groups show 8 spaces. Availability can change."
+        "status": "unknown",
+        "asOf": "2026-10-24",
+        "note": "Online booking unavailable at the checked URLs; remaining places unverified. This does not establish cancellation or that the session is full."
       }
     },
     {
@@ -662,7 +650,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "camp-beaumont-woodbridge",
-      "checkedOn": "2026-07-04",
+      "checkedOn": "2026-10-24",
       "name": "Camp Beaumont Woodbridge High School",
       "kind": "Multi-activity day camp",
       "area": "Woodford Green",
@@ -671,30 +659,36 @@ window.E17_DIRECTORY = {
         "Chingford",
         "Wanstead"
       ],
-      "venue": "Previous listing: Woodbridge High School",
+      "venue": "Woodbridge High School",
       "address": "Mallards Road, Woodford Green, IG8 7DQ",
       "ageMin": 3,
       "ageMax": 14,
-      "ageLabel": "Previously: 3-14",
+      "ageLabel": "Separate groups: 3–4, 5–7, 8–11 and 12–14",
       "categories": [
         "Multi-activity",
         "Teen"
       ],
       "funding": [],
-      "hours": "October hours to confirm",
-      "price": "October price to confirm",
-      "summary": "Previously listed multi-activity day camp provider. October 2026 dates, venue, age range and places have not yet been verified; check with the provider before planning cover.",
-      "goodFor": "Previous provider details only — confirm suitability, support and any funding for October.",
-      "booking": "Ask the provider whether it is running on 26–30 October 2026 and confirm the current booking link.",
-      "confidence": "Previous directory details; October availability unconfirmed",
+      "hours": "26–30 October, 8:30am–5:30pm",
+      "price": "Confirm final price when selecting dates; the venue page advertises £63/day or £290/week, while the booking overview says from £58/day.",
+      "summary": "October multi-activity camp at Woodbridge High School, 26–30 October 2026, with separate programmes for ages 3–14.",
+      "goodFor": "Children aged 3–14 needing a full camp day; choose the appropriate age programme.",
+      "booking": "Select Woodbridge High School, October Half Term and the correct age programme. All four programmes advertise Spaces available on 24 October; exact remaining capacity and selected-day availability are not verified. Confirm final price before payment.",
+      "confidence": "Official venue page and linked October booking overview checked 24 October 2026; advertised availability can change.",
       "source": {
-        "label": "Camp Beaumont Woodbridge High School",
-        "url": "https://www.campbeaumont.co.uk/our-camps/woodbridge-high-school"
+        "label": "Camp Beaumont Woodbridge official venue page",
+        "url": "https://www.campbeaumont.co.uk/camps/woodbridge-high-school/"
       },
       "lastCheck": {
-        "date": "2026-10-02",
-        "status": "blocked",
-        "note": "Woodbridge detail URL returns Page Not Found. Official location finder still links to the same missing page; October dates and booking availability remain unconfirmed. Successful verification date preserved."
+        "date": "2026-10-24",
+        "status": "checked",
+        "note": "Working venue page and official linked booking route verified. Four age programmes list 26–30 October, 8:30am–5:30pm and Spaces available. Price displays differ; no exact planner price entered."
+      },
+      "bookingUrl": "https://booknow.campbeaumont.co.uk/?campId=17&dateId=4015",
+      "availability": {
+        "status": "open",
+        "asOf": "2026-10-24",
+        "note": "All four October age programmes advertise Spaces available; exact capacity and selected-day availability unverified."
       }
     },
     {
