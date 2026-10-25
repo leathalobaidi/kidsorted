@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -60,7 +60,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "Official 2026 diary confirms 26–30 October. October application form is open and adds children to a queue; acceptance and remaining places unverified. Checked 23 September 2026.",
+      "weeksBasis": "Official 2026 diary previously confirmed 26–30 October. On 25 October the public application form says Bookings are closed. Existing saved plans are retained; closure does not establish cancellation of existing bookings or that all places are full.",
       "price": {
         "day": 48.3
       },
@@ -450,7 +450,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; only the morning has one place. Sessions on 27–30 October are selectable. Existing saved plans are retained, but Monday cannot currently be booked as a full day. A planner selection is not a booking."
+      "weeksBasis": "25 October: all Monday 26 October sessions are unavailable; Tuesday 27 October has only the morning selectable. Full days remain selectable 28–30 October. Existing saved plans are retained; Monday and Tuesday cannot currently be booked as full days. A planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
@@ -849,7 +849,7 @@ window.E17_PLANNER = {
         "week": 140
       },
       "priceBasis": "October public booking page checked 7 October 2026. Bring packed lunch.",
-      "weeksBasis": "26–30 October 2026 verified on current Class4Kids camp/119 on 23 October; Limited Spaces Available."
+      "weeksBasis": "26–30 October 2026 verified on current Class4Kids camp/119 on 25 October; Very Limited Spaces Available."
     }
   },
   "season": "october-2026",

@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "providers": [
     {
       "id": "all-about-dance",
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-23",
+      "checkedOn": "2026-10-25",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; the morning has one place. Tuesday and Wednesday full-day and afternoon sessions show two and three places respectively. Other 27–30 October sessions are selectable without a numeric capacity label. Full days are £70 (10am–3pm); half days £30 (10am–noon or 1–3pm).",
-      "confidence": "Current public booking page checked 23 October 2026; availability can change.",
+      "booking": "25 October: all Monday 26 October sessions are unavailable. On Tuesday 27 October only the 10am–noon session is selectable; full-day and afternoon sessions are unavailable. Wednesday full-day and afternoon sessions show three places. Other 28–30 October sessions are selectable without numeric capacity labels. Full days £70 (10am–3pm); half days £30 (10am–noon or 1–3pm).",
+      "confidence": "Current public booking page checked 25 October 2026; availability can change.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
         "status": "limited",
-        "asOf": "2026-10-23",
-        "note": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; the morning has one place. Tuesday and Wednesday full-day and afternoon sessions show two and three places respectively. Other 27–30 October sessions are selectable without a numeric capacity label. Full days are £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
+        "asOf": "2026-10-25",
+        "note": "25 October: all Monday 26 October sessions are unavailable. On Tuesday 27 October only the 10am–noon session is selectable; full-day and afternoon sessions are unavailable. Wednesday full-day and afternoon sessions show three places. Other 28–30 October sessions are selectable without numeric capacity labels. Full days £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-23",
+        "date": "2026-10-25",
         "status": "verified",
-        "note": "23 October: Monday 26 October full-day and afternoon sessions are unavailable; the morning has one place. Tuesday and Wednesday full-day and afternoon sessions show two and three places respectively. Other 27–30 October sessions are selectable without a numeric capacity label. Full days are £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
+        "note": "25 October: all Monday 26 October sessions are unavailable. On Tuesday 27 October only the 10am–noon session is selectable; full-day and afternoon sessions are unavailable. Wednesday full-day and afternoon sessions show three places. Other 28–30 October sessions are selectable without numeric capacity labels. Full days £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
       }
     },
     {
@@ -1070,8 +1070,8 @@ window.E17_DIRECTORY = {
       "price": "£48.30/day",
       "summary": "Inclusive October holiday clubs on 26–30 October 2026 at the Lloyd Park and Higham Hill centres, with arts, sports, imaginative play and outdoor activities.",
       "goodFor": "Primary school children needing a long childcare day; discuss individual support needs with the provider.",
-      "booking": "October applications are open. The public form adds your child to a queue for a place; submitting an application does not confirm a booking. Confirm acceptance and remaining places with the provider.",
-      "confidence": "October dates, centres, hours and daily fee verified; application form open, checked 23 September 2026",
+      "booking": "25 October: the public holiday-club application page says “Bookings are closed!”. New applications are no longer available through that form. This does not establish that all places are full or that existing bookings are cancelled.",
+      "confidence": "Application closure verified 25 October 2026. Previously verified October dates, hours and fee retained; remaining capacity is unknown.",
       "source": {
         "label": "Lloyd Park Children's Charity holiday club",
         "url": "https://www.tlpcc.org.uk/teatime-and-holiday-club"
@@ -1091,14 +1091,14 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-23",
+        "date": "2026-10-25",
         "status": "verified",
-        "note": "Browser verified the live October 2026 Place Application Form and its queue notice. Published dates, hours and fees unchanged."
+        "note": "25 October: the public holiday-club application page says “Bookings are closed!”. New applications are no longer available through that form. This does not establish that all places are full or that existing bookings are cancelled."
       },
       "availability": {
         "status": "unknown",
-        "asOf": "2026-09-23",
-        "note": "October application form is open and explicitly queues children for a place. Actual place availability is unverified."
+        "asOf": "2026-10-25",
+        "note": "25 October: the public holiday-club application page says “Bookings are closed!”. New applications are no longer available through that form. This does not establish that all places are full or that existing bookings are cancelled."
       }
     },
     {
@@ -2490,7 +2490,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "ptc-sports-gwyn-jones",
-      "checkedOn": "2026-10-23",
+      "checkedOn": "2026-10-25",
       "name": "PTC Sports — Gwyn Jones October Holiday Club",
       "kind": "Multi-sports holiday camp",
       "area": "Leytonstone",
@@ -2514,8 +2514,8 @@ window.E17_DIRECTORY = {
       "price": "£30/day or £140/week",
       "summary": "October multi-sports holiday club, 26–30 October 2026, at Gwyn Jones Primary School. Bring a nut-free packed lunch and refillable water bottle.",
       "goodFor": "Children aged 4–12 who enjoy a range of sports and team activities.",
-      "booking": "23 October: Limited Spaces Available on the public booking page for 26–30 October, ages 4–12, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week.",
-      "confidence": "Current public booking page checked 23 October 2026; availability can change.",
+      "booking": "25 October: Very Limited Spaces Available on the public booking page for 26–30 October, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week.",
+      "confidence": "Current public booking page checked 25 October 2026; availability can change.",
       "source": {
         "label": "PTC Gwyn Jones October booking",
         "url": "https://ptcsports.classforkids.io/camp/119"
@@ -2527,15 +2527,15 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-23",
+        "date": "2026-10-25",
         "status": "verified",
-        "note": "23 October: Limited Spaces Available on the public booking page for 26–30 October, ages 4–12, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week."
+        "note": "25 October: Very Limited Spaces Available on the public booking page for 26–30 October, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week."
       },
       "bookingUrl": "https://ptcsports.classforkids.io/camp/119",
       "availability": {
         "status": "limited",
-        "asOf": "2026-10-23",
-        "note": "23 October: Limited Spaces Available on the public booking page for 26–30 October, ages 4–12, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week."
+        "asOf": "2026-10-25",
+        "note": "25 October: Very Limited Spaces Available on the public booking page for 26–30 October, 9am–4:30pm; £30/day or £140/week. Book individual days or the full week."
       }
     }
   ],
