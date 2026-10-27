@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-25",
+  "updated": "2026-10-27",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -386,7 +386,7 @@ window.E17_PLANNER = {
         "end": "17:30"
       },
       "coverage": "working",
-      "priceBasis": "Price not entered: venue page advertises £63/day or £290/week, booking overview says from £58/day. Confirm the final total for chosen dates."
+      "priceBasis": "Price not entered: venue page advertises £63/day or £290/week, booking overview says from £60/day (27 October booking overview). Confirm the final total for chosen dates."
     },
     "barracudas-woodford": {
       "weeks": [
@@ -450,7 +450,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "25 October: all Monday 26 October sessions are unavailable; Tuesday 27 October has only the morning selectable. Full days remain selectable 28–30 October. Existing saved plans are retained; Monday and Tuesday cannot currently be booked as full days. A planner selection is not a booking."
+      "weeksBasis": "27 October: Wednesday 28 October full-day and afternoon sessions each show one place. Wednesday morning and 29–30 October sessions remain selectable. Monday/Tuesday controls are disabled. Existing saved plans and day patterns are retained. A planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
