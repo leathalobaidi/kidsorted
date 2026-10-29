@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-27",
+  "updated": "2026-10-29",
   "providers": [
     {
       "id": "all-about-dance",
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-27",
+      "checkedOn": "2026-10-29",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "27 October: Wednesday 28 October full-day and afternoon sessions each show one place; Wednesday morning and all 29–30 October sessions remain selectable without numeric capacity labels. Monday and Tuesday controls are disabled; this does not establish that expired sessions sold out. Full days £70 (10am–3pm); half days £30 (10am–noon or 1–3pm).",
-      "confidence": "Current public workshop and session pages checked 27 October 2026; availability can change.",
+      "booking": "29 October: Thursday full-day (10am–3pm) and afternoon (1–3pm) sessions each show three places. Thursday morning and all Friday 30 October sessions remain selectable without numeric capacity labels. Expired Monday–Wednesday controls are disabled, not evidence of sell-out. Full days £70; half days £30.",
+      "confidence": "Current public workshop and session pages checked 29 October 2026; availability can change.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
         "status": "limited",
-        "asOf": "2026-10-27",
-        "note": "27 October: Wednesday 28 October full-day and afternoon sessions each show one place; Wednesday morning and all 29–30 October sessions remain selectable without numeric capacity labels. Monday and Tuesday controls are disabled; this does not establish that expired sessions sold out. Full days £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
+        "asOf": "2026-10-29",
+        "note": "29 October: Thursday full-day (10am–3pm) and afternoon (1–3pm) sessions each show three places. Thursday morning and all Friday 30 October sessions remain selectable without numeric capacity labels. Expired Monday–Wednesday controls are disabled, not evidence of sell-out. Full days £70; half days £30."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-27",
+        "date": "2026-10-29",
         "status": "verified",
-        "note": "27 October: Wednesday 28 October full-day and afternoon sessions each show one place; Wednesday morning and all 29–30 October sessions remain selectable without numeric capacity labels. Monday and Tuesday controls are disabled; this does not establish that expired sessions sold out. Full days £70 (10am–3pm); half days £30 (10am–noon or 1–3pm)."
+        "note": "29 October: Thursday full-day (10am–3pm) and afternoon (1–3pm) sessions each show three places. Thursday morning and all Friday 30 October sessions remain selectable without numeric capacity labels. Expired Monday–Wednesday controls are disabled, not evidence of sell-out. Full days £70; half days £30."
       }
     },
     {
@@ -820,16 +820,16 @@ window.E17_DIRECTORY = {
       "price": "£35/day or £126 for all four days; 50% off additional siblings",
       "summary": "October football camp on Monday 26–Thursday 29 October 2026 for boys and girls aged 5–12, featuring an inflatable goal, dartboard and pitch. No Friday session listed. The provider plans to run every school holiday: February half-term, Easter, May half-term and summer booking links are due soon; Christmas depends on demand.",
       "goodFor": "Children of all football abilities, ages 5–12.",
-      "booking": "October half-term confirmed and open for booking. Book individual days or the full camp; 50% off additional siblings.",
+      "booking": "29 October: the October event booking page says the requested event is no longer available. New online booking availability is unconfirmed; this does not establish cancellation or sell-out. Previously published dates were 26–29 October, 9am–3:30pm, £35/day or £126/four days.",
       "confidence": "October booking, venue, ages, hours and discounts confirmed by provider email, 6 September 2026",
       "source": {
         "label": "Football Fun Factory October camp booking",
         "url": "https://booking.thefootballfunfactory.co.uk/event/5136"
       },
       "availability": {
-        "status": "open",
-        "asOf": "2026-09-06",
-        "note": "Provider booking page explicitly shows Spaces Available, checked 6 September."
+        "status": "unknown",
+        "asOf": "2026-10-29",
+        "note": "29 October: the October event booking page says the requested event is no longer available. New online booking availability is unconfirmed; this does not establish cancellation or sell-out. Previously published dates were 26–29 October, 9am–3:30pm, £35/day or £126/four days."
       },
       "secondarySources": [
         {
@@ -838,9 +838,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-09-13",
+        "date": "2026-10-29",
         "status": "unconfirmed",
-        "note": "Browser location and event 5136 verified: Spaces Available, 26–29 October 2026, James Lane E11 1NS, ages 5–12, 9–15:30, £35/day or £126/four days. No material change."
+        "note": "29 October: the October event booking page says the requested event is no longer available. New online booking availability is unconfirmed; this does not establish cancellation or sell-out. Previously published dates were 26–29 October, 9am–3:30pm, £35/day or £126/four days."
       }
     },
     {

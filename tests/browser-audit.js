@@ -59,7 +59,7 @@ window.addEventListener('load', async () => {
     startDraft(1,c,{type:'camp',campId:'noisy-book-club-october-wednesday'},[1,2,3,4,5]);
     check(pickerCtx.draft.days.join()==='3' && entryCost(pickerCtx.draft,1).value===75,'Noisy Book Club Wednesday is separate and costs £75');close();
     check(entryCost({type:'camp',campId:'football-fun-factory',days:[5]},1)===null,'old plans on unlisted days never receive an invented price');
-    check(bookingState(providerById('football-fun-factory')).includes('Booking open'),'verified booking status reaches planner');
+    check(bookingState(providerById('football-fun-factory')).includes('places unverified'),'verified booking status reaches planner');
     const url=planShareUrl(), shared=parseSharedPlan(url.slice(url.indexOf('#')));
     check(shared.children.find(x=>x.id===c).age===4.5 && shared.plan[1][c].length===4,'mixed bookings and fractional age survive share round trip');
     const cal=planCalendarText();

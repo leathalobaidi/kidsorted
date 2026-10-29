@@ -1,5 +1,5 @@
 window.E17_PLANNER = {
-  "updated": "2026-10-27",
+  "updated": "2026-10-29",
   "keyDates": {
     "lastSchoolDay": {
       "iso": "2026-10-23",
@@ -318,7 +318,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "26–30 October, 09:30–15:30 and Choose tickets confirmed on 22 October. Booking age label says 5–12 while description says 5–11; confirm eligibility for age 12 directly. Previous successful ticket-price verification retained."
+      "weeksBasis": "29 October: the October event booking page says the requested event is no longer available. New online booking availability is unconfirmed; this does not establish cancellation or sell-out. Previously published dates were 26–29 October, 9am–3:30pm, £35/day or £126/four days. Existing saved plans and day patterns retained; a planner selection is not a booking."
     },
     "little-soccer-stars-walthamstow": {
       "weeks": [
@@ -450,7 +450,7 @@ window.E17_PLANNER = {
       "weeks": [
         1
       ],
-      "weeksBasis": "27 October: Wednesday 28 October full-day and afternoon sessions each show one place. Wednesday morning and 29–30 October sessions remain selectable. Monday/Tuesday controls are disabled. Existing saved plans and day patterns are retained. A planner selection is not a booking."
+      "weeksBasis": "29 October: Thursday full-day (10am–3pm) and afternoon (1–3pm) sessions each show three places. Thursday morning and all Friday 30 October sessions remain selectable without numeric capacity labels. Expired Monday–Wednesday controls are disabled, not evidence of sell-out. Full days £70; half days £30. Existing saved plans and day patterns retained; a planner selection is not a booking."
     },
     "creation-station-walthamstow": {
       "weeks": [],
