@@ -1,5 +1,5 @@
 window.E17_DIRECTORY = {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "providers": [
     {
       "id": "all-about-dance",
@@ -444,7 +444,7 @@ window.E17_DIRECTORY = {
     },
     {
       "id": "art-k-highams-park",
-      "checkedOn": "2026-10-29",
+      "checkedOn": "2026-10-30",
       "name": "art-K Highams Park holiday workshops",
       "kind": "Art workshop",
       "area": "Highams Park",
@@ -468,16 +468,16 @@ window.E17_DIRECTORY = {
       "price": "£70/full day; £30/half day",
       "summary": "October art workshops on Monday 26–Friday 30 October 2026. Individual projects in sculpture, painting and mixed media.",
       "goodFor": "Creative children; choose half days for younger artists. Clay projects need attendance on two or more days.",
-      "booking": "29 October: Thursday full-day (10am–3pm) and afternoon (1–3pm) sessions each show three places. Thursday morning and all Friday 30 October sessions remain selectable without numeric capacity labels. Expired Monday–Wednesday controls are disabled, not evidence of sell-out. Full days £70; half days £30.",
-      "confidence": "Current public workshop and session pages checked 29 October 2026; availability can change.",
+      "booking": "30 October: Friday full-day (10am–3pm, £70) and morning (10am–12pm, £30) each show one place; afternoon (1–3pm, £30) shows two places. Earlier dates are disabled because they have passed; this is not evidence of sell-out. Availability can change.",
+      "confidence": "Current public workshop and session pages checked 30 October 2026; availability can change.",
       "source": {
         "label": "art-K October 2026 workshops and booking",
         "url": "https://portal.art-k.co.uk/public/workshops/237/2744"
       },
       "availability": {
         "status": "limited",
-        "asOf": "2026-10-29",
-        "note": "29 October: Thursday full-day (10am–3pm) and afternoon (1–3pm) sessions each show three places. Thursday morning and all Friday 30 October sessions remain selectable without numeric capacity labels. Expired Monday–Wednesday controls are disabled, not evidence of sell-out. Full days £70; half days £30."
+        "asOf": "2026-10-30",
+        "note": "30 October: Friday full-day (10am–3pm, £70) and morning (10am–12pm, £30) each show one place; afternoon (1–3pm, £30) shows two places. Earlier dates are disabled because they have passed; this is not evidence of sell-out. Availability can change."
       },
       "secondarySources": [
         {
@@ -486,9 +486,9 @@ window.E17_DIRECTORY = {
         }
       ],
       "lastCheck": {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "status": "verified",
-        "note": "29 October: Thursday full-day (10am–3pm) and afternoon (1–3pm) sessions each show three places. Thursday morning and all Friday 30 October sessions remain selectable without numeric capacity labels. Expired Monday–Wednesday controls are disabled, not evidence of sell-out. Full days £70; half days £30."
+        "note": "30 October: Friday full-day (10am–3pm, £70) and morning (10am–12pm, £30) each show one place; afternoon (1–3pm, £30) shows two places. Earlier dates are disabled because they have passed; this is not evidence of sell-out. Availability can change."
       }
     },
     {
@@ -670,25 +670,25 @@ window.E17_DIRECTORY = {
       ],
       "funding": [],
       "hours": "26–30 October, 8:30am–5:30pm",
-      "price": "Confirm final price when selecting dates; the venue page advertises £63/day or £290/week, while the booking overview says from £60/day (booking overview checked 27 October).",
+      "price": "Confirm final price when selecting dates; the venue page advertises £63/day or £290/week, while the booking overview says from £62.50/day (booking overview checked 30 October).",
       "summary": "October multi-activity camp at Woodbridge High School, 26–30 October 2026, with separate programmes for ages 3–14.",
       "goodFor": "Children aged 3–14 needing a full camp day; choose the appropriate age programme.",
-      "booking": "Select Woodbridge High School, October Half Term and the correct age programme. All four programmes advertise Spaces available on 27 October; exact remaining capacity and selected-day availability are not verified. Confirm final price before payment.",
+      "booking": "Select Woodbridge High School, October Half Term and the correct age programme. All four programmes advertise Spaces available on 30 October; exact remaining capacity and selected-day availability are not verified. Confirm final price before payment.",
       "confidence": "Official venue page and linked October booking overview checked 24 October 2026; advertised availability can change.",
       "source": {
         "label": "Camp Beaumont Woodbridge official venue page",
         "url": "https://www.campbeaumont.co.uk/camps/woodbridge-high-school/"
       },
       "lastCheck": {
-        "date": "2026-10-27",
+        "date": "2026-10-30",
         "status": "checked",
-        "note": "Official booking overview rechecked: four age groups show Spaces available, 26–30 October, 8:30am–5:30pm, now from £60/day. Earlier venue price conflict remains; no exact planner price entered."
+        "note": "Official booking overview rechecked: four age groups show Spaces available, 26–30 October, 8:30am–5:30pm, now from £62.50/day. Earlier venue price conflict remains; no exact planner price entered."
       },
       "bookingUrl": "https://booknow.campbeaumont.co.uk/?campId=17&dateId=4015",
       "availability": {
         "status": "open",
-        "asOf": "2026-10-27",
-        "note": "All four October age programmes advertise Spaces available and from £60/day. Exact capacity and selected-day availability unverified."
+        "asOf": "2026-10-30",
+        "note": "All four October age programmes advertise Spaces available and from £62.50/day. Exact capacity and selected-day availability unverified."
       }
     },
     {
